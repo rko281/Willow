@@ -1,0 +1,15 @@
+﻿"Filed out from Dolphin Smalltalk 7"!
+
+WARenderingTest subclass: #ComponentScriptCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+ComponentScriptCommandTest guid: (GUID fromString: '{4ce08bec-1a49-46b2-99df-9fd05952aa1e}')!
+ComponentScriptCommandTest comment: 'A ComponentScriptCommandTest is a test class for testing the behavior of ComponentScriptCommand'!
+!ComponentScriptCommandTest categoriesForClass!Willow-Tests-Frontend! !
+!ComponentScriptCommandTest methodsFor!
+
+testApplyToOn	| html |	html := self		apply: (ComponentScriptCommand toExecute: [ :canvas | canvas jQuery this clone ])		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").clone();</script>'! !
+!ComponentScriptCommandTest categoriesFor: #testApplyToOn!public!tests/applying! !
+

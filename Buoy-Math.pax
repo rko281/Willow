@@ -1,0 +1,95 @@
+﻿| package |
+package := Package name: 'Buoy-Math'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #PartsPerFraction;
+	add: #Percentage;
+	add: #PerMille;
+	yourself.
+
+package methodNames
+	add: #Fraction -> #adaptToFraction:andSend:;
+	add: #Integer -> #adaptToInteger:andSend:;
+	add: #Number -> #decreasedBy:;
+	add: #Number -> #increasedBy:;
+	add: #Number -> #isPercentage;
+	add: #Number -> #percent;
+	add: #Number -> #perMille;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Assertions';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Portishead\Portishead-Pragmas';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Number subclass: #PartsPerFraction
+	instanceVariableNames: 'ratio'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PartsPerFraction subclass: #Percentage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: 'zeroPercent oneHundredPercent'!
+PartsPerFraction subclass: #PerMille
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Fraction methodsFor!
+
+adaptToFraction: aFraction andSend: selector	^self perform: selector with: aFraction ! !
+!Fraction categoriesFor: #adaptToFraction:andSend:!*Buoy/Math!public! !
+
+!Integer methodsFor!
+
+adaptToInteger: anInteger andSend: selector	^ self perform: selector with: anInteger! !
+!Integer categoriesFor: #adaptToInteger:andSend:!*Buoy/Math!public! !
+
+!Number methodsFor!
+
+decreasedBy: aPercentage	AssertionChecker		enforce: [ aPercentage between: 0 and: 1 ]		because: 'A number can''t be decreased by a percentage greater than 100% and lesser than 0%'		raising: ArithmeticError.	^ self * (Percentage oneHundred - aPercentage)!
+
+increasedBy: aPercentage	AssertionChecker		enforce: [ aPercentage positive ]		because: 'A number can''t be increased by a negative percentage'		raising: ArithmeticError.	^ self * (Percentage oneHundred + aPercentage)!
+
+isPercentage	^false!
+
+percent	^ Percentage of: self!
+
+perMille	^ PerMille of: self! !
+!Number categoriesFor: #decreasedBy:!*Buoy/Math!public! !
+!Number categoriesFor: #increasedBy:!*Buoy/Math!public! !
+!Number categoriesFor: #isPercentage!*Buoy/Math!public! !
+!Number categoriesFor: #percent!*Buoy/Math!public! !
+!Number categoriesFor: #perMille!*Buoy/Math!public! !
+
+"End of package definition"!
+

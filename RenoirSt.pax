@@ -1,0 +1,608 @@
+﻿| package |
+package := Package name: 'RenoirSt'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #CascadingStyleSheet;
+	add: #CascadingStyleSheetBuilder;
+	add: #CssAbstractDeclaration;
+	add: #CssAdjacentSiblingCombinator;
+	add: #CssAlphaChannel;
+	add: #CssAlphaChannelProvided;
+	add: #CssAttributeMatchingCondition;
+	add: #CssAttributeReference;
+	add: #CssAttributeSelector;
+	add: #CssBoxShadow;
+	add: #CssChildCombinator;
+	add: #CssClassSelector;
+	add: #CssColor;
+	add: #CssColorStop;
+	add: #CssColorUnit;
+	add: #CssComment;
+	add: #CssDeclaration;
+	add: #CssDeclarationBlock;
+	add: #CssDescendantCombinator;
+	add: #CssExternalFontReference;
+	add: #CssFallbackSpecified;
+	add: #CssFontReference;
+	add: #CssFunction;
+	add: #CssGeneralSiblingCombinator;
+	add: #CssGradient;
+	add: #CssGradientComponent;
+	add: #CssHSLColor;
+	add: #CssIdentifiedColor;
+	add: #CssIdSelector;
+	add: #CssImportantDeclaration;
+	add: #CssImportantRulePrecedencePoliciy;
+	add: #CssLinearGradient;
+	add: #CssLinearPolynomial;
+	add: #CssLocalFontReference;
+	add: #CssMathExpression;
+	add: #CssMeasure;
+	add: #CssMediaQueryExpression;
+	add: #CssMediaQueryRule;
+	add: #CssMediaQueryRuleBuilder;
+	add: #CssNoAlphaChannelProvided;
+	add: #CssNoFallbackSpecified;
+	add: #CssNormalRulePrecedencePolicy;
+	add: #CssObject;
+	add: #CssObjectList;
+	add: #CssPseudoClassSelector;
+	add: #CssPseudoElementSelector;
+	add: #CssRadialGradient;
+	add: #CssRGBColor;
+	add: #CssRulePrecedencePolicy;
+	add: #CssRuleSet;
+	add: #CssSelector;
+	add: #CssSelectorGroup;
+	add: #CssSVGFontLocation;
+	add: #CssToggle;
+	add: #CssTypeSelector;
+	add: #CssUnit;
+	add: #CssUniversalSelector;
+	add: #IndentOnNewLineWriteStream;
+	add: #ReflectiveCascadingStyleSheetBuilder;
+	add: #RenoirSt;
+	yourself.
+
+package methodNames
+	add: #Array -> #cssContentOn:;
+	add: #Float -> #cm;
+	add: #Float -> #cssContentOn:;
+	add: #Float -> #deg;
+	add: #Float -> #em;
+	add: #Float -> #grad;
+	add: #Float -> #in;
+	add: #Float -> #mm;
+	add: #Float -> #ms;
+	add: #Float -> #newMeasureWith:;
+	add: #Float -> #pc;
+	add: #Float -> #rad;
+	add: #Float -> #s;
+	add: #Float -> #turn;
+	add: #Fraction -> #cssContentOn:;
+	add: #Integer -> #ch;
+	add: #Integer -> #cm;
+	add: #Integer -> #cssContentOn:;
+	add: #Integer -> #deg;
+	add: #Integer -> #dpcm;
+	add: #Integer -> #dpi;
+	add: #Integer -> #dppx;
+	add: #Integer -> #em;
+	add: #Integer -> #ex;
+	add: #Integer -> #grad;
+	add: #Integer -> #Hz;
+	add: #Integer -> #in;
+	add: #Integer -> #kHz;
+	add: #Integer -> #mm;
+	add: #Integer -> #ms;
+	add: #Integer -> #n;
+	add: #Integer -> #newMeasureWith:;
+	add: #Integer -> #pc;
+	add: #Integer -> #pt;
+	add: #Integer -> #px;
+	add: #Integer -> #rad;
+	add: #Integer -> #rem;
+	add: #Integer -> #s;
+	add: #Integer -> #turn;
+	add: #Integer -> #vh;
+	add: #Integer -> #vmax;
+	add: #Integer -> #vmin;
+	add: #Integer -> #vw;
+	add: #Percentage -> #cssContentOn:;
+	add: #String -> #cssContentOn:;
+	add: #WriteStream -> #newLine;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Assertions';
+	add: 'Buoy-Math';
+	add: 'Buoy-Metaprogramming';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Portishead\Portishead-Pragmas';
+	add: '..\Portishead\Portishead-SharedPools';
+	yourself).
+
+package untracedGlobals: (Set new
+	add: #RenoirSt;
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #CascadingStyleSheetBuilder
+	instanceVariableNames: 'statements'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #CssAlphaChannel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #CssMediaQueryRuleBuilder
+	instanceVariableNames: 'styleSheet mediaType expressions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #CssObject
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'RenoirSt'
+	classInstanceVariableNames: ''!
+Object subclass: #CssRulePrecedencePolicy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #IndentOnNewLineWriteStream
+	instanceVariableNames: 'stream'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #ReflectiveCascadingStyleSheetBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssAlphaChannel subclass: #CssAlphaChannelProvided
+	instanceVariableNames: 'value'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssAlphaChannel subclass: #CssNoAlphaChannelProvided
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CascadingStyleSheet
+	instanceVariableNames: 'statements'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssAbstractDeclaration
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssAttributeMatchingCondition
+	instanceVariableNames: 'attributeValue condition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssBoxShadow
+	instanceVariableNames: 'components'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssColorStop
+	instanceVariableNames: 'color stop'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssColorUnit
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssComment
+	instanceVariableNames: 'comment'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssDeclarationBlock
+	instanceVariableNames: 'declarations rulePrecedencePolicy'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssFallbackSpecified
+	instanceVariableNames: 'value'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssFontReference
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssFunction
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssGradient
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssGradientComponent
+	instanceVariableNames: 'direction'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssLinearPolynomial
+	instanceVariableNames: 'dependentCoefficient independentCoefficient'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssMeasure
+	instanceVariableNames: 'quantity unit'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssMediaQueryExpression
+	instanceVariableNames: 'mediaFeature values'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssMediaQueryRule
+	instanceVariableNames: 'mediaType expressions styleSheet'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssNoFallbackSpecified
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssObjectList
+	instanceVariableNames: 'components'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssRuleSet
+	instanceVariableNames: 'selector declarationBlock comment'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssSelector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssSVGFontLocation
+	instanceVariableNames: 'url id'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssObject subclass: #CssUnit
+	instanceVariableNames: 'identifier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssAbstractDeclaration subclass: #CssDeclaration
+	instanceVariableNames: 'property value'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssAbstractDeclaration subclass: #CssImportantDeclaration
+	instanceVariableNames: 'declaration'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssColorUnit subclass: #CssColor
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssColorUnit subclass: #CssIdentifiedColor
+	instanceVariableNames: 'color identification'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssColor subclass: #CssHSLColor
+	instanceVariableNames: 'hue saturation lightness alphaChannel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssColor subclass: #CssRGBColor
+	instanceVariableNames: 'redComponent greenComponent blueComponent alphaChannel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssFontReference subclass: #CssExternalFontReference
+	instanceVariableNames: 'url format'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssFontReference subclass: #CssLocalFontReference
+	instanceVariableNames: 'fontName'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssFunction subclass: #CssAttributeReference
+	instanceVariableNames: 'attributeName typeOrUnit fallback'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssFunction subclass: #CssMathExpression
+	instanceVariableNames: 'operands operators'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssFunction subclass: #CssToggle
+	instanceVariableNames: 'values'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssGradient subclass: #CssLinearGradient
+	instanceVariableNames: 'direction colorStops functionName'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssGradient subclass: #CssRadialGradient
+	instanceVariableNames: 'shape colorStops functionName'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssAdjacentSiblingCombinator
+	instanceVariableNames: 'predecessor successor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssAttributeSelector
+	instanceVariableNames: 'selector attributeName matchingCondition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssChildCombinator
+	instanceVariableNames: 'parent child'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssClassSelector
+	instanceVariableNames: 'cssClass parentSelector'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssDescendantCombinator
+	instanceVariableNames: 'ancestor descendant'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssGeneralSiblingCombinator
+	instanceVariableNames: 'predecessor successor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssIdSelector
+	instanceVariableNames: 'id selector'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssPseudoClassSelector
+	instanceVariableNames: 'selector pseudoClassName arguments'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssPseudoElementSelector
+	instanceVariableNames: 'selector pseudoElementName'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssSelectorGroup
+	instanceVariableNames: 'selectors'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssTypeSelector
+	instanceVariableNames: 'elementType'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssSelector subclass: #CssUniversalSelector
+	instanceVariableNames: 'representation'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssRulePrecedencePolicy subclass: #CssImportantRulePrecedencePoliciy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+CssRulePrecedencePolicy subclass: #CssNormalRulePrecedencePolicy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SharedPool subclass: #RenoirSt
+	instanceVariableNames: ''
+	classVariableNames: 'CssConstants CssMediaQueryConstants'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Array methodsFor!
+
+cssContentOn: aStream	self do: [ :element | element cssContentOn: aStream ] separatedBy: [ aStream space ]! !
+!Array categoriesFor: #cssContentOn:!*RenoirSt!public! !
+
+!Float methodsFor!
+
+cm	^ self newMeasureWith: RenoirSt units >> #centimeter!
+
+cssContentOn: aStream 		aStream nextPutAll: self printString!
+
+deg	 ^self newMeasureWith: RenoirSt units >> #degree    !
+
+em	^ self newMeasureWith: RenoirSt units >> #fontSize!
+
+grad	^ self newMeasureWith: RenoirSt units >> #gradian!
+
+in	^ self newMeasureWith: RenoirSt units >> #inch!
+
+mm	^ self newMeasureWith: RenoirSt units >> #millimeter!
+
+ms	^ self newMeasureWith: RenoirSt units >> #millisecond!
+
+newMeasureWith: unit	^ CssMeasure quantity: self unit: unit!
+
+pc	^ self newMeasureWith: RenoirSt units >> #pica!
+
+rad	^ self newMeasureWith: RenoirSt units >> #radian!
+
+s	^ self newMeasureWith: RenoirSt units >> #second!
+
+turn	^ self newMeasureWith: RenoirSt units >> #turn! !
+!Float categoriesFor: #cm!*RenoirSt!public! !
+!Float categoriesFor: #cssContentOn:!*RenoirSt!public! !
+!Float categoriesFor: #deg!*RenoirSt!public! !
+!Float categoriesFor: #em!*RenoirSt!public! !
+!Float categoriesFor: #grad!*RenoirSt!public! !
+!Float categoriesFor: #in!*RenoirSt!public! !
+!Float categoriesFor: #mm!*RenoirSt!public! !
+!Float categoriesFor: #ms!*RenoirSt!public! !
+!Float categoriesFor: #newMeasureWith:!*RenoirSt!public! !
+!Float categoriesFor: #pc!*RenoirSt!public! !
+!Float categoriesFor: #rad!*RenoirSt!public! !
+!Float categoriesFor: #s!*RenoirSt!public! !
+!Float categoriesFor: #turn!*RenoirSt!public! !
+
+!Fraction methodsFor!
+
+cssContentOn: aStream	self numerator cssContentOn: aStream.	aStream nextPut: $/.	self denominator cssContentOn: aStream ! !
+!Fraction categoriesFor: #cssContentOn:!*RenoirSt!public! !
+
+!Integer methodsFor!
+
+ch	^ self newMeasureWith: RenoirSt units >> #zeroWidth!
+
+cm	^ self newMeasureWith: RenoirSt units >> #centimeter!
+
+cssContentOn: aStream	self printOn: aStream!
+
+deg	^ self newMeasureWith: RenoirSt units >> #degree!
+
+dpcm	^ self newMeasureWith: RenoirSt units >> #dotsPerCentimeter!
+
+dpi	^ self newMeasureWith: RenoirSt units >> #dotsPerInch!
+
+dppx	^ self newMeasureWith: RenoirSt units >> #dotsPerPixelUnit!
+
+em	^ self newMeasureWith: RenoirSt units >> #fontSize!
+
+ex	^ self newMeasureWith: RenoirSt units >> #xHeight!
+
+grad	^ self newMeasureWith: RenoirSt units >> #gradian!
+
+Hz	^ self newMeasureWith: RenoirSt units >> #hertz!
+
+in	^ self newMeasureWith: RenoirSt units >> #inch!
+
+kHz	^ self newMeasureWith: RenoirSt units >> #kiloHertz!
+
+mm	^ self newMeasureWith: RenoirSt units >> #millimeter!
+
+ms	^ self newMeasureWith: RenoirSt units >> #millisecond!
+
+n	 ^CssLinearPolynomial with: self!
+
+newMeasureWith: unit	^ CssMeasure quantity: self unit: unit!
+
+pc	^ self newMeasureWith: RenoirSt units >> #pica!
+
+pt	^ self newMeasureWith: RenoirSt units >> #point!
+
+px	^ self newMeasureWith: RenoirSt units >> #pixel!
+
+rad	^ self newMeasureWith: RenoirSt units >> #radian!
+
+rem	^ self newMeasureWith: RenoirSt units >> #fontSizeOfRootElement!
+
+s	^ self newMeasureWith: RenoirSt units >> #second!
+
+turn	^ self newMeasureWith: RenoirSt units >> #turn!
+
+vh	^ self newMeasureWith: RenoirSt units >> #onePercentOfViewportHeight!
+
+vmax	^ self newMeasureWith: RenoirSt units >> #onePercentOfViewportLargerDimension!
+
+vmin	^ self newMeasureWith: RenoirSt units >> #onePercentOfViewportSmallerDimension!
+
+vw	^ self newMeasureWith: RenoirSt units >> #onePercentOfViewportWidth! !
+!Integer categoriesFor: #ch!*RenoirSt!public! !
+!Integer categoriesFor: #cm!*RenoirSt!public! !
+!Integer categoriesFor: #cssContentOn:!*RenoirSt!public! !
+!Integer categoriesFor: #deg!*RenoirSt!public! !
+!Integer categoriesFor: #dpcm!*RenoirSt!public! !
+!Integer categoriesFor: #dpi!*RenoirSt!public! !
+!Integer categoriesFor: #dppx!*RenoirSt!public! !
+!Integer categoriesFor: #em!*RenoirSt!public! !
+!Integer categoriesFor: #ex!*RenoirSt!public! !
+!Integer categoriesFor: #grad!*RenoirSt!public! !
+!Integer categoriesFor: #Hz!*RenoirSt!public! !
+!Integer categoriesFor: #in!*RenoirSt!public! !
+!Integer categoriesFor: #kHz!*RenoirSt!public! !
+!Integer categoriesFor: #mm!*RenoirSt!public! !
+!Integer categoriesFor: #ms!*RenoirSt!public! !
+!Integer categoriesFor: #n!*RenoirSt!public! !
+!Integer categoriesFor: #newMeasureWith:!*RenoirSt!public! !
+!Integer categoriesFor: #pc!*RenoirSt!public! !
+!Integer categoriesFor: #pt!*RenoirSt!public! !
+!Integer categoriesFor: #px!*RenoirSt!public! !
+!Integer categoriesFor: #rad!*RenoirSt!public! !
+!Integer categoriesFor: #rem!*RenoirSt!public! !
+!Integer categoriesFor: #s!*RenoirSt!public! !
+!Integer categoriesFor: #turn!*RenoirSt!public! !
+!Integer categoriesFor: #vh!*RenoirSt!public! !
+!Integer categoriesFor: #vmax!*RenoirSt!public! !
+!Integer categoriesFor: #vmin!*RenoirSt!public! !
+!Integer categoriesFor: #vw!*RenoirSt!public! !
+
+!Percentage methodsFor!
+
+cssContentOn: aStream 		self value cssContentOn: aStream.	aStream nextPut: $%! !
+!Percentage categoriesFor: #cssContentOn:!*RenoirSt!public! !
+
+!String methodsFor!
+
+cssContentOn: aStream	aStream nextPutAll: self! !
+!String categoriesFor: #cssContentOn:!*RenoirSt!public! !
+
+!WriteStream methodsFor!
+
+newLine	self nextPutAll: '<n>' expandMacros! !
+!WriteStream categoriesFor: #newLine!*RenoirSt!public! !
+
+"End of package definition"!
+

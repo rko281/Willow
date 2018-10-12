@@ -1,0 +1,47 @@
+﻿| package |
+package := Package name: 'RenoirSt-Dolphin'.
+package paxVersion: 1;
+	basicComment: ''.
+
+
+package methodNames
+	add: 'CascadingStyleSheetBuilder class' -> #new;
+	add: 'CssObject class' -> #new;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'RenoirSt';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!CascadingStyleSheetBuilder class methodsFor!
+
+new
+
+	^super new initialize! !
+!CascadingStyleSheetBuilder class categoriesFor: #new!public! !
+
+!CssObject class methodsFor!
+
+new
+
+	^super new initialize! !
+!CssObject class categoriesFor: #new!public! !
+
+"End of package definition"!
+

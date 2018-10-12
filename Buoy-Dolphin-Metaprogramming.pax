@@ -1,0 +1,48 @@
+﻿| package |
+package := Package name: 'Buoy-Dolphin-Metaprogramming'.
+package paxVersion: 1;
+	basicComment: ''.
+
+
+package methodNames
+	add: 'Asserter class' -> #new;
+	add: 'Namespace class' -> #new;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Assertions';
+	add: 'Buoy-Metaprogramming';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Asserter class methodsFor!
+
+new
+
+	^super new initialize! !
+!Asserter class categoriesFor: #new!public! !
+
+!Namespace class methodsFor!
+
+new
+
+	^super new initialize! !
+!Namespace class categoriesFor: #new!public! !
+
+"End of package definition"!
+

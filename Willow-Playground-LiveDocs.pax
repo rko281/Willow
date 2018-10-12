@@ -1,0 +1,99 @@
+﻿| package |
+package := Package name: 'Willow-Playground-LiveDocs'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #WPLiveDocumentation;
+	add: #WPLiveDocumentationBehaviorWebView;
+	add: #WPLiveDocumentationClassCommentWebView;
+	add: #WPLiveDocumentationClassDefinitionCard;
+	add: #WPLiveDocumentationClassHierarchyCard;
+	add: #WPLiveDocumentationContext;
+	add: #WPLiveDocumentationMethodCard;
+	add: #WPLiveDocumentationScopeSelectionWebView;
+	add: #WPLiveDocumentationSession;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Dynamic-Binding';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Grease\Grease-Core';
+	add: '..\Portishead\Portishead-Development';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	add: 'Willow';
+	add: 'Willow-Bootstrap';
+	add: 'Willow-SpinKit';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+GRObject subclass: #WPLiveDocumentationContext
+	instanceVariableNames: 'selectedPackageOptional selectedBehaviorOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationBehaviorWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationClassCommentWebView
+	instanceVariableNames: 'selectedClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationClassDefinitionCard
+	instanceVariableNames: 'selectedClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationClassHierarchyCard
+	instanceVariableNames: 'selectedClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationMethodCard
+	instanceVariableNames: 'method methodPanel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPLiveDocumentationScopeSelectionWebView
+	instanceVariableNames: 'identifiedBehaviorSelection behaviorsListBox packagesDropdown'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowApplication subclass: #WPLiveDocumentation
+	instanceVariableNames: 'contentView'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowSession subclass: #WPLiveDocumentationSession
+	instanceVariableNames: 'applicationContext'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

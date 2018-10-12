@@ -1,0 +1,661 @@
+﻿| package |
+package := Package name: 'Willow-Tests'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #AddTimestampToSourceCommandTest;
+	add: #AjaxAwareErrorHandlerTest;
+	add: #AlertingCommandTest;
+	add: #AsynchronicButtonWebViewTest;
+	add: #AutoFocusComponentCommandTest;
+	add: #BinaryChoiceWebViewTest;
+	add: #CheckboxWebViewTest;
+	add: #CombinedWebInteractionInterpreterTest;
+	add: #ComponentAccessibilityEnrichmentCommandTest;
+	add: #ComponentAttributeCommandTest;
+	add: #ComponentBoundaryCommandTest;
+	add: #ComponentCallbackSettingCommandTest;
+	add: #ComponentClassificationCommandTest;
+	add: #ComponentEnableStatusChangingCommandTest;
+	add: #ComponentFocusingCommandTest;
+	add: #ComponentMetadataCommandTest;
+	add: #ComponentNamingCommandTest;
+	add: #ComponentPlaceholderCommandTest;
+	add: #ComponentReadOnlyCommandTest;
+	add: #ComponentRemovingCommandTest;
+	add: #ComponentRequiredCommandTest;
+	add: #ComponentScriptCommandTest;
+	add: #ComponentStyleClassChangingCommandTest;
+	add: #ComponentTitleCommandTest;
+	add: #ComponentValueSettingCommandTest;
+	add: #CompositeComponentCommandTest;
+	add: #CompositeTableRowCommandTest;
+	add: #ConditionalComponentCommandTest;
+	add: #ConfirmationCommandTest;
+	add: #DateFieldWebViewTest;
+	add: #DelayedCommandTest;
+	add: #DeselectAllOptionsCommandTest;
+	add: #DialogClosingCommandTest;
+	add: #DialogOpeningCommandTest;
+	add: #DisableComponentCommandTest;
+	add: #DisableComponentTabCycleCommandTest;
+	add: #DropDownListWebViewTest;
+	add: #FieldSetWebViewTest;
+	add: #FileDownloadAnchorWebViewTest;
+	add: #FloatCodecTest;
+	add: #FormSubmitCommandTest;
+	add: #GenericContainerWebViewTest;
+	add: #HeadingWebViewTest;
+	add: #Html5ComponentSupplierTest;
+	add: #IdentifiedWebViewTest;
+	add: #ImageWebViewTest;
+	add: #InputFieldMaxLengthCommandTest;
+	add: #InputModeCommandTest;
+	add: #IntegerCodecTest;
+	add: #ISODateCodecTest;
+	add: #JQuery3DeploymentMetadataLibraryTest;
+	add: #JQuery3DevelopmentMetadataLibraryTest;
+	add: #JQuery3FileMetadataLibraryTest;
+	add: #JQuery3OnlineLibraryTest;
+	add: #LabeledWebViewTest;
+	add: #LinkWebViewTest;
+	add: #ListItemWebViewTest;
+	add: #ListLabelingCommandTest;
+	add: #LoadingNotificationCommandTest;
+	add: #MultipleSelectionListBoxWebViewTest;
+	add: #NaturalNumberCodecTest;
+	add: #NullCodecTest;
+	add: #NullTriggeringPolicyTest;
+	add: #NullWebInteractionCommandTest;
+	add: #NumberFieldWebViewTest;
+	add: #OpenLocationCommandTest;
+	add: #PeriodicallyRenderedWebViewTest;
+	add: #PhrasingContainerWebViewTest;
+	add: #PluggableExecutionOnClientCommandTest;
+	add: #PluggableTableRowCommandTest;
+	add: #RadioGroupWebViewTest;
+	add: #ReflectiveCascadingStyleSheetBuilderExtensionTest;
+	add: #RenderingCommandTest;
+	add: #ScrollIntoViewCommandTest;
+	add: #SerializationCommandTest;
+	add: #SetColumnSpanCommandTest;
+	add: #SetComponentSizeCommandTest;
+	add: #SetComponentStyleCommandTest;
+	add: #SetComponentTabIndexCommandTest;
+	add: #SetRowSpanCommandTest;
+	add: #SingleSelectionListBoxWebViewTest;
+	add: #SingleSelectionWebViewTest;
+	add: #SynchronicSubmitButtonWebViewTest;
+	add: #TableWebViewTest;
+	add: #TemporarilyDisablingCommandTest;
+	add: #TextFieldWebViewTest;
+	add: #UnorderedListWebViewTest;
+	add: #WebComponentCommandBuilderTest;
+	add: #WebComponentCommandToTableRowCommandAdapterTest;
+	add: #WebComponentInteractionTest;
+	add: #WebInteractionInterpreterTest;
+	add: #WillowApplicationTest;
+	add: #WillowConstantsTest;
+	add: #WillowJavascriptNamespaceTest;
+	add: #WillowNamespaceFileMetadataLibraryTest;
+	add: #WillowSeasideExtensionsTest;
+	add: #WillowSessionTest;
+	add: #WillowSystemConfigurationTest;
+	add: #WillowTestingApplication;
+	yourself.
+
+package methodNames
+	add: #WARenderingTest -> #apply:toComponentDefinedBy:;
+	add: #WARenderingTest -> #apply:toComponentDefinedBy:afterApplyingDo:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Boardwalk';
+	add: 'Boardwalk-Tests';
+	add: 'Buoy-Assertions';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Grease\Grease-Core';
+	add: '..\Seaside\Javascript\Javascript-Core';
+	add: 'RenoirSt';
+	add: '..\Seaside\Seaside\Seaside-Canvas';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	add: '..\Seaside\Seaside\Seaside-Tests-Canvas';
+	add: '..\Seaside\Seaside\Seaside-Tests-Core';
+	add: '..\Seaside\Seaside\Seaside-Tools-Core';
+	add: '..\Core\Contributions\Camp Smalltalk\SUnit\SUnit';
+	add: 'Willow';
+	yourself).
+
+package setManualPrerequisites: #(
+	'Boardwalk-Tests').
+
+package!
+
+"Class Definitions"!
+
+WillowApplication subclass: #WillowTestingApplication
+	instanceVariableNames: 'componentSupplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #FloatCodecTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #IntegerCodecTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #ISODateCodecTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #JQuery3FileMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #JQuery3OnlineLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #NaturalNumberCodecTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #NullCodecTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #NullWebInteractionCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #ReflectiveCascadingStyleSheetBuilderExtensionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #WillowJavascriptNamespaceTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #WillowSessionTest
+	instanceVariableNames: 'componentSupplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #WillowSystemConfigurationTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #AddTimestampToSourceCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #AlertingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #AsynchronicButtonWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #AutoFocusComponentCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #BinaryChoiceWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #CombinedWebInteractionInterpreterTest
+	instanceVariableNames: 'okButton cancelButton'
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentAccessibilityEnrichmentCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentAttributeCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentBoundaryCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentCallbackSettingCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentClassificationCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentEnableStatusChangingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentFocusingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentMetadataCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentNamingCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentPlaceholderCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentReadOnlyCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentRemovingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentRequiredCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentScriptCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentStyleClassChangingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentTitleCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ComponentValueSettingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #CompositeComponentCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #CompositeTableRowCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ConditionalComponentCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ConfirmationCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DateFieldWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DelayedCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DeselectAllOptionsCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DialogClosingCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DialogOpeningCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DisableComponentCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #DisableComponentTabCycleCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #FieldSetWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #FileDownloadAnchorWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #FormSubmitCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #GenericContainerWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #HeadingWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #Html5ComponentSupplierTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #IdentifiedWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ImageWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #InputFieldMaxLengthCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #InputModeCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #JQuery3DeploymentMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #JQuery3DevelopmentMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #LabeledWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #LinkWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ListItemWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ListLabelingCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #LoadingNotificationCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #MultipleSelectionListBoxWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #NullTriggeringPolicyTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #NumberFieldWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #OpenLocationCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #PeriodicallyRenderedWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #PhrasingContainerWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #PluggableExecutionOnClientCommandTest
+	instanceVariableNames: 'command commandAction'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #PluggableTableRowCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #RenderingCommandTest
+	instanceVariableNames: 'identifiedView command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #ScrollIntoViewCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SerializationCommandTest
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SetColumnSpanCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SetComponentSizeCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SetComponentStyleCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SetComponentTabIndexCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SetRowSpanCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SingleSelectionWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #SynchronicSubmitButtonWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #TableWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #TemporarilyDisablingCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #TextFieldWebViewTest
+	instanceVariableNames: 'notificationWasReceived'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #UnorderedListWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WebComponentCommandBuilderTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WebComponentCommandToTableRowCommandAdapterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WebComponentInteractionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WebInteractionInterpreterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WillowApplicationTest
+	instanceVariableNames: 'applicationStarted'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WillowConstantsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WillowNamespaceFileMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARenderingTest subclass: #WillowSeasideExtensionsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BinaryChoiceWebViewTest subclass: #CheckboxWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewTest subclass: #DropDownListWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewTest subclass: #RadioGroupWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewTest subclass: #SingleSelectionListBoxWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAErrorHandlerTest subclass: #AjaxAwareErrorHandlerTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!WARenderingTest methodsFor!
+
+apply: aWebInteractionObject toComponentDefinedBy: aComponentProvider	^ self		apply: aWebInteractionObject		toComponentDefinedBy: aComponentProvider		afterApplyingDo: [ :canvas :component |  ]!
+
+apply: aWebInteractionObject toComponentDefinedBy: aComponentProvider afterApplyingDo: aPostAction	^ self		renderUsing: [ :canvas |			| component |			component := aComponentProvider cull: canvas.			aWebInteractionObject applyTo: component on: canvas.			aPostAction value: canvas value: component ]! !
+!WARenderingTest categoriesFor: #apply:toComponentDefinedBy:!*Willow/Tests!public! !
+!WARenderingTest categoriesFor: #apply:toComponentDefinedBy:afterApplyingDo:!*Willow/Tests!public! !
+
+"End of package definition"!
+

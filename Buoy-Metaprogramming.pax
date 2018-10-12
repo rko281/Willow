@@ -1,0 +1,94 @@
+﻿| package |
+package := Package name: 'Buoy-Metaprogramming'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #Interface;
+	add: #KeywordMessageSendingCollector;
+	add: #MessageSendingCollector;
+	add: #Namespace;
+	add: #UnaryMessageSendingCollector;
+	yourself.
+
+package methodNames
+	add: #Object -> #isA:;
+	add: #Object -> #isAn:;
+	add: 'Asserter class' -> #new;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Assertions';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Portishead\Portishead-Core';
+	yourself).
+
+package setManualPrerequisites: #(
+	'Portishead-Core').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #Interface
+	instanceVariableNames: 'name messages'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MessageSendingCollector
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #Namespace
+	instanceVariableNames: 'bindings'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MessageSendingCollector subclass: #KeywordMessageSendingCollector
+	instanceVariableNames: 'receiver filterBlock arguments'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MessageSendingCollector subclass: #UnaryMessageSendingCollector
+	instanceVariableNames: 'receiver filterBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Asserter class methodsFor!
+
+new
+
+	^super new initialize! !
+!Asserter class categoriesFor: #new!public! !
+
+!Object methodsFor!
+
+isA: aClass	^self isKindOf: aClass!
+
+isAn: aClass	^self isA: aClass! !
+!Object categoriesFor: #isA:!*Buoy/Metaprogramming!public! !
+!Object categoriesFor: #isAn:!*Buoy/Metaprogramming!public! !
+
+"End of package definition"!
+

@@ -1,0 +1,253 @@
+﻿| package |
+package := Package name: 'Boardwalk'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #HTMLAsserter;
+	add: #IdentifierAssigner;
+	add: #JSDeclareGlobalNamespace;
+	add: #JSExpression;
+	add: #JSFunctionCall;
+	add: #JSNamedFunction;
+	add: #JSNonInlinedIfThenElse;
+	add: #JSTypeOf;
+	add: #WAApplicationDeployed;
+	add: #WAApplicationInDevelopment;
+	add: #WADeploymentAwareFileHandler;
+	add: #WADeploymentAwareFileMetadataLibrary;
+	add: #WADeploymentMode;
+	add: #WAOnlineLibrary;
+	yourself.
+
+package methodNames
+	add: #JSObject -> #asImmediatelyInvokedFunctionExpression;
+	add: #JSObject -> #equalTo:;
+	add: #JSObject -> #identicalTo:;
+	add: #JSObject -> #nonInlinedThen:;
+	add: #JSObject -> #nonInlinedThen:else:;
+	add: #JSObject -> #notIdenticalTo:;
+	add: #JSObject -> #sessionStorage;
+	add: #JSObject -> #typeOf;
+	add: #JSScript -> #call:;
+	add: #JSScript -> #call:with:;
+	add: #JSScript -> #call:with:with:;
+	add: #JSScript -> #call:with:with:with:;
+	add: #JSScript -> #call:withArguments:;
+	add: #JSScript -> #if:then:;
+	add: #JSScript -> #if:then:else:;
+	add: #JSScript -> #var:;
+	add: #WAContentElement -> #anonymousSubResourceIntegrity:;
+	add: #WAFormTag -> #doNotSubmit;
+	add: #WAHtmlCanvas -> #ensureIdFor:;
+	add: #WATagBrush -> #classes:;
+	add: #WATagBrush -> #identifier;
+	add: #WATagBrush -> #identifyIn:;
+	add: #WAUrl -> #/;
+	add: 'JSStream class' -> #undefined;
+	add: 'WAAbstractFileLibrary class' -> #isForDeployment;
+	add: 'WAAbstractFileLibrary class' -> #isForDevelopment;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Assertions';
+	add: 'Buoy-Dynamic-Binding';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Seaside\Javascript\Javascript-Core';
+	add: '..\Seaside\Seaside\Seaside-Canvas';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	add: '..\Seaside\Seaside\Seaside-Tools-Core';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #HTMLAsserter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #IdentifierAssigner
+	instanceVariableNames: 'prefix identifierHolder'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #WADeploymentMode
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAObject subclass: #WAOnlineLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSDecoration subclass: #JSExpression
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSDecoration subclass: #JSNonInlinedIfThenElse
+	instanceVariableNames: 'trueStatement falseStatementOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSDecoration subclass: #JSTypeOf
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSMember subclass: #JSDeclareGlobalNamespace
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSObject subclass: #JSFunctionCall
+	instanceVariableNames: 'functionName parameters'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSFunction subclass: #JSNamedFunction
+	instanceVariableNames: 'name'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAFileMetadataLibrary subclass: #WADeploymentAwareFileMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAFileHandler subclass: #WADeploymentAwareFileHandler
+	instanceVariableNames: 'libraries baseUrlForLibraryOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentMode subclass: #WAApplicationDeployed
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentMode subclass: #WAApplicationInDevelopment
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!JSObject methodsFor!
+
+asImmediatelyInvokedFunctionExpression	^ (self asFunction apply: #()) addDecoration: JSExpression new!
+
+equalTo: anObject	self		addDecoration:			(JSBinary new				operator: '==';				statement: anObject)!
+
+identicalTo: anObject	self		addDecoration:			(JSBinary new				operator: '===';				statement: anObject)!
+
+nonInlinedThen: anObject	self addDecoration: (JSNonInlinedIfThenElse new trueStatement: anObject)!
+
+nonInlinedThen: anObject else: anotherObject	self		addDecoration:			(JSNonInlinedIfThenElse new				trueStatement: anObject;				falseStatement: anotherObject)!
+
+notIdenticalTo: anObject	self		addDecoration:			(JSBinary new				operator: '!!==';				statement: anObject)!
+
+sessionStorage	^self alias: 'sessionStorage'!
+
+typeOf    "Returns the type of the receiver."    self addDecoration: JSTypeOf new! !
+!JSObject categoriesFor: #asImmediatelyInvokedFunctionExpression!*Boardwalk!public! !
+!JSObject categoriesFor: #equalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #identicalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #nonInlinedThen:!*Boardwalk!public! !
+!JSObject categoriesFor: #nonInlinedThen:else:!*Boardwalk!public! !
+!JSObject categoriesFor: #notIdenticalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #sessionStorage!*Boardwalk!public! !
+!JSObject categoriesFor: #typeOf!*Boardwalk!public! !
+
+!JSScript methodsFor!
+
+call: aFunctionName	^ self call: aFunctionName withArguments: #()!
+
+call: aFunctionName with: anObject	^ self call: aFunctionName withArguments: (Array with: anObject)!
+
+call: aFunctionName with: anObject1 with: anObject2	^ self call: aFunctionName withArguments: (Array with: anObject1 with: anObject2)!
+
+call: aFunctionName with: anObject1 with: anObject2 with: anObject3	^ self		call: aFunctionName		withArguments: (Array with: anObject1 with: anObject2 with: anObject3)!
+
+call: aFunctionName withArguments: anArray	^JSFunctionCall for: aFunctionName withAll: anArray !
+
+if: condition then: statement	^ condition nonInlinedThen: statement!
+
+if: condition then: trueStatement else: falseStatement	^ condition nonInlinedThen: trueStatement else: falseStatement!
+
+var: aVariableName	^ JSDeclareGlobalNamespace		named:			(aVariableName isString				ifTrue: [ JSStream on: aVariableName ]				ifFalse: [ aVariableName ])! !
+!JSScript categoriesFor: #call:!*Boardwalk!public! !
+!JSScript categoriesFor: #call:with:!*Boardwalk!public! !
+!JSScript categoriesFor: #call:with:with:!*Boardwalk!public! !
+!JSScript categoriesFor: #call:with:with:with:!*Boardwalk!public! !
+!JSScript categoriesFor: #call:withArguments:!*Boardwalk!public! !
+!JSScript categoriesFor: #if:then:!*Boardwalk!public! !
+!JSScript categoriesFor: #if:then:else:!*Boardwalk!public! !
+!JSScript categoriesFor: #var:!*Boardwalk!public! !
+
+!JSStream class methodsFor!
+
+undefined	^ self on: 'undefined'! !
+!JSStream class categoriesFor: #undefined!*Boardwalk!public! !
+
+!WAAbstractFileLibrary class methodsFor!
+
+isForDeployment	^true!
+
+isForDevelopment	^true! !
+!WAAbstractFileLibrary class categoriesFor: #isForDeployment!*Boardwalk!public! !
+!WAAbstractFileLibrary class categoriesFor: #isForDevelopment!*Boardwalk!public! !
+
+!WAContentElement methodsFor!
+
+anonymousSubResourceIntegrity: theIntegrityMetadata	self		attributeAt: 'integrity' put: theIntegrityMetadata;		attributeAt: 'crossorigin' put: 'anonymous'! !
+!WAContentElement categoriesFor: #anonymousSubResourceIntegrity:!*Boardwalk!public! !
+
+!WAFormTag methodsFor!
+
+doNotSubmit	self onSubmit: 'return false;'! !
+!WAFormTag categoriesFor: #doNotSubmit!*Boardwalk!public! !
+
+!WAHtmlCanvas methodsFor!
+
+ensureIdFor: aTagBrush	aTagBrush id ifNil: [ aTagBrush id: ((IdentifierAssigner prefixedBy: aTagBrush tag) identifyIn: self) ]! !
+!WAHtmlCanvas categoriesFor: #ensureIdFor:!*Boardwalk!public! !
+
+!WATagBrush methodsFor!
+
+classes: cssClasses	cssClasses do: [ :cssClass | self class: cssClass ]!
+
+identifier	^ self id		ifNil: [ AssertionFailed signal: 'The identifier was never assigned' ]		ifNotNil: [ :id | id ]!
+
+identifyIn: aCanvas	self ensureId ! !
+!WATagBrush categoriesFor: #classes:!*Boardwalk!public! !
+!WATagBrush categoriesFor: #identifier!*Boardwalk!public! !
+!WATagBrush categoriesFor: #identifyIn:!*Boardwalk!public! !
+
+!WAUrl methodsFor!
+
+/ aString	^ self with: aString! !
+!WAUrl categoriesFor: #/!*Boardwalk!public! !
+
+"End of package definition"!
+

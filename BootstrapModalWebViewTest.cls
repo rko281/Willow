@@ -1,0 +1,33 @@
+﻿"Filed out from Dolphin Smalltalk 7"!
+
+WARenderingTest subclass: #BootstrapModalWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapModalWebViewTest guid: (GUID fromString: '{2091c82a-5189-4dc6-8fcf-76081a8de40d}')!
+BootstrapModalWebViewTest comment: 'A BootstrapModalWebViewTest is a test class for testing the behavior of BootstrapModalWebView'!
+!BootstrapModalWebViewTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
+!BootstrapModalWebViewTest methodsFor!
+
+agreeButton	^ AsynchronicButtonWebView labeled: 'Agree' applying: [ :button | button addClass bootstrap button + button addClass bootstrap buttonDefault ]!
+
+takeMySoulButton	^ AsynchronicButtonWebView labeled: 'Just take my soul' applying: [ :button | button addClass bootstrap button + button addClass bootstrap buttonPrimary ]!
+
+testOnCloseTrigger	| html footer header dialog |	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].	header := BootstrapModalHeaderWebView dismissableTitled: 'Terms and Conditions'.	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.	dialog onCloseTrigger disable.	html := self render: dialog.	self		assert: html		equals:			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button id="button-id1" class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button id="button-id2" class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id2").click(function(event){$(this).prop("disabled",true)});</script>'!
+
+testOnTriggerDoesNothingWithoutAdditionalActionButtons	| html footer header dialog |	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.	dialog onTrigger disable.	html := self render: dialog.	"The only button is the close one, so no need to generate javascript."	self assert: html equals: '<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div>'!
+
+testOnTriggerWithButtons	| html dialog |	dialog := BootstrapComponentSupplier online dialogBuilder		headerTitled: 'Terms and Conditions';		wrapping: 'Some very large legal stuff. ;)';		closeButtonLabeled: 'Disagree' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ];		addFooterButton: self agreeButton;		addFooterButton: self takeMySoulButton;		build.	dialog onTrigger disable.	html := self render: dialog.	self		assert: html		equals:			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Disagree</button><button id="button-id1" class="btn btn-default" type="button">Agree</button><button id="button-id2" class="btn btn-primary" type="button">Just take my soul</button></div></div></div></div><script type="text/javascript">$("#button-id1").click(function(event){$(this).prop("disabled",true)});$("#button-id2").click(function(event){$(this).prop("disabled",true)});</script>'!
+
+testRenderContentOn	| html footer header dialog |	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.	dialog := BootstrapModalWebView withHeader: header content: 'Some very large legal stuff. ;)' footer: footer.	html := self render: dialog.	self		assert: html		equals:			'<div class="modal" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div>'!
+
+testRenderContentOnWithCommands	| html footer header legalDialog |	footer := BootstrapModalFooterWebView withCloseButtonLabeled: 'Ok' applying: [ :closeButton | closeButton addClass bootstrap buttonLink ].	header := BootstrapModalHeaderWebView titled: 'Terms and Conditions'.	legalDialog := BootstrapModalWebView		withHeader: header		content: 'Some very large legal stuff. ;)'		footer: footer		applyingToDialog: [ :dialog | dialog addClass bootstrap fade ]		andModalDocument: [ :document | document addClass bootstrap modalLarge ].	html := self render: legalDialog.	self		assert: html		equals:			'<div class="modal fade" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Terms and Conditions</h4></div><div class="modal-body">Some very large legal stuff. ;)</div><div class="modal-footer"><button class="btn btn-link" data-dismiss="modal" type="button">Ok</button></div></div></div></div>'! !
+!BootstrapModalWebViewTest categoriesFor: #agreeButton!private! !
+!BootstrapModalWebViewTest categoriesFor: #takeMySoulButton!private! !
+!BootstrapModalWebViewTest categoriesFor: #testOnCloseTrigger!public!tests! !
+!BootstrapModalWebViewTest categoriesFor: #testOnTriggerDoesNothingWithoutAdditionalActionButtons!public!tests! !
+!BootstrapModalWebViewTest categoriesFor: #testOnTriggerWithButtons!public!tests! !
+!BootstrapModalWebViewTest categoriesFor: #testRenderContentOn!public!tests! !
+!BootstrapModalWebViewTest categoriesFor: #testRenderContentOnWithCommands!public!tests! !
+

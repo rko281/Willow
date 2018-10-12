@@ -1,0 +1,123 @@
+﻿| package |
+package := Package name: 'Buoy-Assertions'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #Asserter;
+	add: #AssertionCheck;
+	add: #AssertionChecker;
+	add: #AssertionCheckerBuilder;
+	add: #AssertionFailed;
+	add: #AssertionFailurePolicy;
+	add: #CollectingAssertionFailuresPolicy;
+	add: #ConflictingObjectFound;
+	add: #InstanceCreationFailed;
+	add: #ObjectNotFound;
+	add: #RaiseOnFirstAssertionFailurePolicy;
+	yourself.
+
+package methodNames
+	add: #Error -> #failures;
+	add: 'Error class' -> #signal:;
+	add: 'Error class' -> #signalAll:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #Asserter
+	instanceVariableNames: 'checks'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #AssertionCheck
+	instanceVariableNames: 'factToCheck explanationBlockOrString successAction'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #AssertionChecker
+	instanceVariableNames: 'asserter failurePolicy'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #AssertionCheckerBuilder
+	instanceVariableNames: 'asserter failurePolicyFactory errorToSignal'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #AssertionFailurePolicy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+AssertionFailurePolicy subclass: #CollectingAssertionFailuresPolicy
+	instanceVariableNames: 'failures errorClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+AssertionFailurePolicy subclass: #RaiseOnFirstAssertionFailurePolicy
+	instanceVariableNames: 'errorClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Error subclass: #AssertionFailed
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Error subclass: #ConflictingObjectFound
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Error subclass: #InstanceCreationFailed
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Error subclass: #ObjectNotFound
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Error methodsFor!
+
+failures	^ tag! !
+!Error categoriesFor: #failures!*Buoy/Assertions!public! !
+
+!Error class methodsFor!
+
+signal: aFailureExplanation	^ self new		tag: {aFailureExplanation};		signal: aFailureExplanation!
+
+signalAll: failureExplanations	^ self new		tag: failureExplanations;		signal: ('. ' join: failureExplanations)! !
+!Error class categoriesFor: #signal:!*Buoy/Assertions!public! !
+!Error class categoriesFor: #signalAll:!*Buoy/Assertions!public! !
+
+"End of package definition"!
+

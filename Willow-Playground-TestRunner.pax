@@ -1,0 +1,111 @@
+﻿| package |
+package := Package name: 'Willow-Playground-TestRunner'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #WPMessageTallyWebView;
+	add: #WPTestRunner;
+	add: #WPTestRunnerApplicationContext;
+	add: #WPTestRunnerMessageTallyDialog;
+	add: #WPTestRunnerSession;
+	add: #WPTestRunnerSuiteSelectionWebView;
+	add: #WPTestRunnerTestResultDetailsDialog;
+	add: #WPTestRunnerTestResultWebView;
+	add: #WPTestRunnerToolbar;
+	yourself.
+
+package methodNames
+	add: #TestResult -> #fileOutOn:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Buoy-Dynamic-Binding';
+	add: 'Buoy-Math';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Grease\Grease-Core';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	add: '..\Core\Contributions\Camp Smalltalk\SUnit\SUnit';
+	add: 'Willow';
+	add: 'Willow-Bootstrap';
+	add: 'Willow-SpinKit';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+GRObject subclass: #WPTestRunnerApplicationContext
+	instanceVariableNames: 'currentTestResult selectedTestCaseClasses selectedPackageCategories messageTallyOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPMessageTallyWebView
+	instanceVariableNames: 'rootTally'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPTestRunnerMessageTallyDialog
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPTestRunnerSuiteSelectionWebView
+	instanceVariableNames: 'testCaseClassesListBox identifiedTestCaseClassesSelection packagesListBox'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPTestRunnerTestResultDetailsDialog
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPTestRunnerTestResultWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPTestRunnerToolbar
+	instanceVariableNames: 'runSelectedTestsButton runProfiledButton exportResultButton'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowApplication subclass: #WPTestRunner
+	instanceVariableNames: 'contentView'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowSession subclass: #WPTestRunnerSession
+	instanceVariableNames: 'applicationContext'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!TestResult methodsFor!
+
+fileOutOn: aStream
+
+	self displayOn: aStream! !
+!TestResult categoriesFor: #fileOutOn:!printing!public! !
+
+"End of package definition"!
+

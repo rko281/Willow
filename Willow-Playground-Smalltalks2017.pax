@@ -1,0 +1,225 @@
+﻿| package |
+package := Package name: 'Willow-Playground-Smalltalks2017'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+package basicScriptAt: #postinstall put: '"Register the example applications"
+Smalltalks2017Presentation registerAsDevelopmentApplication.
+WPLiveDocumentation registerAsDevelopmentApplication.
+WPTestRunner registerAsDevelopmentApplication.
+
+"Launch the example server"
+(WASwazooAdaptor port: 8080)
+	codec: (GRCodec forEncoding: ''utf-8'');
+	start.
+ShellLibrary default shellOpen: ''http://localhost:8080/willow101/'''.
+
+package classNames
+	add: #AdvancedComponentsExampleStepWebView;
+	add: #ButtonEvaluatingBlockStepWebView;
+	add: #ButtonExecutingOnClientStepWebView;
+	add: #ButtonRenderingComponentStepWebView;
+	add: #CommandSummaryStepWebView;
+	add: #ComponentSummaryStepWebView;
+	add: #ComponentSupplierStepWebView;
+	add: #ComponentWithCommandsStepWebView;
+	add: #FormTriggeringStepWebView;
+	add: #IntroductionStepWebView;
+	add: #NonInteractiveButtonStepWebView;
+	add: #PlaygroundApplicationsStepWebView;
+	add: #PresentationStepWebView;
+	add: #ProjectLocationStepWebView;
+	add: #RenderingStepWebView;
+	add: #ScreenshotsStepWebView;
+	add: #Smalltalks2017CascadingStyleSheetBuilder;
+	add: #Smalltalks2017FileMetadataLibrary;
+	add: #Smalltalks2017Presentation;
+	add: #SpeakerCardWebView;
+	add: #StyledButtonStepWebView;
+	yourself.
+
+package methodNames
+	add: #ComponentClassificationCommandBuilder -> #browseStep;
+	add: #ComponentClassificationCommandBuilder -> #nextStep;
+	add: #ComponentClassificationCommandBuilder -> #presentationArea;
+	add: #ComponentClassificationCommandBuilder -> #previousStep;
+	add: #ComponentClassificationCommandBuilder -> #screenshot;
+	add: #ComponentClassificationCommandBuilder -> #smalltalks2017;
+	add: #ComponentClassificationCommandBuilder -> #stepButtonContainer;
+	add: #ComponentClassificationCommandBuilder -> #stepContent;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Boardwalk';
+	add: 'Buoy-Dynamic-Binding';
+	add: 'Buoy-Metaprogramming';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Grease\Grease-Core';
+	add: '..\Seaside\Javascript\Javascript-Core';
+	add: '..\Portishead\Portishead-Pragmas';
+	add: '..\Portishead\Portishead-UI';
+	add: 'RenoirSt';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	add: 'Willow';
+	add: 'Willow-Bootstrap';
+	add: 'Willow-Playground-LiveDocs';
+	add: 'Willow-Playground-TestRunner';
+	add: 'Willow-SpinKit';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+WADeploymentAwareFileMetadataLibrary subclass: #Smalltalks2017FileMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #PresentationStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpeakerCardWebView
+	instanceVariableNames: 'panel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #AdvancedComponentsExampleStepWebView
+	instanceVariableNames: 'tableBuilder table periodical delayed'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ButtonEvaluatingBlockStepWebView
+	instanceVariableNames: 'button'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ButtonExecutingOnClientStepWebView
+	instanceVariableNames: 'button'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ButtonRenderingComponentStepWebView
+	instanceVariableNames: 'button companionView'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #CommandSummaryStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ComponentSummaryStepWebView
+	instanceVariableNames: 'checkbox image dropdown'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ComponentSupplierStepWebView
+	instanceVariableNames: 'button dropdown field'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ComponentWithCommandsStepWebView
+	instanceVariableNames: 'input'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #FormTriggeringStepWebView
+	instanceVariableNames: 'button input'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #IntroductionStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #NonInteractiveButtonStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #PlaygroundApplicationsStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ProjectLocationStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #RenderingStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #ScreenshotsStepWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PresentationStepWebView subclass: #StyledButtonStepWebView
+	instanceVariableNames: 'button'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowApplication subclass: #Smalltalks2017Presentation
+	instanceVariableNames: 'currentStepView currentStepIndex stepViews'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+ReflectiveCascadingStyleSheetBuilder subclass: #Smalltalks2017CascadingStyleSheetBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!ComponentClassificationCommandBuilder methodsFor!
+
+browseStep	^ self commandStyledWith: #browseStep!
+
+nextStep	^ self commandStyledWith: #nextStep!
+
+presentationArea	^ self commandStyledWith: #presentationArea!
+
+previousStep	^ self commandStyledWith: #previousStep!
+
+screenshot	^ self commandStyledWith: #screenshot!
+
+smalltalks2017	classificationNamespace := classificationNamespace >> #smalltalks2017!
+
+stepButtonContainer	^ self commandStyledWith: #stepButtonContainer!
+
+stepContent	^ self commandStyledWith: #stepContent! !
+!ComponentClassificationCommandBuilder categoriesFor: #browseStep!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #nextStep!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #presentationArea!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #previousStep!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #screenshot!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #smalltalks2017!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #stepButtonContainer!*Willow/Playground/Smalltalks2017!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #stepContent!*Willow/Playground/Smalltalks2017!public! !
+
+"End of package definition"!
+

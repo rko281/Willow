@@ -1,0 +1,310 @@
+﻿| package |
+package := Package name: 'RenoirSt-HTML'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #UrlRelativeToStyleSheet;
+	yourself.
+
+package methodNames
+	add: #CssDeclarationBlock -> #vendorPropertyAt:put:;
+	add: #CssSelector -> #abbreviation;
+	add: #CssSelector -> #address;
+	add: #CssSelector -> #anchor;
+	add: #CssSelector -> #article;
+	add: #CssSelector -> #aside;
+	add: #CssSelector -> #blockquote;
+	add: #CssSelector -> #body;
+	add: #CssSelector -> #button;
+	add: #CssSelector -> #cite;
+	add: #CssSelector -> #code;
+	add: #CssSelector -> #definitionDescription;
+	add: #CssSelector -> #definitionList;
+	add: #CssSelector -> #definitionTerm;
+	add: #CssSelector -> #div;
+	add: #CssSelector -> #emphasis;
+	add: #CssSelector -> #fieldSet;
+	add: #CssSelector -> #figure;
+	add: #CssSelector -> #figureCaption;
+	add: #CssSelector -> #footer;
+	add: #CssSelector -> #form;
+	add: #CssSelector -> #h1;
+	add: #CssSelector -> #h2;
+	add: #CssSelector -> #h3;
+	add: #CssSelector -> #h4;
+	add: #CssSelector -> #h5;
+	add: #CssSelector -> #h6;
+	add: #CssSelector -> #header;
+	add: #CssSelector -> #headingLevel:;
+	add: #CssSelector -> #horizontalRule;
+	add: #CssSelector -> #image;
+	add: #CssSelector -> #input;
+	add: #CssSelector -> #keyboardInput;
+	add: #CssSelector -> #label;
+	add: #CssSelector -> #legend;
+	add: #CssSelector -> #listItem;
+	add: #CssSelector -> #main;
+	add: #CssSelector -> #nav;
+	add: #CssSelector -> #option;
+	add: #CssSelector -> #optionGroup;
+	add: #CssSelector -> #orderedList;
+	add: #CssSelector -> #paragraph;
+	add: #CssSelector -> #preformatted;
+	add: #CssSelector -> #sample;
+	add: #CssSelector -> #section;
+	add: #CssSelector -> #select;
+	add: #CssSelector -> #small;
+	add: #CssSelector -> #span;
+	add: #CssSelector -> #strong;
+	add: #CssSelector -> #subscript;
+	add: #CssSelector -> #superscript;
+	add: #CssSelector -> #table;
+	add: #CssSelector -> #tableBody;
+	add: #CssSelector -> #tableData;
+	add: #CssSelector -> #tableFooter;
+	add: #CssSelector -> #tableHeader;
+	add: #CssSelector -> #tableHeaderCell;
+	add: #CssSelector -> #tableRow;
+	add: #CssSelector -> #textArea;
+	add: #CssSelector -> #unorderedList;
+	add: #CssSelector -> #variable;
+	add: #ZnUrl -> #cssContentOn:;
+	add: #ZnUrl -> #cssContentRelativeToStyleSheetOn:;
+	add: #ZnUrl -> #relativeToStyleSheet;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Portishead\Portishead-Core';
+	add: 'RenoirSt';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+CssObject subclass: #UrlRelativeToStyleSheet
+	instanceVariableNames: 'url'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!CssDeclarationBlock methodsFor!
+
+vendorPropertyAt: aPropertyName put: aCssValue	self propertyAt: aPropertyName put: aCssValue.	#('-moz-' '-webkit-' '-o-' '-ms-')		do: [ :vendorPrefix | self propertyAt: ('<1s><2s>' expandMacrosWith: vendorPrefix with: aPropertyName) put: aCssValue ]! !
+!CssDeclarationBlock categoriesFor: #vendorPropertyAt:put:!*RenoirSt/HTML!public! !
+
+!CssSelector methodsFor!
+
+abbreviation	 ^self descendantOfType: 'abbr'!
+
+address	 ^self descendantOfType: 'address'!
+
+anchor	 ^self descendantOfType: 'a'!
+
+article	 ^self descendantOfType: 'article'!
+
+aside	 ^self descendantOfType: 'aside'!
+
+blockquote	 ^self descendantOfType: 'blockquote'!
+
+body	 ^self descendantOfType: 'body'!
+
+button	 ^self descendantOfType: 'button'!
+
+cite	 ^self descendantOfType: 'cite'!
+
+code	 ^self descendantOfType: 'code'!
+
+definitionDescription	 ^self descendantOfType: 'dd'!
+
+definitionList	 ^self descendantOfType: 'dl'!
+
+definitionTerm	 ^self descendantOfType: 'dt'!
+
+div	 ^self descendantOfType: 'div'!
+
+emphasis	 ^self descendantOfType: 'em'!
+
+fieldSet	 ^self descendantOfType: 'fieldset'!
+
+figure	 ^self descendantOfType: 'figure'!
+
+figureCaption	 ^self descendantOfType: 'figcaption'!
+
+footer	 ^self descendantOfType: 'footer'!
+
+form	 ^self descendantOfType: 'form'!
+
+h1	^self headingLevel: 1!
+
+h2	^self headingLevel: 2!
+
+h3	^self headingLevel: 3!
+
+h4	^self headingLevel: 4!
+
+h5	^self headingLevel: 5!
+
+h6	^self headingLevel: 6!
+
+header	 ^self descendantOfType: 'header'!
+
+headingLevel: aNaturalNumber	 ^self descendantOfType: ('h<1s>' expandMacrosWith: aNaturalNumber printString)!
+
+horizontalRule	 ^self descendantOfType: 'hr'!
+
+image	 ^self descendantOfType: 'img'!
+
+input	 ^self descendantOfType: 'input'!
+
+keyboardInput	 ^self descendantOfType: 'kbd'!
+
+label	 ^self descendantOfType: 'label'!
+
+legend	 ^self descendantOfType: 'legend'!
+
+listItem	 ^self descendantOfType: 'li'!
+
+main	 ^self descendantOfType: 'main'!
+
+nav	 ^self descendantOfType: 'nav'!
+
+option	 ^self descendantOfType: 'option'!
+
+optionGroup	 ^self descendantOfType: 'optgroup'!
+
+orderedList	 ^self descendantOfType: 'ol'!
+
+paragraph	 ^self descendantOfType: 'p'!
+
+preformatted	 ^self descendantOfType: 'pre'!
+
+sample	 ^self descendantOfType: 'samp'!
+
+section	 ^self descendantOfType: 'section'!
+
+select	 ^self descendantOfType: 'select'!
+
+small	 ^self descendantOfType: 'small'!
+
+span	 ^self descendantOfType: 'span'!
+
+strong	 ^self descendantOfType: 'strong'!
+
+subscript	 ^self descendantOfType: 'sub'!
+
+superscript	 ^self descendantOfType: 'sup'!
+
+table	 ^self descendantOfType: 'table'!
+
+tableBody	 ^self descendantOfType: 'tbody'!
+
+tableData	 ^self descendantOfType: 'td'!
+
+tableFooter	 ^self descendantOfType: 'tfoot'!
+
+tableHeader	 ^self descendantOfType: 'thead'!
+
+tableHeaderCell	 ^self descendantOfType: 'th'!
+
+tableRow	 ^self descendantOfType: 'tr'!
+
+textArea	 ^self descendantOfType: 'textarea'!
+
+unorderedList	 ^self descendantOfType: 'ul'!
+
+variable	 ^self descendantOfType: 'var'! !
+!CssSelector categoriesFor: #abbreviation!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #address!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #anchor!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #article!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #aside!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #blockquote!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #body!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #button!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #cite!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #code!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #definitionDescription!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #definitionList!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #definitionTerm!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #div!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #emphasis!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #fieldSet!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #figure!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #figureCaption!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #footer!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #form!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h1!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h2!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h3!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h4!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h5!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #h6!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #header!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #headingLevel:!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #horizontalRule!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #image!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #input!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #keyboardInput!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #label!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #legend!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #listItem!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #main!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #nav!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #option!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #optionGroup!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #orderedList!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #paragraph!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #preformatted!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #sample!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #section!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #select!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #small!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #span!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #strong!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #subscript!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #superscript!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #table!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableBody!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableData!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableFooter!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableHeader!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableHeaderCell!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #tableRow!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #textArea!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #unorderedList!*RenoirSt/HTML!public! !
+!CssSelector categoriesFor: #variable!*RenoirSt/HTML!public! !
+
+!ZnUrl methodsFor!
+
+cssContentOn: aStream	aStream nextPutAll: 'url("'.	self printOn: aStream.	aStream nextPutAll: '")'!
+
+cssContentRelativeToStyleSheetOn: aStream		aStream nextPutAll: 'url("'.	self isAbsolute		ifTrue: [ self printOn: aStream ]		ifFalse: [ segments do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ].	aStream nextPutAll: '")'!
+
+relativeToStyleSheet	^UrlRelativeToStyleSheet on: self! !
+!ZnUrl categoriesFor: #cssContentOn:!*RenoirSt/HTML!public! !
+!ZnUrl categoriesFor: #cssContentRelativeToStyleSheetOn:!*RenoirSt/HTML!public! !
+!ZnUrl categoriesFor: #relativeToStyleSheet!*RenoirSt/HTML!public! !
+
+"End of package definition"!
+

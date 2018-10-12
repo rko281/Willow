@@ -1,0 +1,84 @@
+﻿| package |
+package := Package name: 'RenoirSt-Seaside'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package methodNames
+	add: #CssAbstractDeclaration -> #javascriptOn:;
+	add: #CssColorUnit -> #javascriptOn:;
+	add: #CssDeclarationBlock -> #greaseString;
+	add: #CssDeclarationBlock -> #javascriptOn:;
+	add: #WATagBrush -> #setStyleTo:;
+	add: #WAUrl -> #cssContentOn:;
+	add: #WAUrl -> #cssContentRelativeToStyleSheetOn:;
+	add: #WAUrl -> #relativeToStyleSheet;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: 'RenoirSt';
+	add: 'RenoirSt-HTML';
+	add: '..\Seaside\Seaside\Seaside-Canvas';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!CssAbstractDeclaration methodsFor!
+
+javascriptOn: aStream	aStream nextPut: $".	self property cssContentOn: aStream.	aStream		nextPut: $";		nextPut: $:;		nextPut: $".	self value cssContentOn: aStream.	aStream nextPut: $"! !
+!CssAbstractDeclaration categoriesFor: #javascriptOn:!*RenoirSt/Seaside!public! !
+
+!CssColorUnit methodsFor!
+
+javascriptOn: aStream	aStream nextPut: $".	self cssContentOn: aStream.	aStream nextPut: $"! !
+!CssColorUnit categoriesFor: #javascriptOn:!*RenoirSt/Seaside!public! !
+
+!CssDeclarationBlock methodsFor!
+
+greaseString	^ String streamContents: [ :stream | self printInlinedOn: stream ]!
+
+javascriptOn: aStream	aStream nextPut: ${.	declarations do: [ :declaration | aStream javascript: declaration ] separatedBy: [ aStream nextPut: $, ].	aStream nextPut: $}! !
+!CssDeclarationBlock categoriesFor: #greaseString!*RenoirSt/Seaside!public! !
+!CssDeclarationBlock categoriesFor: #javascriptOn:!*RenoirSt/Seaside!public! !
+
+!WATagBrush methodsFor!
+
+setStyleTo: aDeclarationAction	| declarationBlock |	declarationBlock := CssDeclarationBlock new.	aDeclarationAction cull: declarationBlock.	self style: declarationBlock! !
+!WATagBrush categoriesFor: #setStyleTo:!*RenoirSt/Seaside!public! !
+
+!WAUrl methodsFor!
+
+cssContentOn: aStream	aStream nextPutAll: 'url("'.	host isNil		ifTrue: [ aStream nextPut: $/.			self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ]		ifFalse: [ self printOn: aStream ].	aStream nextPutAll: '")'!
+
+cssContentRelativeToStyleSheetOn: aStream	aStream nextPutAll: 'url("'.	host isNil		ifTrue: [ self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ]		ifFalse: [ self printOn: aStream ].	aStream nextPutAll: '")'!
+
+relativeToStyleSheet	^UrlRelativeToStyleSheet on: self! !
+!WAUrl categoriesFor: #cssContentOn:!*RenoirSt/Seaside!public! !
+!WAUrl categoriesFor: #cssContentRelativeToStyleSheetOn:!*RenoirSt/Seaside!public! !
+!WAUrl categoriesFor: #relativeToStyleSheet!*RenoirSt/Seaside!public! !
+
+"End of package definition"!
+

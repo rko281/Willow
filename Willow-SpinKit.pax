@@ -1,0 +1,126 @@
+﻿| package |
+package := Package name: 'Willow-SpinKit'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, September 2018.'.
+
+
+package classNames
+	add: #SpinKitChasingDots;
+	add: #SpinKitCircle;
+	add: #SpinKitCssStyles;
+	add: #SpinKitCubeGrid;
+	add: #SpinKitDoubleBounce;
+	add: #SpinKitFadingCircle;
+	add: #SpinKitFoldingCube;
+	add: #SpinKitMetadataLibrary;
+	add: #SpinKitOnlineLibrary;
+	add: #SpinKitPulse;
+	add: #SpinKitRotatingPlane;
+	add: #SpinKitTripleBounce;
+	add: #SpinKitWanderingCubes;
+	add: #SpinKitWave;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'Boardwalk';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Grease\Grease-Core';
+	add: '..\Core\Contributions\IDB\IDB Duration';
+	add: '..\Seaside\Seaside\Seaside-Core';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #SpinKitCssStyles
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentAwareFileMetadataLibrary subclass: #SpinKitMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAOnlineLibrary subclass: #SpinKitOnlineLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitChasingDots
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitCircle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitCubeGrid
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitDoubleBounce
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitFadingCircle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitFoldingCube
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitPulse
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitRotatingPlane
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitTripleBounce
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitWanderingCubes
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitWave
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

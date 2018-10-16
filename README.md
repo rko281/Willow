@@ -16,5 +16,5 @@ Dolphin port created September 2018.
 
 ### Manual Installation
 * Follow the Manual Installation instructions for [Seaside](https://github.com/rko281/Seaside)
-* This repository should be cloned/downloaded to {image directory}\Willow
+* This repository should be cloned/downloaded to your image directory
 * Install package `Willow-Playground-Smalltalks2017` - this will load all required prerequisites and start the example application

@@ -7,7 +7,7 @@ Dolphin port created September 2018.
 * Install [Dolphin Smalltalk 7.1](https://github.com/dolphinsmalltalk/Dolphin)
 
 ### Automated Installation
-* Download and install the [GitHub Package Manager](https://github.com/rko281/GitHub)
+* Download and install [GitHub Package Manager](https://github.com/rko281/GitHub)
 * Evaluate:
   `GitHubPackageManager install: 'rko281/Willow/Willow-Playground-Smalltalks2017'`
 * All required packages and prerequisites will be downloaded and installed

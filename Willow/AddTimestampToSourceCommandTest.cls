@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #AddTimestampToSourceCommandTest
+BWRenderingTest subclass: #AddTimestampToSourceCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-AddTimestampToSourceCommandTest guid: (GUID fromString: '{6bc179ef-2004-4632-b746-c35fbc2b410c}')!
+AddTimestampToSourceCommandTest guid: (GUID fromString: '{50752486-1082-45ca-bc4b-5c0b6287029d}')!
 AddTimestampToSourceCommandTest comment: ''!
 !AddTimestampToSourceCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !AddTimestampToSourceCommandTest methodsFor!

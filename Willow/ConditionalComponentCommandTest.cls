@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ConditionalComponentCommandTest
+BWRenderingTest subclass: #ConditionalComponentCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ConditionalComponentCommandTest guid: (GUID fromString: '{95ba59c1-0bec-4867-a43f-a159a175ea20}')!
+ConditionalComponentCommandTest guid: (GUID fromString: '{f3210921-2f13-433c-902f-fe9dc61370e8}')!
 ConditionalComponentCommandTest comment: 'A ConditionalComponentCommandTest is a test class for testing the behavior of ConditionalComponentCommand'!
 !ConditionalComponentCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ConditionalComponentCommandTest methodsFor!

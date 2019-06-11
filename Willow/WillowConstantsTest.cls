@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WillowConstantsTest
+BWRenderingTest subclass: #WillowConstantsTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WillowConstantsTest guid: (GUID fromString: '{80895007-c257-46b9-b0b7-1375ce037b5c}')!
+WillowConstantsTest guid: (GUID fromString: '{65fb59a0-f8a2-4884-9bf9-bfc7fa15a6f2}')!
 WillowConstantsTest comment: 'A WillowConstantsTest is a test class for testing the constants provided by the library'!
 !WillowConstantsTest categoriesForClass!Willow-Tests-Frontend! !
 !WillowConstantsTest methodsFor!

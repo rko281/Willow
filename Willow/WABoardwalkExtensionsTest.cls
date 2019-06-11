@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WABoardwalkExtensionsTest
+BWRenderingTest subclass: #WABoardwalkExtensionsTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WABoardwalkExtensionsTest guid: (GUID fromString: '{4f58948f-5109-45a9-8aea-c52828556cf3}')!
+WABoardwalkExtensionsTest guid: (GUID fromString: '{77055a99-bcbf-4e8a-9e71-f51551dda3bb}')!
 WABoardwalkExtensionsTest comment: 'I''m a test of Seaside extensions'!
 !WABoardwalkExtensionsTest categoriesForClass!Boardwalk-Tests-WebApplication! !
 !WABoardwalkExtensionsTest methodsFor!

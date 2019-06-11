@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -23,27 +23,23 @@ package classNames
 	add: #WPTestRunnerToolbar;
 	yourself.
 
-package methodNames
-	add: #TestResult -> #fileOutOn:;
-	yourself.
-
 package binaryGlobalNames: (Set new
 	yourself).
 
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Buoy-Dynamic-Binding';
-	add: 'Buoy-Math';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Grease\Grease-Core';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: '..\Core\Contributions\Camp Smalltalk\SUnit\SUnit';
-	add: 'Willow';
-	add: 'Willow-Bootstrap';
-	add: 'Willow-SpinKit';
-	yourself).
+package setPrerequisites: #(
+	'Buoy-Dynamic-Binding'
+	'Buoy-Math'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Portishead\Portishead-SUnit'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit'
+	'Willow'
+	'Willow-Bootstrap'
+	'Willow-SpinKit').
 
 package!
 
@@ -99,13 +95,6 @@ WillowSession subclass: #WPTestRunnerSession
 
 
 "Loose Methods"!
-
-!TestResult methodsFor!
-
-fileOutOn: aStream
-
-	self displayOn: aStream! !
-!TestResult categoriesFor: #fileOutOn:!printing!public! !
 
 "End of package definition"!
 

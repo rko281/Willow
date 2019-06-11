@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentTitleCommandTest
+BWRenderingTest subclass: #ComponentTitleCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentTitleCommandTest guid: (GUID fromString: '{92298510-b68f-4079-a204-54eb24e99c90}')!
+ComponentTitleCommandTest guid: (GUID fromString: '{ec7bfde3-9b32-404e-a576-08ea33a3694c}')!
 ComponentTitleCommandTest comment: 'A ComponentTitleCommandTest is a test class for testing the behavior of ComponentTitleCommand'!
 !ComponentTitleCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentTitleCommandTest methodsFor!

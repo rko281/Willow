@@ -5,12 +5,12 @@ CssObject subclass: #CssComment
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CssComment guid: (GUID fromString: '{93d6f896-42e4-4a97-ac04-606c5eb0f745}')!
+CssComment guid: (GUID fromString: '{49040c28-df80-433a-92d6-c00f3ff49ece}')!
 CssComment comment: 'A CssComment is a representation of a textual comment'!
 !CssComment categoriesForClass!RenoirSt-Common! !
 !CssComment methodsFor!
 
-cssContentOn: aStream	comment notEmpty		ifFalse: [ ^ self ].	aStream nextPutAll: '/*'.	comment cssContentOn: aStream.	aStream		nextPutAll: '*/';		newLine!
+cssContentOn: aStream	[ aStream nextPutAll: '/*'.	comment cssContentOn: aStream.	aStream		nextPutAll: '*/';		newLine	] unless: comment isEmpty!
 
 initializeFor: aCommentText	comment  := aCommentText ! !
 !CssComment categoriesFor: #cssContentOn:!Printing!public! !

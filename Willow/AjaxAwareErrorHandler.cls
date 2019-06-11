@@ -5,14 +5,14 @@ WAHtmlErrorHandler subclass: #AjaxAwareErrorHandler
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-AjaxAwareErrorHandler guid: (GUID fromString: '{76b18698-f722-440f-ae1c-c7b83f364e9a}')!
+AjaxAwareErrorHandler guid: (GUID fromString: '{3bdadb81-e6bb-4370-a143-af649c5e4a89}')!
 AjaxAwareErrorHandler comment: 'I''m an error handler supporting a different handling for AJAX requests'!
 !AjaxAwareErrorHandler categoriesForClass!Willow-Applications! !
 !AjaxAwareErrorHandler methodsFor!
 
-handleDefault: anException	self valueReportingActionWhenHandling: anException.	self requestContext request isXmlHttpRequest		ifTrue: [ self respondToXmlHttpRequestWith: anException messageText ]		ifFalse: [ super handleDefault: anException ]!
+handleDefault: anException	self valueReportingActionWhenHandling: anException.	self requestContext request isXmlHttpRequest		then: [ self respondToXmlHttpRequestWith: anException messageText ]		otherwise: [ super handleDefault: anException ]!
 
-handleException: anException	self requestContext request isXmlHttpRequest		ifTrue: [			^ajaxExceptionHandlers keys				detect: [:key | key handles: anException]				ifFound: [:key | (ajaxExceptionHandlers at: key) cull: anException cull: self]				ifNone: [super handleException: anException]].	^super handleException: anException!
+handleException: anException	^ self requestContext request isXmlHttpRequest		then: [ ajaxExceptionHandlers keys				detect: [ :key | key handles: anException ]				ifFound: [ :key | ( ajaxExceptionHandlers at: key ) cull: anException cull: self ]				ifNone: [ super handleException: anException ]			]		otherwise: [ super handleException: anException ]!
 
 initializeDefaults	ajaxExceptionHandlers := GRSmallDictionary new.	self		reportingAction: [ :errorHandler |  ];		updateRootWith: [ :root |  ];		renderNonAjaxErrorsWith: [ :canvas :exception | super renderContentForException: exception on: canvas ]!
 

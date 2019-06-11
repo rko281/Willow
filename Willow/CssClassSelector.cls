@@ -5,7 +5,7 @@ CssSelector subclass: #CssClassSelector
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CssClassSelector guid: (GUID fromString: '{3e51da3b-5f4b-456c-8e5a-c53685410158}')!
+CssClassSelector guid: (GUID fromString: '{fa4e7456-7cbd-4a06-8893-cfb159abd1e7}')!
 CssClassSelector comment: 'The class attribute assigns one or more class names to an element. The element may be said to belong to these classes. A class name may be shared by several element instances. The class attribute has several roles:- As a style sheet selector (when an author wishes to assign style information to a set of elements).- For general purpose processing by user agents.'!
 !CssClassSelector categoriesForClass!RenoirSt-Selectors! !
 !CssClassSelector methodsFor!

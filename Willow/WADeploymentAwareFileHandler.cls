@@ -5,7 +5,7 @@ WAFileHandler subclass: #WADeploymentAwareFileHandler
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WADeploymentAwareFileHandler guid: (GUID fromString: '{2bf36dc5-806d-4b5e-8e75-7390fedf8043}')!
+WADeploymentAwareFileHandler guid: (GUID fromString: '{bf6335bd-d568-494b-978a-a66923716eac}')!
 WADeploymentAwareFileHandler comment: 'I''m a File Handler that allows to configure the available file library classes.'!
 !WADeploymentAwareFileHandler categoriesForClass!Boardwalk-WebApplication! !
 !WADeploymentAwareFileHandler methodsFor!
@@ -24,7 +24,7 @@ libraries	^libraries ! !
 
 !WADeploymentAwareFileHandler class methodsFor!
 
-install: fileHandler	WAFileHandler default: fileHandler.	WAAdmin defaultDispatcher register: fileHandler at: 'files'.	^ fileHandler!
+install: fileHandler	WAFileHandler default: fileHandler.	WADispatcher default register: fileHandler at: 'files'.	^ fileHandler!
 
 installAsFileHandlerAccordingTo: aDeploymentMode	| libraries fileHandler |	libraries := aDeploymentMode filter: WAAbstractFileLibrary libraries.	fileHandler := self providing: libraries.	^ self install: fileHandler!
 

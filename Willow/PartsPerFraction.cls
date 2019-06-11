@@ -5,7 +5,7 @@ Number subclass: #PartsPerFraction
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PartsPerFraction guid: (GUID fromString: '{5847cd3e-de4e-4677-8303-3858e8536045}')!
+PartsPerFraction guid: (GUID fromString: '{15e751f5-0e40-4f6d-ac91-4026dd1020ce}')!
 PartsPerFraction comment: 'I''m an abstract class representing several kinds of parts-per-fraction objects: like percentages, permille, basis point, etc.'!
 !PartsPerFraction categoriesForClass!Buoy-Math! !
 !PartsPerFraction methodsFor!
@@ -28,6 +28,8 @@ adaptToInteger: anInteger andSend: aSymbol		^anInteger adaptToInteger: ratio  
 
 asFloat	^ ratio asFloat!
 
+asFraction	^ ratio asFraction!
+
 asNumber	^ ratio!
 
 hash	^ ratio hash!
@@ -48,6 +50,7 @@ value	^ratio * self class fraction ! !
 !PartsPerFraction categoriesFor: #adaptToFraction:andSend:!converting!public! !
 !PartsPerFraction categoriesFor: #adaptToInteger:andSend:!converting!public! !
 !PartsPerFraction categoriesFor: #asFloat!converting!public! !
+!PartsPerFraction categoriesFor: #asFraction!converting!public! !
 !PartsPerFraction categoriesFor: #asNumber!converting!public! !
 !PartsPerFraction categoriesFor: #hash!hash!public! !
 !PartsPerFraction categoriesFor: #initializeRatio:!initialization!public! !

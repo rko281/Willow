@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SetRowSpanCommandTest
+BWRenderingTest subclass: #SetRowSpanCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SetRowSpanCommandTest guid: (GUID fromString: '{6b6dfc6d-0c95-4b67-9ade-2cbc8b0a03bd}')!
+SetRowSpanCommandTest guid: (GUID fromString: '{8bf469c6-216e-4f61-8657-2d7f7692ff2f}')!
 SetRowSpanCommandTest comment: 'A SetRowSpanCommandTest is a test class for testing the behavior of SetRowSpanCommand'!
 !SetRowSpanCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !SetRowSpanCommandTest methodsFor!

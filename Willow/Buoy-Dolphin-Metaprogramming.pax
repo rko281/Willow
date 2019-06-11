@@ -1,7 +1,14 @@
 ﻿| package |
 package := Package name: 'Buoy-Dolphin-Metaprogramming'.
 package paxVersion: 1;
-	basicComment: ''.
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package methodNames
@@ -15,10 +22,9 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Buoy-Assertions';
-	add: 'Buoy-Metaprogramming';
-	yourself).
+package setPrerequisites: #(
+	'Buoy-Assertions'
+	'Buoy-Metaprogramming').
 
 package!
 

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #LabeledWebViewTest
+BWRenderingTest subclass: #LabeledWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-LabeledWebViewTest guid: (GUID fromString: '{da372770-ae69-49a4-9c39-3f76a9e30436}')!
+LabeledWebViewTest guid: (GUID fromString: '{ed9de7f9-308e-4fef-a008-f7b56f7db206}')!
 LabeledWebViewTest comment: 'A LabeledWebViewTest is a test class for testing the behavior of LabeledWebView'!
 !LabeledWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !LabeledWebViewTest methodsFor!

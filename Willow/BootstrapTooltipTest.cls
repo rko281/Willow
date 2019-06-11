@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapTooltipTest
+BWRenderingTest subclass: #BootstrapTooltipTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapTooltipTest guid: (GUID fromString: '{9c91eba0-56bb-4b2c-b2f0-504e8029874c}')!
+BootstrapTooltipTest guid: (GUID fromString: '{774b65f1-ce30-4b05-97fc-346bb13009b3}')!
 BootstrapTooltipTest comment: 'A BootstrapTooltipTest is a test class for testing the behavior of BootstrapTooltip'!
 !BootstrapTooltipTest categoriesForClass!Willow-Bootstrap-Tests-Plugins! !
 !BootstrapTooltipTest methodsFor!

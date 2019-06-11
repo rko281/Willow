@@ -1,18 +1,18 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #DateFieldWebViewTest
+BWRenderingTest subclass: #DateFieldWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-DateFieldWebViewTest guid: (GUID fromString: '{2a050f37-f61e-47fc-8f6d-8978487edb11}')!
+DateFieldWebViewTest guid: (GUID fromString: '{4c07da56-ff86-4c7f-b0b1-47458b3915eb}')!
 DateFieldWebViewTest comment: 'A DateFieldWebViewTest is a test class for testing the behavior of DateFieldWebView'!
 !DateFieldWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !DateFieldWebViewTest methodsFor!
 
 changeNotifiedBy: aTextFieldWebView 		notificationWasReceived := true!
 
-testDate	| dateField html currentDate |	dateField := DateFieldWebView applying: [ :field |  ].	self should: [ dateField date ] raise: InstanceCreationFailed.	currentDate := Date newDay: 1 monthIndex: 1 year: 2001.	dateField changeDateTo: currentDate.	self assert: dateField date equals: currentDate.	html := self render: dateField.	self assert: html equals: '<input value="2001-01-01" name="1" type="date"/>'!
+testDate	| dateField html currentDate |	dateField := DateFieldWebView applying: [ :field |  ].	self should: [ dateField date ] raise: InstanceCreationFailed.	currentDate := Date newDay: 1 month: 1 year: 2001.	dateField changeDateTo: currentDate.	self assert: dateField date equals: currentDate.	html := self render: dateField.	self assert: html equals: '<input value="2001-01-01" name="1" type="date"/>'!
 
 testIdentifyIn	| dateField html |	dateField := DateFieldWebView applying: [ :field |  ].	html := self		renderUsing: [ :canvas | 			dateField identifyIn: canvas.			canvas render: dateField ].	self assert: html equals: '<input value="" name="2" id="date-field-id1" type="date"/>'!
 

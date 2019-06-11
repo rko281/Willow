@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ScrollIntoViewCommandTest
+BWRenderingTest subclass: #ScrollIntoViewCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ScrollIntoViewCommandTest guid: (GUID fromString: '{c606d46e-cf68-4972-bc06-673d178607d4}')!
+ScrollIntoViewCommandTest guid: (GUID fromString: '{0f0373e6-7456-4344-b97f-5d50c6e4f32c}')!
 ScrollIntoViewCommandTest comment: 'A ScrollIntoViewCommandTest is a test class for testing the behavior of ScrollIntoViewCommand'!
 !ScrollIntoViewCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ScrollIntoViewCommandTest methodsFor!

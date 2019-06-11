@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapToggableTabsBuilderTest
+BWRenderingTest subclass: #BootstrapToggableTabsBuilderTest
 	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapToggableTabsBuilderTest guid: (GUID fromString: '{49a8f818-73b5-4aa5-a4bb-5ff96c8441d1}')!
+BootstrapToggableTabsBuilderTest guid: (GUID fromString: '{702c84c2-e439-4df0-bb38-c089cdff66ad}')!
 BootstrapToggableTabsBuilderTest comment: 'A BootstrapToggableTabsBuilderTest is a test class for testing the behavior of BootstrapToggableTabsBuilder'!
 !BootstrapToggableTabsBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapToggableTabsBuilderTest methodsFor!

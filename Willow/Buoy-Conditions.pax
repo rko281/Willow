@@ -1,0 +1,90 @@
+﻿| package |
+package := Package name: 'Buoy-Conditions'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
+
+
+package classNames
+	add: #ArithmeticCondition;
+	add: #CompositeCondition;
+	add: #Condition;
+	add: #NegatedCondition;
+	add: #RegexCondition;
+	yourself.
+
+package methodNames
+	add: #BlockClosure -> #unless:;
+	add: #BlockClosure -> #unless:inWhichCase:;
+	add: #Boolean -> #then:;
+	add: #Boolean -> #then:otherwise:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #Condition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Condition subclass: #ArithmeticCondition
+	instanceVariableNames: 'value arithmeticOperator'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Condition subclass: #CompositeCondition
+	instanceVariableNames: 'conditions compositionPolicy'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Condition subclass: #NegatedCondition
+	instanceVariableNames: 'condition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Condition subclass: #RegexCondition
+	instanceVariableNames: 'pattern'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BlockClosure methodsFor!
+
+unless: aBoolean	aBoolean ifFalse: self!
+
+unless: aBoolean inWhichCase: anAlternativeBlock	^ aBoolean then: anAlternativeBlock otherwise: self! !
+!BlockClosure categoriesFor: #unless:!*Buoy/Conditions!public! !
+!BlockClosure categoriesFor: #unless:inWhichCase:!*Buoy/Conditions!public! !
+
+!Boolean methodsFor!
+
+then: aBlock	self ifTrue: aBlock !
+
+then: aTrueBlock otherwise: aFalseBlock	^ self		ifTrue: aTrueBlock		ifFalse: aFalseBlock! !
+!Boolean categoriesFor: #then:!*Buoy/Conditions!public! !
+!Boolean categoriesFor: #then:otherwise:!*Buoy/Conditions!public! !
+
+"End of package definition"!
+

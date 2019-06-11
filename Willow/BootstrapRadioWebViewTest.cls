@@ -5,7 +5,7 @@ SingleSelectionWebViewTest subclass: #BootstrapRadioWebViewTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapRadioWebViewTest guid: (GUID fromString: '{d59089d2-696c-47f4-babd-2dd77e976593}')!
+BootstrapRadioWebViewTest guid: (GUID fromString: '{3ea5ecfe-cba7-4565-8d75-97f8c1809160}')!
 BootstrapRadioWebViewTest comment: ''!
 !BootstrapRadioWebViewTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapRadioWebViewTest methodsFor!
@@ -18,7 +18,7 @@ testOnTrigger	| radioGroup html |	radioGroup := self newSingleSelectionView.
 
 testRenderContentOnWithElements	| radioGroup html |	radioGroup := self newSingleSelectionView.	radioGroup allowAnyOf: #('Buenos Aires' 'CABA').	html := self render: radioGroup.	self		assert: html		equals:			'<label><input name="1" value="1" type="radio"/>Buenos Aires</label><label><input name="1" value="2" type="radio"/>CABA</label>'!
 
-testRenderContentOnWithElementsAndSomethingSelected	| radioGroup html |	radioGroup := self newSingleSelectionView.	radioGroup allowAnyOf: #('Buenos Aires' 'CABA').	radioGroup chooseAnySatisfying: [ :place | true ] ifNone: [ self fail ].	html := self render: radioGroup.	self		assert: html		equals:			'<label><input name="1" checked="checked" value="1" type="radio"/>Buenos Aires</label><label><input name="1" value="2" type="radio"/>CABA</label>'.	radioGroup chooseAnySatisfying: [ :place | place beginsWith: 'C' ] ifNone: [ self fail ].	html := self render: radioGroup.	self		assert: html		equals:			'<label><input name="1" value="1" type="radio"/>Buenos Aires</label><label><input name="1" checked="checked" value="2" type="radio"/>CABA</label>'!
+testRenderContentOnWithElementsAndSomethingSelected	| radioGroup html |	radioGroup := self newSingleSelectionView.	radioGroup allowAnyOf: #('Buenos Aires' 'CABA').	radioGroup chooseAnySatisfying: [ :place | true ] ifNone: [ self fail ].	html := self render: radioGroup.	self		assert: html		equals:			'<label><input name="1" checked value="1" type="radio"/>Buenos Aires</label><label><input name="1" value="2" type="radio"/>CABA</label>'.	radioGroup chooseAnySatisfying: [ :place | place beginsWith: 'C' ] ifNone: [ self fail ].	html := self render: radioGroup.	self		assert: html		equals:			'<label><input name="1" value="1" type="radio"/>Buenos Aires</label><label><input name="1" checked value="2" type="radio"/>CABA</label>'!
 
 testRenderingWhenEmptyDoesNotProduceHTMLContent	| radioGroup html |	radioGroup := self newSingleSelectionView.	html := self render: radioGroup.	self assert: html isEmpty!
 

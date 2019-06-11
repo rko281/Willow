@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapLabeledWebViewTest
+BWRenderingTest subclass: #BootstrapLabeledWebViewTest
 	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapLabeledWebViewTest guid: (GUID fromString: '{37035414-73ff-416b-ae4a-d18e46fea6e0}')!
+BootstrapLabeledWebViewTest guid: (GUID fromString: '{634fd257-0b4e-418b-823b-bec322792e01}')!
 BootstrapLabeledWebViewTest comment: 'A BootstrapLabeledWebViewTest is a test class for testing the behavior of BootstrapLabeledWebView'!
 !BootstrapLabeledWebViewTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapLabeledWebViewTest methodsFor!

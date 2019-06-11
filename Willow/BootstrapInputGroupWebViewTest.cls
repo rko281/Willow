@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapInputGroupWebViewTest
+BWRenderingTest subclass: #BootstrapInputGroupWebViewTest
 	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapInputGroupWebViewTest guid: (GUID fromString: '{9befdbdd-255b-4c5c-8887-d1aabd1d2376}')!
+BootstrapInputGroupWebViewTest guid: (GUID fromString: '{d05598d3-5670-4295-ac64-73e6df7d1d96}')!
 BootstrapInputGroupWebViewTest comment: 'A BootstrapInputGroupWebViewTest is a test class for testing the behavior of BootstrapInputGroupWebView'!
 !BootstrapInputGroupWebViewTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapInputGroupWebViewTest methodsFor!

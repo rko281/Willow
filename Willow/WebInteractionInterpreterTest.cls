@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WebInteractionInterpreterTest
+BWRenderingTest subclass: #WebInteractionInterpreterTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: 'Willow'
 	classInstanceVariableNames: ''!
-WebInteractionInterpreterTest guid: (GUID fromString: '{fb43ce47-302d-4515-b673-c0750ed5b4ac}')!
+WebInteractionInterpreterTest guid: (GUID fromString: '{1fcda78c-4eaa-493b-8be1-1667d43d7097}')!
 WebInteractionInterpreterTest comment: ''!
 !WebInteractionInterpreterTest categoriesForClass!Willow-Tests-WebInteraction! !
 !WebInteractionInterpreterTest methodsFor!

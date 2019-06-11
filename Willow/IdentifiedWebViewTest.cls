@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #IdentifiedWebViewTest
+BWRenderingTest subclass: #IdentifiedWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-IdentifiedWebViewTest guid: (GUID fromString: '{caa5b9f9-cba0-4cf1-ab9a-d2d84def8c6d}')!
+IdentifiedWebViewTest guid: (GUID fromString: '{853f326d-41fd-41b6-af8f-725e4dae7fb6}')!
 IdentifiedWebViewTest comment: 'An IdentifiedWebViewTest is a test class for testing the behavior of IdentifiedWebView'!
 !IdentifiedWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !IdentifiedWebViewTest methodsFor!

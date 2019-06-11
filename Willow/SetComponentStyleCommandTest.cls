@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SetComponentStyleCommandTest
+BWRenderingTest subclass: #SetComponentStyleCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SetComponentStyleCommandTest guid: (GUID fromString: '{45e0cdb1-062f-4d36-9027-6f35942b271d}')!
+SetComponentStyleCommandTest guid: (GUID fromString: '{6aa45f02-e6a1-49c9-a1fa-3a050845a6bf}')!
 SetComponentStyleCommandTest comment: 'A SetComponentStyleCommandTest is a test class for testing the behavior of SetComponentStyleCommand'!
 !SetComponentStyleCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !SetComponentStyleCommandTest methodsFor!

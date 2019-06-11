@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #PeriodicallyRenderedWebViewTest
+BWRenderingTest subclass: #PeriodicallyRenderedWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PeriodicallyRenderedWebViewTest guid: (GUID fromString: '{101253e9-dbf0-45e7-afcf-c502b1040959}')!
+PeriodicallyRenderedWebViewTest guid: (GUID fromString: '{fd1a5c18-b38f-48fa-9f78-2d058c5632a6}')!
 PeriodicallyRenderedWebViewTest comment: 'A PeriodicallyRenderedWebViewTest is a test class for testing the behavior of PeriodicallyRenderedWebView'!
 !PeriodicallyRenderedWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !PeriodicallyRenderedWebViewTest methodsFor!

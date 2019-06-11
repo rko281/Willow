@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapDialogClosingCommandTest
+BWRenderingTest subclass: #BootstrapDialogClosingCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDialogClosingCommandTest guid: (GUID fromString: '{8f793881-daa2-464c-916e-62b10c4e6722}')!
+BootstrapDialogClosingCommandTest guid: (GUID fromString: '{2cfb0011-140b-4076-926d-9d23d5b13d5f}')!
 BootstrapDialogClosingCommandTest comment: 'A BootstrapDialogClosingCommandTest is a test class for testing the behavior of DialogClosingCommand using the Bootstrap Component Supplier'!
 !BootstrapDialogClosingCommandTest categoriesForClass!Willow-Bootstrap-Tests-WebInteraction! !
 !BootstrapDialogClosingCommandTest methodsFor!

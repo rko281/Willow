@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 package basicScriptAt: #postinstall put: '"Register the example applications"
 Smalltalks2017Presentation registerAsDevelopmentApplication.
@@ -16,9 +16,7 @@ WPLiveDocumentation registerAsDevelopmentApplication.
 WPTestRunner registerAsDevelopmentApplication.
 
 "Launch the example server"
-(WASwazooAdaptor port: 8080)
-	codec: (GRCodec forEncoding: ''utf-8'');
-	start.
+(WAHttpServerAdaptor port: 8080) start.
 ShellLibrary default shellOpen: ''http://localhost:8080/willow101/'''.
 
 package classNames
@@ -62,23 +60,23 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Boardwalk';
-	add: 'Buoy-Dynamic-Binding';
-	add: 'Buoy-Metaprogramming';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Grease\Grease-Core';
-	add: '..\Seaside\Javascript\Javascript-Core';
-	add: '..\Portishead\Portishead-Pragmas';
-	add: '..\Portishead\Portishead-UI';
-	add: 'RenoirSt';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: 'Willow';
-	add: 'Willow-Bootstrap';
-	add: 'Willow-Playground-LiveDocs';
-	add: 'Willow-Playground-TestRunner';
-	add: 'Willow-SpinKit';
-	yourself).
+package setPrerequisites: #(
+	'Boardwalk'
+	'Buoy-Dynamic-Binding'
+	'Buoy-Metaprogramming'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'..\Portishead\Portishead-UI'
+	'RenoirSt'
+	'..\Seaside\Seaside\Seaside-Core'
+	'Willow'
+	'Willow-Bootstrap'
+	'Willow-Playground-LiveDocs'
+	'Willow-Playground-TestRunner'
+	'Willow-SpinKit').
 
 package!
 

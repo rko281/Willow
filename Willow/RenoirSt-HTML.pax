@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -88,10 +88,9 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: '..\Portishead\Portishead-Core';
-	add: 'RenoirSt';
-	yourself).
+package setPrerequisites: #(
+	'..\Portishead\Portishead-Core'
+	'RenoirSt').
 
 package!
 
@@ -299,7 +298,7 @@ variable	 ^self descendantOfType: 'var'! !
 
 cssContentOn: aStream	aStream nextPutAll: 'url("'.	self printOn: aStream.	aStream nextPutAll: '")'!
 
-cssContentRelativeToStyleSheetOn: aStream		aStream nextPutAll: 'url("'.	self isAbsolute		ifTrue: [ self printOn: aStream ]		ifFalse: [ segments do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ].	aStream nextPutAll: '")'!
+cssContentRelativeToStyleSheetOn: aStream	aStream nextPutAll: 'url("'.	self isAbsolute		then: [ self printOn: aStream ]		otherwise: [ segments do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ].	aStream nextPutAll: '")'!
 
 relativeToStyleSheet	^UrlRelativeToStyleSheet on: self! !
 !ZnUrl categoriesFor: #cssContentOn:!*RenoirSt/HTML!public! !

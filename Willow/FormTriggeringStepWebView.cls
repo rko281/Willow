@@ -5,14 +5,12 @@ PresentationStepWebView subclass: #FormTriggeringStepWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-FormTriggeringStepWebView guid: (GUID fromString: '{4b70f444-07b9-4ab1-a95a-68b82d9a6def}')!
+FormTriggeringStepWebView guid: (GUID fromString: '{d66541d1-85d0-450c-9bb3-c6d6a55e42fd}')!
 FormTriggeringStepWebView comment: 'I''m a step showing a form triggering.'!
 !FormTriggeringStepWebView categoriesForClass!Willow-Playground-Smalltalks2017-WebViews! !
 !FormTriggeringStepWebView methodsFor!
 
-askDeveloper: aQuestion
-
-	^ UIManager default textEntry: 'aQuestion'!
+askDeveloper: aQuestion	^ UIManager default textEntry: aQuestion!
 
 description	^ 'This button "submits" the form'!
 

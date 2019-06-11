@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentRemovingCommandTest
+BWRenderingTest subclass: #ComponentRemovingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentRemovingCommandTest guid: (GUID fromString: '{0dc9ff1e-9052-4b95-96cf-e1341be879cb}')!
+ComponentRemovingCommandTest guid: (GUID fromString: '{5cf1e4f4-c941-4912-9f2a-7df6abe2327b}')!
 ComponentRemovingCommandTest comment: 'A ComponentRemovingCommandTest is a test class for testing the behavior of ComponentRemovingCommand'!
 !ComponentRemovingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ComponentRemovingCommandTest methodsFor!

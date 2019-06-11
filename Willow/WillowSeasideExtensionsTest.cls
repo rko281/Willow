@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WillowSeasideExtensionsTest
+BWRenderingTest subclass: #WillowSeasideExtensionsTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WillowSeasideExtensionsTest guid: (GUID fromString: '{79cfeece-d6c1-4dd3-aee9-5c4343e66524}')!
+WillowSeasideExtensionsTest guid: (GUID fromString: '{008ce6a7-788c-4cf8-8b86-bee31b8764cf}')!
 WillowSeasideExtensionsTest comment: 'This test case verifies method extensions to Seaside classes'!
 !WillowSeasideExtensionsTest categoriesForClass!Willow-Tests-Applications! !
 !WillowSeasideExtensionsTest methodsFor!

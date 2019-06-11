@@ -5,12 +5,12 @@ WAPainter subclass: #BootstrapLabeledWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapLabeledWebView guid: (GUID fromString: '{a1eb2f6f-87c4-4ae3-a31e-b40c15f10269}')!
+BootstrapLabeledWebView guid: (GUID fromString: '{3742ced3-aeed-4c46-9818-c5965c672152}')!
 BootstrapLabeledWebView comment: 'I''m useful for wrapping labels and controls  for optimum spacing.'!
 !BootstrapLabeledWebView categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapLabeledWebView methodsFor!
 
-initializeApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField	| fieldToRender |	fieldToRender := aCommandToField isNullCommand		ifTrue: [ aFieldWebView ]		ifFalse: [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField  ].			formGroupContainer := GenericContainerWebView		wrapping: [ :canvas | 			| fieldIdentifier |			fieldIdentifier := aFieldWebView identifyIn: canvas.			self				renderLabelFor: fieldIdentifier				displaying: thePhrasingContent				on: canvas				applying: aCommandToLabel.			canvas render: fieldToRender ]		applying: aCommandToContainer!
+initializeApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField	| fieldToRender |	fieldToRender := [ GenericContainerWebView wrapping: aFieldWebView applying: aCommandToField ]		unless: aCommandToField isNullCommand		inWhichCase: [ aFieldWebView ].	formGroupContainer := GenericContainerWebView		wrapping: [ :canvas | 			| fieldIdentifier |			fieldIdentifier := aFieldWebView identifyIn: canvas.			self				renderLabelFor: fieldIdentifier				displaying: thePhrasingContent				on: canvas				applying: aCommandToLabel.			canvas render: fieldToRender			]		applying: aCommandToContainer!
 
 renderContentOn: aCanvas	aCanvas render: formGroupContainer!
 

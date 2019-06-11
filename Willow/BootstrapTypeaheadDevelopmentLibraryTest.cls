@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapTypeaheadDevelopmentLibraryTest
+BWRenderingTest subclass: #BootstrapTypeaheadDevelopmentLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapTypeaheadDevelopmentLibraryTest guid: (GUID fromString: '{e6299e11-089d-4b95-8b6d-fc3e953a8fbb}')!
+BootstrapTypeaheadDevelopmentLibraryTest guid: (GUID fromString: '{02cd6d1c-5f5d-4f49-a8aa-49f4ca89a47f}')!
 BootstrapTypeaheadDevelopmentLibraryTest comment: 'PA BootstrapTypeaheadDevelopmentLibraryTest is a test class for testing the behavior of BootstrapTypeaheadDevelopmentLibrary'!
 !BootstrapTypeaheadDevelopmentLibraryTest categoriesForClass!Willow-Bootstrap-Tests-Typeahead! !
 !BootstrapTypeaheadDevelopmentLibraryTest methodsFor!

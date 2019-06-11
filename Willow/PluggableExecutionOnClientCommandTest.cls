@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #PluggableExecutionOnClientCommandTest
+BWRenderingTest subclass: #PluggableExecutionOnClientCommandTest
 	instanceVariableNames: 'command commandAction'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PluggableExecutionOnClientCommandTest guid: (GUID fromString: '{39938fd4-405c-44aa-9d18-66ac3403f819}')!
+PluggableExecutionOnClientCommandTest guid: (GUID fromString: '{e0ba4e32-ea09-434a-b224-4ea99aa989f0}')!
 PluggableExecutionOnClientCommandTest comment: ''!
 !PluggableExecutionOnClientCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !PluggableExecutionOnClientCommandTest methodsFor!

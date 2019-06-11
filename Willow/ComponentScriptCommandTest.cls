@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentScriptCommandTest
+BWRenderingTest subclass: #ComponentScriptCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentScriptCommandTest guid: (GUID fromString: '{4ce08bec-1a49-46b2-99df-9fd05952aa1e}')!
+ComponentScriptCommandTest guid: (GUID fromString: '{b1313c3b-b3e8-4251-bd15-daf2b60a3601}')!
 ComponentScriptCommandTest comment: 'A ComponentScriptCommandTest is a test class for testing the behavior of ComponentScriptCommand'!
 !ComponentScriptCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentScriptCommandTest methodsFor!

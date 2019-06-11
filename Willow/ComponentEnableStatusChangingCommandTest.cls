@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentEnableStatusChangingCommandTest
+BWRenderingTest subclass: #ComponentEnableStatusChangingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentEnableStatusChangingCommandTest guid: (GUID fromString: '{c7a25219-eb4a-4cf8-911f-cf4f898701bd}')!
+ComponentEnableStatusChangingCommandTest guid: (GUID fromString: '{6c44fd2f-f0b2-46f9-8aad-356656c089b2}')!
 ComponentEnableStatusChangingCommandTest comment: 'A ComponentEnableStatusChangingCommandTest is a test class for testing the behavior of ComponentEnableStatusChangingCommand'!
 !ComponentEnableStatusChangingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ComponentEnableStatusChangingCommandTest methodsFor!

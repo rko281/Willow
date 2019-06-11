@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #DelayedCommandTest
+BWRenderingTest subclass: #DelayedCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-DelayedCommandTest guid: (GUID fromString: '{2967527c-8229-4c27-a4ca-5c84efe71a01}')!
+DelayedCommandTest guid: (GUID fromString: '{a096a54b-d778-4da8-b059-6b075e6f8ee7}')!
 DelayedCommandTest comment: ''!
 !DelayedCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !DelayedCommandTest methodsFor!

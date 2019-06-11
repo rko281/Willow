@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -29,16 +29,19 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Buoy-Dynamic-Binding';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Grease\Grease-Core';
-	add: '..\Portishead\Portishead-Development';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: 'Willow';
-	add: 'Willow-Bootstrap';
-	add: 'Willow-SpinKit';
-	yourself).
+package setPrerequisites: #(
+	'Buoy-Dynamic-Binding'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Portishead\Portishead-Development'
+	'..\Portishead\Portishead-Traits'
+	'..\Seaside\Seaside\Seaside-Core'
+	'Willow'
+	'Willow-Bootstrap'
+	'Willow-SpinKit').
+
+package setManualPrerequisites: #(
+	'Portishead-Traits').
 
 package!
 

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #AsynchronicButtonWebViewTest
+BWRenderingTest subclass: #AsynchronicButtonWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-AsynchronicButtonWebViewTest guid: (GUID fromString: '{3584eefc-8582-4190-90b8-de2d617a2c3a}')!
+AsynchronicButtonWebViewTest guid: (GUID fromString: '{778b345c-3c4b-4f99-85a3-b39210cee975}')!
 AsynchronicButtonWebViewTest comment: 'An AsynchronicButtonWebViewTest is a test class for testing the behavior of AsynchronicButtonWebView'!
 !AsynchronicButtonWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !AsynchronicButtonWebViewTest methodsFor!

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #CombinedWebInteractionInterpreterTest
+BWRenderingTest subclass: #CombinedWebInteractionInterpreterTest
 	instanceVariableNames: 'okButton cancelButton'
 	classVariableNames: ''
 	poolDictionaries: 'Willow'
 	classInstanceVariableNames: ''!
-CombinedWebInteractionInterpreterTest guid: (GUID fromString: '{c0934444-ad85-4d35-8a86-556e1c043707}')!
+CombinedWebInteractionInterpreterTest guid: (GUID fromString: '{f0a068db-38e2-45f5-ae96-3310badd7a39}')!
 CombinedWebInteractionInterpreterTest comment: 'A CombinedWebInteractionInterpreterTest is a test class for testing the behavior of CombinedWebInteractionInterpreter'!
 !CombinedWebInteractionInterpreterTest categoriesForClass!Willow-Tests-WebInteraction! !
 !CombinedWebInteractionInterpreterTest methodsFor!

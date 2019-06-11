@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package methodNames
@@ -28,13 +28,12 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: 'RenoirSt';
-	add: 'RenoirSt-HTML';
-	add: '..\Seaside\Seaside\Seaside-Canvas';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	yourself).
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'RenoirSt'
+	'RenoirSt-HTML'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Core').
 
 package!
 
@@ -71,9 +70,9 @@ setStyleTo: aDeclarationAction	| declarationBlock |	declarationBlock := CssD
 
 !WAUrl methodsFor!
 
-cssContentOn: aStream	aStream nextPutAll: 'url("'.	host isNil		ifTrue: [ aStream nextPut: $/.			self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ]		ifFalse: [ self printOn: aStream ].	aStream nextPutAll: '")'!
+cssContentOn: aStream	aStream nextPutAll: 'url("'.	host		ifNil: [ aStream nextPut: $/.			self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ]			]		ifNotNil: [ self printOn: aStream ].	aStream nextPutAll: '")'!
 
-cssContentRelativeToStyleSheetOn: aStream	aStream nextPutAll: 'url("'.	host isNil		ifTrue: [ self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ]		ifFalse: [ self printOn: aStream ].	aStream nextPutAll: '")'!
+cssContentRelativeToStyleSheetOn: aStream	aStream nextPutAll: 'url("'.	host		ifNil: [ self path do: [ :segment | aStream nextPutAll: segment ] separatedBy: [ aStream nextPut: $/ ] ]		ifNotNil: [ self printOn: aStream ].	aStream nextPutAll: '")'!
 
 relativeToStyleSheet	^UrlRelativeToStyleSheet on: self! !
 !WAUrl categoriesFor: #cssContentOn:!*RenoirSt/Seaside!public! !

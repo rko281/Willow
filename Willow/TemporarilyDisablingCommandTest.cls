@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #TemporarilyDisablingCommandTest
+BWRenderingTest subclass: #TemporarilyDisablingCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-TemporarilyDisablingCommandTest guid: (GUID fromString: '{8d447f47-6806-4b3f-b6c2-1a24874d7928}')!
+TemporarilyDisablingCommandTest guid: (GUID fromString: '{f2628284-8a0a-40fc-ba60-70995e6c89cd}')!
 TemporarilyDisablingCommandTest comment: 'A TemporarilyDisablingCommandTest is a test class for testing the behavior of TemporarilyDisablingCommand'!
 !TemporarilyDisablingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !TemporarilyDisablingCommandTest methodsFor!

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapDropdownTest
+BWRenderingTest subclass: #BootstrapDropdownTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDropdownTest guid: (GUID fromString: '{add997a3-ec84-4c67-b32f-cec5b713dcdd}')!
+BootstrapDropdownTest guid: (GUID fromString: '{3c00c69a-b3de-436f-b19f-3dcfed41a844}')!
 BootstrapDropdownTest comment: 'A BootstrapDropdownTest is a test class for testing the behavior of BootstrapDropdown'!
 !BootstrapDropdownTest categoriesForClass!Willow-Bootstrap-Tests-Plugins! !
 !BootstrapDropdownTest methodsFor!

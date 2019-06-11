@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -29,12 +29,15 @@ package classNames
 	yourself.
 
 package methodNames
+	add: #JSObject -> #*;
 	add: #JSObject -> #asImmediatelyInvokedFunctionExpression;
+	add: #JSObject -> #collect:;
 	add: #JSObject -> #equalTo:;
 	add: #JSObject -> #identicalTo:;
 	add: #JSObject -> #nonInlinedThen:;
 	add: #JSObject -> #nonInlinedThen:else:;
 	add: #JSObject -> #notIdenticalTo:;
+	add: #JSObject -> #select:;
 	add: #JSObject -> #sessionStorage;
 	add: #JSObject -> #typeOf;
 	add: #JSScript -> #call:;
@@ -63,15 +66,13 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Buoy-Assertions';
-	add: 'Buoy-Dynamic-Binding';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Seaside\Javascript\Javascript-Core';
-	add: '..\Seaside\Seaside\Seaside-Canvas';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: '..\Seaside\Seaside\Seaside-Tools-Core';
-	yourself).
+package setPrerequisites: #(
+	'Buoy-Assertions'
+	'Buoy-Dynamic-Binding'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Core').
 
 package!
 
@@ -155,7 +156,11 @@ WADeploymentMode subclass: #WAApplicationInDevelopment
 
 !JSObject methodsFor!
 
+* anObject 	"Multiply the receiver and anObject"		self		addDecoration:			(JSBinary new				operator: '*';				statement: anObject)!
+
 asImmediatelyInvokedFunctionExpression	^ (self asFunction apply: #()) addDecoration: JSExpression new!
+
+collect: aBlock	self		call: 'map'		with:			(((aBlock value: (JSStream on: 'currentValue'))				asFunction: (Array with: 'currentValue'))				return: true;				yourself)!
 
 equalTo: anObject	self		addDecoration:			(JSBinary new				operator: '==';				statement: anObject)!
 
@@ -167,15 +172,20 @@ nonInlinedThen: anObject else: anotherObject	self		addDecoration:			(JSNonIn
 
 notIdenticalTo: anObject	self		addDecoration:			(JSBinary new				operator: '!!==';				statement: anObject)!
 
+select: aBlock	self		call: 'filter'		with:			(((aBlock value: (JSStream on: 'currentValue'))				asFunction: (Array with: 'currentValue'))				return: true;				yourself)!
+
 sessionStorage	^self alias: 'sessionStorage'!
 
 typeOf    "Returns the type of the receiver."    self addDecoration: JSTypeOf new! !
+!JSObject categoriesFor: #*!*Boardwalk!public! !
 !JSObject categoriesFor: #asImmediatelyInvokedFunctionExpression!*Boardwalk!public! !
+!JSObject categoriesFor: #collect:!*Boardwalk!public! !
 !JSObject categoriesFor: #equalTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #identicalTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #nonInlinedThen:!*Boardwalk!public! !
 !JSObject categoriesFor: #nonInlinedThen:else:!*Boardwalk!public! !
 !JSObject categoriesFor: #notIdenticalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #select:!*Boardwalk!public! !
 !JSObject categoriesFor: #sessionStorage!*Boardwalk!public! !
 !JSObject categoriesFor: #typeOf!*Boardwalk!public! !
 

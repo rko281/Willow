@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #NullTriggeringPolicyTest
+BWRenderingTest subclass: #NullTriggeringPolicyTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-NullTriggeringPolicyTest guid: (GUID fromString: '{05945b99-a9c6-4469-9eaf-e5a2bdf9591a}')!
+NullTriggeringPolicyTest guid: (GUID fromString: '{bbeaf2fc-1bd0-40d2-86cb-a6529a8c5966}')!
 NullTriggeringPolicyTest comment: 'A NullTriggeringPolicyTest is a test class for testing the behavior of NullTriggeringPolicy'!
 !NullTriggeringPolicyTest categoriesForClass!Willow-Tests-WebInteraction! !
 !NullTriggeringPolicyTest methodsFor!

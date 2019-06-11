@@ -5,7 +5,7 @@ SingleSelectionWebViewTest subclass: #DropDownListWebViewTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-DropDownListWebViewTest guid: (GUID fromString: '{346573e7-d713-45b9-a692-fbe01033e5dd}')!
+DropDownListWebViewTest guid: (GUID fromString: '{1a114cbc-e25c-415f-b642-c3b354fefa8f}')!
 DropDownListWebViewTest comment: 'A DropDownListWebViewTest is a test class for testing the behavior of DropDownListWebView'!
 !DropDownListWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !DropDownListWebViewTest methodsFor!
@@ -22,7 +22,7 @@ testRenderContentOnWithCommands	| dropDownList html |	dropDownList := DropDo
 
 testRenderContentOnWithElements	| dropDownList html |	dropDownList := self newSingleSelectionView.	dropDownList allowAnyOf: #('One' 'Two' 'Three').	html := self render: dropDownList.	self		assert: html		equals:			'<select name="1" id="id2"><option value="1">One</option><option value="2">Two</option><option value="3">Three</option></select><script type="text/javascript">$("#id2").prop("selectedIndex",-1);</script>'!
 
-testRenderContentOnWithElementsAndSomethingSelected	| dropDownList html |	dropDownList := self newSingleSelectionView.	dropDownList allowAnyOf: #('One' 'Two' 'Three').	dropDownList chooseAnySatisfying: [ :element | true ] ifNone: [ self fail ].	html := self render: dropDownList.	self assert: html equals: '<select name="1"><option value="1" selected="selected">One</option><option value="2">Two</option><option value="3">Three</option></select>'! !
+testRenderContentOnWithElementsAndSomethingSelected	| dropDownList html |	dropDownList := self newSingleSelectionView.	dropDownList allowAnyOf: #('One' 'Two' 'Three').	dropDownList chooseAnySatisfying: [ :element | true ] ifNone: [ self fail ].	html := self render: dropDownList.	self assert: html equals: '<select name="1"><option value="1" selected>One</option><option value="2">Two</option><option value="3">Three</option></select>'! !
 !DropDownListWebViewTest categoriesFor: #newSingleSelectionView!public!support! !
 !DropDownListWebViewTest categoriesFor: #testIdentifyIn!public!tests/configuring! !
 !DropDownListWebViewTest categoriesFor: #testOnTrigger!public!tests/configuring! !

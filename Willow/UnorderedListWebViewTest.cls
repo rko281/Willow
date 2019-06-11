@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #UnorderedListWebViewTest
+BWRenderingTest subclass: #UnorderedListWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-UnorderedListWebViewTest guid: (GUID fromString: '{2f6cf857-3795-43ea-99e9-3d22b36b8de5}')!
+UnorderedListWebViewTest guid: (GUID fromString: '{3a26f093-30ba-460d-9d51-8d56789898b8}')!
 UnorderedListWebViewTest comment: 'An UnorderedListWebViewTest is a test class for testing the behavior of UnorderedListWebView'!
 !UnorderedListWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !UnorderedListWebViewTest methodsFor!

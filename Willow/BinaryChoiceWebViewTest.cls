@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BinaryChoiceWebViewTest
+BWRenderingTest subclass: #BinaryChoiceWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BinaryChoiceWebViewTest guid: (GUID fromString: '{e2957e02-202b-4faf-9eb5-abfc38eaa7df}')!
+BinaryChoiceWebViewTest guid: (GUID fromString: '{818e8f9b-2c62-4243-85da-a7ef691cf88c}')!
 BinaryChoiceWebViewTest comment: 'I''m an abstract test case for views implementing the binary choice  API'!
 !BinaryChoiceWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !BinaryChoiceWebViewTest methodsFor!

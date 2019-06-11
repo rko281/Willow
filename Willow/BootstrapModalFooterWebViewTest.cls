@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapModalFooterWebViewTest
+BWRenderingTest subclass: #BootstrapModalFooterWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapModalFooterWebViewTest guid: (GUID fromString: '{98c4fb39-192d-4758-a9fa-7a65024c71f6}')!
+BootstrapModalFooterWebViewTest guid: (GUID fromString: '{0b9f037b-38b0-4160-b826-c0359a024b6e}')!
 BootstrapModalFooterWebViewTest comment: 'A BootstrapModalFooterTest is a test class for testing the behavior of BootstrapModalFooterWebView'!
 !BootstrapModalFooterWebViewTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapModalFooterWebViewTest methodsFor!

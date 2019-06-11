@@ -5,20 +5,20 @@ MessageSendingCollector subclass: #UnaryMessageSendingCollector
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-UnaryMessageSendingCollector guid: (GUID fromString: '{234e3c00-6ed3-4935-b0d4-c883ebf65523}')!
+UnaryMessageSendingCollector guid: (GUID fromString: '{a8abbc79-b0d0-48ff-a648-f8f90afda76d}')!
 UnaryMessageSendingCollector comment: ''!
 !UnaryMessageSendingCollector categoriesForClass!Buoy-Metaprogramming! !
 !UnaryMessageSendingCollector methodsFor!
 
 filterBlock	^ filterBlock!
 
-intializeSendingAllMessagesMatching: aFilterBlock to: aReceiver	filterBlock := aFilterBlock.	receiver := aReceiver!
+initializeSendingAllMessagesMatching: aFilterBlock to: aReceiver	filterBlock := aFilterBlock.	receiver := aReceiver!
 
 receiver	^ receiver!
 
 value	^ self matchingSelectorsCollect: [ :selector | receiver perform: selector ]! !
 !UnaryMessageSendingCollector categoriesFor: #filterBlock!private! !
-!UnaryMessageSendingCollector categoriesFor: #intializeSendingAllMessagesMatching:to:!initialization!public! !
+!UnaryMessageSendingCollector categoriesFor: #initializeSendingAllMessagesMatching:to:!initialization!public! !
 !UnaryMessageSendingCollector categoriesFor: #receiver!private! !
 !UnaryMessageSendingCollector categoriesFor: #value!evaluating!public! !
 
@@ -30,7 +30,7 @@ sendingAllMessagesBeginningWith: aPrefix to: aReceiver	^ self sendingAllMessag
 
 sendingAllMessagesEndingWith: aSuffix to: aReceiver	^ self sendingAllMessagesMatching: [ :selector | selector endsWith: aSuffix ] to: aReceiver!
 
-sendingAllMessagesMatching: aFilterBlock to: aReceiver	^ self new intializeSendingAllMessagesMatching: aFilterBlock to: aReceiver! !
+sendingAllMessagesMatching: aFilterBlock to: aReceiver	^ self new initializeSendingAllMessagesMatching: aFilterBlock to: aReceiver! !
 !UnaryMessageSendingCollector class categoriesFor: #sendingAllMessagesBeginningWith:andEndingWith:to:!Instance Creation!public! !
 !UnaryMessageSendingCollector class categoriesFor: #sendingAllMessagesBeginningWith:to:!Instance Creation!public! !
 !UnaryMessageSendingCollector class categoriesFor: #sendingAllMessagesEndingWith:to:!Instance Creation!public! !

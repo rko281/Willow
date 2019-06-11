@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #FormSubmitCommandTest
+BWRenderingTest subclass: #FormSubmitCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: 'Willow'
 	classInstanceVariableNames: ''!
-FormSubmitCommandTest guid: (GUID fromString: '{8bc995f7-7329-4577-8ae1-f5c60bb05c01}')!
+FormSubmitCommandTest guid: (GUID fromString: '{ab88eafa-423c-476e-9717-7c3d007e3bd5}')!
 FormSubmitCommandTest comment: 'A FormSubmitCommandTest is a test class for testing the behavior of FormSubmitCommand'!
 !FormSubmitCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !FormSubmitCommandTest methodsFor!

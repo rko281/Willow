@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentFocusingCommandTest
+BWRenderingTest subclass: #ComponentFocusingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentFocusingCommandTest guid: (GUID fromString: '{2fb474fe-9f6d-46fa-96ed-dcd0286e52c0}')!
+ComponentFocusingCommandTest guid: (GUID fromString: '{d0e32d3d-9b36-49f3-81f7-8c69a53d1e1a}')!
 ComponentFocusingCommandTest comment: 'A ComponentFocusingCommandTest is a test class for testing the behavior of ComponentFocusingCommand'!
 !ComponentFocusingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ComponentFocusingCommandTest methodsFor!

@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -385,22 +385,20 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Boardwalk';
-	add: 'Buoy-Assertions';
-	add: 'Buoy-Dynamic-Binding';
-	add: 'Buoy-Metaprogramming';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Grease\Grease-Core';
-	add: '..\Core\Contributions\IDB\IDB Duration';
-	add: '..\Seaside\Javascript\Javascript-Core';
-	add: '..\Seaside\JQuery\JQuery-Core';
-	add: '..\Portishead\Portishead-Pragmas';
-	add: 'RenoirSt';
-	add: '..\Seaside\Seaside\Seaside-Canvas';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: 'Willow';
-	yourself).
+package setPrerequisites: #(
+	'Boardwalk'
+	'Buoy-Assertions'
+	'Buoy-Dynamic-Binding'
+	'Buoy-Metaprogramming'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Seaside\JQuery\JQuery-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'RenoirSt'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Core'
+	'Willow').
 
 package!
 

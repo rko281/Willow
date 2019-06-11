@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentValueSettingCommandTest
+BWRenderingTest subclass: #ComponentValueSettingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentValueSettingCommandTest guid: (GUID fromString: '{906359d6-4403-4566-81d6-388f0626e881}')!
+ComponentValueSettingCommandTest guid: (GUID fromString: '{f989cb67-500a-417b-a761-441a1d344832}')!
 ComponentValueSettingCommandTest comment: 'A ComponentValueSettingCommandTest is a test class for testing the behavior of ComponentValueSettingCommand'!
 !ComponentValueSettingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ComponentValueSettingCommandTest methodsFor!

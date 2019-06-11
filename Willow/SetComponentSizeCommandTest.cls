@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SetComponentSizeCommandTest
+BWRenderingTest subclass: #SetComponentSizeCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SetComponentSizeCommandTest guid: (GUID fromString: '{7496768c-39d4-4f99-94ef-0e108a6783bb}')!
+SetComponentSizeCommandTest guid: (GUID fromString: '{11a41588-350c-4218-909b-78e2f7a3edde}')!
 SetComponentSizeCommandTest comment: ''!
 !SetComponentSizeCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !SetComponentSizeCommandTest methodsFor!

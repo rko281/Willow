@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SerializationCommandTest
+BWRenderingTest subclass: #SerializationCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SerializationCommandTest guid: (GUID fromString: '{4abf3dea-db7c-4804-a877-5487cacacbc2}')!
+SerializationCommandTest guid: (GUID fromString: '{de48e9a1-df33-490f-b431-f2e3af73c0c6}')!
 SerializationCommandTest comment: 'A SerializationCommandTest is a test class for testing the behavior of SerializationCommand'!
 !SerializationCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !SerializationCommandTest methodsFor!

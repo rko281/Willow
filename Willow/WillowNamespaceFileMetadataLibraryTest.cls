@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WillowNamespaceFileMetadataLibraryTest
+BWRenderingTest subclass: #WillowNamespaceFileMetadataLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WillowNamespaceFileMetadataLibraryTest guid: (GUID fromString: '{3e912442-6aab-4fe7-ae66-5ac7eb4fd98c}')!
+WillowNamespaceFileMetadataLibraryTest guid: (GUID fromString: '{5c6d5219-a8fc-43c6-8707-2948c37ac48b}')!
 WillowNamespaceFileMetadataLibraryTest comment: 'A WillowNamespaceFileMetadataLibraryTest is a test class for testing the behavior of WillowNamespaceFileMetadataLibrary'!
 !WillowNamespaceFileMetadataLibraryTest categoriesForClass!Willow-Tests-Libraries! !
 !WillowNamespaceFileMetadataLibraryTest methodsFor!

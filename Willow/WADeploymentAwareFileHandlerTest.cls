@@ -5,12 +5,12 @@ TestCase subclass: #WADeploymentAwareFileHandlerTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WADeploymentAwareFileHandlerTest guid: (GUID fromString: '{716dd567-2717-4c7c-b77a-4cbffc1335e2}')!
+WADeploymentAwareFileHandlerTest guid: (GUID fromString: '{4928646d-0992-4a69-96d8-ad012537987d}')!
 WADeploymentAwareFileHandlerTest comment: 'A WillowFileHandlerTest is a test class for testing the behavior of WillowFileHandler'!
 !WADeploymentAwareFileHandlerTest categoriesForClass!Boardwalk-Tests-WebApplication! !
 !WADeploymentAwareFileHandlerTest methodsFor!
 
-changeRegisteredFileHandlerDuring: aBlock	| installedHandler |	installedHandler := WAFileHandler default.	installedHandler unregister.	aBlock		ensure: [ WAFileHandler default: installedHandler.			WAAdmin defaultDispatcher register: installedHandler at: 'files' ]!
+changeRegisteredFileHandlerDuring: aBlock	| installedHandler |	installedHandler := WAFileHandler default.	installedHandler unregister.	aBlock		ensure: [ WAFileHandler default: installedHandler.			WADispatcher default register: installedHandler at: 'files'			]!
 
 testInstallAsFileHandlerAccordingTo	self		changeRegisteredFileHandlerDuring: [ | handler |			handler := WADeploymentAwareFileHandler installAsFileHandlerAccordingTo: WAApplicationInDevelopment new.			self				assert: (handler libraries includes: WATestingFileMetadataDevelopmentLibrary);				assert: WAFileHandler default equals: handler;				assert: (WATestingFileMetadataDevelopmentLibrary default urlOf: #'' using: handler) greaseString equals: '/files/testing-0.0.0' ]!
 

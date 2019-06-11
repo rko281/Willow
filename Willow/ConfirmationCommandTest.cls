@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ConfirmationCommandTest
+BWRenderingTest subclass: #ConfirmationCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ConfirmationCommandTest guid: (GUID fromString: '{422ab462-8bbc-4f0f-9fd8-08721c470c4d}')!
+ConfirmationCommandTest guid: (GUID fromString: '{532870ab-ab86-4269-a759-de074b939aec}')!
 ConfirmationCommandTest comment: 'A ConfirmationCommandTest is a test class for testing the behavior of ConfirmationCommand'!
 !ConfirmationCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !ConfirmationCommandTest methodsFor!

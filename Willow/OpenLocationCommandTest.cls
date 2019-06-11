@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #OpenLocationCommandTest
+BWRenderingTest subclass: #OpenLocationCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-OpenLocationCommandTest guid: (GUID fromString: '{75ebbdfc-29f2-41fd-ba99-9285af94d54d}')!
+OpenLocationCommandTest guid: (GUID fromString: '{f503f265-36cc-4280-af0d-f29816d749e0}')!
 OpenLocationCommandTest comment: ''!
 !OpenLocationCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !OpenLocationCommandTest methodsFor!

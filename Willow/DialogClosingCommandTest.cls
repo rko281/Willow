@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #DialogClosingCommandTest
+BWRenderingTest subclass: #DialogClosingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-DialogClosingCommandTest guid: (GUID fromString: '{1d5fe858-fe26-4236-a20d-c0121d6c4db0}')!
+DialogClosingCommandTest guid: (GUID fromString: '{038ad095-170b-4f0f-bebc-f0bfda1f00f0}')!
 DialogClosingCommandTest comment: 'A DialogClosingCommandTest is a test class for testing the behavior of DialogClosingCommand'!
 !DialogClosingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !DialogClosingCommandTest methodsFor!

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentAttributeCommandTest
+BWRenderingTest subclass: #ComponentAttributeCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentAttributeCommandTest guid: (GUID fromString: '{36fd0cc5-178d-4725-b16e-56a28b715f6b}')!
+ComponentAttributeCommandTest guid: (GUID fromString: '{2f342e88-000f-4df5-9ef7-2666caea9d93}')!
 ComponentAttributeCommandTest comment: ''!
 !ComponentAttributeCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentAttributeCommandTest methodsFor!

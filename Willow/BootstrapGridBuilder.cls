@@ -5,7 +5,7 @@ WillowComponentBuilder subclass: #BootstrapGridBuilder
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapGridBuilder guid: (GUID fromString: '{a8a0b4e0-fe78-4b7e-b58c-3c70fa78e710}')!
+BootstrapGridBuilder guid: (GUID fromString: '{84f2640d-89ba-4342-a457-5fac8a5cf8a6}')!
 BootstrapGridBuilder comment: 'I''m a builder easing the creation of Bootstrap grids'!
 !BootstrapGridBuilder categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapGridBuilder methodsFor!
@@ -38,7 +38,7 @@ numberOfRows	^ (contents size / self columnCountPerRow) ceiling!
 
 renderColumnsAt: rowIndex on: aCanvas	1 to: self columnCountPerRow do:		[ :columnIndex | self renderContentAt: (self contentIndexAt: rowIndex and: columnIndex) spanning: (columnSpec at: columnIndex) on: aCanvas ]!
 
-renderContentAt: aContentIndex spanning: aColumnCount on: aCanvas	aContentIndex > contents size		ifFalse: [ aCanvas div with: (contents at: aContentIndex) applying: [ :cell | (columnBreakpointBlock value: cell value: aColumnCount) + cellCommand ] ]! !
+renderContentAt: aContentIndex spanning: aColumnCount on: aCanvas	[ aCanvas div		with: ( contents at: aContentIndex )		applying: [ :cell | ( columnBreakpointBlock value: cell value: aColumnCount ) + cellCommand ]	] unless: aContentIndex > contents size! !
 !BootstrapGridBuilder categoriesFor: #addContent:!Configuring!public! !
 !BootstrapGridBuilder categoriesFor: #applyingToCells:!Configuring!public! !
 !BootstrapGridBuilder categoriesFor: #buildApplying:!building!public! !

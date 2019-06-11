@@ -5,7 +5,7 @@ Object subclass: #Namespace
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-Namespace guid: (GUID fromString: '{56b7920f-ee95-48c9-a6b2-31c71f71879a}')!
+Namespace guid: (GUID fromString: '{93e0c00c-84e3-4dcd-93c1-892712f32ebf}')!
 Namespace comment: 'I''m a namespace, my responsibility is to bind a set of symbols to objects of various kinds, so that these objects may be referred to by name.'!
 !Namespace categoriesForClass!Buoy-Metaprogramming! !
 !Namespace methodsFor!
@@ -14,11 +14,9 @@ Namespace comment: 'I''m a namespace, my responsibility is to bind a set of symb
 
 at: aName	^ self at: aName ifAbsent: [ self signalNotFoundFor: aName ]!
 
-at: aName ifAbsent: aBlock
-	^ bindings at: aName ifAbsent: [(aName isKindOf: String) ifTrue: [bindings at: aName asSymbol ifAbsent: aBlock] ifFalse: [aBlock value]]!
+at: aName ifAbsent: aBlock	^ bindings at: aName ifAbsent: aBlock!
 
-bind: aSymbol to: anObject
-	bindings		at: aSymbol		ifPresent: [ ConflictingObjectFound signal: ('<1s> is already bound to some object.' expandMacrosWith: aSymbol) ]		ifAbsentPut: anObject!
+bind: aSymbol to: anObject	bindings		at: aSymbol		ifPresent: [ ConflictingObjectFound signal: ('<1s> is already bound to some object.' expandMacrosWith: aSymbol) ]		ifAbsentPut: anObject!
 
 initialize	super initialize.	bindings := IdentityDictionary new!
 
@@ -38,11 +36,4 @@ signalNotFoundFor: aName	^ ObjectNotFound signal: ('There''s no object bound t
 !Namespace categoriesFor: #rebind:to:!binding!public! !
 !Namespace categoriesFor: #removeBindingFor:!binding!public! !
 !Namespace categoriesFor: #signalNotFoundFor:!private / signaling!public! !
-
-!Namespace class methodsFor!
-
-new
-
-	^super new initialize! !
-!Namespace class categoriesFor: #new!public! !
 

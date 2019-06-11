@@ -5,16 +5,16 @@ Object subclass: #WebComponentInteraction
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WebComponentInteraction guid: (GUID fromString: '{4c7f374a-f09f-44de-a0f8-6700a2bd558b}')!
+WebComponentInteraction guid: (GUID fromString: '{02f64bb1-ef2d-4310-9cd7-ffd7987347d3}')!
 WebComponentInteraction comment: ''!
 !WebComponentInteraction categoriesForClass!Willow-WebInteraction! !
 !WebComponentInteraction methodsFor!
 
-applyTo: aComponent on: aCanvas	self prepareActions.	self shouldApplyActions		ifTrue: 			[triggerPolicy				apply: (self commandToExecuteOn: aCanvas)				to: aComponent				on: aCanvas]!
+applyTo: aComponent on: aCanvas	self prepareActions.	self shouldApplyActions		then: [ triggerPolicy apply: ( self commandToExecuteOn: aCanvas ) to: aComponent on: aCanvas ]!
 
 asynchronousCallToAffect: aCanvas	| serverCall |	serverCall := aCanvas jQuery willow serverCall.	priorityActions do: [ :action | action value: serverCall value: aCanvas ].	self complete: serverCall withResponseOn: aCanvas.	^ serverCall!
 
-commandToExecuteOn: aCanvas	^ serverIndependentActions isEmpty		ifTrue: [ self asynchronousCallToAffect: aCanvas ]		ifFalse: [ | script |			script := aCanvas javascript.			serverIndependentActions do: [ :action | action value: script value: aCanvas ].			self shouldApplyAsynchronousCall				ifTrue: [ script << (self asynchronousCallToAffect: aCanvas) ].			script ]!
+commandToExecuteOn: aCanvas	^ [ | script |	script := aCanvas javascript.	serverIndependentActions do: [ :action | action value: script value: aCanvas ].	self shouldApplyAsynchronousCall then: [ script << ( self asynchronousCallToAffect: aCanvas ) ].	script	] unless: serverIndependentActions isEmpty inWhichCase: [ self asynchronousCallToAffect: aCanvas ]!
 
 complete: anAsynchronousCall withResponseOn: aCanvas	anAsynchronousCall		script: [ :subScript | 			clientIndependentActions do: [ :action | action value ].			modelLoadingActions do: [ :action | action value: subScript value: aCanvas ] ]!
 
@@ -24,7 +24,7 @@ initializeTriggeredAccordingTo: aTriggerPolicy serializingWith: aSerializationCo
 
 onTriggerExecute: aCommand	commands add: aCommand!
 
-prepareActions	| serializationRequired |	serializationRequired := false.	self initializeActions.	commands		do: [ :aCommand | 			self registerActionsOf: aCommand.			serializationRequired := serializationRequired or: [ aCommand requiresSerialization ] ].	serializationRequired		ifTrue: [ self registerActionsOf: serializationCommand ]!
+prepareActions	| serializationRequired |	serializationRequired := false.	self initializeActions.	commands		do: [ :aCommand | 			self registerActionsOf: aCommand.			serializationRequired := serializationRequired or: [ aCommand requiresSerialization ]			].	serializationRequired then: [ self registerActionsOf: serializationCommand ]!
 
 registerActionsOf: aCommand	modelLoadingActions addAll: aCommand modelLoadingActions.	clientIndependentActions addAll: aCommand clientIndependentActions.	priorityActions addAll: aCommand priorityActions.	serverIndependentActions addAll: aCommand serverIndependentActions.!
 

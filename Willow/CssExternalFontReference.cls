@@ -5,12 +5,12 @@ CssFontReference subclass: #CssExternalFontReference
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CssExternalFontReference guid: (GUID fromString: '{7d224ca6-a9bc-4f8e-8c7b-5be33bcaf8c1}')!
+CssExternalFontReference guid: (GUID fromString: '{a7fd55c6-5348-4be1-bc63-0df47f3d30b2}')!
 CssExternalFontReference comment: 'I represent an external font reference'!
 !CssExternalFontReference categoriesForClass!RenoirSt-Fonts! !
 !CssExternalFontReference methodsFor!
 
-cssContentOn: aStream	url cssContentOn: aStream.	format notEmpty		ifTrue: [ aStream				space;				nextPutAll: 'format(';				nextPut: $".			format cssContentOn: aStream.			aStream				nextPut: $";				nextPut: $) ]!
+cssContentOn: aStream	url cssContentOn: aStream.	format		ifNotEmpty: [ aStream				space;				nextPutAll: 'format(';				nextPut: $".			format cssContentOn: aStream.			aStream				nextPut: $";				nextPut: $)			]!
 
 initializeLocatedAt: anUrl withFormat: aString 	url := anUrl.	format := aString ! !
 !CssExternalFontReference categoriesFor: #cssContentOn:!Printing!public! !

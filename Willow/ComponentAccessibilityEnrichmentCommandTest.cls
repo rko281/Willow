@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentAccessibilityEnrichmentCommandTest
+BWRenderingTest subclass: #ComponentAccessibilityEnrichmentCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentAccessibilityEnrichmentCommandTest guid: (GUID fromString: '{e857793e-e701-4629-ab62-199f50be31ac}')!
+ComponentAccessibilityEnrichmentCommandTest guid: (GUID fromString: '{f88c13c8-dae6-44e7-90d5-1f77849d89ac}')!
 ComponentAccessibilityEnrichmentCommandTest comment: 'A ComponentAccessibilityEnrichmentCommandTest is a test class for testing the behavior of ComponentAccessibilityEnrichmentCommand'!
 !ComponentAccessibilityEnrichmentCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentAccessibilityEnrichmentCommandTest methodsFor!

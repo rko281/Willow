@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #TextFieldWebViewTest
+BWRenderingTest subclass: #TextFieldWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-TextFieldWebViewTest guid: (GUID fromString: '{425114c8-0c86-4125-a223-49245d5db793}')!
+TextFieldWebViewTest guid: (GUID fromString: '{40e65b90-8bfd-4240-a308-be224bb89871}')!
 TextFieldWebViewTest comment: 'A TextFieldWebViewTest is a test class for testing the behavior of TextFieldWebView'!
 !TextFieldWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !TextFieldWebViewTest methodsFor!

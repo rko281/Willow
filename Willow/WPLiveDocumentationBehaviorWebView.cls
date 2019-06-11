@@ -5,8 +5,8 @@ WAPainter subclass: #WPLiveDocumentationBehaviorWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WPLiveDocumentationBehaviorWebView guid: (GUID fromString: '{bfa2ec50-9653-4ff4-9326-335d0dd0e2a1}')!
-WPLiveDocumentationBehaviorWebView comment: '�''m a web view showing the details for a class or trait'!
+WPLiveDocumentationBehaviorWebView guid: (GUID fromString: '{4e64838e-2ec8-4854-9f92-040b52206c5d}')!
+WPLiveDocumentationBehaviorWebView comment: 'í''m a web view showing the details for a class or trait'!
 !WPLiveDocumentationBehaviorWebView categoriesForClass!Willow-Playground-LiveDocs-WebViews! !
 !WPLiveDocumentationBehaviorWebView methodsFor!
 

@@ -5,7 +5,7 @@ BinaryChoiceWebViewBehavior subclass: #BootstrapCheckboxWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapCheckboxWebView guid: (GUID fromString: '{ebcfc344-d2bc-4da3-a04c-13ee3853cc5d}')!
+BootstrapCheckboxWebView guid: (GUID fromString: '{f4d7ce35-530c-412e-93a3-04076d811948}')!
 BootstrapCheckboxWebView comment: 'I''m a checkbox specifically designed to use the html structure required by Bootstrap.'!
 !BootstrapCheckboxWebView categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapCheckboxWebView methodsFor!
@@ -18,7 +18,7 @@ initializeLabeledAccordingTo: anOptionalLabel applying: aCommandToComponent	la
 
 onTrigger	^ interactionInterpreter!
 
-renderCheckboxOn: aCanvas	| checkbox |	checkbox := aCanvas checkbox.	checkbox		apply: commandToComponent;		value: isChecked;		callback: [ :value | 			value = isChecked				ifFalse: [ self toggleCurrentSelection ] ].	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].	checkbox interactUsing: interactionInterpreter!
+renderCheckboxOn: aCanvas	| checkbox |	checkbox := aCanvas checkbox.	checkbox		apply: commandToComponent;		value: isChecked;		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].	identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ].	checkbox interactUsing: interactionInterpreter!
 
 renderContentOn: aCanvas	aCanvas div with: [ self renderLabelOn: aCanvas ] applying: [ :div | div addClass bootstrap checkbox + commandToComponent ]!
 

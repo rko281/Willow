@@ -5,9 +5,9 @@ GRPlatform subclass: #WAFileTestingPlatform
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAFileTestingPlatform guid: (GUID fromString: '{a79a4cf8-dcf5-40a4-b338-357c06d2596c}')!
+WAFileTestingPlatform guid: (GUID fromString: '{d60ccb91-78bf-41a7-b4a4-e5c3ff3cbc04}')!
 WAFileTestingPlatform comment: 'I''m a platform wrapping the installed one but providing facilities to test stuff related to the file system'!
-!WAFileTestingPlatform categoriesForClass!Boardwalk-Tests-WebApplication! !
+!WAFileTestingPlatform categoriesForClass!Boardwalk-SUnit! !
 !WAFileTestingPlatform methodsFor!
 
 addToShutDownList: anObject	##(Pragma ignoreForCoverage).	^ platform addToShutDownList: anObject!
@@ -28,8 +28,7 @@ createdFolders	^ (SortedCollection withAll: createdFolders) asArray!
 
 directoriesIn: aPathString	##(Pragma ignoreForCoverage).	^ platform directoriesIn: aPathString!
 
-ensureExistenceOfFolder: aString
-	"Store in platform-agnostic format"	createdFolders add: (aString copyReplaceAll: self pathSeparator with: '/').	^ true!
+ensureExistenceOfFolder: aString	createdFolders add: aString.	^ true!
 
 fileExists: aString	##(Pragma ignoreForCoverage).	^ platform fileExists: aString!
 
@@ -75,21 +74,7 @@ terminateProcess: aProcess	##(Pragma ignoreForCoverage).	^ platform terminate
 
 weakDictionaryOfSize: aNumber	##(Pragma ignoreForCoverage).	^ platform weakDictionaryOfSize: aNumber!
 
-write: aStringOrByteArray toFile: aFileNameString inFolder: aFolderString	| filePathString ansi |	"Store in platform-agnostic format"
-	filePathString := ('<1s>/<2s>' expandMacrosWith: aFolderString with: aFileNameString) copyReplaceAll: self pathSeparator with: '/'.
-	createdFiles add: filePathString.
-
-	"Force AnsiString to try to get a comparable result to Pharo. 
-	If the Ansi isn't valid then do nothing since we can't get a usable result to compare with the hardcoded test values.
-	Note we also have to drop line feeds. Also tabs (or at least one of the test values containing tabs) doesn't work, so ignore these too..."
-	(aStringOrByteArray class = Utf8String) 
-	ifTrue: 
-		[ansi := aStringOrByteArray asAnsiString.
-		(aStringOrByteArray = ansi and: [(ansi includes: Character tab) not])
-			ifTrue: [hashByFile at: filePathString put: (self secureHashFor: (ansi reject: [ :char | char = Character lf])) hex]
-			ifFalse: [hashByFile at: filePathString put: nil]]
-	ifFalse: 
-		[hashByFile at: filePathString put: (self secureHashFor: aStringOrByteArray) hex]! !
+write: aStringOrByteArray toFile: aFileNameString inFolder: aFolderString	| filePathString |	filePathString := '<1s>/<2s>' expandMacrosWith: aFolderString with: aFileNameString.	createdFiles add: filePathString.	hashByFile at: filePathString put: (self secureHashFor: aStringOrByteArray) hex! !
 !WAFileTestingPlatform categoriesFor: #addToShutDownList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #addToStartUpList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #asMethodReturningByteArray:named:!file library!public! !

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #FileDownloadAnchorWebViewTest
+BWRenderingTest subclass: #FileDownloadAnchorWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-FileDownloadAnchorWebViewTest guid: (GUID fromString: '{4f9772ee-f0b6-443a-b4c1-0baee301635b}')!
+FileDownloadAnchorWebViewTest guid: (GUID fromString: '{434e3014-83a8-446b-911d-8f429bac6093}')!
 FileDownloadAnchorWebViewTest comment: 'A FileDownloadAnchorWebViewTest is a test class for testing the behavior of FileDownloadAnchorWebView'!
 !FileDownloadAnchorWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !FileDownloadAnchorWebViewTest methodsFor!

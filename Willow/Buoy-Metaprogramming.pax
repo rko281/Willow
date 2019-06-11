@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -20,9 +20,9 @@ package classNames
 	yourself.
 
 package methodNames
+	add: #Behavior -> #allLeafSubclasses;
 	add: #Object -> #isA:;
 	add: #Object -> #isAn:;
-	add: 'Asserter class' -> #new;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -31,11 +31,10 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Buoy-Assertions';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Portishead\Portishead-Core';
-	yourself).
+package setPrerequisites: #(
+	'Buoy-Assertions'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Portishead\Portishead-Core').
 
 package setManualPrerequisites: #(
 	'Portishead-Core').
@@ -75,12 +74,10 @@ MessageSendingCollector subclass: #UnaryMessageSendingCollector
 
 "Loose Methods"!
 
-!Asserter class methodsFor!
+!Behavior methodsFor!
 
-new
-
-	^super new initialize! !
-!Asserter class categoriesFor: #new!public! !
+allLeafSubclasses	| leafs |	leafs := OrderedCollection new.	self allSubclassesDo: [ :class | class subclasses ifEmpty: [ leafs add: class ] ].	^ leafs! !
+!Behavior categoriesFor: #allLeafSubclasses!*Buoy/Metaprogramming!public! !
 
 !Object methodsFor!
 

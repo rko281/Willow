@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #CompositeComponentCommandTest
+BWRenderingTest subclass: #CompositeComponentCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CompositeComponentCommandTest guid: (GUID fromString: '{69f5a47b-cc06-4fbe-860d-ed874c9dbabb}')!
+CompositeComponentCommandTest guid: (GUID fromString: '{9f3b9055-a1a2-424a-9f80-46da806153db}')!
 CompositeComponentCommandTest comment: 'A CompositeComponentCommandTest is a test class for testing the behavior of CompositeComponentCommand'!
 !CompositeComponentCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !CompositeComponentCommandTest methodsFor!

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SingleSelectionWebViewTest
+BWRenderingTest subclass: #SingleSelectionWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SingleSelectionWebViewTest guid: (GUID fromString: '{dadef886-d57b-423e-9dd7-b356daeeaf58}')!
+SingleSelectionWebViewTest guid: (GUID fromString: '{c3127201-440c-4c15-9211-4a3fe2b83bd6}')!
 SingleSelectionWebViewTest comment: 'I''m an abstract test case for views implementing the single selection API'!
 !SingleSelectionWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !SingleSelectionWebViewTest methodsFor!

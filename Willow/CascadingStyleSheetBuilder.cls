@@ -5,7 +5,7 @@ Object subclass: #CascadingStyleSheetBuilder
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CascadingStyleSheetBuilder guid: (GUID fromString: '{63a862e2-8851-4b53-8902-6192b33cf032}')!
+CascadingStyleSheetBuilder guid: (GUID fromString: '{a7d6a652-2f0b-4926-b576-f741825e9742}')!
 CascadingStyleSheetBuilder comment: 'A CascadingStyleSheetBuilder is a builder to help creting style sheets.'!
 !CascadingStyleSheetBuilder categoriesForClass!RenoirSt-Common! !
 !CascadingStyleSheetBuilder methodsFor!
@@ -33,11 +33,4 @@ initialize	super initialize.	statements := OrderedCollection new! !
 !CascadingStyleSheetBuilder categoriesFor: #declareRuleSetFor:with:!Configuring!public! !
 !CascadingStyleSheetBuilder categoriesFor: #declareRuleSetFor:with:andComment:!Configuring!public! !
 !CascadingStyleSheetBuilder categoriesFor: #initialize!initialize/release!public! !
-
-!CascadingStyleSheetBuilder class methodsFor!
-
-new
-
-	^super new initialize! !
-!CascadingStyleSheetBuilder class categoriesFor: #new!public! !
 

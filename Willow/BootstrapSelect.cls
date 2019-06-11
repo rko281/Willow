@@ -5,7 +5,7 @@ BootstrapPlugin subclass: #BootstrapSelect
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapSelect guid: (GUID fromString: '{4a27c6f5-06d3-4df8-ace6-7042d8f4f707}')!
+BootstrapSelect guid: (GUID fromString: '{2a46fc3e-3cb2-4948-a587-e9d50655ef12}')!
 BootstrapSelect comment: 'I''m a JQueryPlugin implementing  the bootstrap-select programmatic API'!
 !BootstrapSelect categoriesForClass!Willow-Bootstrap-Select! !
 !BootstrapSelect methodsFor!
@@ -108,7 +108,7 @@ title: string	"The default title for the selectpicker."	self optionAt: #titl
 
 toggle	functionName := 'toggle'!
 
-width: autoOrFitOrCssLengthOrFalse	"When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option.	 When set to a css-length, the width of the selectpicker is forced inline to the given value.	 When set to false, all width information is removed."	| optionValue |	optionValue := autoOrFitOrCssLengthOrFalse == false		ifTrue: [ false ]		ifFalse: [ autoOrFitOrCssLengthOrFalse greaseString ].	self optionAt: #width put: optionValue!
+width: autoOrFitOrCssLengthOrFalse	"When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option.	 When set to a css-length, the width of the selectpicker is forced inline to the given value.	 When set to false, all width information is removed."	| optionValue |	optionValue := autoOrFitOrCssLengthOrFalse == false		then: [ false ]		otherwise: [ autoOrFitOrCssLengthOrFalse greaseString ].	self optionAt: #width put: optionValue!
 
 windowPadding: integerOrArray	"This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. 	When set to an integer, the same padding will be added to all sides. 	Alternatively, an array of integers can be used in the format [top, right, bottom, left]."	self optionAt: 'windowPadding' put: integerOrArray! !
 !BootstrapSelect categoriesFor: #actionsBox:!Options!public! !

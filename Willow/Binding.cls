@@ -5,13 +5,16 @@ Object subclass: #Binding
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-Binding guid: (GUID fromString: '{0344b4a3-8be0-4ec9-92aa-c487680870c1}')!
+Binding guid: (GUID fromString: '{f562244b-d304-4f68-9d58-76bf49a8e3f9}')!
 Binding comment: 'I''m an abstract class representing a binding. '!
 !Binding categoriesForClass!Buoy-Dynamic-Binding! !
 !Binding methodsFor!
 
-content	self subclassResponsibility ! !
+content	self subclassResponsibility !
+
+isDefined	^ self subclassResponsibility ! !
 !Binding categoriesFor: #content!accessing!public! !
+!Binding categoriesFor: #isDefined!public!testing! !
 
 !Binding class methodsFor!
 

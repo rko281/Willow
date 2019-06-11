@@ -8,7 +8,7 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, September 2018.'.
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
 
 
 package classNames
@@ -22,7 +22,6 @@ package classNames
 	add: #WABoardwalkExtensionsTest;
 	add: #WADeploymentAwareFileHandlerTest;
 	add: #WADeploymentAwareFileMetadataLibraryTest;
-	add: #WAFileTestingPlatform;
 	add: #WAFileTestingPlatformTest;
 	add: #WAOnlineLibraryTest;
 	add: #WATestingFileMetadataDeploymentLibrary;
@@ -32,51 +31,27 @@ package classNames
 	add: #WATestingRootComponent;
 	yourself.
 
-package methodNames
-	add: #WARenderingTest -> #assertFileDeploymentOf:createsAsFolders:andFileContentsMatching:;
-	add: #WARenderingTest -> #builder;
-	add: #WARenderingTest -> #createCodec;
-	add: #WARenderingTest -> #fullDocumentRendering:;
-	add: #WARenderingTest -> #render:;
-	add: #WARenderingTest -> #renderUsing:;
-	add: #WARenderingTest -> #useFileTestingPlatformDuring:;
-	add: 'WARenderingTest class' -> #isAbstract;
-	yourself.
-
 package binaryGlobalNames: (Set new
 	yourself).
 
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'Boardwalk';
-	add: 'Buoy-Assertions';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Grease\Grease-Core';
-	add: '..\Seaside\Javascript\Javascript-Core';
-	add: '..\Seaside\Javascript\Javascript-Tests-Core';
-	add: '..\Portishead\Portishead-Pragmas';
-	add: '..\Portishead\Portishead-SUnit';
-	add: '..\Seaside\Seaside\Seaside-Canvas';
-	add: '..\Seaside\Seaside\Seaside-Core';
-	add: '..\Seaside\Seaside\Seaside-Tests-Canvas';
-	add: '..\Seaside\Seaside\Seaside-Tools-Core';
-	add: '..\Core\Contributions\Camp Smalltalk\SUnit\SUnit';
-	yourself).
-
-package setManualPrerequisites: #(
-	'Portishead-SUnit').
+package setPrerequisites: #(
+	'Boardwalk'
+	'Boardwalk-SUnit'
+	'Buoy-Assertions'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Seaside\Javascript\Javascript-Tests-Core'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit').
 
 package!
 
 "Class Definitions"!
 
-GRPlatform subclass: #WAFileTestingPlatform
-	instanceVariableNames: 'platform createdFolders createdFiles hashByFile'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 WADeploymentAwareFileMetadataLibrary subclass: #WATestingFileMetadataLibrary
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -127,6 +102,26 @@ TestCase subclass: #WADeploymentAwareFileHandlerTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WABoardwalkExtensionsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WADeploymentAwareFileMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WAFileTestingPlatformTest
+	instanceVariableNames: 'testingPlatform'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WAOnlineLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 JSObjectTest subclass: #BoardwalkJavascriptTest
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -142,103 +137,11 @@ JSObjectTest subclass: #JSNamedFunctionTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WARenderingTest subclass: #WABoardwalkExtensionsTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WARenderingTest subclass: #WADeploymentAwareFileMetadataLibraryTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WARenderingTest subclass: #WAFileTestingPlatformTest
-	instanceVariableNames: 'testingPlatform'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WARenderingTest subclass: #WAOnlineLibraryTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 
 "Global Aliases"!
 
 
 "Loose Methods"!
-
-!WARenderingTest methodsFor!
-
-assertFileDeploymentOf: fileMetadataLibrary createsAsFolders: expectedFolders andFileContentsMatching: expectedFilesMetadata
-
-	"expectedFilesMetadata MUST be a collection of associations with key = expectedFilePath and value = expectedFileContentsHash"
-
-	self
-		useFileTestingPlatformDuring: [ | expectedFiles hashByFile |
-
-			fileMetadataLibrary deployFiles.
-			expectedFiles := expectedFilesMetadata asArray collect: [ :fileMetadata | fileMetadata key ].
-			hashByFile := expectedFilesMetadata asDictionary.
-
-			"Dolphin-specific mods - 
-			1) sort before comparing to take account of ordering differences between Pharo and Smalltalk 
-			2) we record a nil hash if we can't compute a pharo-compatible hash value"
-			self
-				assert: GRPlatform current createdFolders asSortedCollection asArray equals: expectedFolders asSortedCollection asArray ;
-				assert: GRPlatform current createdFiles asSortedCollection asArray equals: expectedFiles asSortedCollection asArray .
-			hashByFile keysAndValuesDo: [ :file :hash | (GRPlatform current savedHashFor: file) ifNotNil: [ :savedHash | self assert: savedHash equals: hash ]] ]!
-
-builder
-
-	^ WAHtmlCanvas builder
-		fullDocument: false;
-		codec: self createCodec;
-		yourself!
-
-createCodec
-
-	^ GRCodec forEncoding: 'utf8'!
-
-fullDocumentRendering: aWARootComponent
-
-	^ self builder
-		fullDocument: true;
-		rootBlock: [ :root | aWARootComponent updateRoot: root ];
-		render: aWARootComponent!
-
-render: aRenderable
-
-	^ self renderUsing: [ :canvas | canvas render: aRenderable ]!
-
-renderUsing: aMonadycBlock
-
-	^ self builder render: [ :canvas | aMonadycBlock cull: canvas ]!
-
-useFileTestingPlatformDuring: aBlock
-
-	| installedPlatform |
-
-	installedPlatform := GRPlatform current.
-	[ GRPlatform current: (WAFileTestingPlatform wrapping: installedPlatform).
-	aBlock value ]
-		ensure: [ GRPlatform current: installedPlatform ]! !
-!WARenderingTest categoriesFor: #assertFileDeploymentOf:createsAsFolders:andFileContentsMatching:!asserting!public! !
-!WARenderingTest categoriesFor: #builder!public!utility! !
-!WARenderingTest categoriesFor: #createCodec!public! !
-!WARenderingTest categoriesFor: #fullDocumentRendering:!public!utility! !
-!WARenderingTest categoriesFor: #render:!public!utility! !
-!WARenderingTest categoriesFor: #renderUsing:!public!utility! !
-!WARenderingTest categoriesFor: #useFileTestingPlatformDuring:!public!utility! !
-
-!WARenderingTest class methodsFor!
-
-isAbstract
-	"Override to true if a TestCase subclass is Abstract and should not have
-	TestCase instances built from it"
-
-	^self name = #WARenderingTest! !
-!WARenderingTest class categoriesFor: #isAbstract!public!testing! !
 
 "End of package definition"!
 

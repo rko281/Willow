@@ -5,7 +5,7 @@ WebInteractionCommand subclass: #LoadingNotificationCommand
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-LoadingNotificationCommand guid: (GUID fromString: '{cfee00d8-17ab-4187-baee-d8326bbd4e88}')!
+LoadingNotificationCommand guid: (GUID fromString: '{353e42f5-29d0-4bd3-bbd6-0e14f8626967}')!
 LoadingNotificationCommand comment: 'I''m a WebInteractionCommand that displays a Loading... notification while an AJAX call is beign executed.'!
 !LoadingNotificationCommand categoriesForClass!Willow-WebInteraction! !
 !LoadingNotificationCommand methodsFor!
@@ -30,9 +30,12 @@ serverIndependentActions	^serverIndependentActions! !
 
 !LoadingNotificationCommand class methodsFor!
 
+displaying: aWebView applying: aComponentCommand	^ self		executing:			(Array				with: [ :aScript :aCanvas | 					aScript << (aCanvas jQuery id: Constants >> #willow >> #notificationSectionName)						html: [ :aSubCanvas | 							aSubCanvas render:								(GenericContainerWebView wrapping: aWebView applying: aComponentCommand) ] ])		then:			(Array				with: [ :aScript :aCanvas | 					aScript << (aCanvas jQuery id: Constants >> #willow >> #notificationSectionName)						html: [ :aSubCanvas |  ] ])!
+
 executing: aServerIndependentActionCollection then: aModelLoadingActionCollection	^self new initializeExecuting: aServerIndependentActionCollection		then: aModelLoadingActionCollection!
 
-onPageTopWithClasses: aCssClassCollection	^ self		executing:			(Array				with: [ :aScript :aCanvas | 					aScript << (aCanvas jQuery id: Constants >> #willow >> #notificationSectionName)						html: [ :aSubCanvas | 							aSubCanvas div								classes: aCssClassCollection;								with: 'Loading...' ] ])		then:			(Array				with: [ :aScript :aCanvas | 					aScript << (aCanvas jQuery id: Constants >> #willow >> #notificationSectionName)						html: [ :aSubCanvas |  ] ])! !
+onPageTopWithClasses: aCssClassCollection	^ self		displaying: 'Loading...'		applying: (ComponentClassificationCommand toStyleWithAll: aCssClassCollection)! !
+!LoadingNotificationCommand class categoriesFor: #displaying:applying:!instance creation!public! !
 !LoadingNotificationCommand class categoriesFor: #executing:then:!instance creation / private!public! !
 !LoadingNotificationCommand class categoriesFor: #onPageTopWithClasses:!instance creation!public! !
 

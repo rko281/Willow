@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WillowExtensionsTest
+BWRenderingTest subclass: #WillowExtensionsTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: 'Willow'
 	classInstanceVariableNames: ''!
-WillowExtensionsTest guid: (GUID fromString: '{f4e4734f-9bdc-4043-8708-78c964da285d}')!
+WillowExtensionsTest guid: (GUID fromString: '{349e8b30-1c3b-4744-96bd-f88d66b734ed}')!
 WillowExtensionsTest comment: 'I''m a test case for extensions of basic Willow objects'!
 !WillowExtensionsTest categoriesForClass!Willow-Bootstrap-Tests-Frontend! !
 !WillowExtensionsTest methodsFor!

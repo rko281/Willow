@@ -5,7 +5,7 @@ BinaryChoiceWebViewBehavior subclass: #CheckboxWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CheckboxWebView guid: (GUID fromString: '{45ff9b71-d8c0-42d9-a4b0-9d6bd3b4d7bd}')!
+CheckboxWebView guid: (GUID fromString: '{5283687b-b2da-4ae5-b94a-e545e181a4f9}')!
 CheckboxWebView comment: 'I''m a binary choice web view implemented as a checkbox'!
 !CheckboxWebView categoriesForClass!Willow-WebViews! !
 !CheckboxWebView methodsFor!
@@ -18,7 +18,7 @@ initializeLabeledAccordingTo: anOptionalLabel applying: aCommandToComponent	la
 
 onTrigger	^ interactionInterpreter!
 
-renderContentOn: aCanvas	| checkbox |	checkbox := aCanvas checkbox.	commandToComponent applyTo: checkbox on: aCanvas.	checkbox		value: isChecked;		callback: [ :value | 			value = isChecked				ifFalse: [ self toggleCurrentSelection ] ].	self renderOptionalLabelRelatedTo: checkbox on: aCanvas.	interactionInterpreter applyTo: checkbox on: aCanvas!
+renderContentOn: aCanvas	| checkbox |	checkbox := aCanvas checkbox.	commandToComponent applyTo: checkbox on: aCanvas.	checkbox		value: isChecked;		callback: [ :value | [ self toggleCurrentSelection ] unless: value = isChecked ].	self renderOptionalLabelRelatedTo: checkbox on: aCanvas.	interactionInterpreter applyTo: checkbox on: aCanvas!
 
 renderOptionalLabelRelatedTo: checkbox on: aCanvas	labelOptional		withContentDo: [ :label | 			| id |			id := self identifyIn: aCanvas.			checkbox id: id.			aCanvas label				for: id;				with: label ]		ifUnused: [ identifierAssigner withAssignedIdentifierDo: [ :id | checkbox id: id ] ]!
 

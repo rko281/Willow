@@ -5,7 +5,7 @@ WAObject subclass: #WebInteractionInterpreterBehavior
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WebInteractionInterpreterBehavior guid: (GUID fromString: '{5010199d-1ed8-4c2d-a563-a7b58eea5a98}')!
+WebInteractionInterpreterBehavior guid: (GUID fromString: '{84028301-e8dc-4acf-a6a9-38b31040602b}')!
 WebInteractionInterpreterBehavior comment: ''!
 !WebInteractionInterpreterBehavior categoriesForClass!Willow-WebInteraction! !
 !WebInteractionInterpreterBehavior methodsFor!

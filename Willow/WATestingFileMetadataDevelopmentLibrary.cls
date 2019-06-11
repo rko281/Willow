@@ -5,6 +5,6 @@ WATestingFileMetadataLibrary subclass: #WATestingFileMetadataDevelopmentLibrary
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WATestingFileMetadataDevelopmentLibrary guid: (GUID fromString: '{4062c784-acd7-4b43-9107-fcacea6390b0}')!
+WATestingFileMetadataDevelopmentLibrary guid: (GUID fromString: '{2c8b4240-5af5-4842-b99f-f3074d48c7a7}')!
 WATestingFileMetadataDevelopmentLibrary comment: 'WAOnlineLibrary subclass: #WATestingOnlineLibrary	instanceVariableNames: ''''	classVariableNames: ''''	poolDictionaries: ''''	category: ''Boardwalk-Tests-WebApplication'''!
 !WATestingFileMetadataDevelopmentLibrary categoriesForClass!Boardwalk-Tests-WebApplication! !

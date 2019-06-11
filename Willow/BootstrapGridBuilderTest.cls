@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapGridBuilderTest
+BWRenderingTest subclass: #BootstrapGridBuilderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapGridBuilderTest guid: (GUID fromString: '{7fdd199c-739f-4909-98b3-67b14f7ba877}')!
+BootstrapGridBuilderTest guid: (GUID fromString: '{2017c092-ceec-463f-9d1d-fdfbded2967e}')!
 BootstrapGridBuilderTest comment: 'A BootstrapGridBuilderTest is a test class for testing the behavior of BootstrapGridBuilder'!
 !BootstrapGridBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapGridBuilderTest methodsFor!

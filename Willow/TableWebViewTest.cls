@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #TableWebViewTest
+BWRenderingTest subclass: #TableWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-TableWebViewTest guid: (GUID fromString: '{4961a55a-3b48-439d-af5d-c82c31a1bf2c}')!
+TableWebViewTest guid: (GUID fromString: '{6e70b2e0-8ccb-47f6-a4da-fb0571dc8229}')!
 TableWebViewTest comment: 'A TableWebViewTest is a test class for testing the behavior of TableWebView'!
 !TableWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !TableWebViewTest methodsFor!

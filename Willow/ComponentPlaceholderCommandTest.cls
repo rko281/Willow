@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentPlaceholderCommandTest
+BWRenderingTest subclass: #ComponentPlaceholderCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentPlaceholderCommandTest guid: (GUID fromString: '{5f18d45a-d16e-4741-9c43-c78a62dcbcec}')!
+ComponentPlaceholderCommandTest guid: (GUID fromString: '{9ccb5687-ce33-4e76-a6d7-d3f772fb1cb8}')!
 ComponentPlaceholderCommandTest comment: 'A ComponentPlaceholderCommandTest is a test class for testing the behavior of ComponentPlaceholderCommand'!
 !ComponentPlaceholderCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentPlaceholderCommandTest methodsFor!

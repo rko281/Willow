@@ -1,16 +1,16 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapDatepickerTest
+BWRenderingTest subclass: #BootstrapDatepickerTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDatepickerTest guid: (GUID fromString: '{19613c72-37c6-4346-86c8-1d62bd2fd84a}')!
+BootstrapDatepickerTest guid: (GUID fromString: '{0dc4ac68-5b26-404a-b86b-3eaa49bd8299}')!
 BootstrapDatepickerTest comment: 'A BootstrapDatepickerTest is a test class for testing the behavior of BootstrapDatepicker'!
 !BootstrapDatepickerTest categoriesForClass!Willow-Bootstrap-Tests-Datepicker! !
 !BootstrapDatepickerTest methodsFor!
 
-januaryFirst2017	^ Date newDay: 1 monthIndex: 1 year: 2017!
+januaryFirst2017	^ Date newDay: 1 month: 1 year: 2017!
 
 renderTextFieldApplying: aBlock	^ self		renderUsing: [ :canvas | 			| select datepicker |			select := canvas textInput.			datepicker := canvas jQuery new bootstrapDatepicker.			aBlock value: datepicker.			select script: datepicker ]!
 

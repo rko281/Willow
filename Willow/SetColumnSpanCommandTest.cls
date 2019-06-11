@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #SetColumnSpanCommandTest
+BWRenderingTest subclass: #SetColumnSpanCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SetColumnSpanCommandTest guid: (GUID fromString: '{4e2935d1-e0ad-4a5d-b2af-78e81cb0525e}')!
+SetColumnSpanCommandTest guid: (GUID fromString: '{eb934e14-908e-4be1-9b0b-0728855d94eb}')!
 SetColumnSpanCommandTest comment: ''!
 !SetColumnSpanCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !SetColumnSpanCommandTest methodsFor!

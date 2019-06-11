@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #FieldSetWebViewTest
+BWRenderingTest subclass: #FieldSetWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-FieldSetWebViewTest guid: (GUID fromString: '{db524a22-be7d-44c0-be7c-df4fa6f3221b}')!
+FieldSetWebViewTest guid: (GUID fromString: '{10e64603-a905-4f9b-8c2b-592711f912e6}')!
 FieldSetWebViewTest comment: ''!
 !FieldSetWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !FieldSetWebViewTest methodsFor!

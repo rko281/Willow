@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapPopoverTest
+BWRenderingTest subclass: #BootstrapPopoverTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapPopoverTest guid: (GUID fromString: '{835a0778-ab4b-44e6-80c6-8ae271b7554b}')!
+BootstrapPopoverTest guid: (GUID fromString: '{42b2a1e0-faca-47bc-84be-be915c36bbef}')!
 BootstrapPopoverTest comment: 'A BootstrapPopoverTest is a test class for testing the behavior of BootstrapPopover'!
 !BootstrapPopoverTest categoriesForClass!Willow-Bootstrap-Tests-Plugins! !
 !BootstrapPopoverTest methodsFor!

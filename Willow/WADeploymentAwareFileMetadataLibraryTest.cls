@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WADeploymentAwareFileMetadataLibraryTest
+BWRenderingTest subclass: #WADeploymentAwareFileMetadataLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WADeploymentAwareFileMetadataLibraryTest guid: (GUID fromString: '{7be7b79a-1aaf-4680-b2ca-647003aed9a0}')!
+WADeploymentAwareFileMetadataLibraryTest guid: (GUID fromString: '{56f193f7-6f1e-4296-88e8-19369b51b9f8}')!
 WADeploymentAwareFileMetadataLibraryTest comment: 'A WillowFileMetadataLibraryTest is a test class for testing the behavior of WillowFileMetadataLibrary'!
 !WADeploymentAwareFileMetadataLibraryTest categoriesForClass!Boardwalk-Tests-WebApplication! !
 !WADeploymentAwareFileMetadataLibraryTest methodsFor!

@@ -1,0 +1,144 @@
+﻿| package |
+package := Package name: 'Willow-Dolphin-Tests'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, June 2019.'.
+
+
+package methodNames
+	add: #BootstrapDatepickerTest -> #performTest;
+	add: #BWRenderingTest -> #assert:equals:;
+	add: #DateFieldWebViewTest -> #testDateDolphin;
+	add: #ISODateCodecTest -> #testCantDecodeDateDolphin;
+	add: #ISODateCodecTest -> #testDecodeDolphin;
+	add: #ISODateCodecTest -> #testEncodeDolphin;
+	add: 'DateFieldWebViewTest class' -> #allTestSelectors;
+	add: 'ISODateCodecTest class' -> #allTestSelectors;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Boardwalk-SUnit'
+	'Buoy-Assertions'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Grease\Grease-Core'
+	'Willow'
+	'Willow-Bootstrap-Tests'
+	'Willow-Tests').
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BootstrapDatepickerTest methodsFor!
+
+performTest
+
+	"Workaround for use of Date class>>newDay:month:year: using Integer for month argument"
+
+	^[super performTest] on: MessageNotUnderstood do: 
+		[ :mnu | 
+		(mnu selector = #asLowercase and: [mnu receiver class = SmallInteger])
+			ifTrue: [mnu return: mnu receiver]
+			ifFalse: [mnu pass]]! !
+!BootstrapDatepickerTest categoriesFor: #performTest!public!rendering! !
+
+!BWRenderingTest methodsFor!
+
+assert: anObject equals: anotherObject
+
+	"Workaround for 
+	 - file path separator differences
+	 - sort order differences"
+
+	| platform |
+
+	platform := GRPlatform current.
+
+	^(platform class = WAFileTestingPlatform and: [anObject = platform createdFolders or: [anObject = platform createdFiles]])
+		ifTrue: [super assert: ((anObject collect: [ :each | each replaceAll: $\ with: $/]) asSortedCollection: [ :a :b | a hash <= b hash]) equals: (anotherObject asSortedCollection: [ :a :b | a hash <= b hash])]
+		ifFalse: [super assert: anObject equals: anotherObject]
+
+
+! !
+!BWRenderingTest categoriesFor: #assert:equals:!public! !
+
+!DateFieldWebViewTest methodsFor!
+
+testDateDolphin
+
+	| dateField html currentDate |
+
+	dateField := DateFieldWebView applying: [ :field |  ].
+
+	self should: [ dateField date ] raise: InstanceCreationFailed.
+
+	currentDate := Date newDay: 1 monthIndex: 1 year: 2001.
+	dateField changeDateTo: currentDate.
+
+	self assert: dateField date equals: currentDate.
+	html := self render: dateField.
+
+	self assert: html equals: '<input value="2001-01-01" name="1" type="date"/>'! !
+!DateFieldWebViewTest categoriesFor: #testDateDolphin!public! !
+
+!DateFieldWebViewTest class methodsFor!
+
+allTestSelectors
+
+	^super allTestSelectors reject: [ :each | #(#testDate) includes: each]! !
+!DateFieldWebViewTest class categoriesFor: #allTestSelectors!public! !
+
+!ISODateCodecTest methodsFor!
+
+testCantDecodeDateDolphin
+
+	self
+		should: [ ISODateCodec new decode: '2010-13-11' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '2010-13-32' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '2017-02-29' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '1-13-11' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '10-13-11' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '010-13-11' ] raise: InstanceCreationFailed;
+		should: [ ISODateCodec new decode: '2010-13-11' ] raise: InstanceCreationFailed;
+		"should: [ ISODateCodec new decode: '2010-1-11' ] raise: InstanceCreationFailed;    <- Dolphin is tolerant of single-digit year" 
+		should: [ ISODateCodec new decode: '2010-13-1' ] raise: InstanceCreationFailed!
+
+testDecodeDolphin
+
+	self assert: (ISODateCodec new decode: '2010-12-11') equals: (Date newDay: 11 monthIndex: 12 year: 2010)!
+
+testEncodeDolphin
+
+	self assert: (ISODateCodec new encode: (Date newDay: 11 monthIndex: 12 year: 2010)) equals: '2010-12-11'! !
+!ISODateCodecTest categoriesFor: #testCantDecodeDateDolphin!public! !
+!ISODateCodecTest categoriesFor: #testDecodeDolphin!public! !
+!ISODateCodecTest categoriesFor: #testEncodeDolphin!public! !
+
+!ISODateCodecTest class methodsFor!
+
+allTestSelectors
+
+	^super allTestSelectors reject: [ :each | #(#testDecode #testEncode #testCantDecodeDate) includes: each]! !
+!ISODateCodecTest class categoriesFor: #allTestSelectors!public! !
+
+"End of package definition"!
+

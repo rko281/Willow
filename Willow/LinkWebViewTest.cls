@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #LinkWebViewTest
+BWRenderingTest subclass: #LinkWebViewTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-LinkWebViewTest guid: (GUID fromString: '{253288c9-9574-4998-8b67-9ece2067dad0}')!
+LinkWebViewTest guid: (GUID fromString: '{5a4fd2f1-574f-48bc-86ec-2f6493209e6a}')!
 LinkWebViewTest comment: 'An AsynchronicLinkWebViewTest is a test class for testing the behavior of AsynchronicLinkWebView'!
 !LinkWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !LinkWebViewTest methodsFor!

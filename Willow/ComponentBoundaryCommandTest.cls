@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #ComponentBoundaryCommandTest
+BWRenderingTest subclass: #ComponentBoundaryCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-ComponentBoundaryCommandTest guid: (GUID fromString: '{214d16c0-0ee3-4d3b-b94e-3137e0abb2cb}')!
+ComponentBoundaryCommandTest guid: (GUID fromString: '{11f25d39-ca74-45f9-8fe1-b637a577d48e}')!
 ComponentBoundaryCommandTest comment: 'A ComponentBoundaryCommandTest is a test class for testing the behavior of ComponentBoundaryCommand'!
 !ComponentBoundaryCommandTest categoriesForClass!Willow-Tests-Frontend! !
 !ComponentBoundaryCommandTest methodsFor!

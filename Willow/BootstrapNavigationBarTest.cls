@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapNavigationBarTest
+BWRenderingTest subclass: #BootstrapNavigationBarTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapNavigationBarTest guid: (GUID fromString: '{504f09ef-bbcb-4ba8-bb17-792b19d83a67}')!
+BootstrapNavigationBarTest guid: (GUID fromString: '{d3f6901f-f760-48a1-9de3-125381958293}')!
 BootstrapNavigationBarTest comment: 'A BootstrapNavigationBarTest is a test class for testing the behavior of BootstrapNavigationBar'!
 !BootstrapNavigationBarTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapNavigationBarTest methodsFor!

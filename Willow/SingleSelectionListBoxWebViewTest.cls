@@ -5,7 +5,7 @@ SingleSelectionWebViewTest subclass: #SingleSelectionListBoxWebViewTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-SingleSelectionListBoxWebViewTest guid: (GUID fromString: '{a86dc302-4336-4647-bb07-1209ebdfa3cc}')!
+SingleSelectionListBoxWebViewTest guid: (GUID fromString: '{13f056d5-b951-4352-acac-a573f2c2c9ac}')!
 SingleSelectionListBoxWebViewTest comment: 'A SingleSelectionListBoxWebViewTest is a test class for testing the behavior of SingleSelectionListBoxWebView'!
 !SingleSelectionListBoxWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !SingleSelectionListBoxWebViewTest methodsFor!
@@ -24,7 +24,7 @@ testRenderContentOnWithCommands	| listBox html |	listBox := SingleSelectionL
 
 testRenderContentOnWithElements	| listBox html |	listBox := self newSingleSelectionView.	listBox allowAnyOf: #('One' 'Two' 'Three').	html := self render: listBox.	self		assert: html		equals:			'<select name="1" id="id2" size="5"><option value="1">One</option><option value="2">Two</option><option value="3">Three</option></select><script type="text/javascript">$("#id2").prop("selectedIndex",-1);</script>'!
 
-testRenderContentOnWithElementsAndSomethingSelected	| listBox html |	listBox := self newSingleSelectionView.	listBox allowAnyOf: #('One' 'Two' 'Three').	listBox chooseAnySatisfying: [ :element | true ] ifNone: [ self fail ].	html := self render: listBox.	self		assert: html		equals:			'<select name="1" size="5"><option value="1" selected="selected">One</option><option value="2">Two</option><option value="3">Three</option></select>'! !
+testRenderContentOnWithElementsAndSomethingSelected	| listBox html |	listBox := self newSingleSelectionView.	listBox allowAnyOf: #('One' 'Two' 'Three').	listBox chooseAnySatisfying: [ :element | true ] ifNone: [ self fail ].	html := self render: listBox.	self		assert: html		equals:			'<select name="1" size="5"><option value="1" selected>One</option><option value="2">Two</option><option value="3">Three</option></select>'! !
 !SingleSelectionListBoxWebViewTest categoriesFor: #newSingleSelectionView!instance creation!public! !
 !SingleSelectionListBoxWebViewTest categoriesFor: #testDisplayingAtOnce!public!tests! !
 !SingleSelectionListBoxWebViewTest categoriesFor: #testIdentifyIn!public!tests! !

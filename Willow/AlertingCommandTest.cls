@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #AlertingCommandTest
+BWRenderingTest subclass: #AlertingCommandTest
 	instanceVariableNames: 'command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-AlertingCommandTest guid: (GUID fromString: '{69ffb741-30af-49bb-8b1e-df0e2d6a67c0}')!
+AlertingCommandTest guid: (GUID fromString: '{7742e4ad-4999-4d5c-84de-b5b3c09bd88d}')!
 AlertingCommandTest comment: 'An AlertingCommandTest is a test class for testing the behavior of AlertingCommand'!
 !AlertingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !AlertingCommandTest methodsFor!

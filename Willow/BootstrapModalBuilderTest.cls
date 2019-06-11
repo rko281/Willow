@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapModalBuilderTest
+BWRenderingTest subclass: #BootstrapModalBuilderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapModalBuilderTest guid: (GUID fromString: '{b4c03dc8-60da-4d51-b70e-5f00762c890e}')!
+BootstrapModalBuilderTest guid: (GUID fromString: '{8d03d614-f255-433b-81ed-3acf275a2ff6}')!
 BootstrapModalBuilderTest comment: ''!
 !BootstrapModalBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapModalBuilderTest methodsFor!

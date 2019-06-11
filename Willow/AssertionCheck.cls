@@ -5,12 +5,12 @@ Object subclass: #AssertionCheck
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-AssertionCheck guid: (GUID fromString: '{2cc61d0c-542f-4407-8b8a-11fe0ffc91ac}')!
+AssertionCheck guid: (GUID fromString: '{61875c7d-bb58-424a-9182-51c36a13c133}')!
 AssertionCheck comment: 'I represent a check for a specific fact, including the success and failure actions to apply'!
 !AssertionCheck categoriesForClass!Buoy-Assertions! !
 !AssertionCheck methodsFor!
 
-checkApplying: anAssertionFailurePolicy	factToCheck value		ifTrue: [ successAction value: anAssertionFailurePolicy ]		ifFalse: [ anAssertionFailurePolicy assertionFailedBecause: self explanation ]!
+checkApplying: anAssertionFailurePolicy	factToCheck value		then: [ successAction value: anAssertionFailurePolicy ]		otherwise: [ anAssertionFailurePolicy assertionFailedBecause: self explanation ]!
 
 explanation	^ explanationBlockOrString value!
 

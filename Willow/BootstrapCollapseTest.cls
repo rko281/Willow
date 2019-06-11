@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapCollapseTest
+BWRenderingTest subclass: #BootstrapCollapseTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapCollapseTest guid: (GUID fromString: '{fbb5227c-2768-42bb-83eb-fe7cce683d7a}')!
+BootstrapCollapseTest guid: (GUID fromString: '{a8ed9573-93c8-49f1-bae5-3b54633efbb0}')!
 BootstrapCollapseTest comment: 'A BootstrapCollapseTest is a test class for testing the behavior of BootstrapCollapse'!
 !BootstrapCollapseTest categoriesForClass!Willow-Bootstrap-Tests-Plugins! !
 !BootstrapCollapseTest methodsFor!

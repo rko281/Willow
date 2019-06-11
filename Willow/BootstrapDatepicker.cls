@@ -5,7 +5,7 @@ BootstrapPlugin subclass: #BootstrapDatepicker
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDatepicker guid: (GUID fromString: '{8ea1cf91-c080-4ac2-be6c-ed1f61355af9}')!
+BootstrapDatepicker guid: (GUID fromString: '{323a24c0-7d4c-455c-9b61-c1417ded4395}')!
 BootstrapDatepicker comment: 'I''m a JQueryPlugin implementing  the bootstrap-datepicker programmatic API'!
 !BootstrapDatepicker categoriesForClass!Willow-Bootstrap-Datepicker! !
 !BootstrapDatepicker methodsFor!
@@ -76,7 +76,7 @@ keyboardNavigation: aBoolean	"Whether or not to allow date navigation by arrow
 
 language: aString	"String. Default: “en”The IETF code (eg “en” for English, “pt-BR” for Brazilian Portuguese) of the language to use for month and day names. These will also be used as the input’s value (and subsequently sent to the server in the case of form submissions). If a full code (eg “de-DE”) is supplied the picker will first check for an “de-DE” language and if not found will fallback and check for a “de” language. If an unknown language code is given, English will be used. "	self optionAt: 'language' put: aString!
 
-lookupValueOrArray: aStringOrArray	^ (aStringOrArray isCollection and: [ aStringOrArray isString not ])		ifTrue: [ aStringOrArray collect: [ :value | self lookupValue: value ] ]		ifFalse: [ aStringOrArray ]!
+lookupValueOrArray: aStringOrArray	^ (aStringOrArray isCollection and: [ aStringOrArray isString not ])		then: [ aStringOrArray collect: [ :value | self lookupValue: value ] ]		otherwise: [ aStringOrArray ]!
 
 maxViewMode: aStringOrNumber	"Number, String. Default: 4, “centuries”Set a maximum limit for the view mode. Accepts: “days” or 0, “months” or 1, “years” or 2, “decades” or 3, and “centuries” or 4. Gives the ability to pick only a day, a month, a year or a decade. The day is set to the 1st for “months”, the month is set to January for “years”, the year is set to the first year from the decade for “decades”, and the year is set to the first from the millennium for “centuries”."	self optionAt: 'maxViewMode' put: aStringOrNumber!
 

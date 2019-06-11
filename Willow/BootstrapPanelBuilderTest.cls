@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapPanelBuilderTest
+BWRenderingTest subclass: #BootstrapPanelBuilderTest
 	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapPanelBuilderTest guid: (GUID fromString: '{875bda97-9f45-4d17-8165-abed2083e662}')!
+BootstrapPanelBuilderTest guid: (GUID fromString: '{89b7f5c6-41c4-4a5e-a200-3b32f771c79a}')!
 BootstrapPanelBuilderTest comment: 'A BootstrapPanelBuilderTest is a test class for testing the behavior of BootstrapPanelBuilder'!
 !BootstrapPanelBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapPanelBuilderTest methodsFor!

@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WillowBootstrapFileMetadataLibraryTest
+BWRenderingTest subclass: #WillowBootstrapFileMetadataLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WillowBootstrapFileMetadataLibraryTest guid: (GUID fromString: '{e013a8f6-4869-4954-b5d5-67025cd5af18}')!
+WillowBootstrapFileMetadataLibraryTest guid: (GUID fromString: '{963ff99c-19e0-4351-84a6-59d3ff1ce315}')!
 WillowBootstrapFileMetadataLibraryTest comment: 'A WillowBootstrapFileMetadataLibraryTest is a test class for testing the behavior of WillowBootstrapFileMetadataLibrary'!
 !WillowBootstrapFileMetadataLibraryTest categoriesForClass!Willow-Bootstrap-Tests-Libraries! !
 !WillowBootstrapFileMetadataLibraryTest methodsFor!

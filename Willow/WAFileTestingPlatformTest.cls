@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WAFileTestingPlatformTest
+BWRenderingTest subclass: #WAFileTestingPlatformTest
 	instanceVariableNames: 'testingPlatform'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAFileTestingPlatformTest guid: (GUID fromString: '{519c57a6-38bd-4efd-a421-7495a2d8d0d1}')!
+WAFileTestingPlatformTest guid: (GUID fromString: '{e6c904d6-692e-4f98-b45c-00b75b4a9928}')!
 WAFileTestingPlatformTest comment: 'I''m a test for WAFileTestingPlatform'!
 !WAFileTestingPlatformTest categoriesForClass!Boardwalk-Tests-WebApplication! !
 !WAFileTestingPlatformTest methodsFor!

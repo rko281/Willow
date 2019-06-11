@@ -5,7 +5,7 @@ WADeploymentAwareFileMetadataLibrary subclass: #JQuery3MetadataLibrary
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-JQuery3MetadataLibrary guid: (GUID fromString: '{2615d8b0-620e-4680-98f6-708032cf7860}')!
+JQuery3MetadataLibrary guid: (GUID fromString: '{879b9f8f-6fe1-4d26-9a68-f6b946ff73a6}')!
 JQuery3MetadataLibrary comment: 'JQuery3MetadataLibrary class	instanceVariableNames: '''''!
 !JQuery3MetadataLibrary categoriesForClass!Willow-Libraries! !
 !JQuery3MetadataLibrary class methodsFor!
@@ -16,7 +16,7 @@ forDevelopment	^ JQuery3DevelopmentMetadataLibrary!
 
 libraryName	^ 'jQuery'!
 
-version	^ '3.3.1'! !
+version	^ '3.4.1'! !
 !JQuery3MetadataLibrary class categoriesFor: #forDeployment!Accessing!public! !
 !JQuery3MetadataLibrary class categoriesFor: #forDevelopment!Accessing!public! !
 !JQuery3MetadataLibrary class categoriesFor: #libraryName!Accessing!public! !

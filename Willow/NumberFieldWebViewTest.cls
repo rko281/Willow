@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #NumberFieldWebViewTest
+BWRenderingTest subclass: #NumberFieldWebViewTest
 	instanceVariableNames: 'notificationWasReceived'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-NumberFieldWebViewTest guid: (GUID fromString: '{a93c0244-0453-4326-84f7-37f3c06ca761}')!
+NumberFieldWebViewTest guid: (GUID fromString: '{7addde99-6aac-4d6d-8ce5-14e85769eae5}')!
 NumberFieldWebViewTest comment: 'A NumberFieldWebViewTest is a test class for testing the behavior of NumberFieldWebView'!
 !NumberFieldWebViewTest categoriesForClass!Willow-Tests-WebViews! !
 !NumberFieldWebViewTest methodsFor!

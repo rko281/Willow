@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapDatepickerDevelopmentLibraryTest
+BWRenderingTest subclass: #BootstrapDatepickerDevelopmentLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDatepickerDevelopmentLibraryTest guid: (GUID fromString: '{0aedb0a3-bf88-418e-a5ee-ffeceb182039}')!
+BootstrapDatepickerDevelopmentLibraryTest guid: (GUID fromString: '{4ec5e2cc-1ee1-4507-93ed-f8daa03d3636}')!
 BootstrapDatepickerDevelopmentLibraryTest comment: 'A BootstrapDatepickerDevelopmentLibraryTest is a test class for testing the behavior of BootstrapDatepickerDevelopmentLibrary'!
 !BootstrapDatepickerDevelopmentLibraryTest categoriesForClass!Willow-Bootstrap-Tests-Datepicker! !
 !BootstrapDatepickerDevelopmentLibraryTest methodsFor!

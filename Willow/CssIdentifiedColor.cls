@@ -5,7 +5,7 @@ CssColorUnit subclass: #CssIdentifiedColor
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-CssIdentifiedColor guid: (GUID fromString: '{d82b2a3a-6440-4c89-98b6-607070fd1608}')!
+CssIdentifiedColor guid: (GUID fromString: '{07912790-fb50-49f3-a8af-315a2a0e08d8}')!
 CssIdentifiedColor comment: 'A CssIdentifiedColor is a color with a given identification (a name or hexadecimal representation).'!
 !CssIdentifiedColor categoriesForClass!RenoirSt-Colors! !
 !CssIdentifiedColor methodsFor!
@@ -29,7 +29,7 @@ newWithAlpha: alphaValue	^color newWithAlpha: alphaValue! !
 
 assertIsOfSizeSix: aString	AssertionChecker enforce: [ aString size = 6 ] because: 'Invalid hexadecimal notation for a color.' raising: InstanceCreationFailed!
 
-expandToExtendedHexaNotation: aString	"If the string is specified in the 3 letters short notation, expand it to six"	^ aString size = 3		ifTrue: [ 			'<1s><1s><2s><2s><3s><3s>'				expandMacrosWith: aString first asString				with: aString second asString				with: aString third asString ]		ifFalse: [ aString ]!
+expandToExtendedHexaNotation: aString	"If the string is specified in the 3 letters short notation, expand it to six"	^ aString size = 3		then: [ '<1s><1s><2s><2s><3s><3s>'				expandMacrosWith: aString first asString				with: aString second asString				with: aString third asString			]		otherwise: [ aString ]!
 
 fromHexadecimalNotation: aString	| numberInHexaNotation red green blue |	numberInHexaNotation := self expandToExtendedHexaNotation: aString.	self assertIsOfSizeSix: numberInHexaNotation.	red := Integer readFrom: (numberInHexaNotation copyFrom: 1 to: 2) base: 16.	green := Integer readFrom: (numberInHexaNotation copyFrom: 3 to: 4) base: 16.	blue := Integer readFrom: (numberInHexaNotation copyFrom: 5 to: 6) base: 16.	^ self representing: (CssRGBColor red: red green: green blue: blue) identifiedBy: ('#<1s>' expandMacrosWith: aString)!
 

@@ -5,7 +5,7 @@ WebInteractionCommand subclass: #RenderingCommand
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-RenderingCommand guid: (GUID fromString: '{abdb7184-235d-4d8e-8cdd-e67bff7baaf5}')!
+RenderingCommand guid: (GUID fromString: '{36562b1e-5fb2-4832-8e01-51282a447dcc}')!
 RenderingCommand comment: 'I''m a Web Interaction Command used to render again the contents of an IdentifedWebView .'!
 !RenderingCommand categoriesForClass!Willow-WebInteraction! !
 !RenderingCommand methodsFor!
@@ -14,7 +14,7 @@ clientIndependentActions	^Array with: [shouldRender := renderingCondition valu
 
 initializeEvaluating: aCallback asConditionToRenderAll: anIdentifiedViewCollection	shouldRender := true.	renderingCondition := aCallback.	identifiedViews  := anIdentifiedViewCollection!
 
-modelLoadingActions	^ Array		with: [ :aScript :aCanvas | 			shouldRender				ifTrue: [ identifiedViews						do: [ :identifiedView | 							identifiedView identifyIn: aCanvas.							aScript << (aCanvas jQuery id: identifiedView identifier) html: identifiedView view ] ] ]!
+modelLoadingActions	^ Array		with: [ :aScript :aCanvas | 			shouldRender				then: [ identifiedViews						do: [ :identifiedView | 							identifiedView identifyIn: aCanvas.							aScript << ( aCanvas jQuery id: identifiedView identifier ) html: identifiedView view							]					]			]!
 
 priorityActions	^#()!
 

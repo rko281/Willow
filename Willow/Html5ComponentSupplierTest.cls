@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #Html5ComponentSupplierTest
+BWRenderingTest subclass: #Html5ComponentSupplierTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-Html5ComponentSupplierTest guid: (GUID fromString: '{90cf9d28-29ed-4f49-b38f-800a244b4dea}')!
+Html5ComponentSupplierTest guid: (GUID fromString: '{386cf17f-a904-4576-803f-9d38957ab9b8}')!
 Html5ComponentSupplierTest comment: 'A Html5ComponentSupplierTest is a test class for testing the behavior of Html5ComponentSupplier'!
 !Html5ComponentSupplierTest categoriesForClass!Willow-Tests-Frontend! !
 !Html5ComponentSupplierTest methodsFor!
@@ -16,9 +16,9 @@ testAsynchronicButtonLabeledApplying	self assertRenderingOf: [ :supplier | sup
 
 testAsynchronicLinkLabeledApplying	self assertRenderingOf: [ :supplier | supplier asynchronicLinkLabeled: 'Buy' applying: [ :link | link addClass willow ] ] equals: '<a id="a-id1" class="willow">Buy</a><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});</script>'!
 
-testCheckboxLabeledOnModelOffModelApplying	self		assertRenderingOf: [ :supplier | 			supplier				checkboxLabeled: 'Labelization'				onModel: 3				offModel: 'the off'				applying: [ :checkbox | checkbox addClass willow ] ]		equals: '<input class="willow" checked="checked" name="1" id="checkbox-id2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id2">Labelization</label>'!
+testCheckboxLabeledOnModelOffModelApplying	self		assertRenderingOf: [ :supplier | 			supplier				checkboxLabeled: 'Labelization'				onModel: 3				offModel: 'the off'				applying: [ :checkbox | checkbox addClass willow ]			]		equals:			'<input class="willow" checked name="1" id="checkbox-id2" type="checkbox"/><input name="3" type="hidden"/><label for="checkbox-id2">Labelization</label>'!
 
-testCheckboxUnlabeledOnModelOffModelApplying	self		assertRenderingOf: [ :supplier | supplier checkboxUnlabeledOnModel: 3 offModel: 'the off' applying: [ :checkbox | checkbox addClass willow ] ]		equals: '<input class="willow" checked="checked" name="1" type="checkbox"/><input name="2" type="hidden"/>'!
+testCheckboxUnlabeledOnModelOffModelApplying	self		assertRenderingOf: [ :supplier | supplier checkboxUnlabeledOnModel: 3 offModel: 'the off' applying: [ :checkbox | checkbox addClass willow ] ]		equals: '<input class="willow" checked name="1" type="checkbox"/><input name="2" type="hidden"/>'!
 
 testDateFieldApplying	self assertRenderingOf: [ :supplier | supplier dateFieldApplying: [ :field | field addClass willow ] ] equals: '<input value="" name="1" type="date" class="willow"/>'!
 
@@ -28,11 +28,11 @@ testDelayedViewShowingWhileEvaluatingThenRendering	self		assertRenderingOf: [
 
 testDropdownListApplying	self assertRenderingOf: [ :supplier | supplier dropdownListApplying: [ :dropdownList | dropdownList addClass willow ] ] equals: '<select name="1" class="willow"></select>'!
 
-testFieldSetContainingApplyingWithLegendApplying	self		assertRenderingOf: [ :supplier | 			supplier				fieldSetContaining: 'The View'				applying: [ :fieldSet | fieldSet beDisabled ]				withLegend: 'Its Title'				applying: [ :legend | legend beAutofocused ] ]		equals: '<fieldset disabled="disabled"><legend autofocus="autofocus">Its Title</legend>The View</fieldset>'!
+testFieldSetContainingApplyingWithLegendApplying	self		assertRenderingOf: [ :supplier | 			supplier				fieldSetContaining: 'The View'				applying: [ :fieldSet | fieldSet beDisabled ]				withLegend: 'Its Title'				applying: [ :legend | legend beAutofocused ] ]		equals: '<fieldset disabled><legend autofocus>Its Title</legend>The View</fieldset>'!
 
 testMultiLineTextFieldApplying	self assertRenderingOf: [ :supplier | supplier multiLineTextFieldApplying: [ :textField | textField addClass willow ] ] equals: '<textarea rows="auto" cols="auto" name="1" class="willow"></textarea>'!
 
-testMultipleSelectionListBoxDisplayingAtOnceApplying	self		assertRenderingOf: [ :supplier | supplier multipleSelectionListBoxDisplayingAtOnce: 15 applying: [ :listBox | listBox addClass willow ] ]		equals: '<select name="1" size="15" class="willow" multiple="multiple"></select><input name="2" type="hidden"/>'!
+testMultipleSelectionListBoxDisplayingAtOnceApplying	self		assertRenderingOf: [ :supplier | 			supplier				multipleSelectionListBoxDisplayingAtOnce: 15				applying: [ :listBox | listBox addClass willow ]			]		equals: '<select name="1" size="15" class="willow" multiple></select><input name="2" type="hidden"/>'!
 
 testNaturalNumberFieldApplying	self assertRenderingOf: [ :supplier | supplier naturalNumberFieldApplying: [ :field | field addClass willow ] ] equals: '<input value="" name="1" type="number" min="0" class="willow"/>'!
 

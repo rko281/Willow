@@ -5,7 +5,7 @@ WebInteractionInterpreterBehavior subclass: #WebInteractionInterpreter
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WebInteractionInterpreter guid: (GUID fromString: '{c6bc89a9-40c6-4473-b84a-bd3b2968024e}')!
+WebInteractionInterpreter guid: (GUID fromString: '{9d660643-9ba2-44c5-9687-f228107495a8}')!
 WebInteractionInterpreter comment: ''!
 !WebInteractionInterpreter categoriesForClass!Willow-WebInteraction! !
 !WebInteractionInterpreter methodsFor!
@@ -70,6 +70,8 @@ setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView	interaction	
 
 setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier	interaction		onTriggerExecute:			(ComponentValueSettingCommand				obtainingIdentifierFrom: [ identifier ]				valueFrom: aValueProvider)!
 
+showLoadingNotificationDisplaying: aWebView applying: aComponentCommand	interaction onTriggerExecute:		(LoadingNotificationCommand displaying: aWebView applying: aComponentCommand)!
+
 showLoadingNotificationStyledAsAll: classes	interaction		onTriggerExecute: (LoadingNotificationCommand onPageTopWithClasses: classes)!
 
 submitForm: anIdentifiedForm	interaction		onTriggerExecute:			(FormSubmitCommand				findingComponentUsing: [ :aCanvas | 					anIdentifiedForm identifyIn: aCanvas.					aCanvas jQuery id: anIdentifiedForm identifier ])!
@@ -111,6 +113,7 @@ toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider	interaction
 !WebInteractionInterpreter categoriesFor: #serializeWithHiddenInputs!Configuring / Serialization!public! !
 !WebInteractionInterpreter categoriesFor: #setValueTo:thenTriggerChangeOf:!Configuring / DOM!public! !
 !WebInteractionInterpreter categoriesFor: #setValueTo:withoutTriggeringChangeOnComponentWithId:!Configuring / DOM!public! !
+!WebInteractionInterpreter categoriesFor: #showLoadingNotificationDisplaying:applying:!Configuring!public! !
 !WebInteractionInterpreter categoriesFor: #showLoadingNotificationStyledAsAll:!Configuring!public! !
 !WebInteractionInterpreter categoriesFor: #submitForm:!Configuring / Serialization!public! !
 !WebInteractionInterpreter categoriesFor: #submitFormStyledAs:!Configuring / Serialization!public! !

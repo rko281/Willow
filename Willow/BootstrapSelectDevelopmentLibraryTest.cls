@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapSelectDevelopmentLibraryTest
+BWRenderingTest subclass: #BootstrapSelectDevelopmentLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapSelectDevelopmentLibraryTest guid: (GUID fromString: '{d65625a7-9470-4320-b3a2-c0c44c8e4d65}')!
+BootstrapSelectDevelopmentLibraryTest guid: (GUID fromString: '{3149c8b5-6b10-4be8-b7a1-cd4972f9e779}')!
 BootstrapSelectDevelopmentLibraryTest comment: 'A BootstrapSelectDevelopmentLibraryTest is a test class for testing the behavior of BootstrapSelectDevelopmentLibrary'!
 !BootstrapSelectDevelopmentLibraryTest categoriesForClass!Willow-Bootstrap-Tests-Select! !
 !BootstrapSelectDevelopmentLibraryTest methodsFor!

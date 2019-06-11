@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #WebComponentCommandBuilderTest
+BWRenderingTest subclass: #WebComponentCommandBuilderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WebComponentCommandBuilderTest guid: (GUID fromString: '{497fe7ea-2a4e-4513-be75-683888c0a989}')!
+WebComponentCommandBuilderTest guid: (GUID fromString: '{08dc1d8e-46c5-4666-93b4-aba93ae6a174}')!
 WebComponentCommandBuilderTest comment: 'A WebComponentCommandBuilderTest is a test class for testing the behavior of WebComponentCommandBuilder'!
 !WebComponentCommandBuilderTest categoriesForClass!Willow-Tests-Frontend! !
 !WebComponentCommandBuilderTest methodsFor!
@@ -18,7 +18,7 @@ testARIARoleCommand	| html |	html := self apply: (self commandBuilder setARI
 
 testAttributeCommands	| html |	html := self apply: (self commandBuilder setAttribute: 'rows' to: 5) toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div rows="5"></div>'!
 
-testAutofocusCommand	| html |	html := self apply: self commandBuilder beAutofocused toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div autofocus="autofocus"></div>'!
+testAutofocusCommand	| html |	html := self		apply: self commandBuilder beAutofocused		toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div autofocus></div>'!
 
 testBlockExtension	| html |	html := self		apply: [ :command | (command addScript js: [ :canvas | canvas jQuery this clone ]) + command bePasswordInput ] asWebComponentCommand		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input id="id1" type="password"/><script type="text/javascript">$("#id1").clone();</script>'!
 
@@ -30,11 +30,11 @@ testClassificationCommands	| html |	html := self apply: self commandBuilder 
 
 testCompositeCommand	| html |	html := self		apply: [ :field | (field addScript js: [ :canvas | canvas jQuery this clone ]) + field bePasswordInput ] asWebComponentCommand		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input id="id1" type="password"/><script type="text/javascript">$("#id1").clone();</script>'!
 
-testConditionalCommand	| html |	html := self apply: [ :field | field when: [ true ] apply: field beReadOnly ] asWebComponentCommand toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input readonly="readonly" type="text"/>'.	html := self apply: [ :field | field when: [ false ] apply: field beReadOnly ] asWebComponentCommand toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input type="text"/>'!
+testConditionalCommand	| html |	html := self		apply: [ :field | field when: [ true ] apply: field beReadOnly ] asWebComponentCommand		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input readonly type="text"/>'.	html := self		apply: [ :field | field when: [ false ] apply: field beReadOnly ] asWebComponentCommand		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input type="text"/>'!
 
 testDeselectAllOptionsCommands	| html |	html := self apply: self commandBuilder deselectAllOptions toComponentDefinedBy: [ :canvas | canvas select ].	self		assert: html		equals: '<select id="id1"></select><script type="text/javascript">$("#id1").prop("selectedIndex",-1);</script>'!
 
-testDisableCommand	| html |	html := self apply: self commandBuilder beDisabled toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div disabled="disabled"></div>'!
+testDisableCommand	| html |	html := self apply: self commandBuilder beDisabled toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div disabled></div>'!
 
 testDisableTabCycleCommand	| html |	html := self apply: self commandBuilder disableTabCycle toComponentDefinedBy: [ :canvas | canvas div ].	self assert: html equals: '<div tabindex="-1"></div>'!
 
@@ -50,9 +50,9 @@ testNamingCommand	| html |	html := self apply: (self commandBuilder setNameT
 
 testPlaceholderCommands	| html |	html := self apply: (self commandBuilder setPlaceholderTo: 'user') toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input placeholder="user" type="text"/>'!
 
-testReadOnlyCommand	| html |	html := self apply: self commandBuilder beReadOnly toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input readonly="readonly" type="text"/>'!
+testReadOnlyCommand	| html |	html := self apply: self commandBuilder beReadOnly toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input readonly type="text"/>'!
 
-testRequiredCommand	| html |	html := self apply: self commandBuilder beRequired toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input required="required" type="text"/>'!
+testRequiredCommand	| html |	html := self apply: self commandBuilder beRequired toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input required type="text"/>'!
 
 testScriptCommands	| html |	html := self		apply: (self commandBuilder addScript js: [ :canvas | canvas jQuery this clone ])		toComponentDefinedBy: [ :canvas | canvas textInput ].	self assert: html equals: '<input id="id1" type="text"/><script type="text/javascript">$("#id1").clone();</script>'!
 

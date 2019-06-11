@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #RenderingCommandTest
+BWRenderingTest subclass: #RenderingCommandTest
 	instanceVariableNames: 'identifiedView command'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-RenderingCommandTest guid: (GUID fromString: '{303f1f4f-75b1-4b70-9012-72575c0e4580}')!
+RenderingCommandTest guid: (GUID fromString: '{1c584a3f-61cd-4baf-b622-d2ad5c5be9b3}')!
 RenderingCommandTest comment: 'A RenderingCommandTest is a test class for testing the behavior of RenderingCommand'!
 !RenderingCommandTest categoriesForClass!Willow-Tests-WebInteraction! !
 !RenderingCommandTest methodsFor!

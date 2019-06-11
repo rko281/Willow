@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapSelectLiveSearchCommandTest
+BWRenderingTest subclass: #BootstrapSelectLiveSearchCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapSelectLiveSearchCommandTest guid: (GUID fromString: '{2b73abbf-6af1-4402-b0bc-c883d49dce5c}')!
+BootstrapSelectLiveSearchCommandTest guid: (GUID fromString: '{1cf67989-0e69-46f4-abbd-706f1894eba3}')!
 BootstrapSelectLiveSearchCommandTest comment: 'A BootstrapSelectLiveSearchCommandTest is a test class for testing the behavior of BootstrapSelectLiveSearchCommand'!
 !BootstrapSelectLiveSearchCommandTest categoriesForClass!Willow-Bootstrap-Tests-Frontend! !
 !BootstrapSelectLiveSearchCommandTest methodsFor!

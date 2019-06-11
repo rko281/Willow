@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapNotificationBuilderTest
+BWRenderingTest subclass: #BootstrapNotificationBuilderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapNotificationBuilderTest guid: (GUID fromString: '{20baa5fa-e3e8-493a-96bc-dd01a4654ea7}')!
+BootstrapNotificationBuilderTest guid: (GUID fromString: '{09197bf8-5268-409d-ab9d-8c1c3e5f248c}')!
 BootstrapNotificationBuilderTest comment: 'A BootstrapNotificationBuilderTest is a test class for testing the behavior of BootstrapNotificationBuilder'!
 !BootstrapNotificationBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapNotificationBuilderTest methodsFor!

@@ -5,7 +5,7 @@ WAPainter subclass: #IdentifiedWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-IdentifiedWebView guid: (GUID fromString: '{ae19fffd-fde0-4bb3-8f92-6573be4a2392}')!
+IdentifiedWebView guid: (GUID fromString: '{a709bdde-777d-4bcd-9390-325b9ff2379d}')!
 IdentifiedWebView comment: 'I''m a web view guaranteed to have an id and used usually to swap my child content'!
 !IdentifiedWebView categoriesForClass!Willow-WebViews! !
 !IdentifiedWebView methodsFor!
@@ -49,7 +49,9 @@ forLabeledFieldNamed: aName containing: aView	^ self forComponentBuiltUsing: [
 
 forRowNamed: aName containing: aView	^ self		forComponentBuiltUsing: [ :canvas | canvas tableRow ]		named: aName		containing: aView!
 
-forSpanNamed: aName containing: aView	^ self forComponentBuiltUsing: [ :canvas | canvas span ] named: aName containing: aView! !
+forSpanNamed: aName containing: aView	^ self forSpanNamed: aName containing: aView applying: [ ]!
+
+forSpanNamed: aName containing: aView applying: aComponentCommand	^ self forComponentBuiltUsing: [ :canvas | canvas span ] named: aName containing: aView applying: aComponentCommand! !
 !IdentifiedWebView class categoriesFor: #forComponentBuiltUsing:named:containing:!instance creation!public! !
 !IdentifiedWebView class categoriesFor: #forComponentBuiltUsing:named:containing:applying:!instance creation!public! !
 !IdentifiedWebView class categoriesFor: #forDivNamed:containing:!instance creation!public! !
@@ -59,4 +61,5 @@ forSpanNamed: aName containing: aView	^ self forComponentBuiltUsing: [ :canvas
 !IdentifiedWebView class categoriesFor: #forLabeledFieldNamed:containing:!instance creation!public! !
 !IdentifiedWebView class categoriesFor: #forRowNamed:containing:!instance creation!public! !
 !IdentifiedWebView class categoriesFor: #forSpanNamed:containing:!instance creation!public! !
+!IdentifiedWebView class categoriesFor: #forSpanNamed:containing:applying:!instance creation!public! !
 

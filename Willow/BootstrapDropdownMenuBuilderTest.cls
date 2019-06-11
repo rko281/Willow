@@ -1,11 +1,11 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-WARenderingTest subclass: #BootstrapDropdownMenuBuilderTest
+BWRenderingTest subclass: #BootstrapDropdownMenuBuilderTest
 	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BootstrapDropdownMenuBuilderTest guid: (GUID fromString: '{dfad89ca-8ad1-4fef-8beb-e2b3fed82e2e}')!
+BootstrapDropdownMenuBuilderTest guid: (GUID fromString: '{40c68c64-58d3-4f26-850b-c6a588b9e409}')!
 BootstrapDropdownMenuBuilderTest comment: 'A BootstrapDropdownMenuBuilderTest is a test class for testing the behavior of BootstrapDropdownMenuBuilder'!
 !BootstrapDropdownMenuBuilderTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapDropdownMenuBuilderTest methodsFor!

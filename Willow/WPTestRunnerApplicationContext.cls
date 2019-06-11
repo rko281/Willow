@@ -20,8 +20,7 @@ initialize	super initialize.	self resetTestResult.	selectedTestCaseClasses :
 
 resetTestResult
 
-	"currentTestResult := TestAsserter classForTestResult new"
-	currentTestResult := TestResult new duration: 0; yourself!
+	currentTestResult := TestAsserter classForTestResult new duration: 0 asSeconds; yourself!
 
 runTests	self		resetTestResult;		runTestSuites: (selectedTestCaseClasses select: [ :class | class isAbstract not ] thenCollect: [ :class | class suite ])!
 
@@ -44,8 +43,7 @@ runTestsProfiled
 
 runTestSuites: testSuites
 
-"	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]"
-	testSuites do: [ :suite | suite run: currentTestResult ] !
+	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]
 
 setSelectedPackageCategoriesTo: categories	selectedPackageCategories := categories!
 

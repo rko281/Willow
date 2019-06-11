@@ -43,7 +43,7 @@ runTestsProfiled
 
 runTestSuites: testSuites
 
-	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]
+	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]!
 
 setSelectedPackageCategoriesTo: categories	selectedPackageCategories := categories!
 

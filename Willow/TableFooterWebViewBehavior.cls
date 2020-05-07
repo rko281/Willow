@@ -7,7 +7,7 @@ WAPainter subclass: #TableFooterWebViewBehavior
 	classInstanceVariableNames: ''!
 TableFooterWebViewBehavior guid: (GUID fromString: '{c9deb393-5fbb-4f32-9087-326a0d08d52d}')!
 TableFooterWebViewBehavior comment: 'I''m an abstract class representing table footers'!
-!TableFooterWebViewBehavior categoriesForClass!Willow-WebViews! !
+!TableFooterWebViewBehavior categoriesForClass!Willow-Core-WebViews! !
 !TableFooterWebViewBehavior methodsFor!
 
 changeNotifiedBy: aTableWebView	^ self subclassResponsibility! !

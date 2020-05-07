@@ -7,7 +7,7 @@ FieldWebView subclass: #NumberFieldWebView
 	classInstanceVariableNames: ''!
 NumberFieldWebView guid: (GUID fromString: '{a9859524-81ee-40a0-bb9a-a3cbac85ba5c}')!
 NumberFieldWebView comment: 'I represent a TextField containing numbers.'!
-!NumberFieldWebView categoriesForClass!Willow-WebViews! !
+!NumberFieldWebView categoriesForClass!Willow-Core-WebViews! !
 !NumberFieldWebView methodsFor!
 
 changeNumberTo: aNumber	self changeModelTo: aNumber!

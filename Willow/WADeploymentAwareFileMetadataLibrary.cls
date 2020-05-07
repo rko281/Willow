@@ -10,7 +10,7 @@ WADeploymentAwareFileMetadataLibrary comment: 'I''m an abstract metadata library
 !WADeploymentAwareFileMetadataLibrary categoriesForClass!Boardwalk-WebApplication! !
 !WADeploymentAwareFileMetadataLibrary methodsFor!
 
-javascriptContentFrom: aMonadycBlock	WACurrentRequestContext		use: (WARequestContext request: WARequest new response: WABufferedResponse new)		during: [ WAHtmlCanvas builder				fullDocument: false;				render: [ :canvas | 					| javascript |					javascript := canvas javascript.					aMonadycBlock cull: javascript.					^ javascript greaseString ] ]!
+javascriptContentFrom: aMonadycBlock	WACurrentRequestContext		use: ( WARequestContext request: WARequest new response: WABufferedResponse new )		during: [ WAHtmlCanvas builder				fullDocument: false;				render: [ :canvas | 					canvas requestContext						push: WARequestHandler new						during: [ | javascript |							javascript := canvas javascript.							aMonadycBlock cull: javascript.							^ javascript greaseString							]					]			]!
 
 name	^ self class folderName!
 

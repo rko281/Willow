@@ -1,0 +1,33 @@
+﻿"Filed out from Dolphin Smalltalk 7"!
+
+BWRenderingTest subclass: #Bootstrap3NavigationDropdownMenuBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3NavigationDropdownMenuBuilderTest guid: (GUID fromString: '{14ea4541-b45c-4dec-ba0f-82396ce5ce06}')!
+Bootstrap3NavigationDropdownMenuBuilderTest comment: 'A BootstrapDropdownMenuBuilderTest is a test class for testing the behavior of BootstrapDropdownMenuBuilder'!
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesForClass!Willow-Bootstrap-3-Tests-WebViews! !
+!Bootstrap3NavigationDropdownMenuBuilderTest methodsFor!
+
+navigationBarWith: menuBuilder	^ [ :canvas | 	| navigationBar |	navigationBar := canvas unorderedList.	menuBuilder containedIn: navigationBar.	navigationBar		with: menuBuilder build		applying: [ :list | list addClass bootstrap3 nav + list addClass bootstrap3 navbarNavigation ]	]!
+
+setUp	super setUp.	supplier := Bootstrap3ComponentSupplier online!
+
+testRenderContentOn	| navigation html |	navigation := self		navigationBarWith:			( supplier navigationDropdownMenuBuilder				labeled: 'Dropdown';				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];				addDivider;				addActionLabeled: 'Another action'					executing: [ :button | button onTrigger disable ]					applying: [ :button | button addClass willow ];				yourself ).	html := self render: navigation.	self		assert: html		equals:			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu"><li><a id="a-id2" role="button">Action</a></li><li class="divider" role="separator"></li><li><a id="a-id3" role="button" class="willow">Another action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});$("#a-id3").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'!
+
+testRenderContentOnRightAligned	| navigation html |	navigation := self		navigationBarWith:			( supplier navigationDropdownMenuBuilder				labeled: 'Dropdown';				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];				beRightAligned;				yourself ).	html := self render: navigation.	self		assert: html		equals:			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu dropdown-menu-right"><li><a id="a-id2" role="button">Action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'!
+
+testRenderContentOnWithButton	| navigation html |	navigation := self		navigationBarWith:			( supplier navigationDropdownMenuBuilder				labeled: 'Dropdown' applying: [ :button | button addClass bootstrap3 buttonDefault ];				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];				addDivider;				addActionLabeled: 'Another action' executing: [ :button | button onTrigger disable ];				yourself ).	html := self render: navigation.	self		assert: html		equals:			'<ul class="nav navbar-nav"><li class="dropdown"><button class="btn dropdown-toggle btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">Dropdown&nbsp;<span class="caret"></span></button><ul class="dropdown-menu"><li><a id="a-id1" role="button">Action</a></li><li class="divider" role="separator"></li><li><a id="a-id2" role="button">Another action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'!
+
+testRenderContentOnWithHeaders	| navigation html |	navigation := self		navigationBarWith:			( supplier navigationDropdownMenuBuilder				labeled: 'Dropdown';				addHeaderLabeled: 'Dropdown header';				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];				yourself ).	html := self render: navigation.	self		assert: html		equals:			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu"><li class="dropdown-header">Dropdown header</li><li><a id="a-id2" role="button">Action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'!
+
+testRenderNavigationMenuContent	| navigationBar html |	navigationBar := self		navigationBarWith:			( supplier navigationDropdownMenuBuilder				labeled: 'Dropdown';				addActionLabeled: 'Action' executing: [ :button | button onTrigger disable ];				yourself ).	html := self render: navigationBar.	self		assert: html		equals:			'<ul class="nav navbar-nav"><li class="dropdown"><a id="a-id1" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown&nbsp;<span class="caret"></span></a><ul class="dropdown-menu"><li><a id="a-id2" role="button">Action</a></li></ul></li></ul><script type="text/javascript">$("#a-id1").click(function(event){arguments[0].preventDefault()});$("#a-id2").click(function(event){arguments[0].preventDefault();$(this).prop("disabled",true)});</script>'! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #navigationBarWith:!private! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #setUp!initialization!public! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #testRenderContentOn!public!tests! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #testRenderContentOnRightAligned!public!tests! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #testRenderContentOnWithButton!public!tests! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #testRenderContentOnWithHeaders!public!tests! !
+!Bootstrap3NavigationDropdownMenuBuilderTest categoriesFor: #testRenderNavigationMenuContent!public!tests! !
+

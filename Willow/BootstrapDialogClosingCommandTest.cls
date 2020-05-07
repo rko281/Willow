@@ -10,7 +10,7 @@ BootstrapDialogClosingCommandTest comment: 'A BootstrapDialogClosingCommandTest 
 !BootstrapDialogClosingCommandTest categoriesForClass!Willow-Bootstrap-Tests-WebInteraction! !
 !BootstrapDialogClosingCommandTest methodsFor!
 
-componentSupplier	^ BootstrapComponentSupplier online!
+componentSupplier	^ self subclassResponsibility!
 
 createHandlers	^ Array with: self!
 
@@ -24,4 +24,9 @@ testModelLoadingActionsWhenRemovingAllDialogs	| html |	html := self		render
 !BootstrapDialogClosingCommandTest categoriesFor: #isSession!accessing!public! !
 !BootstrapDialogClosingCommandTest categoriesFor: #testModelLoadingActionsWhenOnlyRemovingLastDialog!public!tests! !
 !BootstrapDialogClosingCommandTest categoriesFor: #testModelLoadingActionsWhenRemovingAllDialogs!public!tests! !
+
+!BootstrapDialogClosingCommandTest class methodsFor!
+
+isAbstract 	^self name = #BootstrapDialogClosingCommandTest! !
+!BootstrapDialogClosingCommandTest class categoriesFor: #isAbstract!public!testing! !
 

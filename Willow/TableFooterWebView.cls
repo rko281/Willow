@@ -7,7 +7,7 @@ TableFooterWebViewBehavior subclass: #TableFooterWebView
 	classInstanceVariableNames: ''!
 TableFooterWebView guid: (GUID fromString: '{9b7e28ee-2a12-4f6a-b16c-c8a70ddf93d9}')!
 TableFooterWebView comment: 'I represent a table footer'!
-!TableFooterWebView categoriesForClass!Willow-WebViews! !
+!TableFooterWebView categoriesForClass!Willow-Core-WebViews! !
 !TableFooterWebView methodsFor!
 
 changeNotifiedBy: aTableWebView	tableContents := aTableWebView contents!

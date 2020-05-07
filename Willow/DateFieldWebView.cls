@@ -7,7 +7,7 @@ FieldWebView subclass: #DateFieldWebView
 	classInstanceVariableNames: ''!
 DateFieldWebView guid: (GUID fromString: '{2e385fb0-246e-450c-bdbb-dd9de5f3c573}')!
 DateFieldWebView comment: 'I represent a TextField containing dates.'!
-!DateFieldWebView categoriesForClass!Willow-WebViews! !
+!DateFieldWebView categoriesForClass!Willow-Core-WebViews! !
 !DateFieldWebView methodsFor!
 
 changeDateTo: aDate	self changeModelTo: aDate!

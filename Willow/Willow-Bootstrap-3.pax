@@ -1,0 +1,718 @@
+﻿| package |
+package := Package name: 'Willow-Bootstrap-3'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
+
+
+package classNames
+	add: #Bootstrap3CheckboxWebView;
+	add: #Bootstrap3ComponentSupplier;
+	add: #Bootstrap3DatePickerWebView;
+	add: #Bootstrap3DeploymentMetadataLibrary;
+	add: #Bootstrap3DevelopmentMetadataLibrary;
+	add: #Bootstrap3DropdownBuilder;
+	add: #Bootstrap3FieldAddonBuilder;
+	add: #Bootstrap3GridBuilder;
+	add: #Bootstrap3HamburgerButton;
+	add: #Bootstrap3HelpTextWebView;
+	add: #Bootstrap3IconWebView;
+	add: #Bootstrap3MetadataLibrary;
+	add: #Bootstrap3NavigationBar;
+	add: #Bootstrap3NavigationDropdownMenuBuilder;
+	add: #Bootstrap3OnlineLibrary;
+	add: #Bootstrap3PanelBuilder;
+	add: #Bootstrap3RadioWebView;
+	add: #Bootstrap3SingleButtonDropdownBuilder;
+	add: #Bootstrap3SplitButtonDropdownBuilder;
+	add: #Bootstrap3ViewportConfiguration;
+	add: #WillowBootstrap3FileMetadataLibrary;
+	yourself.
+
+package methodNames
+	add: #BootstrapPopover -> #destroy;
+	add: #BootstrapPopover -> #viewport:;
+	add: #BootstrapTooltip -> #destroy;
+	add: #BootstrapTooltip -> #viewport:;
+	add: #ComponentClassificationCommandBuilder -> #blockquoteReverse;
+	add: #ComponentClassificationCommandBuilder -> #bootstrap3;
+	add: #ComponentClassificationCommandBuilder -> #buttonDefault;
+	add: #ComponentClassificationCommandBuilder -> #buttonExtraSmall;
+	add: #ComponentClassificationCommandBuilder -> #buttonGroupExtraSmall;
+	add: #ComponentClassificationCommandBuilder -> #buttonGroupJustified;
+	add: #ComponentClassificationCommandBuilder -> #caret;
+	add: #ComponentClassificationCommandBuilder -> #centerBlock;
+	add: #ComponentClassificationCommandBuilder -> #checkbox;
+	add: #ComponentClassificationCommandBuilder -> #checkboxInline;
+	add: #ComponentClassificationCommandBuilder -> #collapsed;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraSmallOffset:;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraSmallPull:;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraSmallPush:;
+	add: #ComponentClassificationCommandBuilder -> #columnLargePull:;
+	add: #ComponentClassificationCommandBuilder -> #columnLargePush:;
+	add: #ComponentClassificationCommandBuilder -> #columnMediumPull:;
+	add: #ComponentClassificationCommandBuilder -> #columnMediumPush:;
+	add: #ComponentClassificationCommandBuilder -> #columnSmallPull:;
+	add: #ComponentClassificationCommandBuilder -> #columnSmallPush:;
+	add: #ComponentClassificationCommandBuilder -> #controlLabel;
+	add: #ComponentClassificationCommandBuilder -> #date;
+	add: #ComponentClassificationCommandBuilder -> #definitionListHorizontal;
+	add: #ComponentClassificationCommandBuilder -> #divider;
+	add: #ComponentClassificationCommandBuilder -> #dropdownBackdrop;
+	add: #ComponentClassificationCommandBuilder -> #formControlStatic;
+	add: #ComponentClassificationCommandBuilder -> #formGroupLarge;
+	add: #ComponentClassificationCommandBuilder -> #formGroupSmall;
+	add: #ComponentClassificationCommandBuilder -> #formHorizontal;
+	add: #ComponentClassificationCommandBuilder -> #glyphicon;
+	add: #ComponentClassificationCommandBuilder -> #hasError;
+	add: #ComponentClassificationCommandBuilder -> #hasFeedback;
+	add: #ComponentClassificationCommandBuilder -> #hasSuccess;
+	add: #ComponentClassificationCommandBuilder -> #hasWarning;
+	add: #ComponentClassificationCommandBuilder -> #helpBlock;
+	add: #ComponentClassificationCommandBuilder -> #hidden;
+	add: #ComponentClassificationCommandBuilder -> #hiddenExtraSmall;
+	add: #ComponentClassificationCommandBuilder -> #hiddenLarge;
+	add: #ComponentClassificationCommandBuilder -> #hiddenMedium;
+	add: #ComponentClassificationCommandBuilder -> #hiddenPrint;
+	add: #ComponentClassificationCommandBuilder -> #hiddenSmall;
+	add: #ComponentClassificationCommandBuilder -> #iconBar;
+	add: #ComponentClassificationCommandBuilder -> #imageCircle;
+	add: #ComponentClassificationCommandBuilder -> #imageResponsive;
+	add: #ComponentClassificationCommandBuilder -> #imageRounded;
+	add: #ComponentClassificationCommandBuilder -> #in;
+	add: #ComponentClassificationCommandBuilder -> #inputGroupAddon;
+	add: #ComponentClassificationCommandBuilder -> #inputGroupButton;
+	add: #ComponentClassificationCommandBuilder -> #inputLarge;
+	add: #ComponentClassificationCommandBuilder -> #inputSmall;
+	add: #ComponentClassificationCommandBuilder -> #label;
+	add: #ComponentClassificationCommandBuilder -> #labelDanger;
+	add: #ComponentClassificationCommandBuilder -> #labelDefault;
+	add: #ComponentClassificationCommandBuilder -> #labelInfo;
+	add: #ComponentClassificationCommandBuilder -> #labelPrimary;
+	add: #ComponentClassificationCommandBuilder -> #labelSuccess;
+	add: #ComponentClassificationCommandBuilder -> #labelWarning;
+	add: #ComponentClassificationCommandBuilder -> #listGroupItemHeading;
+	add: #ComponentClassificationCommandBuilder -> #listGroupItemText;
+	add: #ComponentClassificationCommandBuilder -> #mediaHeading;
+	add: #ComponentClassificationCommandBuilder -> #mediaLeft;
+	add: #ComponentClassificationCommandBuilder -> #mediaList;
+	add: #ComponentClassificationCommandBuilder -> #mediaMiddle;
+	add: #ComponentClassificationCommandBuilder -> #mediaObject;
+	add: #ComponentClassificationCommandBuilder -> #mediaRight;
+	add: #ComponentClassificationCommandBuilder -> #navbarButton;
+	add: #ComponentClassificationCommandBuilder -> #navbarDefault;
+	add: #ComponentClassificationCommandBuilder -> #navbarFixedBottom;
+	add: #ComponentClassificationCommandBuilder -> #navbarFixedTop;
+	add: #ComponentClassificationCommandBuilder -> #navbarForm;
+	add: #ComponentClassificationCommandBuilder -> #navbarHeader;
+	add: #ComponentClassificationCommandBuilder -> #navbarInverse;
+	add: #ComponentClassificationCommandBuilder -> #navbarLeft;
+	add: #ComponentClassificationCommandBuilder -> #navbarLink;
+	add: #ComponentClassificationCommandBuilder -> #navbarRight;
+	add: #ComponentClassificationCommandBuilder -> #navbarStaticTop;
+	add: #ComponentClassificationCommandBuilder -> #navbarToggle;
+	add: #ComponentClassificationCommandBuilder -> #navStacked;
+	add: #ComponentClassificationCommandBuilder -> #next;
+	add: #ComponentClassificationCommandBuilder -> #open;
+	add: #ComponentClassificationCommandBuilder -> #pageHeader;
+	add: #ComponentClassificationCommandBuilder -> #pager;
+	add: #ComponentClassificationCommandBuilder -> #panel;
+	add: #ComponentClassificationCommandBuilder -> #panelBody;
+	add: #ComponentClassificationCommandBuilder -> #panelCollapse;
+	add: #ComponentClassificationCommandBuilder -> #panelDanger;
+	add: #ComponentClassificationCommandBuilder -> #panelDefault;
+	add: #ComponentClassificationCommandBuilder -> #panelFooter;
+	add: #ComponentClassificationCommandBuilder -> #panelGroup;
+	add: #ComponentClassificationCommandBuilder -> #panelHeading;
+	add: #ComponentClassificationCommandBuilder -> #panelInfo;
+	add: #ComponentClassificationCommandBuilder -> #panelPrimary;
+	add: #ComponentClassificationCommandBuilder -> #panelSuccess;
+	add: #ComponentClassificationCommandBuilder -> #panelTitle;
+	add: #ComponentClassificationCommandBuilder -> #panelWarning;
+	add: #ComponentClassificationCommandBuilder -> #popoverContent;
+	add: #ComponentClassificationCommandBuilder -> #popoverTitle;
+	add: #ComponentClassificationCommandBuilder -> #progressBarDanger;
+	add: #ComponentClassificationCommandBuilder -> #progressBarInfo;
+	add: #ComponentClassificationCommandBuilder -> #progressBarSuccess;
+	add: #ComponentClassificationCommandBuilder -> #progressBarWarning;
+	add: #ComponentClassificationCommandBuilder -> #pullLeft;
+	add: #ComponentClassificationCommandBuilder -> #pullRight;
+	add: #ComponentClassificationCommandBuilder -> #radio;
+	add: #ComponentClassificationCommandBuilder -> #radioInline;
+	add: #ComponentClassificationCommandBuilder -> #show;
+	add: #ComponentClassificationCommandBuilder -> #small;
+	add: #ComponentClassificationCommandBuilder -> #tableCondensed;
+	add: #ComponentClassificationCommandBuilder -> #thumbnail;
+	add: #ComponentClassificationCommandBuilder -> #visibleExtraSmallBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleExtraSmallInline;
+	add: #ComponentClassificationCommandBuilder -> #visibleExtraSmallInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleLargeBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleLargeInline;
+	add: #ComponentClassificationCommandBuilder -> #visibleLargeInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleMediumBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleMediumInline;
+	add: #ComponentClassificationCommandBuilder -> #visibleMediumInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #visiblePrintBlock;
+	add: #ComponentClassificationCommandBuilder -> #visiblePrintInline;
+	add: #ComponentClassificationCommandBuilder -> #visiblePrintInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleSmallBlock;
+	add: #ComponentClassificationCommandBuilder -> #visibleSmallInline;
+	add: #ComponentClassificationCommandBuilder -> #visibleSmallInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #well;
+	add: #ComponentClassificationCommandBuilder -> #wellLarge;
+	add: #ComponentClassificationCommandBuilder -> #wellSmall;
+	add: #ReflectiveCascadingStyleSheetBuilder -> #bootstrap3;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Boardwalk'
+	'Buoy-Assertions'
+	'Buoy-Dynamic-Binding'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'RenoirSt-Core'
+	'..\Seaside\Seaside\Seaside-Core'
+	'Willow-Bootstrap'
+	'Willow-Core').
+
+package!
+
+"Class Definitions"!
+
+BootstrapComponentSupplier subclass: #Bootstrap3ComponentSupplier
+	instanceVariableNames: 'bootstrapLibraries'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSObject subclass: #Bootstrap3ViewportConfiguration
+	instanceVariableNames: 'selector padding'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentAwareFileMetadataLibrary subclass: #Bootstrap3MetadataLibrary
+	instanceVariableNames: 'includeOptionalTheme'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3MetadataLibrary subclass: #Bootstrap3DeploymentMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3MetadataLibrary subclass: #Bootstrap3DevelopmentMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowBootstrapFileMetadataLibrary subclass: #WillowBootstrap3FileMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAOnlineLibrary subclass: #Bootstrap3OnlineLibrary
+	instanceVariableNames: 'includeOptionalTheme'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #Bootstrap3DatePickerWebView
+	instanceVariableNames: 'textField container'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #Bootstrap3HamburgerButton
+	instanceVariableNames: 'targetIdentifier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #Bootstrap3HelpTextWebView
+	instanceVariableNames: 'fieldWebView helpText'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #Bootstrap3IconWebView
+	instanceVariableNames: 'containerCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #Bootstrap3NavigationBar
+	instanceVariableNames: 'componentCommand brandView navbarContent containerCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapCheckboxWebView subclass: #Bootstrap3CheckboxWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapRadioWebView subclass: #Bootstrap3RadioWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapDropdownBuilder subclass: #Bootstrap3DropdownBuilder
+	instanceVariableNames: 'listClassificationCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3DropdownBuilder subclass: #Bootstrap3NavigationDropdownMenuBuilder
+	instanceVariableNames: 'containerBuildingCommand navigationBarBinding'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3DropdownBuilder subclass: #Bootstrap3SingleButtonDropdownBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bootstrap3DropdownBuilder subclass: #Bootstrap3SplitButtonDropdownBuilder
+	instanceVariableNames: 'mainButtonBinding'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapFieldAddonBuilder subclass: #Bootstrap3FieldAddonBuilder
+	instanceVariableNames: 'fieldBinding prependedTextOptional prependedButtons appendedTextOptional appendedButtons'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapGridBuilder subclass: #Bootstrap3GridBuilder
+	instanceVariableNames: 'columnSpec'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapPanelBuilder subclass: #Bootstrap3PanelBuilder
+	instanceVariableNames: 'headingOptional bodyOptional footerOptional tablesAndListGroups'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BootstrapPopover methodsFor!
+
+destroy	"Hides and destroys an element's popover. 	Tooltips that use delegation (which are created using the selector option) cannot be individually destroyed on descendant trigger elements."	functionName := 'destroy'!
+
+viewport: aStringViewportConfigurationOrFunction	"Keeps the popover within the bounds of this element. 	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the popover instance."	self optionAt: #viewport put: aStringViewportConfigurationOrFunction! !
+!BootstrapPopover categoriesFor: #destroy!*Willow/Bootstrap/3!public! !
+!BootstrapPopover categoriesFor: #viewport:!*Willow/Bootstrap/3!public! !
+
+!BootstrapTooltip methodsFor!
+
+destroy	"Hides and destroys an element's tooltip. 	Tooltips that use delegation (which are created using the selector option) cannot be individually destroyed on descendant trigger elements."	functionName := 'destroy'!
+
+viewport: aStringViewportConfigurationOrFunction	"Keeps the tooltip within the bounds of this element. 	Example: viewport: '#viewport' or { 'selector': '#viewport', 'padding': 0 }	If a function is given, it is called with the triggering element DOM node as its only argument. The this context is set to the tooltip instance."	self optionAt: #viewport put: aStringViewportConfigurationOrFunction! !
+!BootstrapTooltip categoriesFor: #destroy!*Willow/Bootstrap/3!public! !
+!BootstrapTooltip categoriesFor: #viewport:!*Willow/Bootstrap/3!public! !
+
+!ComponentClassificationCommandBuilder methodsFor!
+
+blockquoteReverse	^ self commandStyledWith: #blockquoteReverse!
+
+bootstrap3	classificationNamespace := classificationNamespace >> #bootstrap3!
+
+buttonDefault	^ self commandStyledWith: #buttonDefault!
+
+buttonExtraSmall	^ self commandStyledWith: #buttonExtraSmall!
+
+buttonGroupExtraSmall	^ self commandStyledWith: #buttonGroupExtraSmall!
+
+buttonGroupJustified	^ self commandStyledWith: #buttonGroupJustified!
+
+caret	^ self commandStyledWith: #caret!
+
+centerBlock	^ self commandStyledWith: #centerBlock!
+
+checkbox	^ self commandStyledWith: #checkbox!
+
+checkboxInline	^ self commandStyledWith: #checkboxInline!
+
+collapsed	^ self commandStyledWith: #collapsed!
+
+columnExtraSmallOffset: count	^ self commandStyledWith: (#'columnExtraSmallOffset<1p>' expandMacrosWith: count)!
+
+columnExtraSmallPull: count	^ self commandStyledWith: (#'columnExtraSmallPull<1p>' expandMacrosWith: count)!
+
+columnExtraSmallPush: count	^ self commandStyledWith: (#'columnExtraSmallPush<1p>' expandMacrosWith: count)!
+
+columnLargePull: count	^ self commandStyledWith: (#'columnLargePull<1p>' expandMacrosWith: count)!
+
+columnLargePush: count	^ self commandStyledWith: (#'columnLargePush<1p>' expandMacrosWith: count)!
+
+columnMediumPull: count	^ self commandStyledWith: (#'columnMediumPull<1p>' expandMacrosWith: count)!
+
+columnMediumPush: count	^ self commandStyledWith: (#'columnMediumPush<1p>' expandMacrosWith: count)!
+
+columnSmallPull: count	^ self commandStyledWith: (#'columnSmallPull<1p>' expandMacrosWith: count)!
+
+columnSmallPush: count	^ self commandStyledWith: (#'columnSmallPush<1p>' expandMacrosWith: count)!
+
+controlLabel	^ self commandStyledWith: #controlLabel!
+
+date	^ self commandStyledWith: #date!
+
+definitionListHorizontal	^ self commandStyledWith: #definitionListHorizontal!
+
+divider	^ self commandStyledWith: #divider!
+
+dropdownBackdrop	^ self commandStyledWith: #dropdownBackdrop!
+
+formControlStatic	^ self commandStyledWith: #formControlStatic!
+
+formGroupLarge	^ self commandStyledWith: #formGroupLarge!
+
+formGroupSmall	^ self commandStyledWith: #formGroupSmall!
+
+formHorizontal	^ self commandStyledWith: #formHorizontal!
+
+glyphicon	^ self commandStyledWith: #glyphicon!
+
+hasError	^ self commandStyledWith: #hasError!
+
+hasFeedback	^ self commandStyledWith: #hasFeedback!
+
+hasSuccess	^ self commandStyledWith: #hasSuccess!
+
+hasWarning	^ self commandStyledWith: #hasWarning!
+
+helpBlock	^ self commandStyledWith: #helpBlock!
+
+hidden	^ self commandStyledWith: #hidden!
+
+hiddenExtraSmall	^ self commandStyledWith: #hiddenExtraSmall!
+
+hiddenLarge	^ self commandStyledWith: #hiddenLarge!
+
+hiddenMedium	^ self commandStyledWith: #hiddenMedium!
+
+hiddenPrint	^ self commandStyledWith: #hiddenPrint!
+
+hiddenSmall	^ self commandStyledWith: #hiddenSmall!
+
+iconBar	^ self commandStyledWith: #iconBar!
+
+imageCircle	^ self commandStyledWith: #imageCircle!
+
+imageResponsive	^ self commandStyledWith: #imageResponsive!
+
+imageRounded	^ self commandStyledWith: #imageRounded!
+
+in	^ self commandStyledWith: #in!
+
+inputGroupAddon	^ self commandStyledWith: #inputGroupAddon!
+
+inputGroupButton	^ self commandStyledWith: #inputGroupButton!
+
+inputLarge	^ self commandStyledWith: #inputLarge!
+
+inputSmall	^ self commandStyledWith: #inputSmall!
+
+label	^ self commandStyledWith: #label!
+
+labelDanger	^ self commandStyledWith: #labelDanger!
+
+labelDefault	^ self commandStyledWith: #labelDefault!
+
+labelInfo	^ self commandStyledWith: #labelInfo!
+
+labelPrimary	^ self commandStyledWith: #labelPrimary!
+
+labelSuccess	^ self commandStyledWith: #labelSuccess!
+
+labelWarning	^ self commandStyledWith: #labelWarning!
+
+listGroupItemHeading	^ self commandStyledWith: #listGroupItemHeading!
+
+listGroupItemText	^ self commandStyledWith: #listGroupItemText!
+
+mediaHeading	^ self commandStyledWith: #mediaHeading!
+
+mediaLeft	^ self commandStyledWith: #mediaLeft!
+
+mediaList	^ self commandStyledWith: #mediaList!
+
+mediaMiddle	^ self commandStyledWith: #mediaMiddle!
+
+mediaObject	^ self commandStyledWith: #mediaObject!
+
+mediaRight	^ self commandStyledWith: #mediaRight!
+
+navbarButton	^ self commandStyledWith: #navbarButton!
+
+navbarDefault	^ self commandStyledWith: #navbarDefault!
+
+navbarFixedBottom	^ self commandStyledWith: #navbarFixedBottom!
+
+navbarFixedTop	^ self commandStyledWith: #navbarFixedTop!
+
+navbarForm	^ self commandStyledWith: #navbarForm!
+
+navbarHeader	^ self commandStyledWith: #navbarHeader!
+
+navbarInverse	^ self commandStyledWith: #navbarInverse!
+
+navbarLeft	^ self commandStyledWith: #navbarLeft!
+
+navbarLink	^ self commandStyledWith: #navbarLink!
+
+navbarRight	^ self commandStyledWith: #navbarRight!
+
+navbarStaticTop	^ self commandStyledWith: #navbarStaticTop!
+
+navbarToggle	^ self commandStyledWith: #navbarToggle!
+
+navStacked	^ self commandStyledWith: #navStacked!
+
+next	^ self commandStyledWith: #next!
+
+open	^ self commandStyledWith: #open!
+
+pageHeader	^ self commandStyledWith: #pageHeader!
+
+pager	^ self commandStyledWith: #pager!
+
+panel	^ self commandStyledWith: #panel!
+
+panelBody	^ self commandStyledWith: #panelBody!
+
+panelCollapse	^ self commandStyledWith: #panelCollapse!
+
+panelDanger	^ self commandStyledWith: #panelDanger!
+
+panelDefault	^ self commandStyledWith: #panelDefault!
+
+panelFooter	^ self commandStyledWith: #panelFooter!
+
+panelGroup	^ self commandStyledWith: #panelGroup!
+
+panelHeading	^ self commandStyledWith: #panelHeading!
+
+panelInfo	^ self commandStyledWith: #panelInfo!
+
+panelPrimary	^ self commandStyledWith: #panelPrimary!
+
+panelSuccess	^ self commandStyledWith: #panelSuccess!
+
+panelTitle	^ self commandStyledWith: #panelTitle!
+
+panelWarning	^ self commandStyledWith: #panelWarning!
+
+popoverContent	^ self commandStyledWith: #popoverContent!
+
+popoverTitle	^ self commandStyledWith: #popoverTitle!
+
+progressBarDanger	^ self commandStyledWith: #progressBarDanger!
+
+progressBarInfo	^ self commandStyledWith: #progressBarInfo!
+
+progressBarSuccess	^ self commandStyledWith: #progressBarSuccess!
+
+progressBarWarning	^ self commandStyledWith: #progressBarWarning!
+
+pullLeft	^ self commandStyledWith: #pullLeft!
+
+pullRight	^ self commandStyledWith: #pullRight!
+
+radio	^ self commandStyledWith: #radio!
+
+radioInline	^ self commandStyledWith: #radioInline!
+
+show	^ self commandStyledWith: #show!
+
+small	^ self commandStyledWith: #small!
+
+tableCondensed	^ self commandStyledWith: #tableCondensed!
+
+thumbnail	^ self commandStyledWith: #thumbnail!
+
+visibleExtraSmallBlock	^ self commandStyledWith: #visibleExtraSmallBlock!
+
+visibleExtraSmallInline	^ self commandStyledWith: #visibleExtraSmallInline!
+
+visibleExtraSmallInlineBlock	^ self commandStyledWith: #visibleExtraSmallInlineBlock!
+
+visibleLargeBlock	^ self commandStyledWith: #visibleLargeBlock!
+
+visibleLargeInline	^ self commandStyledWith: #visibleLargeInline!
+
+visibleLargeInlineBlock	^ self commandStyledWith: #visibleLargeInlineBlock!
+
+visibleMediumBlock	^ self commandStyledWith: #visibleMediumBlock!
+
+visibleMediumInline	^ self commandStyledWith: #visibleMediumInline!
+
+visibleMediumInlineBlock	^ self commandStyledWith: #visibleMediumInlineBlock!
+
+visiblePrintBlock	^ self commandStyledWith: #visiblePrintBlock!
+
+visiblePrintInline	^ self commandStyledWith: #visiblePrintInline!
+
+visiblePrintInlineBlock	^ self commandStyledWith: #visiblePrintInlineBlock!
+
+visibleSmallBlock	^ self commandStyledWith: #visibleSmallBlock!
+
+visibleSmallInline	^ self commandStyledWith: #visibleSmallInline!
+
+visibleSmallInlineBlock	^ self commandStyledWith: #visibleSmallInlineBlock!
+
+well	^ self commandStyledWith: #well!
+
+wellLarge	^ self commandStyledWith: #wellLarge!
+
+wellSmall	^ self commandStyledWith: #wellSmall! !
+!ComponentClassificationCommandBuilder categoriesFor: #blockquoteReverse!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #bootstrap3!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonDefault!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonExtraSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonGroupExtraSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonGroupJustified!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #caret!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #centerBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #checkbox!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #checkboxInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #collapsed!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraSmallOffset:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraSmallPull:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraSmallPush:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnLargePull:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnLargePush:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnMediumPull:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnMediumPush:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnSmallPull:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnSmallPush:!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #controlLabel!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #date!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #definitionListHorizontal!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #divider!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #dropdownBackdrop!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #formControlStatic!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #formGroupLarge!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #formGroupSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #formHorizontal!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #glyphicon!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hasError!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hasFeedback!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hasSuccess!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hasWarning!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #helpBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hidden!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hiddenExtraSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hiddenLarge!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hiddenMedium!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hiddenPrint!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #hiddenSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #iconBar!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #imageCircle!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #imageResponsive!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #imageRounded!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #in!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #inputGroupAddon!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #inputGroupButton!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #inputLarge!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #inputSmall!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #label!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelDanger!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelDefault!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelInfo!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelPrimary!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelSuccess!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #labelWarning!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #listGroupItemHeading!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #listGroupItemText!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaHeading!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaLeft!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaList!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaMiddle!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaObject!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #mediaRight!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarButton!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarDefault!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarFixedBottom!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarFixedTop!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarForm!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarHeader!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarInverse!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarLeft!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarLink!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarRight!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarStaticTop!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navbarToggle!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #navStacked!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #next!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #open!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pageHeader!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pager!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panel!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelBody!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelCollapse!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelDanger!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelDefault!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelFooter!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelGroup!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelHeading!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelInfo!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelPrimary!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelSuccess!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelTitle!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #panelWarning!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #popoverContent!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #popoverTitle!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #progressBarDanger!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #progressBarInfo!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #progressBarSuccess!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #progressBarWarning!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pullLeft!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pullRight!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #radio!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #radioInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #show!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #small!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableCondensed!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #thumbnail!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleExtraSmallBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleExtraSmallInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleExtraSmallInlineBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleLargeBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleLargeInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleLargeInlineBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleMediumBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleMediumInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleMediumInlineBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visiblePrintBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visiblePrintInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visiblePrintInlineBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleSmallBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleSmallInline!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visibleSmallInlineBlock!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #well!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #wellLarge!*Willow/Bootstrap/3!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #wellSmall!*Willow/Bootstrap/3!public! !
+
+!ReflectiveCascadingStyleSheetBuilder methodsFor!
+
+bootstrap3	^ self classification >> #bootstrap3! !
+!ReflectiveCascadingStyleSheetBuilder categoriesFor: #bootstrap3!*Willow/Bootstrap/3!public! !
+
+"End of package definition"!
+

@@ -10,11 +10,11 @@ BootstrapModalWebView comment: 'I represent a Bootstrap Modal.'!
 !BootstrapModalWebView categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapModalWebView methodsFor!
 
-contentWrapping: aBodyView	^ GenericContainerWebView		wrapping: [ :canvas | 			canvas render: header.			canvas div with: aBodyView applying: [ :div | div addClass bootstrap modalBody ].			canvas render: footer ]		applying: [ :container | container addClass bootstrap modalContent ]!
+contentWrapping: aBodyView	^ GenericContainerWebView		wrapping: [ :canvas | 			canvas render: header.			canvas div with: aBodyView applying: [ :div | div addClass bootstrapCommon modalBody ].			canvas render: footer			]		applying: [ :container | container addClass bootstrapCommon modalContent ]!
 
-documentWrapping: content applying: aDocumentCommand	^ GenericContainerWebView wrapping: content applying: [ :container :constants | container addClass bootstrap modalDialog + (container setARIARoleTo: #document) + aDocumentCommand ]!
+documentWrapping: content applying: aDocumentCommand	^ GenericContainerWebView		wrapping: content		applying: [ :container :constants | 			container addClass bootstrapCommon modalDialog + ( container setARIARoleTo: #document )				+ aDocumentCommand			]!
 
-initializeWithHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFooter applyingToDialog: aDialogCommand andToDocument: aModalDocumentCommand	header := aBootstrapModalHeader.	footer := aBootstrapModalFooter.	dialog := GenericContainerWebView		wrapping: (self documentWrapping: (self contentWrapping: aBodyView) applying: aModalDocumentCommand)		applying: [ :container :constants | container addClass bootstrap modal + container disableTabCycle + (container setARIARoleTo: #dialog) + aDialogCommand ]!
+initializeWithHeader: aBootstrapModalHeader content: aBodyView footer: aBootstrapModalFooter applyingToDialog: aDialogCommand andToDocument: aModalDocumentCommand	header := aBootstrapModalHeader.	footer := aBootstrapModalFooter.	dialog := GenericContainerWebView		wrapping: ( self documentWrapping: ( self contentWrapping: aBodyView ) applying: aModalDocumentCommand )		applying: [ :container :constants | 			container addClass bootstrapCommon modal + container disableTabCycle				+ ( container setARIARoleTo: #dialog ) + aDialogCommand			]!
 
 onCloseTrigger	^ CombinedWebInteractionInterpreter		combining:			{header onCloseTrigger.			footer onCloseTrigger}!
 

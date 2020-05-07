@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentMetadataCommand
 	classInstanceVariableNames: ''!
 ComponentMetadataCommand guid: (GUID fromString: '{cfeff5f1-f931-4c84-85f3-2820376f7e95}')!
 ComponentMetadataCommand comment: 'A command to add attributes with custom information:data-* = "value"'!
-!ComponentMetadataCommand categoriesForClass!Willow-Frontend! !
+!ComponentMetadataCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentMetadataCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	(ComponentAttributeCommand named: self dataAttribute with: content)		applyTo: aComponent		on: aCanvas!

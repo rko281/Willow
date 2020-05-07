@@ -14,7 +14,7 @@ description	^ 'You can add special styles to components'!
 
 initialize	super initialize.	self initializeButton!
 
-initializeButton button := AsynchronicButtonWebView	labeled: 'Primary Bootstrap Button'	applying:		[ :theButton | theButton addClass bootstrap button + 				theButton addClass bootstrap buttonPrimary ]!
+initializeButton	button := AsynchronicButtonWebView		labeled: 'Primary Bootstrap Button'		applying:			[ :theButton | theButton addClass bootstrap3 button + theButton addClass bootstrap3 buttonPrimary ]!
 
 renderContentOn: aCanvas	self renderPanelWrapping: button on: aCanvas.		self renderSourceOf: #initializeButton withBrowseButtonOn: aCanvas.!
 

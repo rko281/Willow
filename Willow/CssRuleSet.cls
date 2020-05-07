@@ -7,7 +7,7 @@ CssObject subclass: #CssRuleSet
 	classInstanceVariableNames: ''!
 CssRuleSet guid: (GUID fromString: '{4e2ba812-3f08-4513-a346-b1cf310f92b5}')!
 CssRuleSet comment: 'A rule set (also called "rule") consists of a selector followed by a declaration block.'!
-!CssRuleSet categoriesForClass!RenoirSt-Common! !
+!CssRuleSet categoriesForClass!RenoirSt-Core-Common! !
 !CssRuleSet methodsFor!
 
 cssContentOn: aStream	comment cssContentOn: aStream.	selector cssContentOn: aStream.	aStream newLine.	declarationBlock cssContentOn: aStream!

@@ -1,7 +1,7 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
 Object subclass: #IdentifierAssigner
-	instanceVariableNames: 'prefix identifierHolder'
+	instanceVariableNames: 'prefix identifierOptional'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -10,13 +10,13 @@ IdentifierAssigner comment: 'I''m responsible of the generation and assignment o
 !IdentifierAssigner categoriesForClass!Boardwalk-WebApplication! !
 !IdentifierAssigner methodsFor!
 
-assignedIdentifier	^ identifierHolder		withContentDo: [ :id | id ]		ifUnused: [ :explanations | AssertionFailed signalAll: explanations ]!
+assignedIdentifier	^ identifierOptional		withContentDo: [ :id | id ]		ifUnused: [ :explanations | AssertionFailed signalAll: explanations ]!
 
-identifyIn: aCanvas	^ identifierHolder		withContentDo: [ :identifier | identifier ]		ifUnused: [ | identifier |			identifier := '<1s>-<2s>' expandMacrosWith: prefix greaseString with: aCanvas nextId greaseString.			HTMLAsserter new assertIsValidIdentifier: identifier.			identifierHolder := Optional containing: identifier.			identifier ]!
+identifyIn: aCanvas	^ identifierOptional		withContentDo: [ :identifier | identifier ]		ifUnused: [ | identifier |			identifier := '<1s>-<2s>' expandMacrosWith: prefix greaseString with: aCanvas nextId greaseString.			HTMLAsserter new assertIsValidIdentifier: identifier.			identifierOptional := Optional containing: identifier.			identifier ]!
 
-initializePrefixedBy: aPrefix	prefix := aPrefix.	identifierHolder := Optional unusedBecause: 'The identifier was never assigned'!
+initializePrefixedBy: aPrefix	prefix := aPrefix.	identifierOptional := Optional unusedBecause: 'The identifier was never assigned'!
 
-withAssignedIdentifierDo: aMonadycBlock	identifierHolder withContentDo: aMonadycBlock ! !
+withAssignedIdentifierDo: aMonadycBlock	identifierOptional withContentDo: aMonadycBlock ! !
 !IdentifierAssigner categoriesFor: #assignedIdentifier!Accessing!public! !
 !IdentifierAssigner categoriesFor: #identifyIn:!Configuring!public! !
 !IdentifierAssigner categoriesFor: #initializePrefixedBy:!initialization!public! !

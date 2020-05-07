@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ComponentEnableStatusChangingCommand
 	classInstanceVariableNames: ''!
 ComponentEnableStatusChangingCommand guid: (GUID fromString: '{6c4971d2-e246-4ac9-84d3-c64fd4633c39}')!
 ComponentEnableStatusChangingCommand comment: 'I''m a WebInteractionCommand allowing to enable or disable a component. I just generate javascript code for the client, no server communication or processing is involved.'!
-!ComponentEnableStatusChangingCommand categoriesForClass!Willow-WebInteraction! !
+!ComponentEnableStatusChangingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ComponentEnableStatusChangingCommand methodsFor!
 
 clientIndependentActions	^#()!
@@ -30,11 +30,14 @@ serverIndependentActions	^ Array		with: [ :aScript :aCanvas | 			aScript << 
 
 !ComponentEnableStatusChangingCommand class methodsFor!
 
+disabling: anIdentifiedComponent	^ self		obtainingComponentWith: [ :canvas | 			anIdentifiedComponent identifyIn: canvas.			canvas jQuery id: anIdentifiedComponent identifier ]		settingStatusTo: true!
+
 disablingCurrentComponent	^self obtainingComponentWith: [:canvas | canvas jQuery this] settingStatusTo: true!
 
 enabling: anIdentifiedComponent	^ self		obtainingComponentWith: [ :canvas | 			anIdentifiedComponent identifyIn: canvas.			canvas jQuery id: anIdentifiedComponent identifier ]		settingStatusTo: false!
 
 obtainingComponentWith: aComponentProvider settingStatusTo: aBoolean	^self new initializeObtainingComponentWith: aComponentProvider settingStatusTo: aBoolean! !
+!ComponentEnableStatusChangingCommand class categoriesFor: #disabling:!Instance Creation!public! !
 !ComponentEnableStatusChangingCommand class categoriesFor: #disablingCurrentComponent!Instance Creation!public! !
 !ComponentEnableStatusChangingCommand class categoriesFor: #enabling:!Instance Creation!public! !
 !ComponentEnableStatusChangingCommand class categoriesFor: #obtainingComponentWith:settingStatusTo:!private! !

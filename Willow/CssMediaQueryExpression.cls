@@ -7,7 +7,7 @@ CssObject subclass: #CssMediaQueryExpression
 	classInstanceVariableNames: ''!
 CssMediaQueryExpression guid: (GUID fromString: '{ebb938dd-f43e-4b99-a9de-b55cbe7e0245}')!
 CssMediaQueryExpression comment: 'A CssMediaQueryExpression represents a condition to check of a particular media feature.'!
-!CssMediaQueryExpression categoriesForClass!RenoirSt-MediaQueries! !
+!CssMediaQueryExpression categoriesForClass!RenoirSt-Core-MediaQueries! !
 !CssMediaQueryExpression methodsFor!
 
 cssContentOn: aStream	aStream nextPut: $(.	mediaFeature cssContentOn: aStream.	values		do: [ :value | 			aStream				nextPut: $:;				space.			value cssContentOn: aStream ].	aStream nextPut: $)!

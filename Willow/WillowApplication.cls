@@ -7,7 +7,7 @@ WAComponent subclass: #WillowApplication
 	classInstanceVariableNames: ''!
 WillowApplication guid: (GUID fromString: '{81886630-cc91-4b8d-83f9-fd68c4699099}')!
 WillowApplication comment: 'I''m a basic Willow application providing some guidance to the developers.'!
-!WillowApplication categoriesForClass!Willow-Applications! !
+!WillowApplication categoriesForClass!Willow-Core-Applications! !
 !WillowApplication methodsFor!
 
 applicationTitle		^self class applicationTitle  !

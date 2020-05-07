@@ -7,7 +7,7 @@ CssAlphaChannel subclass: #CssAlphaChannelProvided
 	classInstanceVariableNames: ''!
 CssAlphaChannelProvided guid: (GUID fromString: '{21a0e51b-7ae9-463b-bc84-a00ca8af5c4b}')!
 CssAlphaChannelProvided comment: 'A CssAlphaChannelProvided represents the presence of an alpha channel value'!
-!CssAlphaChannelProvided categoriesForClass!RenoirSt-Colors! !
+!CssAlphaChannelProvided categoriesForClass!RenoirSt-Core-Colors! !
 !CssAlphaChannelProvided methodsFor!
 
 componentsDo: aBlockClosure separatedBy: aSeparationBlock	aSeparationBlock value.	aBlockClosure value: value	!

@@ -7,7 +7,7 @@ CssRulePrecedencePolicy subclass: #CssNormalRulePrecedencePolicy
 	classInstanceVariableNames: ''!
 CssNormalRulePrecedencePolicy guid: (GUID fromString: '{fb8d77c2-ff48-4d8f-bb1a-dc9173a49468}')!
 CssNormalRulePrecedencePolicy comment: 'A CssNormalRulePrecedencePolicy is a policy indicating an standard declaration.'!
-!CssNormalRulePrecedencePolicy categoriesForClass!RenoirSt-Common! !
+!CssNormalRulePrecedencePolicy categoriesForClass!RenoirSt-Core-Common! !
 !CssNormalRulePrecedencePolicy methodsFor!
 
 applyTo: aCssDeclaration 		^aCssDeclaration ! !

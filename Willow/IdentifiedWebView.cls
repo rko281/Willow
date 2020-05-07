@@ -7,7 +7,7 @@ WAPainter subclass: #IdentifiedWebView
 	classInstanceVariableNames: ''!
 IdentifiedWebView guid: (GUID fromString: '{a709bdde-777d-4bcd-9390-325b9ff2379d}')!
 IdentifiedWebView comment: 'I''m a web view guaranteed to have an id and used usually to swap my child content'!
-!IdentifiedWebView categoriesForClass!Willow-WebViews! !
+!IdentifiedWebView categoriesForClass!Willow-Core-WebViews! !
 !IdentifiedWebView methodsFor!
 
 componentRenderedOn: aCanvas	^ componentBuilder value: aCanvas!

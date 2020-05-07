@@ -7,7 +7,7 @@ TableFooterWebViewBehavior subclass: #NullTableFooterWebView
 	classInstanceVariableNames: ''!
 NullTableFooterWebView guid: (GUID fromString: '{50882ebc-5e2d-46e3-991d-68517287b1e9}')!
 NullTableFooterWebView comment: 'I represent the absence of a table footer'!
-!NullTableFooterWebView categoriesForClass!Willow-WebViews! !
+!NullTableFooterWebView categoriesForClass!Willow-Core-WebViews! !
 !NullTableFooterWebView methodsFor!
 
 changeNotifiedBy: aTableWebView!

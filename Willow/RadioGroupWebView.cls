@@ -7,7 +7,7 @@ SingleSelectionWebViewBehavior subclass: #RadioGroupWebView
 	classInstanceVariableNames: ''!
 RadioGroupWebView guid: (GUID fromString: '{3174a1af-8614-4f07-bed1-145ff038e02f}')!
 RadioGroupWebView comment: 'I''m a group of radio buttons allowing the user to select one of many options.'!
-!RadioGroupWebView categoriesForClass!Willow-WebViews! !
+!RadioGroupWebView categoriesForClass!Willow-Core-WebViews! !
 !RadioGroupWebView methodsFor!
 
 initializeRenderingWith: aRenderingBlock	applyingToLabel: aLabelCommand	applyingToInput: anInputCommand	labelCommand := aLabelCommand.	inputCommand := anInputCommand.	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue.	renderingBlock := aRenderingBlock!

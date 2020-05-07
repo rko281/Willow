@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentScriptCommand
 	classInstanceVariableNames: ''!
 ComponentScriptCommand guid: (GUID fromString: '{b82023dc-0d28-4622-8805-bf9c3f491be1}')!
 ComponentScriptCommand comment: 'Command to execute a JS script on  a component (using script:).'!
-!ComponentScriptCommand categoriesForClass!Willow-Frontend! !
+!ComponentScriptCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentScriptCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	^ aComponent script: (scriptProvider cull: aCanvas)!

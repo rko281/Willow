@@ -8,19 +8,20 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, June 2019.'.
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
 
 
 package classNames
-	add: #Bootstrap3DeploymentMetadataLibraryTest;
-	add: #Bootstrap3DevelopmentMetadataLibraryTest;
-	add: #Bootstrap3MetadataLibraryTest;
-	add: #Bootstrap3OnlineLibraryTest;
 	add: #BootstrapAlertCommandTest;
-	add: #BootstrapCheckboxWebViewTest;
 	add: #BootstrapCollapseTest;
 	add: #BootstrapComponentSupplierTest;
-	add: #BootstrapConstantsTest;
 	add: #BootstrapCssStylesTest;
 	add: #BootstrapDatepickerDeploymentLibraryTest;
 	add: #BootstrapDatepickerDevelopmentLibraryTest;
@@ -30,26 +31,16 @@ package classNames
 	add: #BootstrapDatepickerOnlineLibraryTest;
 	add: #BootstrapDatepickerTemplateTest;
 	add: #BootstrapDatepickerTest;
-	add: #BootstrapDatePickerWebViewTest;
 	add: #BootstrapDelayConfigurationTest;
 	add: #BootstrapDialogClosingCommandTest;
-	add: #BootstrapDropdownMenuBuilderTest;
 	add: #BootstrapDropdownTest;
-	add: #BootstrapGridBuilderTest;
-	add: #BootstrapHamburgerButtonTest;
-	add: #BootstrapIconWebViewTest;
-	add: #BootstrapInputGroupWebViewTest;
-	add: #BootstrapLabeledWebViewTest;
 	add: #BootstrapModalBuilderTest;
 	add: #BootstrapModalFooterWebViewTest;
 	add: #BootstrapModalHeaderWebViewTest;
 	add: #BootstrapModalTest;
 	add: #BootstrapModalWebViewTest;
-	add: #BootstrapNavigationBarTest;
 	add: #BootstrapNotificationBuilderTest;
-	add: #BootstrapPanelBuilderTest;
 	add: #BootstrapPopoverTest;
-	add: #BootstrapRadioWebViewTest;
 	add: #BootstrapSelectDeploymentLibraryTest;
 	add: #BootstrapSelectDevelopmentLibraryTest;
 	add: #BootstrapSelectLanguageToFileNameTranslatorTest;
@@ -58,10 +49,6 @@ package classNames
 	add: #BootstrapSelectOnlineLibraryTest;
 	add: #BootstrapSelectTest;
 	add: #BootstrapSelfCleaningModalCommandTest;
-	add: #BootstrapSingleButtonDropdownBuilderTest;
-	add: #BootstrapSplitButtonDropdownBuilderTest;
-	add: #BootstrapToggablePillsBuilderTest;
-	add: #BootstrapToggableTabsBuilderTest;
 	add: #BootstrapTooltipTest;
 	add: #BootstrapTypeaheadCommandTest;
 	add: #BootstrapTypeaheadDeploymentLibraryTest;
@@ -69,7 +56,6 @@ package classNames
 	add: #BootstrapTypeaheadLibraryTest;
 	add: #BootstrapTypeaheadOnlineLibraryTest;
 	add: #BootstrapTypeaheadTest;
-	add: #BootstrapViewportConfigurationTest;
 	add: #GlyphiconsTest;
 	add: #WillowBootstrapApplicationTest;
 	add: #WillowBootstrapFileMetadataLibraryTest;
@@ -90,28 +76,17 @@ package setPrerequisites: #(
 	'..\Grease\Grease-Core'
 	'..\Seaside\Javascript\Javascript-Core'
 	'..\Seaside\Javascript\Javascript-Tests-Core'
-	'RenoirSt'
 	'..\Seaside\Seaside\Seaside-Canvas'
 	'..\Seaside\Seaside\Seaside-Core'
 	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit'
-	'Willow'
 	'Willow-Bootstrap'
+	'Willow-Core'
 	'Willow-Tests').
 
 package!
 
 "Class Definitions"!
 
-TestCase subclass: #Bootstrap3MetadataLibraryTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-TestCase subclass: #BootstrapConstantsTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: 'Willow'
-	classInstanceVariableNames: ''!
 TestCase subclass: #BootstrapCssStylesTest
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -162,27 +137,7 @@ TestCase subclass: #BootstrapTypeaheadOnlineLibraryTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-TestCase subclass: #BootstrapViewportConfigurationTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 TestCase subclass: #GlyphiconsTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #Bootstrap3DeploymentMetadataLibraryTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #Bootstrap3DevelopmentMetadataLibraryTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #Bootstrap3OnlineLibraryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -217,48 +172,13 @@ BWRenderingTest subclass: #BootstrapDatepickerTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapDatePickerWebViewTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 BWRenderingTest subclass: #BootstrapDialogClosingCommandTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapDropdownMenuBuilderTest
-	instanceVariableNames: 'supplier'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 BWRenderingTest subclass: #BootstrapDropdownTest
 	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapGridBuilderTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapHamburgerButtonTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapIconWebViewTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapInputGroupWebViewTest
-	instanceVariableNames: 'supplier'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapLabeledWebViewTest
-	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -287,18 +207,8 @@ BWRenderingTest subclass: #BootstrapModalWebViewTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapNavigationBarTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
 BWRenderingTest subclass: #BootstrapNotificationBuilderTest
 	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapPanelBuilderTest
-	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -329,26 +239,6 @@ BWRenderingTest subclass: #BootstrapSelectTest
 	classInstanceVariableNames: ''!
 BWRenderingTest subclass: #BootstrapSelfCleaningModalCommandTest
 	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapSingleButtonDropdownBuilderTest
-	instanceVariableNames: 'supplier'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapSplitButtonDropdownBuilderTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapToggablePillsBuilderTest
-	instanceVariableNames: 'supplier'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-BWRenderingTest subclass: #BootstrapToggableTabsBuilderTest
-	instanceVariableNames: 'supplier'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -396,16 +286,6 @@ BWRenderingTest subclass: #WillowExtensionsTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: 'Willow'
-	classInstanceVariableNames: ''!
-BinaryChoiceWebViewTest subclass: #BootstrapCheckboxWebViewTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-SingleSelectionWebViewTest subclass: #BootstrapRadioWebViewTest
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 JSObjectTest subclass: #BootstrapDatepickerTemplateTest
 	instanceVariableNames: ''

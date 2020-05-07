@@ -7,7 +7,7 @@ GRObject subclass: #DialogOpener
 	classInstanceVariableNames: ''!
 DialogOpener guid: (GUID fromString: '{d22038a7-09a1-48a8-b44b-8e18afc8378d}')!
 DialogOpener comment: 'I help in opening dialogs. Useful outside of the DialogOpeningCommand.'!
-!DialogOpener categoriesForClass!Willow-WebInteraction! !
+!DialogOpener categoriesForClass!Willow-Core-WebInteraction! !
 !DialogOpener methodsFor!
 
 open: aDialogView on: aCanvas	^ (aCanvas jQuery id: Constants >> #willow >> #dialogSectionName)		append: [ :aSubCanvas | aSubCanvas render: aDialogView ]! !

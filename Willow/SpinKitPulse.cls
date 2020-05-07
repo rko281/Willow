@@ -10,6 +10,6 @@ SpinKitPulse comment: 'SpinKit animation'!
 !SpinKitPulse categoriesForClass!Willow-SpinKit! !
 !SpinKitPulse methodsFor!
 
-renderContentOn: aCanvas	aCanvas div class: SpinKitCssStyles spinnerPulse! !
+renderContentOn: aCanvas	aCanvas div apply: [ :div | div addClass spinKit pulse ]! !
 !SpinKitPulse categoriesFor: #renderContentOn:!public!rendering! !
 

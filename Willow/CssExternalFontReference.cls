@@ -7,7 +7,7 @@ CssFontReference subclass: #CssExternalFontReference
 	classInstanceVariableNames: ''!
 CssExternalFontReference guid: (GUID fromString: '{a7fd55c6-5348-4be1-bc63-0df47f3d30b2}')!
 CssExternalFontReference comment: 'I represent an external font reference'!
-!CssExternalFontReference categoriesForClass!RenoirSt-Fonts! !
+!CssExternalFontReference categoriesForClass!RenoirSt-Core-Fonts! !
 !CssExternalFontReference methodsFor!
 
 cssContentOn: aStream	url cssContentOn: aStream.	format		ifNotEmpty: [ aStream				space;				nextPutAll: 'format(';				nextPut: $".			format cssContentOn: aStream.			aStream				nextPut: $";				nextPut: $)			]!

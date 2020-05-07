@@ -7,7 +7,7 @@ TestCase subclass: #Bootstrap3MetadataLibraryTest
 	classInstanceVariableNames: ''!
 Bootstrap3MetadataLibraryTest guid: (GUID fromString: '{d8633dcf-02fe-4d77-9ace-145cbed751a1}')!
 Bootstrap3MetadataLibraryTest comment: 'A Bootstrap3MetadataLibraryTest is a test class for testing the behavior of Bootstrap3MetadataLibrary'!
-!Bootstrap3MetadataLibraryTest categoriesForClass!Willow-Bootstrap-Tests-Libraries! !
+!Bootstrap3MetadataLibraryTest categoriesForClass!Willow-Bootstrap-3-Tests-Libraries! !
 !Bootstrap3MetadataLibraryTest methodsFor!
 
 testForDeployment	self assert: Bootstrap3MetadataLibrary forDeployment equals: Bootstrap3DeploymentMetadataLibrary!

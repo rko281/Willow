@@ -7,7 +7,7 @@ WAPainter subclass: #ListItemWebView
 	classInstanceVariableNames: ''!
 ListItemWebView guid: (GUID fromString: '{95ddad0e-593e-40b2-957e-2b8b2173c3dd}')!
 ListItemWebView comment: 'I represent a list item including command support. '!
-!ListItemWebView categoriesForClass!Willow-WebViews! !
+!ListItemWebView categoriesForClass!Willow-Core-WebViews! !
 !ListItemWebView methodsFor!
 
 initializeItemizing: anObject containedIn: aList applying: aComponentCommand	item := anObject.	list := aList.	commandToComponent := aComponentCommand!

@@ -7,7 +7,7 @@ CssObject subclass: #CssUnit
 	classInstanceVariableNames: ''!
 CssUnit guid: (GUID fromString: '{4e5a0f9c-a38c-48d9-ba5b-3dd2d6d575a6}')!
 CssUnit comment: 'There are two types of length units: relative and absolute. Relative length units specify a length relative to another length property. Style sheets that use relative units will more easily scale from one medium to another (e.g., from a computer display to a laser printer).'!
-!CssUnit categoriesForClass!RenoirSt-Units! !
+!CssUnit categoriesForClass!RenoirSt-Core-Units! !
 !CssUnit methodsFor!
 
 cssContentOn: aStream 		identifier cssContentOn: aStream !

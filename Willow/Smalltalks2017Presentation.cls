@@ -10,7 +10,7 @@ Smalltalks2017Presentation comment: 'I''m the presentation :)'!
 !Smalltalks2017Presentation categoriesForClass!Willow-Playground-Smalltalks2017-Application! !
 !Smalltalks2017Presentation methodsFor!
 
-componentSupplierForApplication	^ BootstrapComponentSupplier		withBootstrapLibrary: (self deploymentMode libraryFor: Bootstrap3MetadataLibrary) withoutOptionalTheme		selectLibrary: ((self deploymentMode libraryFor: BootstrapSelectLibrary) using: self language)		datepickerLibrary: ((self deploymentMode libraryFor: BootstrapDatepickerLibrary) using: self language)		typeaheadLibrary: (self deploymentMode libraryFor: BootstrapTypeaheadLibrary) new!
+componentSupplierForApplication	^ Bootstrap3ComponentSupplier		withBootstrapLibrary: (self deploymentMode libraryFor: Bootstrap3MetadataLibrary) withoutOptionalTheme		selectLibrary: ((self deploymentMode libraryFor: BootstrapSelectLibrary) using: self language)		datepickerLibrary: ((self deploymentMode libraryFor: BootstrapDatepickerLibrary) using: self language)		typeaheadLibrary: (self deploymentMode libraryFor: BootstrapTypeaheadLibrary) new!
 
 contentView	^ currentStepView!
 
@@ -22,15 +22,13 @@ initialRequest: request	super initialRequest: request.		self initializeStepV
 
 jQueryLibrary	^(self deploymentMode libraryFor: JQuery3MetadataLibrary) default!
 
-newComponentSupplier	^ BootstrapComponentSupplier		withBootstrapLibrary: (self deploymentMode libraryFor: Bootstrap3MetadataLibrary) withoutOptionalTheme		selectLibrary: ((self deploymentMode libraryFor: BootstrapSelectLibrary) using: self language)		datepickerLibrary: ((self deploymentMode libraryFor: BootstrapDatepickerLibrary) using: self language)		typeaheadLibrary: (self deploymentMode libraryFor: BootstrapTypeaheadLibrary) new!
-
-nextStepButton	| button |	button := self componentSupplier		asynchronicButtonLabeled: [ :canvas | 			canvas				render: self nextStepView shortName;				space;				render: (BootstrapIconWebView representing: Glyphicons chevronRight) ]		applying: [ :theButton | theButton addClass bootstrap pullRight + theButton addClass bootstrap buttonDefault ].	button onTrigger		evaluate: [ currentStepIndex := self nextStepIndex ];		render: currentStepView.	^ button!
+nextStepButton	| button |	button := self componentSupplier		asynchronicButtonLabeled: [ :canvas | 			canvas				render: self nextStepView shortName;				space;				render: ( Bootstrap3IconWebView representing: Glyphicons chevronRight )			]		applying:			[ :theButton | theButton addClass bootstrap3 pullRight + theButton addClass bootstrap3 buttonDefault ].	button onTrigger		evaluate: [ currentStepIndex := self nextStepIndex ];		render: currentStepView.	^ button!
 
 nextStepIndex	^ currentStepIndex + 1 min: stepViews size!
 
 nextStepView	^ stepViews at: self nextStepIndex!
 
-previousStepButton	| button |	button := self componentSupplier		asynchronicButtonLabeled: [ :canvas | 			canvas				render: (BootstrapIconWebView representing: Glyphicons chevronLeft);				space;				render: self previousStepView shortName ]		applying: [ :theButton | theButton addClass bootstrap pullLeft + theButton addClass bootstrap buttonDefault ].	button onTrigger		evaluate: [ currentStepIndex := self previousStepIndex ];		render: currentStepView.	^ button!
+previousStepButton	| button |	button := self componentSupplier		asynchronicButtonLabeled: [ :canvas | 			canvas				render: ( Bootstrap3IconWebView representing: Glyphicons chevronLeft );				space;				render: self previousStepView shortName			]		applying:			[ :theButton | theButton addClass bootstrap3 pullLeft + theButton addClass bootstrap3 buttonDefault ].	button onTrigger		evaluate: [ currentStepIndex := self previousStepIndex ];		render: currentStepView.	^ button!
 
 previousStepIndex	^ currentStepIndex - 1 max: 1!
 
@@ -40,14 +38,13 @@ renderCurrentStepOn: aCanvas	| view |	view := stepViews at: currentStepIndex
 
 renderStepButtonsOn: aCanvas	aCanvas div		with: [ currentStepIndex = 1				ifFalse: [ aCanvas render: self previousStepButton ].			currentStepIndex = stepViews size				ifFalse: [ aCanvas render: self nextStepButton ] ]		applying: [ :div | div addClass smalltalks2017 stepButtonContainer ]!
 
-requiredLibraries	" Libraries added here are not considered until the server is restarted.	  Including a library with a favicon.ico will automatically use it.	"	^ {Smalltalks2017FileMetadataLibrary default. 	SpinKitMetadataLibrary default}! !
+requiredLibraries	" Libraries added here are not considered until the server is restarted.	  Including a library with a favicon.ico will automatically use it.	"	^ {Smalltalks2017FileMetadataLibrary default.	( self deploymentMode libraryFor: SpinKitMetadataLibrary ) default}! !
 !Smalltalks2017Presentation categoriesFor: #componentSupplierForApplication!accessing!public! !
 !Smalltalks2017Presentation categoriesFor: #contentView!accessing!public! !
 !Smalltalks2017Presentation categoriesFor: #initializeCurrentStepView!initialization!public! !
 !Smalltalks2017Presentation categoriesFor: #initializeStepViews!initialization!public! !
 !Smalltalks2017Presentation categoriesFor: #initialRequest:!initialization!public! !
 !Smalltalks2017Presentation categoriesFor: #jQueryLibrary!accessing!public! !
-!Smalltalks2017Presentation categoriesFor: #newComponentSupplier!accessing!public! !
 !Smalltalks2017Presentation categoriesFor: #nextStepButton!private / accessing!public! !
 !Smalltalks2017Presentation categoriesFor: #nextStepIndex!private / accessing!public! !
 !Smalltalks2017Presentation categoriesFor: #nextStepView!private / accessing!public! !

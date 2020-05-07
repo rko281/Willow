@@ -7,7 +7,7 @@ CssFunction subclass: #CssToggle
 	classInstanceVariableNames: ''!
 CssToggle guid: (GUID fromString: '{442411ad-0a76-4738-b1e4-60c55935d606}')!
 CssToggle comment: 'A CssToggle represents a CSS expression allowing descendant elements to cycle over a list of values instead of inheriting the same value.'!
-!CssToggle categoriesForClass!RenoirSt-Common! !
+!CssToggle categoriesForClass!RenoirSt-Core-Common! !
 !CssToggle methodsFor!
 
 cssFunctionParametersContentOn: aWriteStream	values		do: [ :value | value cssContentOn: aWriteStream ]		separatedBy: [ 			aWriteStream				nextPut: $,;				space ]!

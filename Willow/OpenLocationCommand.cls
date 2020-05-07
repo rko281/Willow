@@ -7,7 +7,7 @@ WebComponentCommand subclass: #OpenLocationCommand
 	classInstanceVariableNames: ''!
 OpenLocationCommand guid: (GUID fromString: '{e1c8d079-93d9-44d6-ac7d-754ef9551689}')!
 OpenLocationCommand comment: 'Command to configure an anchor to open a destination into a blank page'!
-!OpenLocationCommand categoriesForClass!Willow-Frontend! !
+!OpenLocationCommand categoriesForClass!Willow-Core-Frontend! !
 !OpenLocationCommand methodsFor!
 
 applyTo: anAnchorComponent on: aCanvas	anAnchorComponent url: destination.	targetOptional		withContentDo: [ :target | 			anAnchorComponent				target: target;				relationship: 'noopener noreferrer' ]!

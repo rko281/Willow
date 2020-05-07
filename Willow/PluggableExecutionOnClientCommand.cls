@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #PluggableExecutionOnClientCommand
 	classInstanceVariableNames: ''!
 PluggableExecutionOnClientCommand guid: (GUID fromString: '{2a453c3c-01a7-4dd1-9fc6-119781e6c089}')!
 PluggableExecutionOnClientCommand comment: 'I''m a WebInteractionCommand that allows for arbitrary code execution in the client'!
-!PluggableExecutionOnClientCommand categoriesForClass!Willow-WebInteraction! !
+!PluggableExecutionOnClientCommand categoriesForClass!Willow-Core-WebInteraction! !
 !PluggableExecutionOnClientCommand methodsFor!
 
 clientIndependentActions	^#()!

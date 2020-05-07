@@ -7,7 +7,7 @@ FrontendComponentSupplier subclass: #Html5ComponentSupplier
 	classInstanceVariableNames: ''!
 Html5ComponentSupplier guid: (GUID fromString: '{013bb865-cf36-429f-94c0-b22e0ec35687}')!
 Html5ComponentSupplier comment: 'I provide plain HTML 5 components.'!
-!Html5ComponentSupplier categoriesForClass!Willow-Frontend! !
+!Html5ComponentSupplier categoriesForClass!Willow-Core-Frontend! !
 !Html5ComponentSupplier methodsFor!
 
 addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'dialog')) removeAttribute: 'open'!

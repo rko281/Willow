@@ -7,7 +7,7 @@ CssObject subclass: #CssColorUnit
 	classInstanceVariableNames: ''!
 CssColorUnit guid: (GUID fromString: '{16f7b4c3-9cc0-424e-a83d-d40c9f8768ab}')!
 CssColorUnit comment: 'A CssColorUnit is an abstract color unit for CSS'!
-!CssColorUnit categoriesForClass!RenoirSt-Colors! !
+!CssColorUnit categoriesForClass!RenoirSt-Core-Colors! !
 !CssColorUnit methodsFor!
 
 identifiedBy: aString	self subclassResponsibility !

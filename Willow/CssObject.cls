@@ -7,7 +7,7 @@ Object subclass: #CssObject
 	classInstanceVariableNames: ''!
 CssObject guid: (GUID fromString: '{ec53cad5-fd34-4306-ac95-acf0cb8dbace}')!
 CssObject comment: 'A CssObject is the abstract superclass of the CSS renderable objects'!
-!CssObject categoriesForClass!RenoirSt-Common! !
+!CssObject categoriesForClass!RenoirSt-Core-Common! !
 !CssObject methodsFor!
 
 asString	^ self printString!

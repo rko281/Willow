@@ -12,7 +12,7 @@ WPLiveDocumentationClassHierarchyCard comment: 'I''m a panel showing the class h
 
 initializeFor: aClass	selectedClass := aClass!
 
-renderContentOn: html	html		render:			(self componentSupplier panelBuilder				headingDisplaying: 'Hierarchy';				wrapping: [ :canvas | 					selectedClass withAllSuperclasses reverse						doWithIndex: [ :class :index | 							index - 1								timesRepeat: [ canvas										space;										space ].							canvas								render: class name;								break ] ];				buildApplying: [ :panel | panel addClass bootstrap panelDefault ])! !
+renderContentOn: html	html		render:			(self componentSupplier panelBuilder				headingDisplaying: 'Hierarchy';				wrapping: [ :canvas | 					selectedClass withAllSuperclasses reverse						doWithIndex: [ :class :index | 							index - 1								timesRepeat: [ canvas										space;										space ].							canvas								render: class name;								break ] ];				buildApplying: [ :panel | panel addClass bootstrap3 panelDefault ])! !
 !WPLiveDocumentationClassHierarchyCard categoriesFor: #initializeFor:!initialization!public! !
 !WPLiveDocumentationClassHierarchyCard categoriesFor: #renderContentOn:!initialization!public! !
 

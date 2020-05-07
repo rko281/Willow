@@ -1,0 +1,52 @@
+﻿| package |
+package := Package name: 'Willow-SpinKit-Examples'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
+
+
+package classNames
+	add: #WillowSpinKitPlayground;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'Willow-Core'
+	'Willow-SpinKit').
+
+package!
+
+"Class Definitions"!
+
+WillowApplication subclass: #WillowSpinKitPlayground
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

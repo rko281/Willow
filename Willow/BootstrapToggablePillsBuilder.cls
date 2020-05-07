@@ -14,7 +14,7 @@ addPillHeadedBy: aRenderable containing: aTabContent	self addNavigationHeadedB
 
 dataToggleValue	^ Constants >> #bootstrap >> #pill!
 
-navigationTypeCommand	^ [ :list | list addClass bootstrap navPills ] asWebComponentCommand! !
+navigationTypeCommand	^ [ :list | list addClass bootstrapCommon navPills ] asWebComponentCommand! !
 !BootstrapToggablePillsBuilder categoriesFor: #addPillHeadedBy:containing:!adding!public! !
 !BootstrapToggablePillsBuilder categoriesFor: #dataToggleValue!private! !
 !BootstrapToggablePillsBuilder categoriesFor: #navigationTypeCommand!private! !

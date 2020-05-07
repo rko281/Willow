@@ -8,24 +8,59 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, June 2019.'.
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
 
 
 package classNames
-	add: #SpinKitChasingDots;
+	add: #SpinKitBounce;
+	add: #SpinKitChase;
 	add: #SpinKitCircle;
-	add: #SpinKitCssStyles;
-	add: #SpinKitCubeGrid;
-	add: #SpinKitDoubleBounce;
-	add: #SpinKitFadingCircle;
-	add: #SpinKitFoldingCube;
+	add: #SpinKitCircleFade;
+	add: #SpinKitDeploymentMetadataLibrary;
+	add: #SpinKitDevelopmentMetadataLibrary;
+	add: #SpinKitFlow;
+	add: #SpinKitFold;
+	add: #SpinKitGrid;
 	add: #SpinKitMetadataLibrary;
-	add: #SpinKitOnlineLibrary;
+	add: #SpinKitPlane;
 	add: #SpinKitPulse;
-	add: #SpinKitRotatingPlane;
-	add: #SpinKitTripleBounce;
-	add: #SpinKitWanderingCubes;
+	add: #SpinKitSwing;
+	add: #SpinKitWander;
 	add: #SpinKitWave;
+	add: #WillowSpinKit;
+	yourself.
+
+package methodNames
+	add: #ComponentClassificationCommandBuilder -> #bounce;
+	add: #ComponentClassificationCommandBuilder -> #bounceDot;
+	add: #ComponentClassificationCommandBuilder -> #chase;
+	add: #ComponentClassificationCommandBuilder -> #chaseDot;
+	add: #ComponentClassificationCommandBuilder -> #circle;
+	add: #ComponentClassificationCommandBuilder -> #circleDot;
+	add: #ComponentClassificationCommandBuilder -> #circleFade;
+	add: #ComponentClassificationCommandBuilder -> #circleFadeDot;
+	add: #ComponentClassificationCommandBuilder -> #flow;
+	add: #ComponentClassificationCommandBuilder -> #flowDot;
+	add: #ComponentClassificationCommandBuilder -> #fold;
+	add: #ComponentClassificationCommandBuilder -> #foldCube;
+	add: #ComponentClassificationCommandBuilder -> #grid;
+	add: #ComponentClassificationCommandBuilder -> #gridCube;
+	add: #ComponentClassificationCommandBuilder -> #plane;
+	add: #ComponentClassificationCommandBuilder -> #pulse;
+	add: #ComponentClassificationCommandBuilder -> #spinKit;
+	add: #ComponentClassificationCommandBuilder -> #swing;
+	add: #ComponentClassificationCommandBuilder -> #swingDot;
+	add: #ComponentClassificationCommandBuilder -> #wander;
+	add: #ComponentClassificationCommandBuilder -> #wanderCube;
+	add: #ComponentClassificationCommandBuilder -> #wave;
+	add: #ComponentClassificationCommandBuilder -> #waveRectangle;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -36,30 +71,43 @@ package globalAliases: (Set new
 
 package setPrerequisites: #(
 	'Boardwalk'
+	'Buoy-Metaprogramming'
 	'..\Core\Object Arts\Dolphin\Base\Dolphin'
 	'..\Grease\Grease-Core'
-	'..\Seaside\Seaside\Seaside-Core').
+	'..\Portishead\Portishead-Pragmas'
+	'..\Seaside\Seaside\Seaside-Core'
+	'Willow-Core').
 
 package!
 
 "Class Definitions"!
 
-Object subclass: #SpinKitCssStyles
+Object subclass: #WillowSpinKit
 	instanceVariableNames: ''
 	classVariableNames: ''
-	poolDictionaries: ''
+	poolDictionaries: 'Willow'
 	classInstanceVariableNames: ''!
 WADeploymentAwareFileMetadataLibrary subclass: #SpinKitMetadataLibrary
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAOnlineLibrary subclass: #SpinKitOnlineLibrary
+SpinKitMetadataLibrary subclass: #SpinKitDeploymentMetadataLibrary
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitChasingDots
+SpinKitMetadataLibrary subclass: #SpinKitDevelopmentMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitBounce
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitChase
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -69,22 +117,27 @@ WAPainter subclass: #SpinKitCircle
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitCubeGrid
+WAPainter subclass: #SpinKitCircleFade
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitDoubleBounce
+WAPainter subclass: #SpinKitFlow
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitFadingCircle
+WAPainter subclass: #SpinKitFold
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitFoldingCube
+WAPainter subclass: #SpinKitGrid
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SpinKitPlane
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -94,17 +147,12 @@ WAPainter subclass: #SpinKitPulse
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitRotatingPlane
+WAPainter subclass: #SpinKitSwing
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitTripleBounce
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WAPainter subclass: #SpinKitWanderingCubes
+WAPainter subclass: #SpinKitWander
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -119,6 +167,77 @@ WAPainter subclass: #SpinKitWave
 
 
 "Loose Methods"!
+
+!ComponentClassificationCommandBuilder methodsFor!
+
+bounce	^ self commandStyledWith: #bounce!
+
+bounceDot	^ self commandStyledWith: #bounceDot!
+
+chase	^ self commandStyledWith: #chase!
+
+chaseDot	^ self commandStyledWith: #chaseDot!
+
+circle	^ self commandStyledWith: #circle!
+
+circleDot	^ self commandStyledWith: #circleDot!
+
+circleFade	^ self commandStyledWith: #circleFade!
+
+circleFadeDot	^ self commandStyledWith: #circleFadeDot!
+
+flow	^ self commandStyledWith: #flow!
+
+flowDot	^ self commandStyledWith: #flowDot!
+
+fold	^ self commandStyledWith: #fold!
+
+foldCube	^ self commandStyledWith: #foldCube!
+
+grid	^ self commandStyledWith: #grid!
+
+gridCube	^ self commandStyledWith: #gridCube!
+
+plane	^ self commandStyledWith: #plane!
+
+pulse	^ self commandStyledWith: #pulse!
+
+spinKit	classificationNamespace := classificationNamespace >> #spinKit!
+
+swing	^ self commandStyledWith: #swing!
+
+swingDot	^ self commandStyledWith: #swingDot!
+
+wander	^ self commandStyledWith: #wander!
+
+wanderCube	^ self commandStyledWith: #wanderCube!
+
+wave	^ self commandStyledWith: #wave!
+
+waveRectangle	^ self commandStyledWith: #waveRectangle! !
+!ComponentClassificationCommandBuilder categoriesFor: #bounce!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #bounceDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #chase!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #chaseDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #circle!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #circleDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #circleFade!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #circleFadeDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flow!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flowDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #fold!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #foldCube!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #grid!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #gridCube!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #plane!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pulse!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #spinKit!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #swing!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #swingDot!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #wander!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #wanderCube!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #wave!*Willow/SpinKit!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #waveRectangle!*Willow/SpinKit!public! !
 
 "End of package definition"!
 

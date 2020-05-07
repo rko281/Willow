@@ -7,7 +7,7 @@ WebComponentCommand subclass: #InputModeCommand
 	classInstanceVariableNames: ''!
 InputModeCommand guid: (GUID fromString: '{cab0caf8-c6a4-435d-8254-992339a76586}')!
 InputModeCommand comment: 'I''m a command configuring an input field to be of an specific type'!
-!InputModeCommand categoriesForClass!Willow-Frontend! !
+!InputModeCommand categoriesForClass!Willow-Core-Frontend! !
 !InputModeCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent type: type!

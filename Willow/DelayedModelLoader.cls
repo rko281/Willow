@@ -7,7 +7,7 @@ Object subclass: #DelayedModelLoader
 	classInstanceVariableNames: ''!
 DelayedModelLoader guid: (GUID fromString: '{40fc5d9d-c0f6-4b54-8a3b-9d27ed69b2e6}')!
 DelayedModelLoader comment: ''!
-!DelayedModelLoader categoriesForClass!Willow-WebInteraction! !
+!DelayedModelLoader categoriesForClass!Willow-Core-WebInteraction! !
 !DelayedModelLoader methodsFor!
 
 applyTo: aScript on: aCanvas	self		commandsDo: [ :command | command serverIndependentActions do: [ :action | action value: aScript value: aCanvas ] ];		commandsDo: [ :command | command clientIndependentActions do: [ :action | action value ] ];		commandsDo: [ :command | command modelLoadingActions do: [ :action | action value: aScript value: aCanvas ] ]!

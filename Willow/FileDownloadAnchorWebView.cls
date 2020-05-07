@@ -7,7 +7,7 @@ WAPainter subclass: #FileDownloadAnchorWebView
 	classInstanceVariableNames: ''!
 FileDownloadAnchorWebView guid: (GUID fromString: '{bd54ee3d-c98e-41ef-9dc1-5003ab6f3cbd}')!
 FileDownloadAnchorWebView comment: 'I''m an anchor with a callback to download a document'!
-!FileDownloadAnchorWebView categoriesForClass!Willow-WebViews! !
+!FileDownloadAnchorWebView categoriesForClass!Willow-Core-WebViews! !
 !FileDownloadAnchorWebView methodsFor!
 
 initializeLabeled: aLabel applying: aComponentCommand obtainingFileUsing: aFileProvider	label := aLabel.	documentProvider := aFileProvider.	commandToComponent := aComponentCommand!

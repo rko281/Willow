@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentBoundaryCommand
 	classInstanceVariableNames: ''!
 ComponentBoundaryCommand guid: (GUID fromString: '{69f73a24-9379-4be8-bd89-3f43ea6f2b92}')!
 ComponentBoundaryCommand comment: 'Command to add boundaries to a component (using min: and/or max:).'!
-!ComponentBoundaryCommand categoriesForClass!Willow-Frontend! !
+!ComponentBoundaryCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentBoundaryCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	minimumHolder withContentDo: [ :minimum | aComponent attributeAt: 'min' put: minimum ].	maximumHolder withContentDo: [ :maximum | aComponent attributeAt: 'max' put: maximum ]!

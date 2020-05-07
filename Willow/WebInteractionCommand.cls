@@ -7,7 +7,7 @@ Object subclass: #WebInteractionCommand
 	classInstanceVariableNames: ''!
 WebInteractionCommand guid: (GUID fromString: '{1e65b705-e188-47b8-810c-8567f2241241}')!
 WebInteractionCommand comment: ''!
-!WebInteractionCommand categoriesForClass!Willow-WebInteraction! !
+!WebInteractionCommand categoriesForClass!Willow-Core-WebInteraction! !
 !WebInteractionCommand methodsFor!
 
 clientIndependentActions	self subclassResponsibility!

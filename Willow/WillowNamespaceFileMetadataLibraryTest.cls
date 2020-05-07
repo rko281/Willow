@@ -10,7 +10,7 @@ WillowNamespaceFileMetadataLibraryTest comment: 'A WillowNamespaceFileMetadataLi
 !WillowNamespaceFileMetadataLibraryTest categoriesForClass!Willow-Tests-Libraries! !
 !WillowNamespaceFileMetadataLibraryTest methodsFor!
 
-testDeployFiles	self		assertFileDeploymentOf: WillowNamespaceFileMetadataLibrary default deployFiles		createsAsFolders: #('willow-8.0.1' 'willow-8.0.1/js')		andFileContentsMatching: {('willow-8.0.1/js/willow.js' -> 'd01dced3b8eed675fe45b1f8a3cb3470c730150b')}!
+testDeployFiles	self		assertFileDeploymentOf: WillowNamespaceFileMetadataLibrary default deployFiles		createsAsFolders:			{'willow-8.0.1'.			( 'willow-8.0.1<1s>js' expandMacrosWith: GRPlatform current pathSeparator )}		andFileContentsMatching:			{( ( 'willow-8.0.1<1s>js/willow.js' expandMacrosWith: GRPlatform current pathSeparator )				-> 'd01dced3b8eed675fe45b1f8a3cb3470c730150b' )}!
 
 testInstanceCreation	self		assert: WillowNamespaceFileMetadataLibrary forDeployment equals: WillowNamespaceFileMetadataLibrary;		assert: WillowNamespaceFileMetadataLibrary forDevelopment equals: WillowNamespaceFileMetadataLibrary!
 

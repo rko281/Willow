@@ -7,7 +7,7 @@ WebComponentCommand subclass: #InputFieldMaxLengthCommand
 	classInstanceVariableNames: ''!
 InputFieldMaxLengthCommand guid: (GUID fromString: '{467c81f1-468d-4da6-a441-9b06fa5a8bc8}')!
 InputFieldMaxLengthCommand comment: 'Command to configure maximum length of an input field'!
-!InputFieldMaxLengthCommand categoriesForClass!Willow-Frontend! !
+!InputFieldMaxLengthCommand categoriesForClass!Willow-Core-Frontend! !
 !InputFieldMaxLengthCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent maxLength: maxLength!

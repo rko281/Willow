@@ -8,12 +8,21 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, June 2019.'.
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
 
 
 package classNames
 	add: #HTMLAsserter;
 	add: #IdentifierAssigner;
+	add: #JSArrowFunction;
+	add: #JSDeclareConstVariable;
 	add: #JSDeclareGlobalNamespace;
 	add: #JSExpression;
 	add: #JSFunctionCall;
@@ -25,29 +34,47 @@ package classNames
 	add: #WADeploymentAwareFileHandler;
 	add: #WADeploymentAwareFileMetadataLibrary;
 	add: #WADeploymentMode;
+	add: #WAFileMetadataLibraryDeployer;
 	add: #WAOnlineLibrary;
 	yourself.
 
 package methodNames
+	add: #JSFunction -> #asArrowFunction:;
 	add: #JSObject -> #*;
+	add: #JSObject -> #asExpression;
 	add: #JSObject -> #asImmediatelyInvokedFunctionExpression;
 	add: #JSObject -> #collect:;
+	add: #JSObject -> #detect:;
+	add: #JSObject -> #detect:ifFound:;
+	add: #JSObject -> #detect:ifFound:ifNone:;
+	add: #JSObject -> #detect:ifNone:;
 	add: #JSObject -> #equalTo:;
+	add: #JSObject -> #greaterThan:;
+	add: #JSObject -> #greaterThanOrEqualTo:;
 	add: #JSObject -> #identicalTo:;
+	add: #JSObject -> #javascript;
+	add: #JSObject -> #lessThan:;
+	add: #JSObject -> #lessThanOrEqualTo:;
 	add: #JSObject -> #nonInlinedThen:;
 	add: #JSObject -> #nonInlinedThen:else:;
+	add: #JSObject -> #notEqualTo:;
 	add: #JSObject -> #notIdenticalTo:;
 	add: #JSObject -> #select:;
 	add: #JSObject -> #sessionStorage;
 	add: #JSObject -> #typeOf;
+	add: #JSScript -> #asVariableName:;
 	add: #JSScript -> #call:;
 	add: #JSScript -> #call:with:;
 	add: #JSScript -> #call:with:with:;
 	add: #JSScript -> #call:with:with:with:;
 	add: #JSScript -> #call:withArguments:;
+	add: #JSScript -> #const:assign:;
 	add: #JSScript -> #if:then:;
 	add: #JSScript -> #if:then:else:;
 	add: #JSScript -> #var:;
+	add: #Object -> #asArrowFunction;
+	add: #Object -> #asArrowFunction:;
+	add: #String -> #asArrowFunction:;
 	add: #WAContentElement -> #anonymousSubResourceIntegrity:;
 	add: #WAFormTag -> #doNotSubmit;
 	add: #WAHtmlCanvas -> #ensureIdFor:;
@@ -70,6 +97,7 @@ package setPrerequisites: #(
 	'Buoy-Assertions'
 	'Buoy-Dynamic-Binding'
 	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
 	'..\Seaside\Javascript\Javascript-Core'
 	'..\Seaside\Seaside\Seaside-Canvas'
 	'..\Seaside\Seaside\Seaside-Core').
@@ -84,12 +112,17 @@ Object subclass: #HTMLAsserter
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 Object subclass: #IdentifierAssigner
-	instanceVariableNames: 'prefix identifierHolder'
+	instanceVariableNames: 'prefix identifierOptional'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 Object subclass: #WADeploymentMode
 	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #WAFileMetadataLibraryDeployer
+	instanceVariableNames: 'libraries'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -113,6 +146,11 @@ JSDecoration subclass: #JSTypeOf
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+JSMember subclass: #JSDeclareConstVariable
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 JSMember subclass: #JSDeclareGlobalNamespace
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -120,6 +158,11 @@ JSMember subclass: #JSDeclareGlobalNamespace
 	classInstanceVariableNames: ''!
 JSObject subclass: #JSFunctionCall
 	instanceVariableNames: 'functionName parameters'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSFunction subclass: #JSArrowFunction
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -154,42 +197,82 @@ WADeploymentMode subclass: #WAApplicationInDevelopment
 
 "Loose Methods"!
 
+!JSFunction methodsFor!
+
+asArrowFunction: aCollection	| function |	function := JSArrowFunction context: self renderContext.	statements do: [ :statement | function add: statement ].	function return: return.	^ function asArrowFunction: aCollection! !
+!JSFunction categoriesFor: #asArrowFunction:!*Boardwalk!public! !
+
 !JSObject methodsFor!
 
 * anObject 	"Multiply the receiver and anObject"		self		addDecoration:			(JSBinary new				operator: '*';				statement: anObject)!
 
+asExpression	self addDecoration: JSExpression new!
+
 asImmediatelyInvokedFunctionExpression	^ (self asFunction apply: #()) addDecoration: JSExpression new!
 
-collect: aBlock	self		call: 'map'		with:			(((aBlock value: (JSStream on: 'currentValue'))				asFunction: (Array with: 'currentValue'))				return: true;				yourself)!
+collect: aBlock	self		call: 'map'		with:			( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )				return: true;				yourself )!
+
+detect: aBlock	self		call: 'find'		with:			( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )				return: true;				yourself )!
+
+detect: aBlock ifFound: foundBlock	| thenScript |	thenScript := self javascript.	foundBlock value: ( JSStream on: 'foundValue' ) value: thenScript.	^ self javascript		if:			( ( ( JSStream on: 'foundValue' )				assign:					( self						call: 'find'						with:							( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )								return: true;								yourself ) ) ) asExpression notEqualTo: JSStream undefined )		then: thenScript!
+
+detect: aBlock ifFound: foundBlock ifNone: errorBlock	| thenScript elseScript |	thenScript := self javascript.	elseScript := self javascript.	foundBlock value: ( JSStream on: 'foundValue' ) value: thenScript.	errorBlock value: elseScript.	^ self javascript		if:			( ( ( JSStream on: 'foundValue' )				assign:					( self						call: 'find'						with:							( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )								return: true;								yourself ) ) ) asExpression notEqualTo: JSStream undefined )		then: thenScript		else: elseScript!
+
+detect: aBlock ifNone: errorBlock	| thenScript |	thenScript := self javascript.	errorBlock value: thenScript.	^ self javascript		if:			( ( ( JSStream on: 'foundValue' )				assign:					( self						call: 'find'						with:							( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )								return: true;								yourself ) ) ) asExpression equalTo: JSStream undefined )		then: thenScript!
 
 equalTo: anObject	self		addDecoration:			(JSBinary new				operator: '==';				statement: anObject)!
 
+greaterThan: anObject	self		addDecoration:			( JSBinary new				operator: '>';				statement: anObject )!
+
+greaterThanOrEqualTo: anObject	self		addDecoration:			( JSBinary new				operator: '>=';				statement: anObject )!
+
 identicalTo: anObject	self		addDecoration:			(JSBinary new				operator: '===';				statement: anObject)!
+
+javascript	^ ( JSScript context: self renderContext )		rendererClass: self rendererClass;		yourself!
+
+lessThan: anObject	self		addDecoration:			( JSBinary new				operator: '<';				statement: anObject )!
+
+lessThanOrEqualTo: anObject	self		addDecoration:			( JSBinary new				operator: '<=';				statement: anObject )!
 
 nonInlinedThen: anObject	self addDecoration: (JSNonInlinedIfThenElse new trueStatement: anObject)!
 
 nonInlinedThen: anObject else: anotherObject	self		addDecoration:			(JSNonInlinedIfThenElse new				trueStatement: anObject;				falseStatement: anotherObject)!
 
+notEqualTo: anObject	self		addDecoration:			( JSBinary new				operator: '!!=';				statement: anObject )!
+
 notIdenticalTo: anObject	self		addDecoration:			(JSBinary new				operator: '!!==';				statement: anObject)!
 
-select: aBlock	self		call: 'filter'		with:			(((aBlock value: (JSStream on: 'currentValue'))				asFunction: (Array with: 'currentValue'))				return: true;				yourself)!
+select: aBlock	self		call: 'filter'		with:			( ( ( aBlock value: ( JSStream on: 'currentValue' ) ) asArrowFunction: #('currentValue') )				return: true;				yourself )!
 
 sessionStorage	^self alias: 'sessionStorage'!
 
 typeOf    "Returns the type of the receiver."    self addDecoration: JSTypeOf new! !
 !JSObject categoriesFor: #*!*Boardwalk!public! !
+!JSObject categoriesFor: #asExpression!*Boardwalk!public! !
 !JSObject categoriesFor: #asImmediatelyInvokedFunctionExpression!*Boardwalk!public! !
 !JSObject categoriesFor: #collect:!*Boardwalk!public! !
+!JSObject categoriesFor: #detect:!*Boardwalk!public! !
+!JSObject categoriesFor: #detect:ifFound:!*Boardwalk!public! !
+!JSObject categoriesFor: #detect:ifFound:ifNone:!*Boardwalk!public! !
+!JSObject categoriesFor: #detect:ifNone:!*Boardwalk!public! !
 !JSObject categoriesFor: #equalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #greaterThan:!*Boardwalk!public! !
+!JSObject categoriesFor: #greaterThanOrEqualTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #identicalTo:!*Boardwalk!public! !
+!JSObject categoriesFor: #javascript!*Boardwalk!public! !
+!JSObject categoriesFor: #lessThan:!*Boardwalk!public! !
+!JSObject categoriesFor: #lessThanOrEqualTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #nonInlinedThen:!*Boardwalk!public! !
 !JSObject categoriesFor: #nonInlinedThen:else:!*Boardwalk!public! !
+!JSObject categoriesFor: #notEqualTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #notIdenticalTo:!*Boardwalk!public! !
 !JSObject categoriesFor: #select:!*Boardwalk!public! !
 !JSObject categoriesFor: #sessionStorage!*Boardwalk!public! !
 !JSObject categoriesFor: #typeOf!*Boardwalk!public! !
 
 !JSScript methodsFor!
+
+asVariableName: aVariableName	^ aVariableName isString		ifTrue: [ JSStream on: aVariableName ]		ifFalse: [ aVariableName ]!
 
 call: aFunctionName	^ self call: aFunctionName withArguments: #()!
 
@@ -201,16 +284,20 @@ call: aFunctionName with: anObject1 with: anObject2 with: anObject3	^ self		c
 
 call: aFunctionName withArguments: anArray	^JSFunctionCall for: aFunctionName withAll: anArray !
 
+const: aVariableName assign: anObject	^ JSDeclareConstVariable named: ( ( self asVariableName: aVariableName ) assign: anObject )!
+
 if: condition then: statement	^ condition nonInlinedThen: statement!
 
 if: condition then: trueStatement else: falseStatement	^ condition nonInlinedThen: trueStatement else: falseStatement!
 
-var: aVariableName	^ JSDeclareGlobalNamespace		named:			(aVariableName isString				ifTrue: [ JSStream on: aVariableName ]				ifFalse: [ aVariableName ])! !
+var: aVariableName	^ JSDeclareGlobalNamespace named: ( self asVariableName: aVariableName )! !
+!JSScript categoriesFor: #asVariableName:!*Boardwalk!public! !
 !JSScript categoriesFor: #call:!*Boardwalk!public! !
 !JSScript categoriesFor: #call:with:!*Boardwalk!public! !
 !JSScript categoriesFor: #call:with:with:!*Boardwalk!public! !
 !JSScript categoriesFor: #call:with:with:with:!*Boardwalk!public! !
 !JSScript categoriesFor: #call:withArguments:!*Boardwalk!public! !
+!JSScript categoriesFor: #const:assign:!*Boardwalk!public! !
 !JSScript categoriesFor: #if:then:!*Boardwalk!public! !
 !JSScript categoriesFor: #if:then:else:!*Boardwalk!public! !
 !JSScript categoriesFor: #var:!*Boardwalk!public! !
@@ -219,6 +306,19 @@ var: aVariableName	^ JSDeclareGlobalNamespace		named:			(aVariableName isStr
 
 undefined	^ self on: 'undefined'! !
 !JSStream class categoriesFor: #undefined!*Boardwalk!public! !
+
+!Object methodsFor!
+
+asArrowFunction	^self asArrowFunction: #()!
+
+asArrowFunction: aCollection	^ JSArrowFunction new		add: self;		arguments: aCollection;		yourself! !
+!Object categoriesFor: #asArrowFunction!*Boardwalk!public! !
+!Object categoriesFor: #asArrowFunction:!*Boardwalk!public! !
+
+!String methodsFor!
+
+asArrowFunction: aCollection	^ ( JSStream on: self ) asArrowFunction: aCollection! !
+!String categoriesFor: #asArrowFunction:!*Boardwalk!public! !
 
 !WAAbstractFileLibrary class methodsFor!
 

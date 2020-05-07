@@ -7,7 +7,7 @@ WAPainter subclass: #TableHeaderWebView
 	classInstanceVariableNames: ''!
 TableHeaderWebView guid: (GUID fromString: '{f54c17ce-8d69-494f-a32b-517ec78950b1}')!
 TableHeaderWebView comment: 'I represent a table header'!
-!TableHeaderWebView categoriesForClass!Willow-WebViews! !
+!TableHeaderWebView categoriesForClass!Willow-Core-WebViews! !
 !TableHeaderWebView methodsFor!
 
 initializeDefinedBy: aColumnRendererCollection	columnRenderers := aColumnRendererCollection!

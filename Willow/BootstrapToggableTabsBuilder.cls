@@ -14,7 +14,7 @@ addTabHeadedBy: aRenderable containing: aTabContent	self addNavigationHeadedBy
 
 dataToggleValue	^ Constants >> #aria >> #tab!
 
-navigationTypeCommand	^ [ :list | list addClass bootstrap navTabs ] asWebComponentCommand ! !
+navigationTypeCommand	^ [ :list | list addClass bootstrapCommon navTabs ] asWebComponentCommand! !
 !BootstrapToggableTabsBuilder categoriesFor: #addTabHeadedBy:containing:!Configuring!public! !
 !BootstrapToggableTabsBuilder categoriesFor: #dataToggleValue!private! !
 !BootstrapToggableTabsBuilder categoriesFor: #navigationTypeCommand!private! !

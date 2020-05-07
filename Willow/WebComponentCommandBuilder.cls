@@ -7,7 +7,7 @@ GRObject subclass: #WebComponentCommandBuilder
 	classInstanceVariableNames: ''!
 WebComponentCommandBuilder guid: (GUID fromString: '{74f70456-bb27-4fd7-8163-9cceafad32d1}')!
 WebComponentCommandBuilder comment: 'I''m a builder to ease the creation of component commands'!
-!WebComponentCommandBuilder categoriesForClass!Willow-Frontend! !
+!WebComponentCommandBuilder categoriesForClass!Willow-Core-Frontend! !
 !WebComponentCommandBuilder methodsFor!
 
 addClass	^ ComponentClassificationCommandBuilder new!

@@ -7,7 +7,7 @@ CssGradient subclass: #CssRadialGradient
 	classInstanceVariableNames: ''!
 CssRadialGradient guid: (GUID fromString: '{50cbfec9-c331-4f74-a2b0-015795598069}')!
 CssRadialGradient comment: 'In a radial gradient, rather than colors smoothly fading from one side of the gradient box to the other as with linear gradients, they instead emerge from a single point and smoothly spread outward in a circular or elliptical shape.'!
-!CssRadialGradient categoriesForClass!RenoirSt-Colors! !
+!CssRadialGradient categoriesForClass!RenoirSt-Core-Colors! !
 !CssRadialGradient methodsFor!
 
 beRepeating		functionName := 'repeating-radial-gradient'!

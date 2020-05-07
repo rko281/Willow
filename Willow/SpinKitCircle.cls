@@ -10,6 +10,6 @@ SpinKitCircle comment: 'SpinKit animation'!
 !SpinKitCircle categoriesForClass!Willow-SpinKit! !
 !SpinKitCircle methodsFor!
 
-renderContentOn: aCanvas	aCanvas div		class: SpinKitCssStyles circle;		with: [ 1 to: 12 do: [ :index | 				aCanvas div					class: SpinKitCssStyles child;					class: (SpinKitCssStyles circle: index) ] ]! !
+renderContentOn: aCanvas	aCanvas div		with: [ 1 to: 12 do: [ :index | aCanvas div apply: [ :div | div addClass spinKit circleDot ] ] ]		applying: [ :div | div addClass spinKit circle ]! !
 !SpinKitCircle categoriesFor: #renderContentOn:!public!rendering! !
 

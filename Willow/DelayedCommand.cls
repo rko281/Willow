@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #DelayedCommand
 	classInstanceVariableNames: ''!
 DelayedCommand guid: (GUID fromString: '{af4be449-ebcd-4ebc-9f68-a5ec896d429e}')!
 DelayedCommand comment: 'I''m a WebInteractionCommand with a response that can be configured during the execution on the server.'!
-!DelayedCommand categoriesForClass!Willow-WebInteraction! !
+!DelayedCommand categoriesForClass!Willow-Core-WebInteraction! !
 !DelayedCommand methodsFor!
 
 clientIndependentActions	^ Array		with: [ self resetInterpreter.			optionalClientSideParameter				withContentDo: [ behaviorCallback value: self value: serverSideParameterBinding content ]				ifUnused: [ behaviorCallback value: self ] ]!

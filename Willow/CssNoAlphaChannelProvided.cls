@@ -7,7 +7,7 @@ CssAlphaChannel subclass: #CssNoAlphaChannelProvided
 	classInstanceVariableNames: ''!
 CssNoAlphaChannelProvided guid: (GUID fromString: '{98598096-afb4-4c53-93f3-8b544d8657eb}')!
 CssNoAlphaChannelProvided comment: 'A CssNoAlphaChannelProvided represents the absence of an alpha channel. So this color is considered opaque.'!
-!CssNoAlphaChannelProvided categoriesForClass!RenoirSt-Colors! !
+!CssNoAlphaChannelProvided categoriesForClass!RenoirSt-Core-Colors! !
 !CssNoAlphaChannelProvided methodsFor!
 
 componentsDo: aBlockClosure separatedBy: aSeparationBlock 	!

@@ -7,7 +7,7 @@ BinaryChoiceWebViewBehavior subclass: #CheckboxWebView
 	classInstanceVariableNames: ''!
 CheckboxWebView guid: (GUID fromString: '{5283687b-b2da-4ae5-b94a-e545e181a4f9}')!
 CheckboxWebView comment: 'I''m a binary choice web view implemented as a checkbox'!
-!CheckboxWebView categoriesForClass!Willow-WebViews! !
+!CheckboxWebView categoriesForClass!Willow-Core-WebViews! !
 !CheckboxWebView methodsFor!
 
 identifier	^ identifierAssigner assignedIdentifier!

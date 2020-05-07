@@ -7,7 +7,7 @@ Codec subclass: #FloatCodec
 	classInstanceVariableNames: ''!
 FloatCodec guid: (GUID fromString: '{2544ea10-2681-476c-8a0b-ca55df248975}')!
 FloatCodec comment: 'I''m an encoder/decoder of floats'!
-!FloatCodec categoriesForClass!Willow-Frontend! !
+!FloatCodec categoriesForClass!Willow-Core-Frontend! !
 !FloatCodec methodsFor!
 
 canCreate: anObject	^anObject isNumber!

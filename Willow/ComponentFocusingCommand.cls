@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ComponentFocusingCommand
 	classInstanceVariableNames: ''!
 ComponentFocusingCommand guid: (GUID fromString: '{f9e86e27-2e8f-4594-a368-6eb00f7d5e68}')!
 ComponentFocusingCommand comment: 'I''m a WebInteractionCommand allowing to put the focus in a component'!
-!ComponentFocusingCommand categoriesForClass!Willow-WebInteraction! !
+!ComponentFocusingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ComponentFocusingCommand methodsFor!
 
 clientIndependentActions	^#()!

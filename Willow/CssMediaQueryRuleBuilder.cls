@@ -7,7 +7,7 @@ Object subclass: #CssMediaQueryRuleBuilder
 	classInstanceVariableNames: ''!
 CssMediaQueryRuleBuilder guid: (GUID fromString: '{7f199282-cf33-458b-b711-34a1c61fe44a}')!
 CssMediaQueryRuleBuilder comment: 'A CssMediaQueryRuleBuilder is a builder to help creating media queries'!
-!CssMediaQueryRuleBuilder categoriesForClass!RenoirSt-MediaQueries! !
+!CssMediaQueryRuleBuilder categoriesForClass!RenoirSt-Core-MediaQueries! !
 !CssMediaQueryRuleBuilder methodsFor!
 
 addExpressionForFeatureNamed: aFeatureName withValue: aValue	expressions add: (CssMediaQueryExpression forFeatureNamed: aFeatureName withValue: aValue)!

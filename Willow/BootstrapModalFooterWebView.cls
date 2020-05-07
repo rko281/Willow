@@ -16,7 +16,7 @@ onCloseTrigger	^ closeButton onTrigger!
 
 onTrigger	^ CombinedWebInteractionInterpreter combiningInterpretersOf: buttons!
 
-renderContentOn: aCanvas	aCanvas div		with: [ aCanvas render: closeButton.			buttons				do: [ :button | 					button identifyIn: aCanvas.					aCanvas render: button ] ]		applying: [ :div | div addClass bootstrap modalFooter ]! !
+renderContentOn: aCanvas	aCanvas div		with: [ aCanvas render: closeButton.			buttons				do: [ :button | 					button identifyIn: aCanvas.					aCanvas render: button					]			]		applying: [ :div | div addClass bootstrapCommon modalFooter ]! !
 !BootstrapModalFooterWebView categoriesFor: #initializeContaining:andCloseButton:!initialize!public! !
 !BootstrapModalFooterWebView categoriesFor: #onCloseTrigger!Configuring!public! !
 !BootstrapModalFooterWebView categoriesFor: #onTrigger!Configuring!public! !
@@ -24,7 +24,7 @@ renderContentOn: aCanvas	aCanvas div		with: [ aCanvas render: closeButton.		
 
 !BootstrapModalFooterWebView class methodsFor!
 
-closeButtonLabeled: aRenderable applying: aComponentCommand	^ AsynchronicButtonWebView		labeled: aRenderable		applying: [ :button :constants | button addClass bootstrap button + (button setData: constants >> #bootstrap >> #dismiss to: constants >> #bootstrap >> #modal) + aComponentCommand ]!
+closeButtonLabeled: aRenderable applying: aComponentCommand	^ AsynchronicButtonWebView		labeled: aRenderable		applying: [ :button :constants | 			button addClass bootstrapCommon button				+ ( button setData: constants >> #bootstrap >> #dismiss to: constants >> #bootstrap >> #modal )				+ aComponentCommand			]!
 
 containing: aButtonCollection andCloseButton: aCloseButton	^ self new initializeContaining: aButtonCollection andCloseButton: aCloseButton!
 

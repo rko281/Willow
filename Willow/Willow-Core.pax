@@ -1,0 +1,912 @@
+﻿| package |
+package := Package name: 'Willow-Core'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
+
+
+package classNames
+	add: #AddTimestampToSourceCommand;
+	add: #AjaxAwareErrorHandler;
+	add: #AjaxAwareErrorHandlerFactory;
+	add: #AlertingCommand;
+	add: #AsynchronicButtonWebView;
+	add: #AutoFocusComponentCommand;
+	add: #BinaryChoiceWebViewBehavior;
+	add: #CheckboxWebView;
+	add: #Codec;
+	add: #CombinedWebInteractionInterpreter;
+	add: #ComponentAccessibilityEnrichmentCommand;
+	add: #ComponentAttributeCommand;
+	add: #ComponentBoundaryCommand;
+	add: #ComponentCallbackSettingCommand;
+	add: #ComponentClassificationCommand;
+	add: #ComponentClassificationCommandBuilder;
+	add: #ComponentEnableStatusChangingCommand;
+	add: #ComponentErrorCommand;
+	add: #ComponentFocusingCommand;
+	add: #ComponentMetadataCommand;
+	add: #ComponentNamingCommand;
+	add: #ComponentPlaceholderCommand;
+	add: #ComponentReadOnlyCommand;
+	add: #ComponentRemovingCommand;
+	add: #ComponentRequiredCommand;
+	add: #ComponentScriptCommand;
+	add: #ComponentScriptCommandBuilder;
+	add: #ComponentStyleClassChangingCommand;
+	add: #ComponentTitleCommand;
+	add: #ComponentValueSettingCommand;
+	add: #CompositeComponentCommand;
+	add: #CompositeTableRowCommand;
+	add: #ConditionalComponentCommand;
+	add: #ConfirmationCommand;
+	add: #DateFieldWebView;
+	add: #DelayedCommand;
+	add: #DelayedModelLoader;
+	add: #DelayedViewRenderer;
+	add: #DeselectAllOptionsCommand;
+	add: #DialogClosingCommand;
+	add: #DialogOpener;
+	add: #DialogOpeningCommand;
+	add: #DisableComponentCommand;
+	add: #DisableComponentTabCycleCommand;
+	add: #DocumentLoadTrigger;
+	add: #DropDownListWebView;
+	add: #FieldSetWebView;
+	add: #FieldWebView;
+	add: #FileDownloadAnchorWebView;
+	add: #FloatCodec;
+	add: #FormSubmitCommand;
+	add: #FrontendComponentSupplier;
+	add: #FunctionEvaluationTrigger;
+	add: #GenericContainerWebView;
+	add: #HeadingWebView;
+	add: #Html5ComponentSupplier;
+	add: #IdentifiedWebView;
+	add: #ImageWebView;
+	add: #InputFieldMaxLengthCommand;
+	add: #InputModeCommand;
+	add: #IntegerCodec;
+	add: #InteractionScriptTrigger;
+	add: #ISODateCodec;
+	add: #JQuery3DeploymentMetadataLibrary;
+	add: #JQuery3DevelopmentMetadataLibrary;
+	add: #JQuery3MetadataLibrary;
+	add: #JQuery3OnlineLibrary;
+	add: #JSConcatenateBefore;
+	add: #LabeledWebView;
+	add: #LinkWebView;
+	add: #ListItemWebView;
+	add: #ListLabelingCommand;
+	add: #LoadingNotificationCommand;
+	add: #MultipleSelectionListBoxWebView;
+	add: #NaturalNumberCodec;
+	add: #NullCodec;
+	add: #NullTableFooterWebView;
+	add: #NullTriggeringPolicy;
+	add: #NullWebInteractionCommand;
+	add: #NumberFieldWebView;
+	add: #OpenLocationCommand;
+	add: #PeriodicallyRenderedWebView;
+	add: #PhrasingContainerWebView;
+	add: #PluggableExecutionOnClientCommand;
+	add: #PluggableTableRowCommand;
+	add: #RadioGroupWebView;
+	add: #RenderingCommand;
+	add: #ScrollIntoViewCommand;
+	add: #SelectionIsInvalid;
+	add: #SerializationCommand;
+	add: #SetColumnSpanCommand;
+	add: #SetComponentSizeCommand;
+	add: #SetComponentStyleCommand;
+	add: #SetComponentTabIndexCommand;
+	add: #SetRowSpanCommand;
+	add: #SingleSelectionListBoxWebView;
+	add: #SingleSelectionWebViewBehavior;
+	add: #SynchronicSubmitButtonWebView;
+	add: #TableFooterWebView;
+	add: #TableFooterWebViewBehavior;
+	add: #TableHeaderWebView;
+	add: #TableRowCommand;
+	add: #TableWebView;
+	add: #TableWebViewBuilder;
+	add: #TemporarilyDisablingCommand;
+	add: #TextFieldWebView;
+	add: #TriggeringPolicy;
+	add: #UnorderedListWebView;
+	add: #WebComponentCommand;
+	add: #WebComponentCommandBuilder;
+	add: #WebComponentCommandToTableRowCommandAdapter;
+	add: #WebComponentInteraction;
+	add: #WebInteractionCommand;
+	add: #WebInteractionInterpreter;
+	add: #WebInteractionInterpreterBehavior;
+	add: #WebTableColumnRenderer;
+	add: #WebTableColumnRendererBehavior;
+	add: #WebTableColumnRendererBuilder;
+	add: #Willow;
+	add: #WillowApplication;
+	add: #WillowComponentBuilder;
+	add: #WillowJavascriptNamespace;
+	add: #WillowNamespaceFileMetadataLibrary;
+	add: #WillowServerCall;
+	add: #WillowSession;
+	add: #WillowSystemConfiguration;
+	yourself.
+
+package methodNames
+	add: #BlockClosure -> #asTableRowCommand;
+	add: #BlockClosure -> #asWebComponentCommand;
+	add: #GRSmallOrderedSet -> #at:;
+	add: #JQAjaxSetup -> #bePost;
+	add: #JQueryClass -> #cssSelector:;
+	add: #JSObject -> #constants;
+	add: #JSObject -> #willow;
+	add: #ReflectiveCascadingStyleSheetBuilder -> #classification;
+	add: #WAHtmlCanvas -> #dialog;
+	add: #WAHtmlCanvas -> #every:millisecondsEvaluateAsAjaxScript:until:;
+	add: #WAHtmlCanvas -> #icon;
+	add: #WAHtmlCanvas -> #scriptToExecute:asAjaxScriptEvery:millsecondsUnless:;
+	add: #WAPainter -> #componentSupplier;
+	add: #WATagBrush -> #apply:;
+	add: #WATagBrush -> #interactUsing:;
+	add: #WATagBrush -> #with:applying:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Boardwalk'
+	'Buoy-Assertions'
+	'Buoy-Collections'
+	'Buoy-Dynamic-Binding'
+	'Buoy-Metaprogramming'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Seaside\JQuery\JQuery-Core'
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'..\Portishead\Portishead-SharedPools'
+	'RenoirSt-Core'
+	'RenoirSt-Dolphin'
+	'RenoirSt-Seaside'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Seaside\Seaside\Seaside-Dolphin-Welcome'
+	'..\Seaside\Seaside\Seaside-Environment'
+	'..\Seaside\Seaside\Seaside-Session'
+	'..\Seaside\Seaside\Seaside-Tools-Core').
+
+package setManualPrerequisites: #(
+	'RenoirSt-Dolphin'
+	'RenoirSt-Seaside'
+	'Seaside-Dolphin-Welcome').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #Codec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #DelayedModelLoader
+	instanceVariableNames: 'commands'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #FrontendComponentSupplier
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #TableRowCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #TriggeringPolicy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #WebComponentInteraction
+	instanceVariableNames: 'triggerPolicy commands modelLoadingActions clientIndependentActions priorityActions serverIndependentActions serializationCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #WebInteractionCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+Object subclass: #WebTableColumnRendererBehavior
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Codec subclass: #FloatCodec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Codec subclass: #IntegerCodec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Codec subclass: #ISODateCodec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Codec subclass: #NaturalNumberCodec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Codec subclass: #NullCodec
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Error subclass: #SelectionIsInvalid
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+FrontendComponentSupplier subclass: #Html5ComponentSupplier
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+GRObject subclass: #AjaxAwareErrorHandlerFactory
+	instanceVariableNames: 'reportingActionOptional rootCommandOptional nonAjaxRenderBlockOptional ajaxErrorHandlers'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+GRObject subclass: #ComponentClassificationCommandBuilder
+	instanceVariableNames: 'classificationNamespace'
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+GRObject subclass: #ComponentScriptCommandBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+GRObject subclass: #DialogOpener
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+GRObject subclass: #WebComponentCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+GRObject subclass: #WebComponentCommandBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+GRObject subclass: #WebTableColumnRendererBuilder
+	instanceVariableNames: 'title renderingCommandBinding footerRenderingCommand cellCommand headingCommand footerCommand tableBuilder'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+GRObject subclass: #WillowComponentBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+WAObject subclass: #WebInteractionInterpreterBehavior
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSStatement subclass: #JSConcatenateBefore
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JSObject subclass: #WillowJavascriptNamespace
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JQAjax subclass: #WillowServerCall
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentAwareFileMetadataLibrary subclass: #JQuery3MetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADeploymentAwareFileMetadataLibrary subclass: #WillowNamespaceFileMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+JQuery3MetadataLibrary subclass: #JQuery3DeploymentMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+JQuery3MetadataLibrary subclass: #JQuery3DevelopmentMetadataLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WASystemConfiguration subclass: #WillowSystemConfiguration
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAHtmlErrorHandler subclass: #AjaxAwareErrorHandler
+	instanceVariableNames: 'reportingAction ajaxExceptionHandlers rootCommand nonAjaxRenderBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAOnlineLibrary subclass: #JQuery3OnlineLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #AsynchronicButtonWebView
+	instanceVariableNames: 'identifierAssigner commandToComponent interactionInterpreter label'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #BinaryChoiceWebViewBehavior
+	instanceVariableNames: 'interested iterator'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #DelayedViewRenderer
+	instanceVariableNames: 'identifiedDelayedView currentView interpreter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #FieldSetWebView
+	instanceVariableNames: 'title contentView fieldSetCommand legendCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #FieldWebView
+	instanceVariableNames: 'interactionInterpreter commandToComponent interested componentBuilder contents identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #FileDownloadAnchorWebView
+	instanceVariableNames: 'label documentProvider commandToComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #GenericContainerWebView
+	instanceVariableNames: 'contentProvider interactionInterpreter commandToComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #HeadingWebView
+	instanceVariableNames: 'text level commandToComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #IdentifiedWebView
+	instanceVariableNames: 'view componentBuilder commandToComponent identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #ImageWebView
+	instanceVariableNames: 'interactionInterpreter commandToComponent imageLocation'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #LabeledWebView
+	instanceVariableNames: 'phrasingContentProvider fieldWebView commandToComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #LinkWebView
+	instanceVariableNames: 'commandToComponent interactionInterpreter label'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #ListItemWebView
+	instanceVariableNames: 'commandToComponent list item'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #MultipleSelectionListBoxWebView
+	instanceVariableNames: 'availableElements chosenElements interested interactionInterpreter commandToComponent identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #PeriodicallyRenderedWebView
+	instanceVariableNames: 'stopRenderingContent refreshCommand refreshIntervalInMilliseconds identifiedViewToRefresh conditionBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #PhrasingContainerWebView
+	instanceVariableNames: 'phrasingContentProvider interactionInterpreter commandToComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SingleSelectionWebViewBehavior
+	instanceVariableNames: 'availableElements interested chosenElementOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #SynchronicSubmitButtonWebView
+	instanceVariableNames: 'label commandToComponent interactionInterpreter identifierAssigner submitCallback'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #TableFooterWebViewBehavior
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #TableHeaderWebView
+	instanceVariableNames: 'columnRenderers'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #TableWebView
+	instanceVariableNames: 'columnRenderers items interested header interactionInterpreter commandToRow commandToTable identifierAssigner footer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #UnorderedListWebView
+	instanceVariableNames: 'elements commandToItem commandToList interactionInterpreter identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BinaryChoiceWebViewBehavior subclass: #CheckboxWebView
+	instanceVariableNames: 'commandToComponent interactionInterpreter identifierAssigner isChecked labelOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+FieldWebView subclass: #DateFieldWebView
+	instanceVariableNames: 'textField textCodec'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+FieldWebView subclass: #NumberFieldWebView
+	instanceVariableNames: 'textCodec'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+FieldWebView subclass: #TextFieldWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewBehavior subclass: #DropDownListWebView
+	instanceVariableNames: 'interactionInterpreter commandToComponent identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewBehavior subclass: #RadioGroupWebView
+	instanceVariableNames: 'interactionInterpreter renderingBlock labelCommand inputCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewBehavior subclass: #SingleSelectionListBoxWebView
+	instanceVariableNames: 'interactionInterpreter commandToComponent identifierAssigner'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TableFooterWebViewBehavior subclass: #NullTableFooterWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TableFooterWebViewBehavior subclass: #TableFooterWebView
+	instanceVariableNames: 'columnRenderers tableContents'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #WillowApplication
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+WASession subclass: #WillowSession
+	instanceVariableNames: 'componentSupplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionInterpreterBehavior subclass: #CombinedWebInteractionInterpreter
+	instanceVariableNames: 'interpreters'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionInterpreterBehavior subclass: #WebInteractionInterpreter
+	instanceVariableNames: 'interaction'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #AddTimestampToSourceCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #AutoFocusComponentCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentAccessibilityEnrichmentCommand
+	instanceVariableNames: 'name content'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentAttributeCommand
+	instanceVariableNames: 'name value'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentBoundaryCommand
+	instanceVariableNames: 'minimumHolder maximumHolder'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentCallbackSettingCommand
+	instanceVariableNames: 'callback'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentClassificationCommand
+	instanceVariableNames: 'cssStyles'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentErrorCommand
+	instanceVariableNames: 'actionProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentMetadataCommand
+	instanceVariableNames: 'name content'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentNamingCommand
+	instanceVariableNames: 'name'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentPlaceholderCommand
+	instanceVariableNames: 'suggestion'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentReadOnlyCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentRequiredCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentScriptCommand
+	instanceVariableNames: 'scriptProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ComponentTitleCommand
+	instanceVariableNames: 'titleProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #CompositeComponentCommand
+	instanceVariableNames: 'commands'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ConditionalComponentCommand
+	instanceVariableNames: 'command conditionBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #DeselectAllOptionsCommand
+	instanceVariableNames: 'scriptCommand'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #DisableComponentCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #DisableComponentTabCycleCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #InputFieldMaxLengthCommand
+	instanceVariableNames: 'maxLength'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #InputModeCommand
+	instanceVariableNames: 'type'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #ListLabelingCommand
+	instanceVariableNames: 'renderingBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #OpenLocationCommand
+	instanceVariableNames: 'destination targetOptional'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #SetColumnSpanCommand
+	instanceVariableNames: 'colSpan'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #SetComponentSizeCommand
+	instanceVariableNames: 'size'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #SetComponentStyleCommand
+	instanceVariableNames: 'style'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #SetComponentTabIndexCommand
+	instanceVariableNames: 'index'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebComponentCommand subclass: #SetRowSpanCommand
+	instanceVariableNames: 'rowSpan'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowComponentBuilder subclass: #TableWebViewBuilder
+	instanceVariableNames: 'columnRenderers rowCommand tableCommand headerProvider footerProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SharedPool subclass: #Willow
+	instanceVariableNames: ''
+	classVariableNames: 'Classification Constants'
+	poolDictionaries: 'RenoirSt'
+	classInstanceVariableNames: ''!
+TableRowCommand subclass: #CompositeTableRowCommand
+	instanceVariableNames: 'commands'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TableRowCommand subclass: #PluggableTableRowCommand
+	instanceVariableNames: 'block'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TableRowCommand subclass: #WebComponentCommandToTableRowCommandAdapter
+	instanceVariableNames: 'command'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TriggeringPolicy subclass: #DocumentLoadTrigger
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TriggeringPolicy subclass: #FunctionEvaluationTrigger
+	instanceVariableNames: 'functionSelector argumentNames'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TriggeringPolicy subclass: #InteractionScriptTrigger
+	instanceVariableNames: 'interacionSelector'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TriggeringPolicy subclass: #NullTriggeringPolicy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #AlertingCommand
+	instanceVariableNames: 'messageProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ComponentEnableStatusChangingCommand
+	instanceVariableNames: 'componentProvider desiredStatus'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ComponentFocusingCommand
+	instanceVariableNames: 'componentProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ComponentRemovingCommand
+	instanceVariableNames: 'identifiedView'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ComponentStyleClassChangingCommand
+	instanceVariableNames: 'componentProvider styleToChange transformationMessage transformationProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ComponentValueSettingCommand
+	instanceVariableNames: 'valueProvider identifierProvider triggeringAction'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ConfirmationCommand
+	instanceVariableNames: 'question'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #DelayedCommand
+	instanceVariableNames: 'behaviorCallback interpreter optionalClientSideParameter serverSideParameterBinding optionalClientCondition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #DialogClosingCommand
+	instanceVariableNames: 'dialogSupplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #DialogOpeningCommand
+	instanceVariableNames: 'dialogView'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #FormSubmitCommand
+	instanceVariableNames: 'componentProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #LoadingNotificationCommand
+	instanceVariableNames: 'serverIndependentActions modelLoadingActions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #NullWebInteractionCommand
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #PluggableExecutionOnClientCommand
+	instanceVariableNames: 'serverIndependentActions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #RenderingCommand
+	instanceVariableNames: 'shouldRender renderingCondition identifiedViews'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #ScrollIntoViewCommand
+	instanceVariableNames: 'identifierProvider'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #SerializationCommand
+	instanceVariableNames: 'priorityActions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebInteractionCommand subclass: #TemporarilyDisablingCommand
+	instanceVariableNames: 'componentProvider viewWhileDisabled'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WebTableColumnRendererBehavior subclass: #WebTableColumnRenderer
+	instanceVariableNames: 'title renderingCommand commandToHeading commandToCell footerRenderingCommand commandToFooterCell'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BlockClosure methodsFor!
+
+asTableRowCommand	^ self asWebComponentCommand asTableRowCommand!
+
+asWebComponentCommand	^ (self cull: WebComponentCommandBuilder new cull: Willow constants) ifNil: [ CompositeComponentCommand empty ]! !
+!BlockClosure categoriesFor: #asTableRowCommand!*Willow/Core!public! !
+!BlockClosure categoriesFor: #asWebComponentCommand!*Willow/Core!public! !
+
+!GRSmallOrderedSet methodsFor!
+
+at: anIndex	^ table at: anIndex ! !
+!GRSmallOrderedSet categoriesFor: #at:!*Willow/Core/SeasideExtensions!public! !
+
+!JQAjaxSetup methodsFor!
+
+bePost	self type: 'POST'! !
+!JQAjaxSetup categoriesFor: #bePost!*Willow/Core!public! !
+
+!JQueryClass methodsFor!
+
+cssSelector: aCssSelector	^ self expression: aCssSelector greaseString! !
+!JQueryClass categoriesFor: #cssSelector:!*Willow/Core!public! !
+
+!JSObject methodsFor!
+
+constants		"This method is intended to be private."	^ Willow constants!
+
+willow	^ (WillowJavascriptNamespace context: self renderContext)		rendererClass: self rendererClass;		yourself! !
+!JSObject categoriesFor: #constants!*Willow/Core!public! !
+!JSObject categoriesFor: #willow!*Willow/Core!public! !
+
+!ReflectiveCascadingStyleSheetBuilder methodsFor!
+
+classification	^ Willow classification! !
+!ReflectiveCascadingStyleSheetBuilder categoriesFor: #classification!*Willow/Core!public! !
+
+!WAHtmlCanvas methodsFor!
+
+dialog	^ self tag: 'dialog'!
+
+every: aNumber millisecondsEvaluateAsAjaxScript: aScriptBlock until: aStoppingCondition	self script: (self scriptToExecute: aScriptBlock asAjaxScriptEvery: aNumber millsecondsUnless: aStoppingCondition)!
+
+icon	^ self tag: 'i'!
+
+scriptToExecute: aScriptBlock asAjaxScriptEvery: aNumber millsecondsUnless: aStoppingCondition	| asynchronousCall |	asynchronousCall := self jQuery ajax.	asynchronousCall		script: [ :script | 			[ script				<<					( self						scriptToExecute: aScriptBlock						asAjaxScriptEvery: aNumber						millsecondsUnless: aStoppingCondition )			] unless: aStoppingCondition value.			script << ( aScriptBlock value: self )			].	asynchronousCall addDecoration: ( JSTimeout duration: aNumber ).	^ asynchronousCall! !
+!WAHtmlCanvas categoriesFor: #dialog!*Willow/Core!public! !
+!WAHtmlCanvas categoriesFor: #every:millisecondsEvaluateAsAjaxScript:until:!*Willow/Core!public! !
+!WAHtmlCanvas categoriesFor: #icon!*Willow/Core!public! !
+!WAHtmlCanvas categoriesFor: #scriptToExecute:asAjaxScriptEvery:millsecondsUnless:!*Willow/Core!public! !
+
+!WAPainter methodsFor!
+
+componentSupplier	^ self session componentSupplier! !
+!WAPainter categoriesFor: #componentSupplier!*Willow/Core!public! !
+
+!WATagBrush methodsFor!
+
+apply: aBlockOrComponentCommand	aBlockOrComponentCommand asWebComponentCommand applyTo: self on: canvas!
+
+interactUsing: anInteractionInterpreter	anInteractionInterpreter applyTo: self on: canvas!
+
+with: aRenderable applying: aBlockOrWebComponentCommand	self		apply: aBlockOrWebComponentCommand;		with: aRenderable! !
+!WATagBrush categoriesFor: #apply:!*Willow/Core!public! !
+!WATagBrush categoriesFor: #interactUsing:!*Willow/Core!public! !
+!WATagBrush categoriesFor: #with:applying:!*Willow/Core!public! !
+
+"End of package definition"!
+

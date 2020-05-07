@@ -7,7 +7,7 @@ CssObject subclass: #CssLinearPolynomial
 	classInstanceVariableNames: ''!
 CssLinearPolynomial guid: (GUID fromString: '{4a5d1434-2d7b-4a09-adb3-59c59c958873}')!
 CssLinearPolynomial comment: 'A CssLinearPolynomial represents a function of the type: an+b where n is a free variable. It can be used in some structural pseudo class selectors.'!
-!CssLinearPolynomial categoriesForClass!RenoirSt-Selectors! !
+!CssLinearPolynomial categoriesForClass!RenoirSt-Core-Selectors! !
 !CssLinearPolynomial methodsFor!
 
 - aPositiveInteger	independentCoefficient := aPositiveInteger * -1!

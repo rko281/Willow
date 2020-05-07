@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #RenderingCommand
 	classInstanceVariableNames: ''!
 RenderingCommand guid: (GUID fromString: '{36562b1e-5fb2-4832-8e01-51282a447dcc}')!
 RenderingCommand comment: 'I''m a Web Interaction Command used to render again the contents of an IdentifedWebView .'!
-!RenderingCommand categoriesForClass!Willow-WebInteraction! !
+!RenderingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !RenderingCommand methodsFor!
 
 clientIndependentActions	^Array with: [shouldRender := renderingCondition value]!

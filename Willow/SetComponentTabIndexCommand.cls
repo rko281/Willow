@@ -7,7 +7,7 @@ WebComponentCommand subclass: #SetComponentTabIndexCommand
 	classInstanceVariableNames: ''!
 SetComponentTabIndexCommand guid: (GUID fromString: '{646bb22e-aa49-4637-ac58-d3af873b15cb}')!
 SetComponentTabIndexCommand comment: 'A command to set the tab index/order of a component.'!
-!SetComponentTabIndexCommand categoriesForClass!Willow-Frontend! !
+!SetComponentTabIndexCommand categoriesForClass!Willow-Core-Frontend! !
 !SetComponentTabIndexCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent tabIndex: index!

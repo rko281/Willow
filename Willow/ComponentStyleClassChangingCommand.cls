@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ComponentStyleClassChangingCommand
 	classInstanceVariableNames: ''!
 ComponentStyleClassChangingCommand guid: (GUID fromString: '{33304e0b-1fbf-47fa-81f0-d3413f0cb0f3}')!
 ComponentStyleClassChangingCommand comment: 'I''m a WebInteractionCommand allowing to change the css class of a component, which can be done using a specific transformation.'!
-!ComponentStyleClassChangingCommand categoriesForClass!Willow-WebInteraction! !
+!ComponentStyleClassChangingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ComponentStyleClassChangingCommand methodsFor!
 
 applyStyleChangeTo: component	^ component perform: transformationMessage with: styleToChange!

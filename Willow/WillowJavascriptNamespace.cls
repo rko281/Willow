@@ -7,7 +7,7 @@ JSObject subclass: #WillowJavascriptNamespace
 	classInstanceVariableNames: ''!
 WillowJavascriptNamespace guid: (GUID fromString: '{7d198b96-42c1-44c1-8935-1c7da3257686}')!
 WillowJavascriptNamespace comment: 'I represent the Willow JS module'!
-!WillowJavascriptNamespace categoriesForClass!Willow-Applications! !
+!WillowJavascriptNamespace categoriesForClass!Willow-Core-Applications! !
 !WillowJavascriptNamespace methodsFor!
 
 callServerFunction	^ self access: self constants >> #willow >> #callServerFunctionName!

@@ -7,7 +7,7 @@ CssColorUnit subclass: #CssIdentifiedColor
 	classInstanceVariableNames: ''!
 CssIdentifiedColor guid: (GUID fromString: '{07912790-fb50-49f3-a8af-315a2a0e08d8}')!
 CssIdentifiedColor comment: 'A CssIdentifiedColor is a color with a given identification (a name or hexadecimal representation).'!
-!CssIdentifiedColor categoriesForClass!RenoirSt-Colors! !
+!CssIdentifiedColor categoriesForClass!RenoirSt-Core-Colors! !
 !CssIdentifiedColor methodsFor!
 
 color	^ color!

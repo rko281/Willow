@@ -12,19 +12,19 @@ WPTestRunnerToolbar comment: 'Im the test runner toolbar'!
 
 initialize	super initialize.	self		initializeRunSelectedTestsButton;		initializeRunProfiledButton;		initializeExportResultButton!
 
-initializeExportResultButton	exportResultButton := FileDownloadAnchorWebView		labeled: (self label: 'Download' prependedBy: Glyphicons cloudDownload)		applying: [ :button | button addClass bootstrap button + button addClass bootstrap buttonDefault + button addClass bootstrap pullRight ]		obtainingFileUsing: [ WAMimeDocument on: (String streamContents: [ :stream | self session applicationContext currentTestResult fileOutOn: stream ]) mimeType: WAMimeType textPlain fileName: 'test-results.txt' ]!
+initializeExportResultButton	exportResultButton := FileDownloadAnchorWebView		labeled: (self label: 'Download' prependedBy: Glyphicons cloudDownload)		applying: [ :button | button addClass bootstrap3 button + button addClass bootstrap3 buttonDefault + button addClass bootstrap3 pullRight ]		obtainingFileUsing: [ WAMimeDocument on: (String streamContents: [ :stream | self session applicationContext currentTestResult fileOutOn: stream ]) mimeType: WAMimeType textPlain fileName: 'test-results.txt' ]!
 
-initializeRunProfiledButton	runProfiledButton := self componentSupplier asynchronicButtonLabeled: (self label: 'Run Profiled' prependedBy: Glyphicons stats) applying: [ :button | button addClass bootstrap buttonDefault ]!
+initializeRunProfiledButton	runProfiledButton := self componentSupplier asynchronicButtonLabeled: (self label: 'Run Profiled' prependedBy: Glyphicons stats) applying: [ :button | button addClass bootstrap3 buttonDefault ]!
 
-initializeRunSelectedTestsButton	runSelectedTestsButton := self componentSupplier asynchronicButtonLabeled: (self label: 'Run Selected' prependedBy: Glyphicons play) applying: [ :button | button addClass bootstrap buttonDefault ]!
+initializeRunSelectedTestsButton	runSelectedTestsButton := self componentSupplier		asynchronicButtonLabeled: ( self label: 'Run Selected' prependedBy: Glyphicons play )		applying: [ :button | button addClass bootstrap3 buttonDefault ]!
 
-label: aText prependedBy: anIconClass	^ [ :canvas | 	canvas		render: (BootstrapIconWebView representing: anIconClass);		space;		render: aText ]!
+label: aText prependedBy: anIconClass	^ [ :canvas | 	canvas		render: (Bootstrap3IconWebView representing: anIconClass);		space;		render: aText ]!
 
 onRunProfiledTrigger	^ runProfiledButton onTrigger!
 
 onRunSelectedTestsTrigger	^ runSelectedTestsButton onTrigger!
 
-renderContentOn: html	html div		with: [ 			html div				with: [ html						render: runSelectedTestsButton;						render: runProfiledButton ]				applying: [ :div | div addClass bootstrap buttonGroup ].			html render: exportResultButton ]		applying: [ :div | div addClass bootstrap buttonToolbar ].	html div: [ html space ]! !
+renderContentOn: html	html div		with: [ 			html div				with: [ html						render: runSelectedTestsButton;						render: runProfiledButton ]				applying: [ :div | div addClass bootstrap3 buttonGroup ].			html render: exportResultButton ]		applying: [ :div | div addClass bootstrap3 buttonToolbar ].	html div: [ html space ]! !
 !WPTestRunnerToolbar categoriesFor: #initialize!initialization!public! !
 !WPTestRunnerToolbar categoriesFor: #initializeExportResultButton!initialization!public! !
 !WPTestRunnerToolbar categoriesFor: #initializeRunProfiledButton!initialization!public! !

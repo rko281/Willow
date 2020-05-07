@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #AlertingCommand
 	classInstanceVariableNames: ''!
 AlertingCommand guid: (GUID fromString: '{d4405328-0c1b-43f4-82ca-65b9aaba4979}')!
 AlertingCommand comment: 'I''m a WebInteractionCommand used to show an alert, useful for low level debugging purposes.'!
-!AlertingCommand categoriesForClass!Willow-WebInteraction! !
+!AlertingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !AlertingCommand methodsFor!
 
 clientIndependentActions	^#()!

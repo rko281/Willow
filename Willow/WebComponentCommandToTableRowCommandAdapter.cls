@@ -7,7 +7,7 @@ TableRowCommand subclass: #WebComponentCommandToTableRowCommandAdapter
 	classInstanceVariableNames: ''!
 WebComponentCommandToTableRowCommandAdapter guid: (GUID fromString: '{e78e13a3-78e5-4fbc-b707-d33e5453e588}')!
 WebComponentCommandToTableRowCommandAdapter comment: 'I''m an adapter for web component commands allowing to use it as table row commnands'!
-!WebComponentCommandToTableRowCommandAdapter categoriesForClass!Willow-Frontend! !
+!WebComponentCommandToTableRowCommandAdapter categoriesForClass!Willow-Core-Frontend! !
 !WebComponentCommandToTableRowCommandAdapter methodsFor!
 
 applyTo: aTableRow for: aRelatedObject on: aCanvas	command applyTo: aTableRow on: aCanvas!

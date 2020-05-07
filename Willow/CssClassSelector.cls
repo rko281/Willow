@@ -7,7 +7,7 @@ CssSelector subclass: #CssClassSelector
 	classInstanceVariableNames: ''!
 CssClassSelector guid: (GUID fromString: '{fa4e7456-7cbd-4a06-8893-cfb159abd1e7}')!
 CssClassSelector comment: 'The class attribute assigns one or more class names to an element. The element may be said to belong to these classes. A class name may be shared by several element instances. The class attribute has several roles:- As a style sheet selector (when an author wishes to assign style information to a set of elements).- For general purpose processing by user agents.'!
-!CssClassSelector categoriesForClass!RenoirSt-Selectors! !
+!CssClassSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssClassSelector methodsFor!
 
 cssContentOn: aStream		parentSelector cssContentOn: aStream.	aStream		nextPut: $.;		nextPutAll: cssClass!

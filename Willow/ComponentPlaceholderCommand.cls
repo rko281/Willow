@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentPlaceholderCommand
 	classInstanceVariableNames: ''!
 ComponentPlaceholderCommand guid: (GUID fromString: '{bac8c2a5-5849-467e-912c-f923693389b3}')!
 ComponentPlaceholderCommand comment: 'A command to assign a hint for a component, using the placeholder attribute.'!
-!ComponentPlaceholderCommand categoriesForClass!Willow-Frontend! !
+!ComponentPlaceholderCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentPlaceholderCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent placeholder: suggestion!

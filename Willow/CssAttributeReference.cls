@@ -7,7 +7,7 @@ CssFunction subclass: #CssAttributeReference
 	classInstanceVariableNames: ''!
 CssAttributeReference guid: (GUID fromString: '{5b56a3bd-66cc-44a6-b3f8-eda63a868def}')!
 CssAttributeReference comment: 'A CssAttributeReference represents a CSS function allowed as a component value in properties applied to an element or pseudo-element. It returns the value of an attribute on the element. If used on a pseudo-element, it returns the value of the attribute on the pseudo-element''s originating element.'!
-!CssAttributeReference categoriesForClass!RenoirSt-Units! !
+!CssAttributeReference categoriesForClass!RenoirSt-Core-Units! !
 !CssAttributeReference methodsFor!
 
 asTypeOrUnit: aCssTypeOrNamedUnit	^ CssConstants >> #units at: aCssTypeOrNamedUnit ifAbsent: [ aCssTypeOrNamedUnit ]!

@@ -7,7 +7,7 @@ TriggeringPolicy subclass: #InteractionScriptTrigger
 	classInstanceVariableNames: ''!
 InteractionScriptTrigger guid: (GUID fromString: '{7bf317b3-9503-4389-a075-6ed72d167325}')!
 InteractionScriptTrigger comment: ''!
-!InteractionScriptTrigger categoriesForClass!Willow-WebInteraction! !
+!InteractionScriptTrigger categoriesForClass!Willow-Core-WebInteraction! !
 !InteractionScriptTrigger methodsFor!
 
 apply: aJavascriptScript to: aComponent on: aCanvas	aCanvas ensureIdFor: aComponent.	aComponent		script:			(aCanvas jQuery this				perform: interacionSelector				with: (aJavascriptScript asFunction: #(event)))!

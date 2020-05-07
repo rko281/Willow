@@ -7,7 +7,7 @@ WAPainter subclass: #FieldSetWebView
 	classInstanceVariableNames: ''!
 FieldSetWebView guid: (GUID fromString: '{4d9bb401-732d-4a9e-b32f-2dab6f537bd4}')!
 FieldSetWebView comment: 'A Web View that renders a fieldSet with custom styles.'!
-!FieldSetWebView categoriesForClass!Willow-WebViews! !
+!FieldSetWebView categoriesForClass!Willow-Core-WebViews! !
 !FieldSetWebView methodsFor!
 
 initializeContaining: aWebView applying: aFieldSetCommand withLegend: aTitle applying: aLegendCommand	title := aTitle.	contentView := aWebView.	fieldSetCommand := aFieldSetCommand.	legendCommand := aLegendCommand!

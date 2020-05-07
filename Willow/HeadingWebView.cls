@@ -7,7 +7,7 @@ WAPainter subclass: #HeadingWebView
 	classInstanceVariableNames: ''!
 HeadingWebView guid: (GUID fromString: '{ab8702ab-5d2f-4bf5-b381-71ec6b6d36b0}')!
 HeadingWebView comment: 'I represent a document heading'!
-!HeadingWebView categoriesForClass!Willow-WebViews! !
+!HeadingWebView categoriesForClass!Willow-Core-WebViews! !
 !HeadingWebView methodsFor!
 
 initializeDisplaying: aHeadingText withLevel: aLevel applying: aCommand	text := aHeadingText.	level := aLevel.	commandToComponent := aCommand!

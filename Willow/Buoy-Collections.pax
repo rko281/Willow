@@ -8,7 +8,14 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, June 2019.'.
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
 
 
 package classNames
@@ -27,6 +34,8 @@ package methodNames
 	add: #SequenceableCollection -> #copyLast:;
 	add: #SequenceableCollection -> #copyNoMoreThanFirst:;
 	add: #SequenceableCollection -> #copyNoMoreThanLast:;
+	add: #SequenceableCollection -> #withoutFirst;
+	add: #SequenceableCollection -> #withoutFirst:;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -92,11 +101,17 @@ copyLast: n	^ [ self copyFrom: self size - n + 1 to: self size ] unless: n = 0
 
 copyNoMoreThanFirst: n	^ self copyFirst: ( self size min: n )!
 
-copyNoMoreThanLast: n	^ self copyLast: ( n min: self size )! !
+copyNoMoreThanLast: n	^ self copyLast: ( n min: self size )!
+
+withoutFirst	^self withoutFirst: 1!
+
+withoutFirst: n	(self size <= n) ifTrue: [^self species new].	^self copyFrom: n + 1 to: self size! !
 !SequenceableCollection categoriesFor: #copyFirst:!*Buoy/Collections!public! !
 !SequenceableCollection categoriesFor: #copyLast:!*Buoy/Collections!public! !
 !SequenceableCollection categoriesFor: #copyNoMoreThanFirst:!*Buoy/Collections!public! !
 !SequenceableCollection categoriesFor: #copyNoMoreThanLast:!*Buoy/Collections!public! !
+!SequenceableCollection categoriesFor: #withoutFirst!*Buoy/Collections!public! !
+!SequenceableCollection categoriesFor: #withoutFirst:!*Buoy/Collections!public! !
 
 "End of package definition"!
 

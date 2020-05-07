@@ -22,8 +22,8 @@ shortName	^ 'Introduction'!
 
 willowLogoView	^ ImageWebView		locatedAt: Smalltalks2017FileMetadataLibrary / #willowlogoSvg		applying: [ :image | image setStyleTo: [ :style | style width: 128 px ] ]! !
 !IntroductionStepWebView categoriesFor: #description!accessing!public! !
-!IntroductionStepWebView categoriesFor: #loadWillowFromGitHubCode!public! !
-!IntroductionStepWebView categoriesFor: #loadWillowPlaygroundFromGitHubCode!public! !
+!IntroductionStepWebView categoriesFor: #loadWillowFromGitHubCode!accessing!public! !
+!IntroductionStepWebView categoriesFor: #loadWillowPlaygroundFromGitHubCode!accessing!public! !
 !IntroductionStepWebView categoriesFor: #renderContentOn:!public!rendering! !
 !IntroductionStepWebView categoriesFor: #shortName!accessing!public! !
 !IntroductionStepWebView categoriesFor: #willowLogoView!private/accessing!public! !

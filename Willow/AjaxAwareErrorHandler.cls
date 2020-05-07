@@ -7,7 +7,7 @@ WAHtmlErrorHandler subclass: #AjaxAwareErrorHandler
 	classInstanceVariableNames: ''!
 AjaxAwareErrorHandler guid: (GUID fromString: '{3bdadb81-e6bb-4370-a143-af649c5e4a89}')!
 AjaxAwareErrorHandler comment: 'I''m an error handler supporting a different handling for AJAX requests'!
-!AjaxAwareErrorHandler categoriesForClass!Willow-Applications! !
+!AjaxAwareErrorHandler categoriesForClass!Willow-Core-Applications! !
 !AjaxAwareErrorHandler methodsFor!
 
 handleDefault: anException	self valueReportingActionWhenHandling: anException.	self requestContext request isXmlHttpRequest		then: [ self respondToXmlHttpRequestWith: anException messageText ]		otherwise: [ super handleDefault: anException ]!

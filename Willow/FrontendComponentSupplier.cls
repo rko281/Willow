@@ -7,7 +7,7 @@ Object subclass: #FrontendComponentSupplier
 	classInstanceVariableNames: ''!
 FrontendComponentSupplier guid: (GUID fromString: '{8a97bf52-e227-4a1a-82f7-06a6318a0ac3}')!
 FrontendComponentSupplier comment: 'Abstract class for the front-end component suppliers, like Bootstrap, JqueryUI, etc.'!
-!FrontendComponentSupplier categoriesForClass!Willow-Frontend! !
+!FrontendComponentSupplier categoriesForClass!Willow-Core-Frontend! !
 !FrontendComponentSupplier methodsFor!
 
 addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas	^ self subclassResponsibility!

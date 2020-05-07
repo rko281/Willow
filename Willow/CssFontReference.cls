@@ -7,7 +7,7 @@ CssObject subclass: #CssFontReference
 	classInstanceVariableNames: ''!
 CssFontReference guid: (GUID fromString: '{21285478-c6a5-4500-b1eb-ca53aa7538d5}')!
 CssFontReference comment: 'I represent a font reference'!
-!CssFontReference categoriesForClass!RenoirSt-Fonts! !
+!CssFontReference categoriesForClass!RenoirSt-Core-Fonts! !
 !CssFontReference methodsFor!
 
 , aCssFontReference	^CssObjectList with: self with: aCssFontReference ! !

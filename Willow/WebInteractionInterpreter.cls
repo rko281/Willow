@@ -7,7 +7,7 @@ WebInteractionInterpreterBehavior subclass: #WebInteractionInterpreter
 	classInstanceVariableNames: ''!
 WebInteractionInterpreter guid: (GUID fromString: '{9d660643-9ba2-44c5-9687-f228107495a8}')!
 WebInteractionInterpreter comment: ''!
-!WebInteractionInterpreter categoriesForClass!Willow-WebInteraction! !
+!WebInteractionInterpreter categoriesForClass!Willow-Core-WebInteraction! !
 !WebInteractionInterpreter methodsFor!
 
 addCssClass: aCssStyle toComponentsMatching: aComponentProvider	interaction		onTriggerExecute:			(ComponentStyleClassChangingCommand				on: aComponentProvider				altering: aCssStyle				sending: #addClass:)!
@@ -28,13 +28,15 @@ determineBehaviorByEvaluating: aCallbackBlock with: aParameter	interaction onT
 
 disable	interaction onTriggerExecute: ComponentEnableStatusChangingCommand disablingCurrentComponent!
 
-enable: aComponent	interaction onTriggerExecute: (ComponentEnableStatusChangingCommand enabling: aComponent)!
+disable: aComponent	interaction onTriggerExecute: ( ComponentEnableStatusChangingCommand disabling: aComponent )!
+
+enable: aComponent	interaction onTriggerExecute: ( ComponentEnableStatusChangingCommand enabling: aComponent )!
 
 executeOnClient: aServerIndependentAction	interaction		onTriggerExecute: (PluggableExecutionOnClientCommand executingOnly: aServerIndependentAction)!
 
-focus: anIdentifiedWebView	interaction		onTriggerExecute: (ComponentFocusingCommand for: anIdentifiedWebView)!
+focus: anIdentifiedWebView	interaction onTriggerExecute: ( ComponentFocusingCommand for: anIdentifiedWebView )!
 
-focusUsing: aComponentProvider	interaction		onTriggerExecute: (ComponentFocusingCommand findingComponentUsing: aComponentProvider)!
+focusUsing: aComponentProvider	interaction		onTriggerExecute: ( ComponentFocusingCommand findingComponentUsing: aComponentProvider )!
 
 inform: aMessage	interaction onTriggerExecute: (AlertingCommand stating: aMessage)!
 
@@ -46,13 +48,13 @@ onlyWhen: aStringCondition determineBehaviorByEvaluating: aCallbackBlock with: a
 
 open: aView	interaction onTriggerExecute: (DialogOpeningCommand alwaysOpening: aView)!
 
-remove: anIdentifiedView	interaction onTriggerExecute: (ComponentRemovingCommand for: anIdentifiedView)!
+remove: anIdentifiedView	interaction onTriggerExecute: ( ComponentRemovingCommand for: anIdentifiedView )!
 
 removeCssClass: aCssStyle fromComponentsMatching: aComponentProvider	interaction		onTriggerExecute:			(ComponentStyleClassChangingCommand				on: aComponentProvider				altering: aCssStyle				sending: #removeClass:)!
 
-render: anIdentifiedView	interaction onTriggerExecute: (RenderingCommand for: anIdentifiedView)!
+render: anIdentifiedView	interaction onTriggerExecute: ( RenderingCommand for: anIdentifiedView )!
 
-renderAll: anIdentifiedViewCollection	interaction onTriggerExecute: (RenderingCommand forAll: anIdentifiedViewCollection)!
+renderAll: anIdentifiedViewCollection	interaction onTriggerExecute: ( RenderingCommand forAll: anIdentifiedViewCollection )!
 
 scrollingIntoView: anIdentifier	interaction onTriggerExecute: (ScrollIntoViewCommand withComponentIdentifierProvidedBy: [ anIdentifier ])!
 
@@ -66,9 +68,9 @@ serializeIt	interaction onTriggerExecute: SerializationCommand forCurrentObjec
 
 serializeWithHiddenInputs	interaction onTriggerExecute: SerializationCommand forCurrentObjectWithHiddenInputs!
 
-setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView	interaction		onTriggerExecute:			(ComponentValueSettingCommand				triggeringChangesObtainingIdentifierFrom: [ anIdentifiedView identifier ]				valueFrom: aValueProvider)!
+setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView	interaction		onTriggerExecute:			( ComponentValueSettingCommand				triggeringChangesObtainingIdentifierFrom: [ anIdentifiedView identifier ]				valueFrom: aValueProvider )!
 
-setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier	interaction		onTriggerExecute:			(ComponentValueSettingCommand				obtainingIdentifierFrom: [ identifier ]				valueFrom: aValueProvider)!
+setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier	interaction		onTriggerExecute:			( ComponentValueSettingCommand obtainingIdentifierFrom: [ identifier ] valueFrom: aValueProvider )!
 
 showLoadingNotificationDisplaying: aWebView applying: aComponentCommand	interaction onTriggerExecute:		(LoadingNotificationCommand displaying: aWebView applying: aComponentCommand)!
 
@@ -78,9 +80,9 @@ submitForm: anIdentifiedForm	interaction		onTriggerExecute:			(FormSubmitCom
 
 submitFormStyledAs: aCssStyle	interaction onTriggerExecute: (FormSubmitCommand forFormStyledAs: aCssStyle)!
 
-temporarilyDisableAndTransform: anIdentifiedView into: aView	interaction onTriggerExecute: (TemporarilyDisablingCommand transforming: anIdentifiedView into: aView)!
+temporarilyDisableAndTransform: anIdentifiedView into: aView	interaction		onTriggerExecute: ( TemporarilyDisablingCommand transforming: anIdentifiedView into: aView )!
 
-temporarilyDisableAndTransformInto: aView	interaction onTriggerExecute: (TemporarilyDisablingCommand transformingCurrentViewInto: aView)!
+temporarilyDisableAndTransformInto: aView	interaction onTriggerExecute: ( TemporarilyDisablingCommand transformingCurrentViewInto: aView )!
 
 toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider	interaction		onTriggerExecute:			(ComponentStyleClassChangingCommand				on: aComponentProvider				altering: aCssStyle				sending: #toggleClass:)! !
 !WebInteractionInterpreter categoriesFor: #addCssClass:toComponentsMatching:!Configuring / CSS!public! !
@@ -92,6 +94,7 @@ toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider	interaction
 !WebInteractionInterpreter categoriesFor: #determineBehaviorByEvaluating:!Configuring!public! !
 !WebInteractionInterpreter categoriesFor: #determineBehaviorByEvaluating:with:!Configuring!public! !
 !WebInteractionInterpreter categoriesFor: #disable!Configuring / DOM!public! !
+!WebInteractionInterpreter categoriesFor: #disable:!Configuring / DOM!public! !
 !WebInteractionInterpreter categoriesFor: #enable:!Configuring / DOM!public! !
 !WebInteractionInterpreter categoriesFor: #executeOnClient:!Configuring!public! !
 !WebInteractionInterpreter categoriesFor: #focus:!Configuring / DOM!public! !

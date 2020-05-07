@@ -7,7 +7,7 @@ Object subclass: #TriggeringPolicy
 	classInstanceVariableNames: ''!
 TriggeringPolicy guid: (GUID fromString: '{be846577-07f1-4729-aec1-a0688c2de15b}')!
 TriggeringPolicy comment: ''!
-!TriggeringPolicy categoriesForClass!Willow-WebInteraction! !
+!TriggeringPolicy categoriesForClass!Willow-Core-WebInteraction! !
 !TriggeringPolicy methodsFor!
 
 apply: anAsynchronousCall to: aComponent on: aCanvas	self subclassResponsibility! !

@@ -7,7 +7,7 @@ WAPainter subclass: #BinaryChoiceWebViewBehavior
 	classInstanceVariableNames: ''!
 BinaryChoiceWebViewBehavior guid: (GUID fromString: '{d37481d3-1d4b-4158-867c-b28d94de4037}')!
 BinaryChoiceWebViewBehavior comment: 'I''m an abstract class representing binary choice web views'!
-!BinaryChoiceWebViewBehavior categoriesForClass!Willow-WebViews! !
+!BinaryChoiceWebViewBehavior categoriesForClass!Willow-Core-WebViews! !
 !BinaryChoiceWebViewBehavior methodsFor!
 
 allows: aModel	^iterator includes: aModel !

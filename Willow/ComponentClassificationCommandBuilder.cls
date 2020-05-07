@@ -7,7 +7,7 @@ GRObject subclass: #ComponentClassificationCommandBuilder
 	classInstanceVariableNames: ''!
 ComponentClassificationCommandBuilder guid: (GUID fromString: '{6be8417a-aa78-46d1-86a9-697742255b1b}')!
 ComponentClassificationCommandBuilder comment: 'I''m a builder of component classification commands'!
-!ComponentClassificationCommandBuilder categoriesForClass!Willow-Frontend! !
+!ComponentClassificationCommandBuilder categoriesForClass!Willow-Core-Frontend! !
 !ComponentClassificationCommandBuilder methodsFor!
 
 commandStyledWith: aSymbol	^ ComponentClassificationCommand toStyleWith: classificationNamespace >> aSymbol!

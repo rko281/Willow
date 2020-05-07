@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentTitleCommand
 	classInstanceVariableNames: ''!
 ComponentTitleCommand guid: (GUID fromString: '{b4552967-a879-4d5a-82b8-5aa7ff39de9d}')!
 ComponentTitleCommand comment: 'Command to set the title attribute of a component (using title:).'!
-!ComponentTitleCommand categoriesForClass!Willow-Frontend! !
+!ComponentTitleCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentTitleCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	^ aComponent title: titleProvider value!

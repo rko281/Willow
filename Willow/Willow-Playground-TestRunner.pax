@@ -8,8 +8,17 @@ Willow is a Web Interaction Library that eases the burden of creating AJAX-based
 Willow and associated frameworks created by Buenos Aires Smalltalk
 https://github.com/ba-st
 
-Dolphin Smalltalk port by John Aspinall, June 2019.'.
+Dolphin Smalltalk port by John Aspinall, May 2020.
 
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
+
+package basicScriptAt: #postinstall put: 'WPTestRunner registerAsDevelopmentApplication.
+'.
 
 package classNames
 	add: #WPMessageTallyWebView;
@@ -37,8 +46,9 @@ package setPrerequisites: #(
 	'..\Portishead\Portishead-SUnit'
 	'..\Seaside\Seaside\Seaside-Core'
 	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit'
-	'Willow'
 	'Willow-Bootstrap'
+	'Willow-Bootstrap-3'
+	'Willow-Core'
 	'Willow-SpinKit').
 
 package!

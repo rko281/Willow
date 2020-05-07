@@ -7,7 +7,7 @@ Object subclass: #IndentOnNewLineWriteStream
 	classInstanceVariableNames: ''!
 IndentOnNewLineWriteStream guid: (GUID fromString: '{6886deaf-070e-4662-b7b4-c785b24203f6}')!
 IndentOnNewLineWriteStream comment: 'A IndentOnNewLineWriteStream is a write stream that adds automatically a tab after a new line.'!
-!IndentOnNewLineWriteStream categoriesForClass!RenoirSt-Common! !
+!IndentOnNewLineWriteStream categoriesForClass!RenoirSt-Core-Common! !
 !IndentOnNewLineWriteStream methodsFor!
 
 initializeOn: aWriteStream 		stream := aWriteStream !

@@ -7,7 +7,7 @@ WebInteractionInterpreterBehavior subclass: #CombinedWebInteractionInterpreter
 	classInstanceVariableNames: ''!
 CombinedWebInteractionInterpreter guid: (GUID fromString: '{e436abba-a53b-4492-89ec-b3b642d7b779}')!
 CombinedWebInteractionInterpreter comment: ''!
-!CombinedWebInteractionInterpreter categoriesForClass!Willow-WebInteraction! !
+!CombinedWebInteractionInterpreter categoriesForClass!Willow-Core-WebInteraction! !
 !CombinedWebInteractionInterpreter methodsFor!
 
 addCssClass: aCssStyle toComponentsMatching: aComponentProvider	self interpretersDo: [:interpreter |		interpreter addCssClass: aCssStyle toComponentsMatching: aComponentProvider]!
@@ -24,13 +24,15 @@ determineBehaviorByEvaluating: aCallbackBlock	self interpretersDo: [:interpret
 
 determineBehaviorByEvaluating: aCallbackBlock with: aParameter	self interpretersDo: [:interpreter |		interpreter determineBehaviorByEvaluating: aCallbackBlock with: aParameter]!
 
-disable	self interpretersDo: [:interpreter | interpreter disable]!
+disable	self interpretersDo: [ :interpreter | interpreter disable ]!
 
-enable: aComponent	self interpretersDo: [:interpreter | interpreter enable: aComponent]!
+disable: aComponent	self interpretersDo: [ :interpreter | interpreter disable: aComponent ]!
+
+enable: aComponent	self interpretersDo: [ :interpreter | interpreter enable: aComponent ]!
 
 executeOnClient: aServerIndependentAction	self interpretersDo: [:interpreter | interpreter executeOnClient: aServerIndependentAction]!
 
-focus: anIdentifiedWebView	self interpretersDo: [:interpreter | interpreter focus: anIdentifiedWebView]!
+focus: anIdentifiedWebView	self interpretersDo: [ :interpreter | interpreter focus: anIdentifiedWebView ]!
 
 focusUsing: aComponentProvider	self interpretersDo: [ :interpreter | interpreter focusUsing: aComponentProvider ]!
 
@@ -50,9 +52,9 @@ remove: anIdentifiedView	self interpretersDo: [ :interpreter | interpreter rem
 
 removeCssClass: aCssStyle fromComponentsMatching: aComponentProvider	self interpretersDo: [ :interpreter | interpreter removeCssClass: aCssStyle fromComponentsMatching: aComponentProvider ]!
 
-render: anIdentifiedView	self interpretersDo: [:interpreter | interpreter render: anIdentifiedView]!
+render: anIdentifiedView	self interpretersDo: [ :interpreter | interpreter render: anIdentifiedView ]!
 
-renderAll: anIdentifiedViewCollection	self interpretersDo: [:interpreter | interpreter renderAll: anIdentifiedViewCollection]!
+renderAll: anIdentifiedViewCollection	self interpretersDo: [ :interpreter | interpreter renderAll: anIdentifiedViewCollection ]!
 
 scrollingIntoView: anIdentifier	self interpretersDo: [:interpreter | interpreter scrollingIntoView: anIdentifier]!
 
@@ -66,9 +68,9 @@ serializeIt	self interpretersDo: [:interpreter | interpreter serializeIt]!
 
 serializeWithHiddenInputs	self interpretersDo: [:interpreter | interpreter serializeWithHiddenInputs]!
 
-setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView	self		interpretersDo: [ :interpreter | 			interpreter				setValueTo: aValueProvider				thenTriggerChangeOf: anIdentifiedView ]!
+setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView	self		interpretersDo:			[ :interpreter | interpreter setValueTo: aValueProvider thenTriggerChangeOf: anIdentifiedView ]!
 
-setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier	self		interpretersDo: [ :interpreter | 			interpreter				setValueTo: aValueProvider				withoutTriggeringChangeOnComponentWithId: identifier ]!
+setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier	self		interpretersDo:			[ :interpreter | interpreter setValueTo: aValueProvider withoutTriggeringChangeOnComponentWithId: identifier ]!
 
 showLoadingNotificationStyledAsAll: classes	self interpretersDo: [:interpreter | interpreter showLoadingNotificationStyledAsAll: classes]!
 
@@ -76,9 +78,9 @@ submitForm: anIdentifiedForm	self interpretersDo: [ :interpreter | interpreter
 
 submitFormStyledAs: aCssStyle	self interpretersDo: [:interpreter | interpreter submitFormStyledAs: aCssStyle]!
 
-temporarilyDisableAndTransform: anIdentifiedView into: aView	self interpretersDo: [ :interpreter | interpreter temporarilyDisableAndTransform: anIdentifiedView into: aView ]!
+temporarilyDisableAndTransform: anIdentifiedView into: aView	self		interpretersDo: [ :interpreter | interpreter temporarilyDisableAndTransform: anIdentifiedView into: aView ]!
 
-temporarilyDisableAndTransformInto: aView	self interpretersDo: [:interpreter | interpreter temporarilyDisableAndTransformInto: aView]!
+temporarilyDisableAndTransformInto: aView	self interpretersDo: [ :interpreter | interpreter temporarilyDisableAndTransformInto: aView ]!
 
 toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider	self interpretersDo: [ :interpreter | interpreter toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider ]! !
 !CombinedWebInteractionInterpreter categoriesFor: #addCssClass:toComponentsMatching:!Configuring / CSS!public! !
@@ -88,34 +90,35 @@ toggleCssClass: aCssStyle onComponentsMatching: aComponentProvider	self interp
 !CombinedWebInteractionInterpreter categoriesFor: #confirmAsking:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #determineBehaviorByEvaluating:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #determineBehaviorByEvaluating:with:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #disable!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #enable:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #disable!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #disable:!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #enable:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #executeOnClient:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #focus:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #focusUsing:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #focus:!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #focusUsing:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #inform:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #informSelection!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #initializeCombining:!initialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #interpretersDo:!private! !
 !CombinedWebInteractionInterpreter categoriesFor: #onlyWhen:determineBehaviorByEvaluating:with:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #open:!Configuring / Dialogs!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #remove:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #remove:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #removeCssClass:fromComponentsMatching:!Configuring / CSS!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #render:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #renderAll:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #render:!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #renderAll:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #scrollingIntoView:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #serializeChildForm!Configuring / Serialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #serializeContainerForm!Configuring / Serialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #serializeForm:!Configuring / Serialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #serializeIt!Configuring / Serialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #serializeWithHiddenInputs!Configuring / Serialization!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #setValueTo:thenTriggerChangeOf:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #setValueTo:withoutTriggeringChangeOnComponentWithId:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #setValueTo:thenTriggerChangeOf:!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #setValueTo:withoutTriggeringChangeOnComponentWithId:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #showLoadingNotificationStyledAsAll:!Configuring!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #submitForm:!Configuring / Serialization!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #submitFormStyledAs:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #temporarilyDisableAndTransform:into:!Configuring!public! !
-!CombinedWebInteractionInterpreter categoriesFor: #temporarilyDisableAndTransformInto:!Configuring!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #temporarilyDisableAndTransform:into:!Configuring / DOM!public! !
+!CombinedWebInteractionInterpreter categoriesFor: #temporarilyDisableAndTransformInto:!Configuring / DOM!public! !
 !CombinedWebInteractionInterpreter categoriesFor: #toggleCssClass:onComponentsMatching:!Configuring / CSS!public! !
 
 !CombinedWebInteractionInterpreter class methodsFor!

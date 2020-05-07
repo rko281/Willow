@@ -10,7 +10,7 @@ WATestingFileMetadataLibrary comment: 'Test support library'!
 !WATestingFileMetadataLibrary categoriesForClass!Boardwalk-Tests-WebApplication! !
 !WATestingFileMetadataLibrary methodsFor!
 
-jsUndefinedJs	^ WAFileLibraryResource		filepath: 'js/undefined.js'		mimeType: WAMimeType textJavascript		cacheDuration: self class defaultCacheDuration		contents: (GRDelayedSend receiver: self selector: #jsUndefinedJsContent)!
+jsUndefinedJs	^ WAFileLibraryResource		filepath: 'js/undefined.js'		mimeType: WAMimeType textJavascript		cacheDuration:			( Duration				days: 0				hours: 0				minutes: 1				seconds: 0 )		contents: ( GRDelayedSend receiver: self selector: #jsUndefinedJsContent )!
 
 jsUndefinedJsContent	^ self javascriptContentFrom: [ :js | js << JSStream undefined ]! !
 !WATestingFileMetadataLibrary categoriesFor: #jsUndefinedJs!accesing!public! !

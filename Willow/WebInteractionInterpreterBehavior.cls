@@ -7,7 +7,7 @@ WAObject subclass: #WebInteractionInterpreterBehavior
 	classInstanceVariableNames: ''!
 WebInteractionInterpreterBehavior guid: (GUID fromString: '{84028301-e8dc-4acf-a6a9-38b31040602b}')!
 WebInteractionInterpreterBehavior comment: ''!
-!WebInteractionInterpreterBehavior categoriesForClass!Willow-WebInteraction! !
+!WebInteractionInterpreterBehavior categoriesForClass!Willow-Core-WebInteraction! !
 !WebInteractionInterpreterBehavior methodsFor!
 
 addCssClass: aCssStyle	self addCssClass: aCssStyle toComponentsMatching: [ :canvas | canvas jQuery this ]!
@@ -27,6 +27,8 @@ determineBehaviorByEvaluating: aCallbackBlock	self subclassResponsibility!
 determineBehaviorByEvaluating: aCallbackBlock with: aParameter	self subclassResponsibility!
 
 disable	self subclassResponsibility!
+
+disable: aComponent	self subclassResponsibility!
 
 enable: aComponent	self subclassResponsibility!
 
@@ -102,6 +104,7 @@ transform: anIdentifiedWebView into: aRenderable	"This will replace anIdentifi
 !WebInteractionInterpreterBehavior categoriesFor: #determineBehaviorByEvaluating:!Configuring!public! !
 !WebInteractionInterpreterBehavior categoriesFor: #determineBehaviorByEvaluating:with:!Configuring!public! !
 !WebInteractionInterpreterBehavior categoriesFor: #disable!Configuring / DOM!public! !
+!WebInteractionInterpreterBehavior categoriesFor: #disable:!Configuring / DOM!public! !
 !WebInteractionInterpreterBehavior categoriesFor: #enable:!Configuring / DOM!public! !
 !WebInteractionInterpreterBehavior categoriesFor: #evaluate:!Configuring!public! !
 !WebInteractionInterpreterBehavior categoriesFor: #evaluate:with:!Configuring!public! !

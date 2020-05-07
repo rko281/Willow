@@ -7,7 +7,7 @@ Codec subclass: #NaturalNumberCodec
 	classInstanceVariableNames: ''!
 NaturalNumberCodec guid: (GUID fromString: '{b6245dfe-ea77-46e7-9adf-587c8f0f382e}')!
 NaturalNumberCodec comment: 'I''m an encoder/decoder of natural numbers'!
-!NaturalNumberCodec categoriesForClass!Willow-Frontend! !
+!NaturalNumberCodec categoriesForClass!Willow-Core-Frontend! !
 !NaturalNumberCodec methodsFor!
 
 canCreate: anObject	^anObject isInteger and: [anObject positive]!

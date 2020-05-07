@@ -7,7 +7,7 @@ SharedPool subclass: #Willow
 	classInstanceVariableNames: ''!
 Willow guid: (GUID fromString: '{298b99c6-e123-42f6-b624-c6cfab3564b1}')!
 Willow comment: 'Willow class	instanceVariableNames: '''''!
-!Willow categoriesForClass!Willow-Frontend! !
+!Willow categoriesForClass!Unclassified! !
 !Willow class methodsFor!
 
 classification	^ Classification!

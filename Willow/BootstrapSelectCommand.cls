@@ -10,6 +10,6 @@ BootstrapSelectCommand comment: 'I''m a component command enabling bootstrap-sel
 !BootstrapSelectCommand categoriesForClass!Willow-Bootstrap-Frontend! !
 !BootstrapSelectCommand methodsFor!
 
-applyTo: aComponent on: aCanvas	"We need to call the render method after the command application to get the right rendering"	[ :component | component addClass bootstrap selectpicker + (component addScript js: [ :canvas | canvas jQuery this bootstrapSelect render ]) ] asWebComponentCommand applyTo: aComponent on: aCanvas! !
+applyTo: aComponent on: aCanvas	"We need to call the render method after the command application to get the right rendering"	[ :component | 	component addClass bootstrapCommon selectpicker		+ ( component addScript js: [ :canvas | canvas jQuery this bootstrapSelect render ] )	] asWebComponentCommand applyTo: aComponent on: aCanvas! !
 !BootstrapSelectCommand categoriesFor: #applyTo:on:!processing!public! !
 

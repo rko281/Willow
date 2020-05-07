@@ -7,7 +7,7 @@ WAPainter subclass: #FieldWebView
 	classInstanceVariableNames: ''!
 FieldWebView guid: (GUID fromString: '{9b849f61-e26f-4434-b124-81a4280ad47b}')!
 FieldWebView comment: 'I ''m an abstract class representing non textual HTML5 inputs.'!
-!FieldWebView categoriesForClass!Willow-WebViews! !
+!FieldWebView categoriesForClass!Willow-Core-WebViews! !
 !FieldWebView methodsFor!
 
 changeContentsTo: aText	contents := aText.	self notifyInterested!

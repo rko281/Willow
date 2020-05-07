@@ -6,5 +6,5 @@ Error subclass: #AssertionFailed
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 AssertionFailed guid: (GUID fromString: '{9fe98040-b7c1-498d-b095-0c8e3c752480}')!
-AssertionFailed comment: 'Object subclass: #AssertionFailurePolicy	instanceVariableNames: ''''	classVariableNames: ''''	poolDictionaries: ''''	category: ''Buoy-Assertions'''!
+AssertionFailed comment: 'Object subclass: #AssertionFailurePolicy	instanceVariableNames: ''''	classVariableNames: ''''	package: ''Buoy-Assertions'''!
 !AssertionFailed categoriesForClass!Buoy-Assertions! !

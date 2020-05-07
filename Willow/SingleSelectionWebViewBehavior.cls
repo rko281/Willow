@@ -7,7 +7,7 @@ WAPainter subclass: #SingleSelectionWebViewBehavior
 	classInstanceVariableNames: ''!
 SingleSelectionWebViewBehavior guid: (GUID fromString: '{6e51f89c-6eb1-4603-ab6f-b88c325b4534}')!
 SingleSelectionWebViewBehavior comment: 'I''m an abstract class representing single selection web views'!
-!SingleSelectionWebViewBehavior categoriesForClass!Willow-WebViews! !
+!SingleSelectionWebViewBehavior categoriesForClass!Willow-Core-WebViews! !
 !SingleSelectionWebViewBehavior methodsFor!
 
 allowAnyOf: anElementCollection	availableElements := anElementCollection.	"Try to keep the current selection, if the new elements includes some object equal to the previous selection make it the chosen one."	self chooseAnySatisfying: [ :element | chosenElementOptional withContentDo: [ :chosenElement | chosenElement = element ] ifUnused: [ false ] ] ifNone: [ self invalidateSelection ]!

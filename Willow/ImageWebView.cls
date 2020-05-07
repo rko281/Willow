@@ -7,7 +7,7 @@ WAPainter subclass: #ImageWebView
 	classInstanceVariableNames: ''!
 ImageWebView guid: (GUID fromString: '{7b1fe548-56cf-4957-a3df-96a4d5137f4a}')!
 ImageWebView comment: 'I represent an image that can optionally be interactive.'!
-!ImageWebView categoriesForClass!Willow-WebViews! !
+!ImageWebView categoriesForClass!Willow-Core-WebViews! !
 !ImageWebView methodsFor!
 
 initializeLocatedAt: aLocation applying: aComponentCommand	imageLocation := aLocation.	commandToComponent := aComponentCommand.	interactionInterpreter := WebInteractionInterpreter forClickOnComponent!

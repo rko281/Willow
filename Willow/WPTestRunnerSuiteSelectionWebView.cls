@@ -14,11 +14,11 @@ initialize	super initialize.	self		initializeTestCaseClassesSelection;		ini
 
 initializeIdentifiedTestCaseClassesSelection	identifiedTestCaseClassesSelection := IdentifiedWebView		forDivNamed: 'test-case-selection'		containing: [ :canvas | 			canvas				render:					(self componentSupplier						delayedViewShowing: SpinKitCircle new						whileEvaluating: [ testCaseClassesListBox allowAnyOf: self session applicationContext availableTestCaseClasses ]						thenRendering: (self labeledViewDisplaying: 'Test Cases' boundTo: testCaseClassesListBox)) ]!
 
-initializePackageSelection	packagesListBox := self componentSupplier multipleSelectionListBoxDisplayingAtOnce: 25 applying: [  ].	packagesListBox onTrigger		serializeWithHiddenInputs;		evaluate: [ self session applicationContext setSelectedPackageCategoriesTo: packagesListBox currentSelection ];		render: identifiedTestCaseClassesSelection!
+initializePackageSelection	packagesListBox := self componentSupplier		multipleSelectionListBoxDisplayingAtOnce: 25		applying: [  ].	packagesListBox onTrigger		evaluate: [ self session applicationContext setSelectedPackageCategoriesTo: packagesListBox currentSelection ];		render: identifiedTestCaseClassesSelection!
 
-initializeTestCaseClassesSelection	testCaseClassesListBox := self componentSupplier multipleSelectionListBoxDisplayingAtOnce: 25 applying: [  ].	testCaseClassesListBox onTrigger		serializeWithHiddenInputs;		evaluate: [ self session applicationContext setSelectedTestCaseClassesTo: testCaseClassesListBox currentSelection ]!
+initializeTestCaseClassesSelection	testCaseClassesListBox := self componentSupplier		multipleSelectionListBoxDisplayingAtOnce: 25		applying: [  ].	testCaseClassesListBox onTrigger		evaluate: [ self session applicationContext				setSelectedTestCaseClassesTo: testCaseClassesListBox currentSelection			]!
 
-labeledViewDisplaying: aLabel boundTo: aField	^ BootstrapLabeledWebView		displaying: aLabel		applying: [  ]		boundTo: aField		applying: [  ]!
+labeledViewDisplaying: aLabel boundTo: aField	^ self componentSupplier		labeledFieldApplying: [  ]		displaying: aLabel		applying: [  ]		boundTo: aField		applying: [  ]!
 
 renderContentOn: html	html		render:			(self componentSupplier				fieldSetContaining:					(self componentSupplier gridBuilder						addContent:							(self componentSupplier								delayedViewShowing: SpinKitCircle new								whileEvaluating: [ packagesListBox allowAnyOf: self session applicationContext availablePackageCategories ]								thenRendering: (self labeledViewDisplaying: 'Package Categories' boundTo: packagesListBox));						addContent: identifiedTestCaseClassesSelection;						build)				applying: [  ]				withLegend: 'Test Case Selection'				applying: [  ])! !
 !WPTestRunnerSuiteSelectionWebView categoriesFor: #initialize!initialization!public! !

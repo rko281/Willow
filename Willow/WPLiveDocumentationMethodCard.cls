@@ -10,7 +10,7 @@ WPLiveDocumentationMethodCard comment: 'I''m a panel showing an specific method 
 !WPLiveDocumentationMethodCard categoriesForClass!Willow-Playground-LiveDocs-WebViews! !
 !WPLiveDocumentationMethodCard methodsFor!
 
-initializeFor: aMethod	method := aMethod.	methodPanel := self componentSupplier panelBuilder		headingDisplaying: [ :canvas | 			canvas strong: aMethod selector.			canvas span with: aMethod protocol applying: [ :badge | badge addClass bootstrap badge + badge addClass bootstrap pullRight ] ];		wrapping: (self panelContentFor: aMethod);		buildApplying: [ :panel | panel addClass bootstrap panelDefault ]!
+initializeFor: aMethod	method := aMethod.	methodPanel := self componentSupplier panelBuilder		headingDisplaying: [ :canvas | 			canvas strong: aMethod selector.			canvas span with: aMethod protocol applying: [ :badge | badge addClass bootstrap3 badge + badge addClass bootstrap3 pullRight ] ];		wrapping: (self panelContentFor: aMethod);		buildApplying: [ :panel | panel addClass bootstrap3 panelDefault ]!
 
 panelContentFor: aMethod	| tabsBuilder |	tabsBuilder := self componentSupplier tabsBuilder.	tabsBuilder addTabHeadedBy: 'Source' containing: (self sourceCodeFor: aMethod).	aMethod comment		ifNotNil: [ :comment | 			tabsBuilder				addTabHeadedBy: 'Comment'				containing: [ :canvas | 					canvas						break;						blockquote: comment ] ].	^ tabsBuilder		addTabHeadedBy: 'Bytecode' containing: (self symbolicBytecodesFor: aMethod);		build!
 

@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentAttributeCommand
 	classInstanceVariableNames: ''!
 ComponentAttributeCommand guid: (GUID fromString: '{0d8bbacc-e987-4b33-bb25-0d46a91c1a79}')!
 ComponentAttributeCommand comment: 'Command to set an attribute for a component'!
-!ComponentAttributeCommand categoriesForClass!Willow-Frontend! !
+!ComponentAttributeCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentAttributeCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent attributeAt: name put: value!

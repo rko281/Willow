@@ -7,7 +7,7 @@ CssObject subclass: #CssAbstractDeclaration
 	classInstanceVariableNames: ''!
 CssAbstractDeclaration guid: (GUID fromString: '{6129b5b4-a568-48a5-b770-fcc18009b828}')!
 CssAbstractDeclaration comment: 'A CssAbstractDeclaration defines the common behavior for the declarations.'!
-!CssAbstractDeclaration categoriesForClass!RenoirSt-Common! !
+!CssAbstractDeclaration categoriesForClass!RenoirSt-Core-Common! !
 !CssAbstractDeclaration methodsFor!
 
 cssContentEndingOn: aStream	aStream nextPut: $;!

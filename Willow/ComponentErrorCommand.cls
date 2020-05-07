@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentErrorCommand
 	classInstanceVariableNames: ''!
 ComponentErrorCommand guid: (GUID fromString: '{043a7eb6-170a-43a6-b20e-44a0547cc15b}')!
 ComponentErrorCommand comment: 'Command to determine behavior when a component signals an error (using onError:).'!
-!ComponentErrorCommand categoriesForClass!Willow-Frontend! !
+!ComponentErrorCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentErrorCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	^ aComponent onError: (actionProvider value: aCanvas)!

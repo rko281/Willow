@@ -7,7 +7,7 @@ CssSelector subclass: #CssUniversalSelector
 	classInstanceVariableNames: ''!
 CssUniversalSelector guid: (GUID fromString: '{79219797-d080-4532-9310-3177ab7edc8a}')!
 CssUniversalSelector comment: 'The universal selector represents the qualified name of any element type. It represents any single element in the document tree in any namespace (including those without a namespace) if no default namespace has been specified for selectors.'!
-!CssUniversalSelector categoriesForClass!RenoirSt-Selectors! !
+!CssUniversalSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssUniversalSelector methodsFor!
 
 cssContentOn: aStream	aStream nextPutAll: representation !

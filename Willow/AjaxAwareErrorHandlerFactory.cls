@@ -7,7 +7,7 @@ GRObject subclass: #AjaxAwareErrorHandlerFactory
 	classInstanceVariableNames: ''!
 AjaxAwareErrorHandlerFactory guid: (GUID fromString: '{d9f4b499-cb0b-45d3-b9fc-623be3e99a23}')!
 AjaxAwareErrorHandlerFactory comment: 'I''m a builder of AjaxAwareErrorHandlers, just because you cannot control the creation of them.'!
-!AjaxAwareErrorHandlerFactory categoriesForClass!Willow-Applications! !
+!AjaxAwareErrorHandlerFactory categoriesForClass!Willow-Core-Applications! !
 !AjaxAwareErrorHandlerFactory methodsFor!
 
 , anException	^ ajaxErrorHandlers keys		inject: AjaxAwareErrorHandler , anException		into: [ :exceptionSet :currentExceptionSelector | exceptionSet , currentExceptionSelector ]!

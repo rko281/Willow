@@ -7,7 +7,7 @@ GRObject subclass: #WebTableColumnRendererBuilder
 	classInstanceVariableNames: ''!
 WebTableColumnRendererBuilder guid: (GUID fromString: '{824eabae-93c7-49c4-8fe8-dacaf270fbc9}')!
 WebTableColumnRendererBuilder comment: 'I''m a builder of table column renderers'!
-!WebTableColumnRendererBuilder categoriesForClass!Willow-WebViews! !
+!WebTableColumnRendererBuilder categoriesForClass!Willow-Core-WebViews! !
 !WebTableColumnRendererBuilder methodsFor!
 
 applyingToEachCell: aCellCommand	cellCommand := aCellCommand!

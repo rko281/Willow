@@ -7,7 +7,7 @@ WAPainter subclass: #PeriodicallyRenderedWebView
 	classInstanceVariableNames: ''!
 PeriodicallyRenderedWebView guid: (GUID fromString: '{74386074-86ba-4cb7-9649-45f936dc49ac}')!
 PeriodicallyRenderedWebView comment: 'I''m a periodically rendered web view, easing the burden of refreshing automatically some content.'!
-!PeriodicallyRenderedWebView categoriesForClass!Willow-WebViews! !
+!PeriodicallyRenderedWebView categoriesForClass!Willow-Core-WebViews! !
 !PeriodicallyRenderedWebView methodsFor!
 
 initializeEvaluating: aRefreshCommand every: aNumber millisecondsThenRendering: anIdentifiedWebView until: aConditionBlock	refreshCommand := aRefreshCommand.	refreshIntervalInMilliseconds := aNumber.	identifiedViewToRefresh := anIdentifiedWebView.	conditionBlock := aConditionBlock.	stopRenderingContent := false!

@@ -7,7 +7,7 @@ TriggeringPolicy subclass: #FunctionEvaluationTrigger
 	classInstanceVariableNames: ''!
 FunctionEvaluationTrigger guid: (GUID fromString: '{ec94d0c9-7130-4a2d-a753-718ae99935fc}')!
 FunctionEvaluationTrigger comment: ''!
-!FunctionEvaluationTrigger categoriesForClass!Willow-WebInteraction! !
+!FunctionEvaluationTrigger categoriesForClass!Willow-Core-WebInteraction! !
 !FunctionEvaluationTrigger methodsFor!
 
 apply: anAsynchronousCall to: aComponent on: aCanvas	aComponent perform: functionSelector with: (anAsynchronousCall asFunction: argumentNames)!

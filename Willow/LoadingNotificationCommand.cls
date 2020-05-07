@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #LoadingNotificationCommand
 	classInstanceVariableNames: ''!
 LoadingNotificationCommand guid: (GUID fromString: '{353e42f5-29d0-4bd3-bbd6-0e14f8626967}')!
 LoadingNotificationCommand comment: 'I''m a WebInteractionCommand that displays a Loading... notification while an AJAX call is beign executed.'!
-!LoadingNotificationCommand categoriesForClass!Willow-WebInteraction! !
+!LoadingNotificationCommand categoriesForClass!Willow-Core-WebInteraction! !
 !LoadingNotificationCommand methodsFor!
 
 clientIndependentActions	^#()!

@@ -7,7 +7,7 @@ CssObject subclass: #CssGradient
 	classInstanceVariableNames: ''!
 CssGradient guid: (GUID fromString: '{4eaa041d-724b-4e86-b8ac-a5b3638c43a9}')!
 CssGradient comment: 'A gradient is an image that smoothly fades from one color to another. '!
-!CssGradient categoriesForClass!RenoirSt-Colors! !
+!CssGradient categoriesForClass!RenoirSt-Core-Colors! !
 !CssGradient methodsFor!
 
 colorStops	self subclassResponsibility !

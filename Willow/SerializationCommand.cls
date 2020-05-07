@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #SerializationCommand
 	classInstanceVariableNames: ''!
 SerializationCommand guid: (GUID fromString: '{85e7b6af-0de6-4974-bf86-aa80fc96fc4a}')!
 SerializationCommand comment: 'I''m a WebInteractionCommand that specifies how to serialize the component state.'!
-!SerializationCommand categoriesForClass!Willow-WebInteraction! !
+!SerializationCommand categoriesForClass!Willow-Core-WebInteraction! !
 !SerializationCommand methodsFor!
 
 clientIndependentActions	^#()!

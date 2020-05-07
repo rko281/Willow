@@ -7,7 +7,7 @@ CssFunction subclass: #CssMathExpression
 	classInstanceVariableNames: ''!
 CssMathExpression guid: (GUID fromString: '{9eeee084-d394-4b1e-a0e4-78e756198fb8}')!
 CssMathExpression comment: 'A CssMathExpression represents a calc() function'!
-!CssMathExpression categoriesForClass!RenoirSt-Units! !
+!CssMathExpression categoriesForClass!RenoirSt-Core-Units! !
 !CssMathExpression methodsFor!
 
 - aCssValue	self addOperand: aCssValue andOperator: '-'!

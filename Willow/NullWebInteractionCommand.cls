@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #NullWebInteractionCommand
 	classInstanceVariableNames: ''!
 NullWebInteractionCommand guid: (GUID fromString: '{8ccfc4ed-14c2-4492-b623-caba83547a2b}')!
 NullWebInteractionCommand comment: 'I represent a null web interaction command, so no javascript is generated when applied.'!
-!NullWebInteractionCommand categoriesForClass!Willow-WebInteraction! !
+!NullWebInteractionCommand categoriesForClass!Willow-Core-WebInteraction! !
 !NullWebInteractionCommand methodsFor!
 
 clientIndependentActions	^#()!

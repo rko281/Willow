@@ -10,7 +10,7 @@ CommandSummaryStepWebView comment: 'I''m a step showing a command summary.'!
 !CommandSummaryStepWebView categoriesForClass!Willow-Playground-Smalltalks2017-WebViews! !
 !CommandSummaryStepWebView methodsFor!
 
-anchorToBrowse: method	| anchor |	anchor := self componentSupplier asynchronicLinkActingAsButtonLabeled: method selector applying: [ :button | button addClass bootstrap buttonLink ].	anchor onTrigger evaluate: [ method browse ].	^ anchor!
+anchorToBrowse: method	| anchor |	anchor := self componentSupplier		asynchronicLinkActingAsButtonLabeled: method selector		applying: [ :button | button addClass bootstrap3 buttonLink ].	anchor onTrigger evaluate: [ method browse ].	^ anchor!
 
 availableCommands	^ WebComponentCommandBuilder localMethods		sorted: [ :a :b | a selector <= b selector ]!
 

@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ComponentValueSettingCommand
 	classInstanceVariableNames: ''!
 ComponentValueSettingCommand guid: (GUID fromString: '{a4d74fc4-2b3c-4e82-ac24-757854b3a44e}')!
 ComponentValueSettingCommand comment: 'I''m a WebInteractionCommand used to change the value of some input field. I can be configured to trigger a change event.'!
-!ComponentValueSettingCommand categoriesForClass!Willow-WebInteraction! !
+!ComponentValueSettingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ComponentValueSettingCommand methodsFor!
 
 clientIndependentActions	^#()!

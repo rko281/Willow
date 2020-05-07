@@ -7,7 +7,7 @@ WebComponentCommand subclass: #CompositeComponentCommand
 	classInstanceVariableNames: ''!
 CompositeComponentCommand guid: (GUID fromString: '{9cf7f0fa-cb3c-4b3a-a175-c45163b7934c}')!
 CompositeComponentCommand comment: 'A command collecting several sub commands to a component.'!
-!CompositeComponentCommand categoriesForClass!Willow-Frontend! !
+!CompositeComponentCommand categoriesForClass!Willow-Core-Frontend! !
 !CompositeComponentCommand methodsFor!
 
 + aComponentCommand	^ self class		applyingAll:			(OrderedCollection new				addAll: commands;				add: aComponentCommand asWebComponentCommand;				yourself)!

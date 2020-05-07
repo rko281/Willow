@@ -7,7 +7,7 @@ SingleSelectionWebViewBehavior subclass: #SingleSelectionListBoxWebView
 	classInstanceVariableNames: ''!
 SingleSelectionListBoxWebView guid: (GUID fromString: '{6adcaef7-bffc-411f-9ef2-f0fe7749dabd}')!
 SingleSelectionListBoxWebView comment: 'I''m a list box, that allows the user to select one item from a list contained within a static, multiple line text box. The user clicks inside the box on an item to select it.'!
-!SingleSelectionListBoxWebView categoriesForClass!Willow-WebViews! !
+!SingleSelectionListBoxWebView categoriesForClass!Willow-Core-WebViews! !
 !SingleSelectionListBoxWebView methodsFor!
 
 configure: select unselectingAllOn: aCanvas	^ availableElements ifNotEmpty: [ select apply: DeselectAllOptionsCommand new ]!

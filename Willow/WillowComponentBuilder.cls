@@ -7,7 +7,7 @@ GRObject subclass: #WillowComponentBuilder
 	classInstanceVariableNames: ''!
 WillowComponentBuilder guid: (GUID fromString: '{c8deeb28-2535-42e6-ab5c-aa3c1a70a177}')!
 WillowComponentBuilder comment: 'I''m an abstract subclass for component builders'!
-!WillowComponentBuilder categoriesForClass!Willow-WebViews! !
+!WillowComponentBuilder categoriesForClass!Willow-Core-WebViews! !
 !WillowComponentBuilder methodsFor!
 
 build	^ self buildApplying: [ :component |  ]!

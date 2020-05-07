@@ -10,6 +10,6 @@ SpinKitWave comment: 'I''n an SpinKit animation'!
 !SpinKitWave categoriesForClass!Willow-SpinKit! !
 !SpinKitWave methodsFor!
 
-renderContentOn: aCanvas	aCanvas div		class: SpinKitCssStyles wave;		with: [ 1 to: 5 do: [ :index | 				aCanvas div					class: SpinKitCssStyles rect;					class: (SpinKitCssStyles rect: index) ] ]! !
+renderContentOn: aCanvas	aCanvas div		with: [ 1 to: 5 do: [ :index | aCanvas div apply: [ :div | div addClass spinKit waveRectangle ] ] ]		applying: [ :div | div addClass spinKit wave ]! !
 !SpinKitWave categoriesFor: #renderContentOn:!public!rendering! !
 

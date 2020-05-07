@@ -12,7 +12,7 @@ BootstrapAlertCommand comment: 'Provide contextual feedback messages for typical
 
 applyTo: aComponent on: aCanvas	classificationCommand applyTo: aComponent on: aCanvas!
 
-initializeApplying: aContextualClassificationCommand	classificationCommand := [ :container :constants | container addClass bootstrap alert + aContextualClassificationCommand + (container setARIARoleTo: #alert) ] asWebComponentCommand! !
+initializeApplying: aContextualClassificationCommand	classificationCommand := [ :container :constants | 	container addClass bootstrapCommon alert + aContextualClassificationCommand		+ ( container setARIARoleTo: #alert )	] asWebComponentCommand! !
 !BootstrapAlertCommand categoriesFor: #applyTo:on:!processing!public! !
 !BootstrapAlertCommand categoriesFor: #initializeApplying:!initialization!public! !
 
@@ -20,13 +20,13 @@ initializeApplying: aContextualClassificationCommand	classificationCommand := 
 
 applying: aCommand	^ self new initializeApplying: aCommand asWebComponentCommand!
 
-danger	^ self applying: [ :container | container addClass bootstrap alertDanger ]!
+danger	^ self applying: [ :container | container addClass bootstrapCommon alertDanger ]!
 
-informational	^ self applying: [ :container | container addClass bootstrap alertInfo ]!
+informational	^ self applying: [ :container | container addClass bootstrapCommon alertInfo ]!
 
-success	^ self applying: [ :container | container addClass bootstrap alertSuccess ]!
+success	^ self applying: [ :container | container addClass bootstrapCommon alertSuccess ]!
 
-warning	^ self applying: [ :container | container addClass bootstrap alertWarning ]! !
+warning	^ self applying: [ :container | container addClass bootstrapCommon alertWarning ]! !
 !BootstrapAlertCommand class categoriesFor: #applying:!private / Instance Creation!public! !
 !BootstrapAlertCommand class categoriesFor: #danger!Instance Creation!public! !
 !BootstrapAlertCommand class categoriesFor: #informational!Instance Creation!public! !

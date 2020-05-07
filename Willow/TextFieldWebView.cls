@@ -7,7 +7,7 @@ FieldWebView subclass: #TextFieldWebView
 	classInstanceVariableNames: ''!
 TextFieldWebView guid: (GUID fromString: '{37e0a991-aa72-4fdd-82b3-5edbd9163b43}')!
 TextFieldWebView comment: 'I enable the user to input text information. I support single-line text box when only one line of input is required, and a multi-line text box only if more than one line of input may be required.'!
-!TextFieldWebView categoriesForClass!Willow-WebViews! !
+!TextFieldWebView categoriesForClass!Willow-Core-WebViews! !
 !TextFieldWebView methodsFor!
 
 identifierPrefix	^ 'text'!

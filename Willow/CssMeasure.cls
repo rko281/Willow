@@ -7,7 +7,7 @@ CssObject subclass: #CssMeasure
 	classInstanceVariableNames: ''!
 CssMeasure guid: (GUID fromString: '{3223aaf9-61a6-4078-bd36-00ea25c855c2}')!
 CssMeasure comment: 'Generic measurements. Can be lengths, resolutions, time, etc'!
-!CssMeasure categoriesForClass!RenoirSt-Units! !
+!CssMeasure categoriesForClass!RenoirSt-Core-Units! !
 !CssMeasure methodsFor!
 
 cssContentOn: aStream 		quantity cssContentOn: aStream.	unit cssContentOn: aStream !

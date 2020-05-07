@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #DialogOpeningCommand
 	classInstanceVariableNames: ''!
 DialogOpeningCommand guid: (GUID fromString: '{666bdc51-f3ec-4330-b845-99493e391c1b}')!
 DialogOpeningCommand comment: 'I''m a WebInteractionCommand used to create and open a Dialog. The created Dialog will be appended to a section in the DOM.'!
-!DialogOpeningCommand categoriesForClass!Willow-WebInteraction! !
+!DialogOpeningCommand categoriesForClass!Willow-Core-WebInteraction! !
 !DialogOpeningCommand methodsFor!
 
 clientIndependentActions	^#()!

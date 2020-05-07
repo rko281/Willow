@@ -1,101 +1,92 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
 FrontendComponentSupplier subclass: #BootstrapComponentSupplier
-	instanceVariableNames: 'bootstrapLibraries'
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 BootstrapComponentSupplier guid: (GUID fromString: '{11c5f93b-73d3-4162-ab48-1423a3564c8b}')!
-BootstrapComponentSupplier comment: 'I have the responsibility to provide Bootstrap components. '!
+BootstrapComponentSupplier comment: 'I''m the abstract superclass of the Bootstrap components suppliers. '!
 !BootstrapComponentSupplier categoriesForClass!Willow-Bootstrap-Frontend! !
 !BootstrapComponentSupplier methodsFor!
 
 addStatementsTo: aJSScript toCloseDialogsIn: jQueryMatchingDialogContainer matching: dialogSupplier on: aCanvas	aJSScript << (dialogSupplier value: (jQueryMatchingDialogContainer children: 'div')) bootstrapModal hide!
 
-asynchronicButtonLabeled: aRenderable applying: aComponentCommand	^ AsynchronicButtonWebView labeled: aRenderable applying: [ :button | button addClass bootstrap button + aComponentCommand ]!
+asynchronicButtonLabeled: aRenderable applying: aComponentCommand	^ AsynchronicButtonWebView		labeled: aRenderable		applying: [ :button | button addClass bootstrapCommon button + aComponentCommand ]!
 
-asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand	^ self asynchronicLinkLabeled: aRenderable applying: [ :anchor :constants | (anchor setARIARoleTo: #button) + anchor addClass bootstrap button + aComponentCommand ]!
+asynchronicLinkActingAsButtonLabeled: aRenderable applying: aComponentCommand	^ self		asynchronicLinkLabeled: aRenderable		applying: [ :anchor :constants | 			( anchor setARIARoleTo: #button ) + anchor addClass bootstrapCommon button + aComponentCommand				+ ( anchor setAttribute: 'href' to: '#' )			]!
 
 asynchronicLinkLabeled: aRenderable applying: aComponentCommand	^ LinkWebView asynchronicLabeled: aRenderable applying: aComponentCommand!
 
-checkboxLabeled: aRenderable onModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent	^ BootstrapCheckboxWebView		labeled: aRenderable		onModel: anObjectToUseWhenOn		offModel: anObjectToUseWhenOff		applying: aCommandToComponent!
+dateFieldApplying: aComponentCommand	^ DateFieldWebView		applying: [ :field | 			field addClass bootstrapCommon formControl + ( field setMaximumLengthTo: 10 ) + aComponentCommand				+ BootstrapDatepickerCommand new + field beTextInput	"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."			]!
 
-checkboxUnlabeledOnModel: anObjectToUseWhenOn offModel: anObjectToUseWhenOff applying: aCommandToComponent	^ BootstrapCheckboxWebView		onModel: anObjectToUseWhenOn		offModel: anObjectToUseWhenOff		applying: aCommandToComponent!
-
-dateFieldApplying: aComponentCommand		"The datepicker plugin doesn't play nice with the HTML5 date input, so we use a text input instead."	^ DateFieldWebView applying: [ :field | field addClass bootstrap formControl + (field setMaximumLengthTo: 10) + aComponentCommand + BootstrapDatepickerCommand new + field beTextInput ]!
-
-decimalNumberFieldApplying: aComponentCommand	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand ] transformingWith: FloatCodec new!
+decimalNumberFieldApplying: aComponentCommand	^ NumberFieldWebView		applying: [ :field | 			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight				+ aComponentCommand			]		transformingWith: FloatCodec new!
 
 dialogBuilder	^ BootstrapModalBuilder new!
 
-dropdownListApplying: aComponentCommand	^ DropDownListWebView applying: [ :field | field addClass bootstrap formControl + aComponentCommand + BootstrapSelectCommand new ]!
+dropdownListApplying: aComponentCommand	^ DropDownListWebView		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand + BootstrapSelectCommand new ]!
 
-dropdownMenuBuilder	^ BootstrapDropdownMenuBuilder using: self!
+fieldAddonBuilder	"A Field addon builder allows to extend fields by adding text, buttons or button groups on either side of the field"	^ self subclassResponsibility!
 
 fieldSetContaining: aWebView applying: fieldSetCommand withLegend: aTitle applying: legendCommand	^ FieldSetWebView		containing: aWebView		applying: fieldSetCommand		withLegend: aTitle		applying: legendCommand!
 
-gridBuilder	^ BootstrapGridBuilder new!
+gridBuilder	self subclassResponsibility!
 
-initializeUsing: aLibraryCollection	bootstrapLibraries := aLibraryCollection!
+helpTextBoundTo: aFieldWebView describedBy: aHelpText	^ self subclassResponsibility!
 
-inputGroupAddOnWrapping: aRenderable	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupAddon ]!
+labeledFieldApplying: aCommandToContainer displaying: thePhrasingContent applying: aCommandToLabel boundTo: aFieldWebView applying: aCommandToField	^ self subclassResponsibility!
 
-inputGroupButtonWrapping: aRenderable	^ PhrasingContainerWebView wrapping: aRenderable applying: [ :container | container addClass bootstrap inputGroupButton ]!
+multiLineTextFieldApplying: aComponentCommand	^ TextFieldWebView		multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]!
 
-multiLineTextFieldApplying: aComponentCommand	^ TextFieldWebView multiLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]!
+multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand	^ MultipleSelectionListBoxWebView		displayingAtOnce: aNumberOfElements		applying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]!
 
-multipleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand	^ MultipleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :field | field addClass bootstrap formControl + aComponentCommand ]!
+naturalNumberFieldApplying: aComponentCommand	^ NumberFieldWebView		applying: [ :field | 			field addClass bootstrapCommon formControl + field addClass bootstrapCommon textRight + aComponentCommand				+ field boundNotNegative			]		transformingWith: NaturalNumberCodec new!
 
-naturalNumberFieldApplying: aComponentCommand	^ NumberFieldWebView applying: [ :field | field addClass bootstrap formControl + field addClass bootstrap textRight + aComponentCommand + field boundNotNegative ] transformingWith: NaturalNumberCodec new!
+navigationDropdownMenuBuilder	^ self subclassResponsibility!
 
 notificationBuilder 	^BootstrapNotificationBuilder new!
 
-panelBuilder	^ BootstrapPanelBuilder new!
+panelBuilder	^ self subclassResponsibility!
 
-pillsBuilder		^BootstrapToggablePillsBuilder new!
+pillsBuilder	^ self subclassResponsibility!
 
-radioRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand	^BootstrapRadioWebView 		renderingWith: aRenderingBlock 		applyingToLabel: aLabelCommand		applyingToInput: anInputCommand!
+singleButtonDropdownBuilder	^ self subclassResponsibility!
 
-singleButtonDropdownBuilder	^ BootstrapSingleButtonDropdownBuilder using: self!
+singleLineTextFieldApplying: aComponentCommand	^ TextFieldWebView		singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrapCommon formControl + aComponentCommand ]!
 
-singleLineTextFieldApplying: aComponentCommand	^ TextFieldWebView singleLineTriggeringOnChangeApplying: [ :field | field addClass bootstrap formControl + aComponentCommand ]!
+singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand	^ SingleSelectionListBoxWebView		displayingAtOnce: aNumberOfElements		applying: [ :listBox | listBox addClass bootstrapCommon formControl + aComponentCommand ]!
 
-singleSelectionListBoxDisplayingAtOnce: aNumberOfElements applying: aComponentCommand	^ SingleSelectionListBoxWebView displayingAtOnce: aNumberOfElements applying: [ :listBox | listBox addClass bootstrap formControl + aComponentCommand ]!
+splitButtonDropdownBuilder	^ self subclassResponsibility!
 
-splitButtonDropdownBuilder	^ BootstrapSplitButtonDropdownBuilder using: self!
+synchronicButtonLabeled: aRenderable applying: aComponentCommand evaluating: anActionBlock	^ SynchronicSubmitButtonWebView		labeled: aRenderable		applying: [ :field | field addClass bootstrapCommon button + aComponentCommand ]		evaluating: anActionBlock!
 
-synchronicButtonLabeled: aRenderable applying: aComponentCommand evaluating: anActionBlock	^ SynchronicSubmitButtonWebView		labeled: aRenderable		applying: [ :field | field addClass bootstrap button + aComponentCommand ]		evaluating: anActionBlock!
+tableBuilder	^ TableWebViewBuilder new		apply: [ :table | table addClass bootstrapCommon table ];		yourself!
 
-tableBuilder	^ TableWebViewBuilder new		apply: [ :table | table addClass bootstrap table ];		yourself!
+tabsBuilder	^ self subclassResponsibility!
 
-tabsBuilder	^ BootstrapToggableTabsBuilder new!
+unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem	^ UnorderedListWebView		applying: [ :list | list addClass bootstrapCommon listGroup + aCommandToList ]		listing: aCollection		applyingToEach: [ :listItem | listItem addClass bootstrapCommon listGroupItem + aCommandToItem ]!
 
-unorderedListApplying: aCommandToList listing: aCollection applyingToEach: aCommandToItem	^ UnorderedListWebView		applying: [ :list | list addClass bootstrap listGroup + aCommandToList ]		listing: aCollection		applyingToEach: [ :listItem | listItem addClass bootstrap listGroupItem + aCommandToItem ]!
-
-updateRoot: aRoot	aRoot beHtml5.	aRoot meta		responseHeaderName: 'X-UA-Compatible';		content: 'IE=edge'.	aRoot meta		name: 'viewport';		content: 'width=device-width, initial-scale=1.0'.	bootstrapLibraries do: [ :library | library updateRoot: aRoot ].	WillowBootstrapFileMetadataLibrary default updateRoot: aRoot! !
+updateRoot: aRoot	aRoot beHtml5! !
 !BootstrapComponentSupplier categoriesFor: #addStatementsTo:toCloseDialogsIn:matching:on:!Interaction!public! !
 !BootstrapComponentSupplier categoriesFor: #asynchronicButtonLabeled:applying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #asynchronicLinkActingAsButtonLabeled:applying:!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #asynchronicLinkLabeled:applying:!public!Supplying! !
-!BootstrapComponentSupplier categoriesFor: #checkboxLabeled:onModel:offModel:applying:!public!Supplying! !
-!BootstrapComponentSupplier categoriesFor: #checkboxUnlabeledOnModel:offModel:applying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #dateFieldApplying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #decimalNumberFieldApplying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #dialogBuilder!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #dropdownListApplying:!public!Supplying! !
-!BootstrapComponentSupplier categoriesFor: #dropdownMenuBuilder!public!Supplying! !
+!BootstrapComponentSupplier categoriesFor: #fieldAddonBuilder!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #fieldSetContaining:applying:withLegend:applying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #gridBuilder!public!Supplying / Non Portable! !
-!BootstrapComponentSupplier categoriesFor: #initializeUsing:!initialization!public! !
-!BootstrapComponentSupplier categoriesFor: #inputGroupAddOnWrapping:!public!Supplying / Non Portable! !
-!BootstrapComponentSupplier categoriesFor: #inputGroupButtonWrapping:!public!Supplying / Non Portable! !
+!BootstrapComponentSupplier categoriesFor: #helpTextBoundTo:describedBy:!public!Supplying / Non Portable! !
+!BootstrapComponentSupplier categoriesFor: #labeledFieldApplying:displaying:applying:boundTo:applying:!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #multiLineTextFieldApplying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #multipleSelectionListBoxDisplayingAtOnce:applying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #naturalNumberFieldApplying:!public!Supplying! !
+!BootstrapComponentSupplier categoriesFor: #navigationDropdownMenuBuilder!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #notificationBuilder!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #panelBuilder!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #pillsBuilder!public!Supplying / Non Portable! !
-!BootstrapComponentSupplier categoriesFor: #radioRenderingWith:applyingToLabel:applyingToInput:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #singleButtonDropdownBuilder!public!Supplying / Non Portable! !
 !BootstrapComponentSupplier categoriesFor: #singleLineTextFieldApplying:!public!Supplying! !
 !BootstrapComponentSupplier categoriesFor: #singleSelectionListBoxDisplayingAtOnce:applying:!public!Supplying! !
@@ -108,12 +99,6 @@ updateRoot: aRoot	aRoot beHtml5.	aRoot meta		responseHeaderName: 'X-UA-Compa
 
 !BootstrapComponentSupplier class methodsFor!
 
-online	^ self		usingLibraries:			{Bootstrap3OnlineLibrary default.			BootstrapSelectOnlineLibrary default.			BootstrapDatepickerOnlineLibrary default.			BootstrapTypeaheadOnlineLibrary default}!
-
-usingLibraries: aLibraryCollection	^ self new initializeUsing: aLibraryCollection!
-
-withBootstrapLibrary: aBootstrapLibrary selectLibrary: aBootstrapSelectLibrary datepickerLibrary: aDatePickerLibrary typeaheadLibrary: aTypeaheadLibrary	^ self		usingLibraries:			{aBootstrapLibrary.			aBootstrapSelectLibrary.			aDatePickerLibrary.			aTypeaheadLibrary}! !
-!BootstrapComponentSupplier class categoriesFor: #online!Instance Creation!public! !
-!BootstrapComponentSupplier class categoriesFor: #usingLibraries:!private / Instance Creation!public! !
-!BootstrapComponentSupplier class categoriesFor: #withBootstrapLibrary:selectLibrary:datepickerLibrary:typeaheadLibrary:!Instance Creation!public! !
+isAbstract	^ self name = #BootstrapComponentSupplier! !
+!BootstrapComponentSupplier class categoriesFor: #isAbstract!public!testing! !
 

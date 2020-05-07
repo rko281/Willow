@@ -7,7 +7,7 @@ WAPainter subclass: #LinkWebView
 	classInstanceVariableNames: ''!
 LinkWebView guid: (GUID fromString: '{d5f0dcbd-cb70-42aa-b99a-97fde90c05d4}')!
 LinkWebView comment: 'I''m an anchor acting as a push button, capable of triggering actions by AJAX'!
-!LinkWebView categoriesForClass!Willow-WebViews! !
+!LinkWebView categoriesForClass!Willow-Core-WebViews! !
 !LinkWebView methodsFor!
 
 initializeLabeled: aLabel applying: aComponentCommand	label := aLabel.	commandToComponent := aComponentCommand.	interactionInterpreter := WebInteractionInterpreter forClickOnComponent!

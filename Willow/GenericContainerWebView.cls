@@ -7,7 +7,7 @@ WAPainter subclass: #GenericContainerWebView
 	classInstanceVariableNames: ''!
 GenericContainerWebView guid: (GUID fromString: '{989a8858-ef82-462e-ae25-c62c64d03827}')!
 GenericContainerWebView comment: 'I''m a generic container suitable for all the non-phrasing content'!
-!GenericContainerWebView categoriesForClass!Willow-WebViews! !
+!GenericContainerWebView categoriesForClass!Willow-Core-WebViews! !
 !GenericContainerWebView methodsFor!
 
 initializeObtainingContentFrom: aContentProvider applying: aComponentCommand	contentProvider := aContentProvider.	commandToComponent := aComponentCommand.	interactionInterpreter := WebInteractionInterpreter forClickOnComponent !

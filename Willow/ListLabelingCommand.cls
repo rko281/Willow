@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ListLabelingCommand
 	classInstanceVariableNames: ''!
 ListLabelingCommand guid: (GUID fromString: '{8a15d295-e09b-4de5-84bb-e14d6889aff1}')!
 ListLabelingCommand comment: 'Command to configure how to render elements in a list'!
-!ListLabelingCommand categoriesForClass!Willow-Frontend! !
+!ListLabelingCommand categoriesForClass!Willow-Core-Frontend! !
 !ListLabelingCommand methodsFor!
 
 applyTo: aListComponent on: aCanvas	aListComponent labels: renderingBlock !

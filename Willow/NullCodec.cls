@@ -7,7 +7,7 @@ Codec subclass: #NullCodec
 	classInstanceVariableNames: ''!
 NullCodec guid: (GUID fromString: '{016fb564-8b38-454b-b5cf-894c66717867}')!
 NullCodec comment: 'I''m a null encoder/decoder'!
-!NullCodec categoriesForClass!Willow-Frontend! !
+!NullCodec categoriesForClass!Willow-Core-Frontend! !
 !NullCodec methodsFor!
 
 canCreate: anObject	^anObject isString!

@@ -7,7 +7,7 @@ CssObject subclass: #CssObjectList
 	classInstanceVariableNames: ''!
 CssObjectList guid: (GUID fromString: '{0c853193-c833-4d02-aa90-7241d340de16}')!
 CssObjectList comment: 'I represent a list of css objects'!
-!CssObjectList categoriesForClass!RenoirSt-Common! !
+!CssObjectList categoriesForClass!RenoirSt-Core-Common! !
 !CssObjectList methodsFor!
 
 cssContentOn: aStream	components		do: [ :shadow | shadow cssContentOn: aStream ]		separatedBy: [ aStream				nextPut: $,;				space ]!

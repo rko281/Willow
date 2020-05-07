@@ -7,7 +7,7 @@ CssSelector subclass: #CssIdSelector
 	classInstanceVariableNames: ''!
 CssIdSelector guid: (GUID fromString: '{7a3466a1-855b-4a30-8d4d-55fbcebc0039}')!
 CssIdSelector comment: 'Document languages may contain attributes that are declared to be of type ID. What makes attributes of type ID special is that no two such attributes can have the same value in a conformant document, regardless of the type of the elements that carry them; whatever the document language, an ID typed attribute can be used to uniquely identify its element. In HTML all ID attributes are named "id"; XML applications may name ID attributes differently, but the same restriction applies.An ID-typed attribute of a document language allows authors to assign an identifier to one element instance in the document tree. An ID selector contains a "number sign" (U+0023, #) immediately followed by the ID value, which must be an CSS identifiers. An ID selector represents an element instance that has an identifier that matches the identifier in the ID selector.'!
-!CssIdSelector categoriesForClass!RenoirSt-Selectors! !
+!CssIdSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssIdSelector methodsFor!
 
 cssContentOn: aStream	selector cssContentOn: aStream.	aStream		nextPut: $#;		nextPutAll: id asString!

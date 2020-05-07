@@ -1,0 +1,258 @@
+﻿| package |
+package := Package name: 'Willow-Bootstrap-3-Tests'.
+package paxVersion: 1;
+	basicComment: 'Willow for Dolphin Smalltalk 7.1
+
+Willow is a Web Interaction Library that eases the burden of creating AJAX-based web applications.
+
+Willow and associated frameworks created by Buenos Aires Smalltalk
+https://github.com/ba-st
+
+Dolphin Smalltalk port by John Aspinall, May 2020.
+
+Willow v13.0.0
+Willow Bootstrap v12.0.0
+Willow Spinkit v8.0.0
+RenoirSt v7.0.0
+Boardwalk v5.0.0
+Buoy v5.0.0'.
+
+
+package classNames
+	add: #Bootstrap3CheckboxWebViewTest;
+	add: #Bootstrap3ComponentSupplierTest;
+	add: #Bootstrap3ConstantsTest;
+	add: #Bootstrap3DatePickerWebViewTest;
+	add: #Bootstrap3DeploymentMetadataLibraryTest;
+	add: #Bootstrap3DevelopmentMetadataLibraryTest;
+	add: #Bootstrap3DialogClosingCommandTest;
+	add: #Bootstrap3FieldAddonBuilderTest;
+	add: #Bootstrap3GridBuilderTest;
+	add: #Bootstrap3HamburgerButtonTest;
+	add: #Bootstrap3IconWebViewTest;
+	add: #Bootstrap3LabeledWebViewTest;
+	add: #Bootstrap3MetadataLibraryTest;
+	add: #Bootstrap3ModalBuilderTest;
+	add: #Bootstrap3NavigationBarTest;
+	add: #Bootstrap3NavigationDropdownMenuBuilderTest;
+	add: #Bootstrap3OnlineLibraryTest;
+	add: #Bootstrap3PanelBuilderTest;
+	add: #Bootstrap3RadioWebViewTest;
+	add: #Bootstrap3SingleButtonDropdownBuilderTest;
+	add: #Bootstrap3SplitButtonDropdownBuilderTest;
+	add: #Bootstrap3ToggablePillsBuilderTest;
+	add: #Bootstrap3ToggableTabsBuilderTest;
+	add: #Bootstrap3ViewportConfigurationTest;
+	add: #WillowBootstrap3ApplicationTest;
+	add: #WillowBootstrap3ExtensionsTest;
+	add: #WillowBootstrap3FileMetadataLibraryTest;
+	yourself.
+
+package methodNames
+	add: #BootstrapModalHeaderWebViewTest -> #testRenderContentOnWithComplexTitle;
+	add: #BootstrapPopoverTest -> #testDestroy;
+	add: #BootstrapPopoverTest -> #testTemplateForBootstrap3;
+	add: #BootstrapPopoverTest -> #testViewport;
+	add: #BootstrapPopoverTest -> #testViewportWithPadding;
+	add: #BootstrapTooltipTest -> #testTemplateForBootstrap3;
+	add: #BootstrapTooltipTest -> #testViewport;
+	add: #BootstrapTooltipTest -> #testViewportWithPadding;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Boardwalk-SUnit'
+	'Buoy-Assertions'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'RenoirSt-Core'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit'
+	'Willow-Bootstrap'
+	'Willow-Bootstrap-3'
+	'Willow-Bootstrap-Tests'
+	'Willow-Core'
+	'Willow-Tests').
+
+package!
+
+"Class Definitions"!
+
+TestCase subclass: #Bootstrap3ConstantsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+TestCase subclass: #Bootstrap3MetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #Bootstrap3ViewportConfigurationTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3DatePickerWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3DeploymentMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3DevelopmentMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3FieldAddonBuilderTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3GridBuilderTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3HamburgerButtonTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3IconWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3LabeledWebViewTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3NavigationBarTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3NavigationDropdownMenuBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3OnlineLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3PanelBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3SingleButtonDropdownBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3SplitButtonDropdownBuilderTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3ToggablePillsBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #Bootstrap3ToggableTabsBuilderTest
+	instanceVariableNames: 'supplier'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WillowBootstrap3ExtensionsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: 'Willow'
+	classInstanceVariableNames: ''!
+BWRenderingTest subclass: #WillowBootstrap3FileMetadataLibraryTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BinaryChoiceWebViewTest subclass: #Bootstrap3CheckboxWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapComponentSupplierTest subclass: #Bootstrap3ComponentSupplierTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapDialogClosingCommandTest subclass: #Bootstrap3DialogClosingCommandTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BootstrapModalBuilderTest subclass: #Bootstrap3ModalBuilderTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SingleSelectionWebViewTest subclass: #Bootstrap3RadioWebViewTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WillowBootstrapApplicationTest subclass: #WillowBootstrap3ApplicationTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BootstrapModalHeaderWebViewTest methodsFor!
+
+testRenderContentOnWithComplexTitle	| header html |	header := BootstrapModalHeaderWebView		titled: [ :canvas | 			canvas				render: (Bootstrap3IconWebView representing: Glyphicons menuUp);				render: 'Up!!' ].	html := self render: header.	self		assert: html		equals: '<div class="modal-header"><h4 class="modal-title"><span class="glyphicon glyphicon-menu-up"></span>Up!!</h4></div>'! !
+!BootstrapModalHeaderWebViewTest categoriesFor: #testRenderContentOnWithComplexTitle!*Willow/Bootstrap/3/Tests!public! !
+
+!BootstrapPopoverTest methodsFor!
+
+testDestroy	| html |	html := self renderPopoverContentApplying: [ :popover | popover destroy ].	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover("destroy");</script>'!
+
+testTemplateForBootstrap3	| html |	html := self		renderUsing: [ :canvas | 			| div popover |			div := canvas div.			popover := canvas jQuery new bootstrapPopover.			popover				template: [ :template | 					template div						with: [ template div apply: [ :container | container addClass bootstrapCommon arrow ].							template								render:									( HeadingWebView										displaying: ''										withLevel: 3										applying: [ :container | container addClass bootstrap3 popoverTitle ] ).							template div								with: ( Bootstrap3IconWebView representing: Glyphicons menuUp )								applying: [ :container | container addClass bootstrap3 popoverContent ]							]						applying:							[ :container :constants | container addClass bootstrapCommon popover + ( container setARIARoleTo: #tooltip ) ]					].			div script: popover			].	self		assert: html		equals:			'<div id="id1"></div><script type="text/javascript">$("#id1").popover({"template":"<div class=\"popover\" role=\"tooltip\"><div class=\"arrow\"></div><h3 class=\"popover-title\"></h3><div class=\"popover-content\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'!
+
+testViewport	| html |	html := self renderPopoverContentApplying: [ :popover | popover viewport: '#id1' ].	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":"#id1"});</script>'!
+
+testViewportWithPadding	| html |	html := self		renderPopoverContentApplying: [ :popover | popover viewport: (Bootstrap3ViewportConfiguration new selector: '#id1' padding: 5) ].	self		assert: html		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").popover({"viewport":{"selector":"#id1","padding":5}});</script>'! !
+!BootstrapPopoverTest categoriesFor: #testDestroy!*Willow/Bootstrap/3/Tests!public! !
+!BootstrapPopoverTest categoriesFor: #testTemplateForBootstrap3!*Willow/Bootstrap/3/Tests!public! !
+!BootstrapPopoverTest categoriesFor: #testViewport!*Willow/Bootstrap/3/Tests!public! !
+!BootstrapPopoverTest categoriesFor: #testViewportWithPadding!*Willow/Bootstrap/3/Tests!public! !
+
+!BootstrapTooltipTest methodsFor!
+
+testTemplateForBootstrap3	| html |	html := self		renderUsing: [ :canvas | 			| div tooltip |			div := canvas div.			tooltip := canvas jQuery new bootstrapTooltip.			tooltip				template: [ :template | 					template div						with: [ template div apply: [ :container | container addClass bootstrap3 tooltipArrow ].							template div								with: ( Bootstrap3IconWebView representing: Glyphicons menuUp )								applying: [ :container | container addClass bootstrap3 tooltipInner ]							]						applying:							[ :container :constants | container addClass bootstrap3 tooltip + ( container setARIARoleTo: #tooltip ) ]					].			div script: tooltip			].	self		assert: html		equals:			'<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"template":"<div class=\"tooltip\" role=\"tooltip\"><div class=\"tooltip-arrow\"></div><div class=\"tooltip-inner\"><span class=\"glyphicon glyphicon-menu-up\"></span></div></div>"});</script>'!
+
+testViewport	| html |	html := self renderTooltipContentApplying: [ :tooltip | tooltip viewport: '#id1' ].	self assert: html equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"viewport":"#id1"});</script>'!
+
+testViewportWithPadding	| html |	html := self		renderTooltipContentApplying: [ :tooltip | tooltip viewport: (Bootstrap3ViewportConfiguration new selector: '#id1' padding: 5) ].	self		assert: html		equals: '<div id="id1"></div><script type="text/javascript">$("#id1").tooltip({"viewport":{"selector":"#id1","padding":5}});</script>'! !
+!BootstrapTooltipTest categoriesFor: #testTemplateForBootstrap3!*Willow/Bootstrap/3/Tests!public! !
+!BootstrapTooltipTest categoriesFor: #testViewport!*Willow/Bootstrap/3/Tests!public! !
+!BootstrapTooltipTest categoriesFor: #testViewportWithPadding!*Willow/Bootstrap/3/Tests!public! !
+
+"End of package definition"!
+

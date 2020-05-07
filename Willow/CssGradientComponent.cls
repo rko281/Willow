@@ -7,7 +7,7 @@ CssObject subclass: #CssGradientComponent
 	classInstanceVariableNames: ''!
 CssGradientComponent guid: (GUID fromString: '{3cfabc13-6e77-4ae9-bb99-6da1df2dcdf1}')!
 CssGradientComponent comment: 'A CssGradientComponent represents a part of a gradient'!
-!CssGradientComponent categoriesForClass!RenoirSt-Colors! !
+!CssGradientComponent categoriesForClass!RenoirSt-Core-Colors! !
 !CssGradientComponent methodsFor!
 
 cssContentOn: aWriteStream		direction cssContentOn: aWriteStream.	aWriteStream		nextPut: $,;		space!

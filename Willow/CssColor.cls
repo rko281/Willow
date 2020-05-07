@@ -7,7 +7,7 @@ CssColorUnit subclass: #CssColor
 	classInstanceVariableNames: ''!
 CssColor guid: (GUID fromString: '{35ac1c63-b30c-403c-95eb-7f162dbde22b}')!
 CssColor comment: 'A CssColor is a color suitable for use in CSS'!
-!CssColor categoriesForClass!RenoirSt-Colors! !
+!CssColor categoriesForClass!RenoirSt-Core-Colors! !
 !CssColor methodsFor!
 
 componentsDo: aBlockClosure separatedBy: aSeparationBlock 		self subclassResponsibility !

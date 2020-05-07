@@ -10,7 +10,7 @@ BootstrapDismissButton comment: 'I''m a dismiss button able to dismiss modals or
 !BootstrapDismissButton categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapDismissButton methodsFor!
 
-initializeDismissing: aContainerType	dismissButton := AsynchronicButtonWebView		labeled: (PhrasingContainerWebView wrapping: '×' applying: [ :span | span setARIAAttribute: 'hidden' to: 'true' ])		applying: [ :button :constants | button addClass bootstrap close + (button setData: constants >> #bootstrap >> #dismiss to: aContainerType) + (button setARIAAttribute: 'label' to: 'Close') ]!
+initializeDismissing: aContainerType	dismissButton := AsynchronicButtonWebView		labeled:			( PhrasingContainerWebView				wrapping: '×'				applying: [ :span | span setARIAAttribute: 'hidden' to: 'true' ] )		applying: [ :button :constants | 			button addClass bootstrapCommon close				+ ( button setData: constants >> #bootstrap >> #dismiss to: aContainerType )				+ ( button setARIAAttribute: 'label' to: 'Close' )			]!
 
 onTrigger	^ dismissButton onTrigger!
 

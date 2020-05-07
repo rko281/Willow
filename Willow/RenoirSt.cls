@@ -7,7 +7,7 @@ SharedPool subclass: #RenoirSt
 	classInstanceVariableNames: ''!
 RenoirSt guid: (GUID fromString: '{b963393f-5ab4-4562-8552-0dca8dafc051}')!
 RenoirSt comment: 'RenoirSt class	instanceVariableNames: '''''!
-!RenoirSt categoriesForClass!RenoirSt-Common! !
+!RenoirSt categoriesForClass!RenoirSt-Core-Common! !
 !RenoirSt class methodsFor!
 
 constants	^ CssConstants!

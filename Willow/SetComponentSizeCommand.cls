@@ -7,7 +7,7 @@ WebComponentCommand subclass: #SetComponentSizeCommand
 	classInstanceVariableNames: ''!
 SetComponentSizeCommand guid: (GUID fromString: '{a6e64bd9-d261-40c8-9dc4-c37c3eea9ac8}')!
 SetComponentSizeCommand comment: 'A command to set the size of a component, in combo boxes this implies the number of visible options.'!
-!SetComponentSizeCommand categoriesForClass!Willow-Frontend! !
+!SetComponentSizeCommand categoriesForClass!Willow-Core-Frontend! !
 !SetComponentSizeCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent size: size!

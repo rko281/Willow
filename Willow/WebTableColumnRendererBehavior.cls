@@ -7,7 +7,7 @@ Object subclass: #WebTableColumnRendererBehavior
 	classInstanceVariableNames: ''!
 WebTableColumnRendererBehavior guid: (GUID fromString: '{d7a93b22-22fe-4a1e-a565-a0cb7b624fd7}')!
 WebTableColumnRendererBehavior comment: 'I''m an abstract class defining the required behavior for rendering columns in a table'!
-!WebTableColumnRendererBehavior categoriesForClass!Willow-WebViews! !
+!WebTableColumnRendererBehavior categoriesForClass!Willow-Core-WebViews! !
 !WebTableColumnRendererBehavior methodsFor!
 
 renderCellAt: anIndex for: anItem on: aCanvas	self subclassResponsibility!

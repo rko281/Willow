@@ -7,7 +7,7 @@ WAPainter subclass: #AsynchronicButtonWebView
 	classInstanceVariableNames: ''!
 AsynchronicButtonWebView guid: (GUID fromString: '{2bb99a83-cafe-446b-9f46-d39ee21993a4}')!
 AsynchronicButtonWebView comment: 'I''m a push button used to trigger actions using AJAX'!
-!AsynchronicButtonWebView categoriesForClass!Willow-WebViews! !
+!AsynchronicButtonWebView categoriesForClass!Willow-Core-WebViews! !
 !AsynchronicButtonWebView methodsFor!
 
 identifier	^ identifierAssigner assignedIdentifier!

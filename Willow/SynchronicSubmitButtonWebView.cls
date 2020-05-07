@@ -7,7 +7,7 @@ WAPainter subclass: #SynchronicSubmitButtonWebView
 	classInstanceVariableNames: ''!
 SynchronicSubmitButtonWebView guid: (GUID fromString: '{b3f2175a-ea86-4e94-b5f0-d4dc1dfe57d3}')!
 SynchronicSubmitButtonWebView comment: 'I''m a submit button'!
-!SynchronicSubmitButtonWebView categoriesForClass!Willow-WebViews! !
+!SynchronicSubmitButtonWebView categoriesForClass!Willow-Core-WebViews! !
 !SynchronicSubmitButtonWebView methodsFor!
 
 identifier	^ identifierAssigner assignedIdentifier!

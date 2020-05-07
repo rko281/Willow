@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentClassificationCommand
 	classInstanceVariableNames: ''!
 ComponentClassificationCommand guid: (GUID fromString: '{303d76c1-d702-4b82-8879-c9e3c4f8a6a0}')!
 ComponentClassificationCommand comment: 'Command to add css styles to a component (using class:/classes:).'!
-!ComponentClassificationCommand categoriesForClass!Willow-Frontend! !
+!ComponentClassificationCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentClassificationCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	^ aComponent classes: cssStyles!

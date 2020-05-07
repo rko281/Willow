@@ -7,7 +7,7 @@ CssObject subclass: #CssMediaQueryRule
 	classInstanceVariableNames: ''!
 CssMediaQueryRule guid: (GUID fromString: '{93b8a280-9fa4-4bfd-ab97-716cad2f5e76}')!
 CssMediaQueryRule comment: 'A media query is a logical expression that is either true or false. A media query is true if the media type of the media query matches the media type of the device where the user agent is running (as defined in the "Applies to" line), and all expressions in the media query are true.'!
-!CssMediaQueryRule categoriesForClass!RenoirSt-MediaQueries! !
+!CssMediaQueryRule categoriesForClass!RenoirSt-Core-MediaQueries! !
 !CssMediaQueryRule methodsFor!
 
 cssContentOn: aStream	aStream		nextPutAll: '@media';		space.	mediaType cssContentOn: aStream.	self cssExpressionsContentOn: aStream.	aStream		newLine;		nextPut: ${.	self cssStatementsContentOn: aStream.	aStream newLine.	aStream nextPut: $}!

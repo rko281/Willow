@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ConditionalComponentCommand
 	classInstanceVariableNames: ''!
 ConditionalComponentCommand guid: (GUID fromString: '{20fdbb6b-7f42-4550-a426-7af71a2f95c5}')!
 ConditionalComponentCommand comment: 'A command applying another command only if the condition is satisfied.'!
-!ConditionalComponentCommand categoriesForClass!Willow-Frontend! !
+!ConditionalComponentCommand categoriesForClass!Willow-Core-Frontend! !
 !ConditionalComponentCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	( conditionBlock cull: aComponent ) then: [ command applyTo: aComponent on: aCanvas ]!

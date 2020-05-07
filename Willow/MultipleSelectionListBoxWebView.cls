@@ -7,7 +7,7 @@ WAPainter subclass: #MultipleSelectionListBoxWebView
 	classInstanceVariableNames: ''!
 MultipleSelectionListBoxWebView guid: (GUID fromString: '{fd967849-b684-465c-aee6-9c6c05e7d523}')!
 MultipleSelectionListBoxWebView comment: 'I''m a list box, that allows the user to select one or more items from a list contained within a static, multiple line text box. The user clicks inside the box on an item to select it.'!
-!MultipleSelectionListBoxWebView categoriesForClass!Willow-WebViews! !
+!MultipleSelectionListBoxWebView categoriesForClass!Willow-Core-WebViews! !
 !MultipleSelectionListBoxWebView methodsFor!
 
 allowAnyOf: anElementCollection	availableElements := anElementCollection.	self chooseAllIn: chosenElements!

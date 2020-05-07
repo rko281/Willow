@@ -1,7 +1,7 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
 SingleSelectionWebViewBehavior subclass: #BootstrapRadioWebView
-	instanceVariableNames: 'interactionInterpreter renderingBlock identifierAssigner labelCommand inputCommand'
+	instanceVariableNames: 'interactionInterpreter renderingBlock labelCommand inputCommand'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -10,28 +10,25 @@ BootstrapRadioWebView comment: 'I''m a radio button group specifically designed 
 !BootstrapRadioWebView categoriesForClass!Willow-Bootstrap-WebViews! !
 !BootstrapRadioWebView methodsFor!
 
-identifyIn: aCanvas	^identifierAssigner identifyIn: aCanvas!
+initializeRenderingWith: aRenderingBlock applyingToLabel: aLabelCommand applyingToInput: anInputCommand	renderingBlock := aRenderingBlock.	labelCommand := aLabelCommand.	inputCommand := anInputCommand.	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue!
 
-initializeRenderingWith: aRenderingBlock	applyingToLabel: aLabelCommand	applyingToInput: anInputCommand	renderingBlock := aRenderingBlock.	labelCommand := aLabelCommand.	inputCommand := anInputCommand.	interactionInterpreter := WebInteractionInterpreter forChangeInComponentValue.	identifierAssigner := IdentifierAssigner prefixedBy: 'radio-button'!
+inputCommand	^ inputCommand!
 
 onTrigger	^ interactionInterpreter!
 
 renderContentOn: aCanvas	aCanvas radioGroup		callback: [ :element | self choose: element ];		with: [ :radioGroup | 			chosenElementOptional withContentDo: [ :chosenElement | radioGroup selected: chosenElement ].			availableElements do: [ :element | self renderRadioButtonFor: element asPartOf: radioGroup on: aCanvas ] ]!
 
-renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas	| radioButton |	radioButton := aRadioGroup radioButton.	identifierAssigner withAssignedIdentifierDo: [ :id | radioButton id: id ].	radioButton		apply: inputCommand;		interactUsing: interactionInterpreter;		value: anElement.	self renderLabelContentFor: anElement on: aCanvas!
+renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas	| radioButton radioButtonId |	radioButtonId := ( IdentifierAssigner prefixedBy: 'radio-button' ) identifyIn: aCanvas.	radioButton := aRadioGroup radioButton.	radioButton		id: radioButtonId;		apply: self inputCommand;		interactUsing: interactionInterpreter;		value: anElement.	^ radioButton!
 
 renderLabelContentFor: anElement on: aCanvas	aCanvas render: (renderingBlock value: anElement)!
 
-renderLabelOn: aCanvas with: aRenderable	aCanvas label with: aRenderable applying: labelCommand!
-
-renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas 			 self renderLabelOn: aCanvas			with: [ self renderInputFor: anElement asPartOf: aRadioGroup on: aCanvas ] ! !
-!BootstrapRadioWebView categoriesFor: #identifyIn:!configuring!public! !
+renderRadioButtonFor: anElement asPartOf: aRadioGroup on: aCanvas	self subclassResponsibility! !
 !BootstrapRadioWebView categoriesFor: #initializeRenderingWith:applyingToLabel:applyingToInput:!initialization!public! !
+!BootstrapRadioWebView categoriesFor: #inputCommand!private / accessing!public! !
 !BootstrapRadioWebView categoriesFor: #onTrigger!configuring!public! !
 !BootstrapRadioWebView categoriesFor: #renderContentOn:!public!rendering! !
 !BootstrapRadioWebView categoriesFor: #renderInputFor:asPartOf:on:!private/rendering!public! !
 !BootstrapRadioWebView categoriesFor: #renderLabelContentFor:on:!private/rendering!public! !
-!BootstrapRadioWebView categoriesFor: #renderLabelOn:with:!private/rendering!public! !
 !BootstrapRadioWebView categoriesFor: #renderRadioButtonFor:asPartOf:on:!private/rendering!public! !
 
 !BootstrapRadioWebView class methodsFor!

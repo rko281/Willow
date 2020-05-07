@@ -25,7 +25,7 @@ libraryName	^ 'bootstrap-select'!
 
 using: aWALocale	^ self new initializeUsing: aWALocale!
 
-version	^'1.12.4'! !
+version	^'1.13.16'! !
 !BootstrapSelectLibrary class categoriesFor: #default!instance creation!public! !
 !BootstrapSelectLibrary class categoriesFor: #forDeployment!Accessing!public! !
 !BootstrapSelectLibrary class categoriesFor: #forDevelopment!Accessing!public! !

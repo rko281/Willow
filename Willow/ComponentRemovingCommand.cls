@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ComponentRemovingCommand
 	classInstanceVariableNames: ''!
 ComponentRemovingCommand guid: (GUID fromString: '{7b6b3def-4a9b-4023-8972-02737eb9d5e2}')!
 ComponentRemovingCommand comment: 'I''m a WebInteractionCommand allowing to remove a component'!
-!ComponentRemovingCommand categoriesForClass!Willow-WebInteraction! !
+!ComponentRemovingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ComponentRemovingCommand methodsFor!
 
 clientIndependentActions	^#()!

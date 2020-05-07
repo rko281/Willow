@@ -7,7 +7,7 @@ WAPainter subclass: #UnorderedListWebView
 	classInstanceVariableNames: ''!
 UnorderedListWebView guid: (GUID fromString: '{f322af3e-974e-4505-ab7b-1b5689d6920d}')!
 UnorderedListWebView comment: 'I represent an unordered list supporting command application.'!
-!UnorderedListWebView categoriesForClass!Willow-WebViews! !
+!UnorderedListWebView categoriesForClass!Willow-Core-WebViews! !
 !UnorderedListWebView methodsFor!
 
 identifier	^ identifierAssigner assignedIdentifier!

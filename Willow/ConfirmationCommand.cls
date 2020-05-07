@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #ConfirmationCommand
 	classInstanceVariableNames: ''!
 ConfirmationCommand guid: (GUID fromString: '{73d8d864-2106-454f-b2de-bfa0d92402c0}')!
 ConfirmationCommand comment: 'I''m a WebInteractionCommand used to ask the user for confirmation before proceeding.'!
-!ConfirmationCommand categoriesForClass!Willow-WebInteraction! !
+!ConfirmationCommand categoriesForClass!Willow-Core-WebInteraction! !
 !ConfirmationCommand methodsFor!
 
 clientIndependentActions	^#()!

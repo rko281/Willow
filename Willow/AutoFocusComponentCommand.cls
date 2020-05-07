@@ -7,7 +7,7 @@ WebComponentCommand subclass: #AutoFocusComponentCommand
 	classInstanceVariableNames: ''!
 AutoFocusComponentCommand guid: (GUID fromString: '{c1f0f92b-4b34-4241-b767-958adfd78214}')!
 AutoFocusComponentCommand comment: 'Command to force autofocus on rendering of a component.'!
-!AutoFocusComponentCommand categoriesForClass!Willow-Frontend! !
+!AutoFocusComponentCommand categoriesForClass!Willow-Core-Frontend! !
 !AutoFocusComponentCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent autofocus! !

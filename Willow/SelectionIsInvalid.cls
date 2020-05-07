@@ -7,7 +7,7 @@ Error subclass: #SelectionIsInvalid
 	classInstanceVariableNames: ''!
 SelectionIsInvalid guid: (GUID fromString: '{d771a94f-7f62-4b71-9d55-4c4ae5f49770}')!
 SelectionIsInvalid comment: 'SelectionIsInvalid class	instanceVariableNames: '''''!
-!SelectionIsInvalid categoriesForClass!Willow-WebInteraction! !
+!SelectionIsInvalid categoriesForClass!Willow-Core-WebInteraction! !
 !SelectionIsInvalid class methodsFor!
 
 signal: aFailureExplanation	^ self signalAll: {aFailureExplanation}!

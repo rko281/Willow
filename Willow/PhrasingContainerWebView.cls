@@ -7,7 +7,7 @@ WAPainter subclass: #PhrasingContainerWebView
 	classInstanceVariableNames: ''!
 PhrasingContainerWebView guid: (GUID fromString: '{8c334f1d-fa4e-4ff1-9e83-84440bec1d53}')!
 PhrasingContainerWebView comment: 'I represent a generic container for phrasing content, which don''t inherently represent anything. I can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. I should be used only when no other semantic element is appropriate.'!
-!PhrasingContainerWebView categoriesForClass!Willow-WebViews! !
+!PhrasingContainerWebView categoriesForClass!Willow-Core-WebViews! !
 !PhrasingContainerWebView methodsFor!
 
 initializeObtainingContentFrom: aContentProvider applying: aComponentCommand	phrasingContentProvider := aContentProvider.	commandToComponent := aComponentCommand.	interactionInterpreter := WebInteractionInterpreter forClickOnComponent!

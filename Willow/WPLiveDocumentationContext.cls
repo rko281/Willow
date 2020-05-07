@@ -12,9 +12,7 @@ WPLiveDocumentationContext comment: 'I''m the application context. My intent is 
 
 availableBehaviors	^ (selectedPackageOptional withContentDo: [ :package | package definedClasses ] ifUnused: [ #() ]) sorted: [ :a :b | a name < b name ]!
 
-availablePackages
-
-	^ RPackageOrganizer default packages sorted: [ :a :b | a name < b name ]!
+availablePackages	^ RPackageOrganizer default packages sorted: [ :a :b | a name < b name ]!
 
 initialize	super initialize.	selectedPackageOptional := Optional unused.	selectedBehaviorOptional := Optional unused!
 

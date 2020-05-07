@@ -14,7 +14,7 @@ buildApplying: aComponentCommand	^ GenericContainerWebView wrapping: content a
 
 danger		alertCommand := BootstrapAlertCommand danger!
 
-dismissibleWrapping: aRenderable	| button |	button := BootstrapDismissButton dismissing: Constants >> #aria >> #alert.	content := [ :html | 	html		render: button;		render: aRenderable ].	dismissCommand := [ :container | container addClass bootstrap alertDismissible ]!
+dismissibleWrapping: aRenderable	| button |	button := BootstrapDismissButton dismissing: Constants >> #aria >> #alert.	content := [ :html | 	html		render: button;		render: aRenderable	].	dismissCommand := [ :container | container addClass bootstrapCommon alertDismissible ]!
 
 informational	alertCommand := BootstrapAlertCommand informational!
 

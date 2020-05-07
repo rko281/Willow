@@ -7,7 +7,7 @@ WillowComponentBuilder subclass: #TableWebViewBuilder
 	classInstanceVariableNames: ''!
 TableWebViewBuilder guid: (GUID fromString: '{32aa71ab-0d6e-4594-b0d2-818372f97bde}')!
 TableWebViewBuilder comment: 'I''m a builder of TableWebVIews'!
-!TableWebViewBuilder categoriesForClass!Willow-WebViews! !
+!TableWebViewBuilder categoriesForClass!Willow-Core-WebViews! !
 !TableWebViewBuilder methodsFor!
 
 addColumn: aMonadycBlock	| builder |	builder := WebTableColumnRendererBuilder on: self.	aMonadycBlock value: builder.	columnRenderers add: builder build!

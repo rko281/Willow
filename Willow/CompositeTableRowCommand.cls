@@ -7,7 +7,7 @@ TableRowCommand subclass: #CompositeTableRowCommand
 	classInstanceVariableNames: ''!
 CompositeTableRowCommand guid: (GUID fromString: '{e1d2d752-72f9-43ca-bfb5-1596292b0632}')!
 CompositeTableRowCommand comment: 'A row command collecting several sub commands to a component.'!
-!CompositeTableRowCommand categoriesForClass!Willow-Frontend! !
+!CompositeTableRowCommand categoriesForClass!Willow-Core-Frontend! !
 !CompositeTableRowCommand methodsFor!
 
 + aTableRowCommand	^self class applyingAll: (		OrderedCollection new 			addAll: commands;			add: aTableRowCommand;			yourself)!

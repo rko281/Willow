@@ -7,7 +7,7 @@ CssObject subclass: #CssAttributeMatchingCondition
 	classInstanceVariableNames: ''!
 CssAttributeMatchingCondition guid: (GUID fromString: '{de082b40-aefb-4cfe-9c46-2ed6d18d1aca}')!
 CssAttributeMatchingCondition comment: 'A CssAttributeMatchingOperation is a matching operation over the value of an attribute. Common examples are: = , += , ^=. See references for the whole list.'!
-!CssAttributeMatchingCondition categoriesForClass!RenoirSt-Selectors! !
+!CssAttributeMatchingCondition categoriesForClass!RenoirSt-Core-Selectors! !
 !CssAttributeMatchingCondition methodsFor!
 
 cssContentOn: aStream 		condition cssContentOn: aStream.	aStream nextPut: $".	attributeValue cssContentOn: aStream.	aStream nextPut: $"!

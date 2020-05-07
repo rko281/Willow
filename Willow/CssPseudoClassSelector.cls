@@ -7,7 +7,7 @@ CssSelector subclass: #CssPseudoClassSelector
 	classInstanceVariableNames: ''!
 CssPseudoClassSelector guid: (GUID fromString: '{3722f7e4-9fe5-44ee-8706-0b58989eb860}')!
 CssPseudoClassSelector comment: 'The pseudo-class concept is introduced to permit selection based on information that lies outside of the document tree or that cannot be expressed using the other simple selectors.A pseudo-class always consists of a "colon" (:) followed by the name of the pseudo-class and optionally by a value between parentheses.Pseudo-classes are allowed in all sequences of simple selectors contained in a selector. Pseudo-classes are allowed anywhere in sequences of simple selectors, after the leading type selector or universal selector (possibly omitted). Pseudo-class names are case-insensitive. Some pseudo-classes are mutually exclusive, while others can be applied simultaneously to the same element. Pseudo-classes may be dynamic, in the sense that an element may acquire or lose a pseudo-class while a user interacts with the document.'!
-!CssPseudoClassSelector categoriesForClass!RenoirSt-Selectors! !
+!CssPseudoClassSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssPseudoClassSelector methodsFor!
 
 cssContentOn: aStream	selector cssContentOn: aStream.	aStream		nextPut: $:;		nextPutAll: pseudoClassName.	arguments		do: [ :argument | 			aStream nextPut: $(.			argument cssContentOn: aStream.			aStream nextPut: $) ]!

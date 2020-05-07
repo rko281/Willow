@@ -7,7 +7,7 @@ WebComponentCommand subclass: #SetRowSpanCommand
 	classInstanceVariableNames: ''!
 SetRowSpanCommand guid: (GUID fromString: '{315e1738-a59d-4015-9e0b-165103f883fb}')!
 SetRowSpanCommand comment: 'A command to set the rowSpan of a table cell.'!
-!SetRowSpanCommand categoriesForClass!Willow-Frontend! !
+!SetRowSpanCommand categoriesForClass!Willow-Core-Frontend! !
 !SetRowSpanCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent rowSpan: rowSpan!

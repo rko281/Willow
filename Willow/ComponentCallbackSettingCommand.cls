@@ -7,7 +7,7 @@ WebComponentCommand subclass: #ComponentCallbackSettingCommand
 	classInstanceVariableNames: ''!
 ComponentCallbackSettingCommand guid: (GUID fromString: '{5992a4a2-466f-446c-a9ff-3fbc292c3e63}')!
 ComponentCallbackSettingCommand comment: 'Command to set the callback of a component'!
-!ComponentCallbackSettingCommand categoriesForClass!Willow-Frontend! !
+!ComponentCallbackSettingCommand categoriesForClass!Willow-Core-Frontend! !
 !ComponentCallbackSettingCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent callback: callback!

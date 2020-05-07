@@ -6,5 +6,5 @@ Error subclass: #ConflictingObjectFound
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 ConflictingObjectFound guid: (GUID fromString: '{ed4d4fcf-8d6a-4a23-9767-b956ecf427f8}')!
-ConflictingObjectFound comment: 'Error subclass: #InstanceCreationFailed	instanceVariableNames: ''''	classVariableNames: ''''	poolDictionaries: ''''	category: ''Buoy-Assertions'''!
+ConflictingObjectFound comment: 'Error subclass: #InstanceCreationFailed	instanceVariableNames: ''''	classVariableNames: ''''	package: ''Buoy-Assertions'''!
 !ConflictingObjectFound categoriesForClass!Buoy-Assertions! !

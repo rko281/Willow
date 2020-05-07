@@ -16,11 +16,11 @@ description	^ 'Some components provide additional features'!
 
 initialize	super initialize.	self initializeTable.	self initializePeriodical.!
 
-initializeDelayed	delayed := DelayedViewRenderer		showing: SpinKitCubeGrid new		whileEvaluating: [ self makeHeavyCalculations ]		thenRendering: [ :canvas | canvas 							render: periodical;							render: table ]!
+initializeDelayed	delayed := DelayedViewRenderer		showing: SpinKitGrid new		whileEvaluating: [ self makeHeavyCalculations ]		thenRendering: [ :canvas | canvas 							render: periodical;							render: table ]!
 
 initializePeriodical	periodical := PeriodicallyRenderedWebView		evaluating: [  ] every: 1000 millisecondsThenRendering:			[ :canvas | canvas				render: 'The time now is ';				strong: self currentTime ]		until: [ false ]!
 
-initializeTable	table := TableWebViewBuilder new	  addColumn: [:column | column titled: 'Decimal'; rendering: [ :number | number ]];	  addColumn: [:column | column titled: 'Hex'; rendering: [ :number | number printStringHex ]];	  addColumn: [:column | column titled: 'Roman'; rendering: [ :number | number printStringRoman ]];	  buildApplying: [ :theTable | theTable addClass bootstrap table ].	table changeContentsTo: #(26 51 78)!
+initializeTable	table := TableWebViewBuilder new	  addColumn: [:column | column titled: 'Decimal'; rendering: [ :number | number ]];	  addColumn: [:column | column titled: 'Hex'; rendering: [ :number | number printStringHex ]];	  addColumn: [:column | column titled: 'Roman'; rendering: [ :number | number printStringRoman ]];	  buildApplying: [ :theTable | theTable addClass bootstrap3 table ].	table changeContentsTo: #(26 51 78)!
 
 makeHeavyCalculations	^ (Delay forSeconds: 2) wait!
 

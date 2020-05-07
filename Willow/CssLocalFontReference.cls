@@ -7,7 +7,7 @@ CssFontReference subclass: #CssLocalFontReference
 	classInstanceVariableNames: ''!
 CssLocalFontReference guid: (GUID fromString: '{7a9cfee8-514e-4889-9a2f-121c02813b0c}')!
 CssLocalFontReference comment: 'I represent a local font reference'!
-!CssLocalFontReference categoriesForClass!RenoirSt-Fonts! !
+!CssLocalFontReference categoriesForClass!RenoirSt-Core-Fonts! !
 !CssLocalFontReference methodsFor!
 
 cssContentOn: aStream	aStream nextPutAll: 'local('.	fontName cssContentOn: aStream.	aStream nextPutAll: ')'!

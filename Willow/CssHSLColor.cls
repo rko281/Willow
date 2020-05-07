@@ -7,7 +7,7 @@ CssColor subclass: #CssHSLColor
 	classInstanceVariableNames: ''!
 CssHSLColor guid: (GUID fromString: '{e8892cec-d5f8-4e6f-8722-a51e077b5765}')!
 CssHSLColor comment: 'HSL colors are encoding as a triple (hue, saturation, lightness). Hue is represented as an angle of the color circle. Saturation and lightness are represented as percentages. 100% is full saturation, and 0% is a shade of gray. 0% lightness is black, 100% lightness is white, and 50% lightness is “normal”.'!
-!CssHSLColor categoriesForClass!RenoirSt-Colors! !
+!CssHSLColor categoriesForClass!RenoirSt-Core-Colors! !
 !CssHSLColor methodsFor!
 
 componentsDo: aBlockClosure separatedBy: aSeparationBlock	aBlockClosure value: hue.	aSeparationBlock value.	aBlockClosure value: saturation .	aSeparationBlock value.	aBlockClosure value: lightness .	alphaChannel componentsDo: aBlockClosure separatedBy: aSeparationBlock	!

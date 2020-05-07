@@ -1,7 +1,7 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
 GRPlatform subclass: #WAFileTestingPlatform
-	instanceVariableNames: 'platform createdFolders createdFiles hashByFile'
+	instanceVariableNames: 'platform createdFolders createdFiles hashByFile contentsByFileOptional'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -36,7 +36,7 @@ filesIn: aPathString	##(Pragma ignoreForCoverage).	^ platform filesIn: aPathS
 
 fileStreamOn: aString do: aBlock binary: aBoolean	##(Pragma ignoreForCoverage).	^ platform fileStreamOn: aString do: aBlock binary: aBoolean!
 
-initializeWrapping: aGRPlatform	platform := aGRPlatform.	createdFolders := GRSmallOrderedSet new.	createdFiles := SortedCollection new.	hashByFile := GRSmallDictionary new.!
+initializeWrapping: aGRPlatform	platform := aGRPlatform.	createdFolders := GRSmallOrderedSet new.	createdFiles := SortedCollection new.	hashByFile := GRSmallDictionary new.	contentsByFileOptional := Optional unused!
 
 isProcessTerminated: aProcess	##(Pragma ignoreForCoverage).	^ platform isProcessTerminated: aProcess!
 
@@ -56,11 +56,15 @@ readWriteByteStream	##(Pragma ignoreForCoverage).	^ platform readWriteByteStr
 
 readWriteCharacterStream	##(Pragma ignoreForCoverage).	^ platform readWriteCharacterStream!
 
+recordFileContents	contentsByFileOptional := Optional containing: Dictionary new!
+
 removeFromShutDownList: anObject	##(Pragma ignoreForCoverage).	^ platform removeFromShutDownList: anObject!
 
 removeFromStartUpList: anObject	##(Pragma ignoreForCoverage).	^ platform removeFromStartUpList: anObject!
 
 removeSelector: aSymbol from: aClass	##(Pragma ignoreForCoverage).	^ platform removeSelector: aSymbol from: aClass!
+
+savedContentsFor: aFilePath	^ contentsByFileOptional		withContentDo: [ :contentsByFile | 			contentsByFile				at: aFilePath				ifAbsent: [ TestResult resumableFailure						signal:							( 'File not found for <1s>. Please review the changes in the metadata library under test'								expandMacrosWith: aFilePath )					]			]		ifUnused: [ TestResult failure signal: 'File content recording was not activated. Send #recordFileContents' ]!
 
 savedHashFor: aFilePath	^ hashByFile at: aFilePath ifAbsent: [ TestResult resumableFailure signal: ('Hash not found for <1s>. Please review the changes in the metadata library under test' expandMacrosWith: aFilePath) ]!
 
@@ -74,7 +78,7 @@ terminateProcess: aProcess	##(Pragma ignoreForCoverage).	^ platform terminate
 
 weakDictionaryOfSize: aNumber	##(Pragma ignoreForCoverage).	^ platform weakDictionaryOfSize: aNumber!
 
-write: aStringOrByteArray toFile: aFileNameString inFolder: aFolderString	| filePathString |	filePathString := '<1s>/<2s>' expandMacrosWith: aFolderString with: aFileNameString.	createdFiles add: filePathString.	hashByFile at: filePathString put: (self secureHashFor: aStringOrByteArray) hex! !
+write: aStringOrByteArray toFile: aFileNameString inFolder: aFolderString	| filePathString |	filePathString := '<1s>/<2s>' expandMacrosWith: aFolderString with: aFileNameString.	createdFiles add: filePathString.	hashByFile at: filePathString put: ( self secureHashFor: aStringOrByteArray ) hex.	contentsByFileOptional		withContentDo: [ :contentsByFile | contentsByFile at: filePathString put: aStringOrByteArray ]! !
 !WAFileTestingPlatform categoriesFor: #addToShutDownList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #addToStartUpList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #asMethodReturningByteArray:named:!file library!public! !
@@ -98,9 +102,11 @@ write: aStringOrByteArray toFile: aFileNameString inFolder: aFolderString	| fi
 !WAFileTestingPlatform categoriesFor: #pathSeparator!file library!public! !
 !WAFileTestingPlatform categoriesFor: #readWriteByteStream!factory!public! !
 !WAFileTestingPlatform categoriesFor: #readWriteCharacterStream!factory!public! !
+!WAFileTestingPlatform categoriesFor: #recordFileContents!initialization!public! !
 !WAFileTestingPlatform categoriesFor: #removeFromShutDownList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #removeFromStartUpList:!public!startup! !
 !WAFileTestingPlatform categoriesFor: #removeSelector:from:!file library!public! !
+!WAFileTestingPlatform categoriesFor: #savedContentsFor:!accessing!public! !
 !WAFileTestingPlatform categoriesFor: #savedHashFor:!accessing!public! !
 !WAFileTestingPlatform categoriesFor: #secureHashFor:!cryptography!public! !
 !WAFileTestingPlatform categoriesFor: #semaphoreClass!factory!public! !

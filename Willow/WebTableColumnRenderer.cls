@@ -7,7 +7,7 @@ WebTableColumnRendererBehavior subclass: #WebTableColumnRenderer
 	classInstanceVariableNames: ''!
 WebTableColumnRenderer guid: (GUID fromString: '{e19097a0-b1a5-4a37-8f70-e8d4425db519}')!
 WebTableColumnRenderer comment: 'I''m responsible of rendering a column and header in a table.'!
-!WebTableColumnRenderer categoriesForClass!Willow-WebViews! !
+!WebTableColumnRenderer categoriesForClass!Willow-Core-WebViews! !
 !WebTableColumnRenderer methodsFor!
 
 initializeTitled: aTitle applyingToEachCell: aCommandToCell renderingWith: aRenderingCommand applyingToHeading: aCommandToHeading summarizedWith: aFooterRenderingCommand applyingToFooter: aCommandToFooterCell	title := aTitle.	renderingCommand := aRenderingCommand.	footerRenderingCommand := aFooterRenderingCommand.	commandToHeading := aCommandToHeading.	commandToCell := aCommandToCell.	commandToFooterCell := aCommandToFooterCell!

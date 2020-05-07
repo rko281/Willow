@@ -14,9 +14,9 @@ initializeUsing: aWALocale	locale := aWALocale!
 
 updateLocaleIn: aRoot	| fileName |	fileName := BootstrapSelectLanguageToFileNameTranslator new fileNameFrom: locale.	aRoot javascript url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/i18n/<2s>.min.js' expandMacrosWith: self version with: fileName)!
 
-updateRoot: aRoot	aRoot stylesheet		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/css/bootstrap-select.min.css' expandMacrosWith: self version);		anonymousSubResourceIntegrity: 'sha256-/us3egi2cVp0mEkVR8cnqLsuDY6BmrDuvTPUuEr1HJQ='.	aRoot javascript		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/bootstrap-select.min.js' expandMacrosWith: self version);		anonymousSubResourceIntegrity: 'sha256-19J3rT3tQdidgtqqdQ3xNu++Gd7EoP/ag/0x1lHi0xY='.	self updateLocaleIn: aRoot!
+updateRoot: aRoot	aRoot stylesheet		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/css/bootstrap-select.min.css' expandMacrosWith: self version);		anonymousSubResourceIntegrity: 'sha256-g19F2KOr/H58l6XdI/rhCdEK3NmB8OILHwP/QYBQ8M4='.	aRoot javascript		url: ('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/<1s>/js/bootstrap-select.min.js' expandMacrosWith: self version);		anonymousSubResourceIntegrity: 'sha256-COIM4OdXvo3jkE0/jD/QIEDe3x0jRuqHhOdGTkno3uM='.	self updateLocaleIn: aRoot !
 
-version	^'1.12.4'! !
+version	^'1.13.16'! !
 !BootstrapSelectOnlineLibrary categoriesFor: #initializeUsing:!initialization!public! !
 !BootstrapSelectOnlineLibrary categoriesFor: #updateLocaleIn:!private! !
 !BootstrapSelectOnlineLibrary categoriesFor: #updateRoot:!public!Updating! !

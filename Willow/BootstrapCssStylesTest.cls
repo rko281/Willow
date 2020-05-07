@@ -10,7 +10,7 @@ BootstrapCssStylesTest comment: 'A BootstrapCssStylesTest is a test class for te
 !BootstrapCssStylesTest categoriesForClass!Willow-Bootstrap-Tests-WebViews! !
 !BootstrapCssStylesTest methodsFor!
 
-assertClassificationAt: aSymbol equals: anExpectedString	self assert: Classification >> #bootstrap >> aSymbol equals: anExpectedString!
+assertClassificationAt: aSymbol equals: anExpectedString	self assert: Classification >> #bootstrap3 >> aSymbol equals: anExpectedString!
 
 testAlerts	self		assertClassificationAt: #alert equals: 'alert';		assertClassificationAt: #alertDanger equals: 'alert-danger';		assertClassificationAt: #alertDismissible equals: 'alert-dismissible';		assertClassificationAt: #alertInfo equals: 'alert-info';		assertClassificationAt: #alertLink equals: 'alert-link';		assertClassificationAt: #alertSuccess equals: 'alert-success';		assertClassificationAt: #alertWarning equals: 'alert-warning'!
 

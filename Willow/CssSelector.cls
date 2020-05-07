@@ -7,7 +7,7 @@ CssObject subclass: #CssSelector
 	classInstanceVariableNames: ''!
 CssSelector guid: (GUID fromString: '{0e09b532-5245-48ec-80d2-a5d90dc50ed0}')!
 CssSelector comment: 'In CSS, pattern matching rules determine which style rules apply to elements in the document tree. These patterns, called selectors, may range from simple element names to rich contextual patterns. If all conditions in the pattern are true for a certain element, the selector matches the element.'!
-!CssSelector categoriesForClass!RenoirSt-Selectors! !
+!CssSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssSelector methodsFor!
 
 * aSelector	| ancestor |	ancestor := CssDescendantCombinator between: self and: CssUniversalSelector explicit.	^CssDescendantCombinator between: ancestor and: aSelector !

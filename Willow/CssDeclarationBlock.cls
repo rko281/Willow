@@ -7,8 +7,26 @@ CssObject subclass: #CssDeclarationBlock
 	classInstanceVariableNames: ''!
 CssDeclarationBlock guid: (GUID fromString: '{6b7a6e33-0be5-462c-959a-cd21cc75ce5b}')!
 CssDeclarationBlock comment: 'A declaration block starts with a left curly brace ({) and ends with the matching right curly brace (}). In between there must be a list of zero or more semicolon-separated (;) declarations.'!
-!CssDeclarationBlock categoriesForClass!RenoirSt-Common! !
+!CssDeclarationBlock categoriesForClass!RenoirSt-Core-Common! !
 !CssDeclarationBlock methodsFor!
+
+animation: aCssValue	"Values must follow the guidelines specified in https://drafts.csswg.org/css-animations/#animation 	being like:		animation: name duration timing-function delay iteration-count direction fill-mode play-state		Always specify the animation-duration property, otherwise the duration is 0, and will never be played."	self propertyAt: 'animation' put: aCssValue !
+
+animationDelay: aCssValue	self propertyAt: 'animation-delay' put: aCssValue !
+
+animationDirection: aCssValue	self propertyAt: 'animation-direction' put: aCssValue !
+
+animationDuration: aCssValue	self propertyAt: 'animation-duration' put: aCssValue !
+
+animationFillMode: aCssValue	self propertyAt: 'animation-fill-mode' put: aCssValue !
+
+animationIterationCount: aCssValue	self propertyAt: 'animation-iteration-count' put: aCssValue !
+
+animationName: aCssValue	self propertyAt: 'animation-name' put: aCssValue !
+
+animationPlayState: aCssValue	self propertyAt: 'animation-play-state' put: aCssValue !
+
+animationTimingFunction: aCssValue	self propertyAt: 'animation-timing-function' put: aCssValue !
 
 background: aCssValue 	self propertyAt: 'background' put: aCssValue!
 
@@ -262,6 +280,8 @@ textUnderlinePosition: aCssValue	self propertyAt: 'text-underline-position' pu
 
 top: aCssValue	self propertyAt: 'top' put: aCssValue !
 
+transform: aCssValue 	self propertyAt: 'transform' put: aCssValue !
+
 unicodeBidi: aCssValue	self propertyAt: 'unicode-bidi' put: aCssValue !
 
 verticalAlign: aCssValue	self propertyAt: 'vertical-align' put: aCssValue !
@@ -277,6 +297,15 @@ wordSpacing: aCssValue	self propertyAt: 'word-spacing' put: aCssValue !
 wordWrap: aCssValue 	self propertyAt: 'word-wrap' put: aCssValue !
 
 zIndex: aCssValue	self propertyAt: 'z-index' put: aCssValue ! !
+!CssDeclarationBlock categoriesFor: #animation:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationDelay:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationDirection:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationDuration:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationFillMode:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationIterationCount:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationName:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationPlayState:!keyframes properties!public! !
+!CssDeclarationBlock categoriesFor: #animationTimingFunction:!keyframes properties!public! !
 !CssDeclarationBlock categoriesFor: #background:!background properties!public! !
 !CssDeclarationBlock categoriesFor: #backgroundAttachment:!background properties!public! !
 !CssDeclarationBlock categoriesFor: #backgroundClip:!background properties!public! !
@@ -403,6 +432,7 @@ zIndex: aCssValue	self propertyAt: 'z-index' put: aCssValue ! !
 !CssDeclarationBlock categoriesFor: #textTransform:!public!text properties! !
 !CssDeclarationBlock categoriesFor: #textUnderlinePosition:!public!text properties! !
 !CssDeclarationBlock categoriesFor: #top:!public!visual formatting properties! !
+!CssDeclarationBlock categoriesFor: #transform:!public!visual formatting properties! !
 !CssDeclarationBlock categoriesFor: #unicodeBidi:!public!visual formatting properties! !
 !CssDeclarationBlock categoriesFor: #verticalAlign:!box properties!public! !
 !CssDeclarationBlock categoriesFor: #visibility:!public!visual effects properties! !

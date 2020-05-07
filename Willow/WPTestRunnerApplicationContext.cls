@@ -18,32 +18,16 @@ currentTestResult	^ currentTestResult!
 
 initialize	super initialize.	self resetTestResult.	selectedTestCaseClasses := #().	selectedPackageCategories := #().	messageTallyOptional := Optional unused!
 
-resetTestResult
-
+resetTestResult
 	currentTestResult := TestAsserter classForTestResult new duration: 0 asSeconds; yourself!
 
 runTests	self		resetTestResult;		runTestSuites: (selectedTestCaseClasses select: [ :class | class isAbstract not ] thenCollect: [ :class | class suite ])!
 
-runTestsProfiled
-
-"	| messageTally |
-
-	messageTally := MessageTally
-		spyOn: [ self runTests ]
-		reportOtherProcesses: false
-		cutoff: 1
-		openResultWindow: false
-		closeAfter: false.
-
-	messageTallyOptional := (messageTally tally strictlyPositive and: [ messageTally time strictlyPositive ])
-		ifTrue: [ Optional containing: messageTally ]
-		ifFalse: [ Optional unused ]"
+runTestsProfiled"	| messageTally |	messageTally := MessageTally		spyOn: [ self runTests ]		reportOtherProcesses: false		cutoff: 1		openResultWindow: false		closeAfter: false.	messageTallyOptional := (messageTally tally strictlyPositive and: [ messageTally time strictlyPositive ])		ifTrue: [ Optional containing: messageTally ]		ifFalse: [ Optional unused ]"
 
 	messageTallyOptional := Optional unused!
 
-runTestSuites: testSuites
-
-	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]!
+runTestSuites: testSuites	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]!
 
 setSelectedPackageCategoriesTo: categories	selectedPackageCategories := categories!
 
@@ -57,7 +41,7 @@ withMessageTallyDo: aFoundBlock ifNone: aNoneBlock	messageTallyOptional withCo
 !WPTestRunnerApplicationContext categoriesFor: #resetTestResult!initialization!public! !
 !WPTestRunnerApplicationContext categoriesFor: #runTests!Actions!public! !
 !WPTestRunnerApplicationContext categoriesFor: #runTestsProfiled!Actions!public! !
-!WPTestRunnerApplicationContext categoriesFor: #runTestSuites:!Actions!public! !
+!WPTestRunnerApplicationContext categoriesFor: #runTestSuites:!private! !
 !WPTestRunnerApplicationContext categoriesFor: #setSelectedPackageCategoriesTo:!public!State Tracking! !
 !WPTestRunnerApplicationContext categoriesFor: #setSelectedTestCaseClassesTo:!public!State Tracking! !
 !WPTestRunnerApplicationContext categoriesFor: #withMessageTallyDo:ifNone:!Accessing!public! !

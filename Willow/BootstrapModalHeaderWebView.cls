@@ -14,7 +14,7 @@ initializeTitled: aRenderable dismissedUsing: aButtonOptional	title := aRender
 
 onCloseTrigger	^ dismissButtonOptional withContentDo: [ :dismissButton | dismissButton onTrigger ] ifUnused: [ WebInteractionInterpreter workingWith: WebComponentInteraction neverTriggered ]!
 
-renderContentOn: aCanvas	aCanvas div		with: [ dismissButtonOptional withContentDo: [ :dismissButton | aCanvas render: dismissButton ].			aCanvas heading				level4;				with: title applying: [ :heading | heading addClass bootstrap modalTitle ] ]		applying: [ :div | div addClass bootstrap modalHeader ]! !
+renderContentOn: aCanvas	aCanvas div		with: [ dismissButtonOptional withContentDo: [ :dismissButton | aCanvas render: dismissButton ].			aCanvas heading				level4;				with: title applying: [ :heading | heading addClass bootstrapCommon modalTitle ]			]		applying: [ :div | div addClass bootstrapCommon modalHeader ]! !
 !BootstrapModalHeaderWebView categoriesFor: #initializeTitled:dismissedUsing:!initialize!public! !
 !BootstrapModalHeaderWebView categoriesFor: #onCloseTrigger!Configuring!public! !
 !BootstrapModalHeaderWebView categoriesFor: #renderContentOn:!public!rendering! !

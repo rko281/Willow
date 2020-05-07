@@ -10,11 +10,13 @@ BootstrapModalTest comment: 'A BootstrapModalTest is a test class for testing th
 !BootstrapModalTest categoriesForClass!Willow-Bootstrap-Tests-Plugins! !
 !BootstrapModalTest methodsFor!
 
-renderModalContentApplying: aBlock	^ self		renderUsing: [ :canvas | 			| modal |			modal := canvas jQuery new bootstrapModal.			aBlock value: modal.			canvas div				apply: [ :div | div addClass bootstrap modal ];				script: modal ]!
+renderModalContentApplying: aBlock	^ self		renderUsing: [ :canvas | 			| modal |			modal := canvas jQuery new bootstrapModal.			aBlock value: modal.			canvas div				apply: [ :div | div addClass bootstrapCommon modal ];				script: modal			]!
 
 testBackdrop	| html |	html := self renderModalContentApplying: [ :modal | modal backdrop: #static ].	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":"static"});</script>'!
 
 testBackdropBoolean	| html |	html := self renderModalContentApplying: [ :modal | modal backdrop: true ].	self		assert: html		equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal({"backdrop":true});</script>'!
+
+testHandleUpdate	| html |	html := self renderModalContentApplying: [ :modal | modal handleUpdate ].	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("handleUpdate");</script>'!
 
 testHide	| html |	html := self renderModalContentApplying: [ :modal | modal hide ].	self assert: html equals: '<div class="modal" id="id1"></div><script type="text/javascript">$("#id1").modal("hide");</script>'!
 
@@ -34,6 +36,7 @@ testToggle	| html |	html := self renderModalContentApplying: [ :modal | moda
 !BootstrapModalTest categoriesFor: #renderModalContentApplying:!private! !
 !BootstrapModalTest categoriesFor: #testBackdrop!public!tests/Options! !
 !BootstrapModalTest categoriesFor: #testBackdropBoolean!public!tests/Options! !
+!BootstrapModalTest categoriesFor: #testHandleUpdate!public!tests/Methods! !
 !BootstrapModalTest categoriesFor: #testHide!public!tests/Methods! !
 !BootstrapModalTest categoriesFor: #testOnHidden!public!tests/Methods! !
 !BootstrapModalTest categoriesFor: #testOnHide!public!tests/Methods! !

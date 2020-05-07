@@ -7,7 +7,7 @@ WebInteractionCommand subclass: #DialogClosingCommand
 	classInstanceVariableNames: ''!
 DialogClosingCommand guid: (GUID fromString: '{28ed3b0c-fba6-4320-889b-11fb4ea4cebc}')!
 DialogClosingCommand comment: 'I''m a WebInteractionCommand used to close a Dialog. I will not destroy the dialog, just hide it.'!
-!DialogClosingCommand categoriesForClass!Willow-WebInteraction! !
+!DialogClosingCommand categoriesForClass!Willow-Core-WebInteraction! !
 !DialogClosingCommand methodsFor!
 
 clientIndependentActions	^#()!

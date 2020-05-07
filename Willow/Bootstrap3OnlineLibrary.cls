@@ -7,7 +7,7 @@ WAOnlineLibrary subclass: #Bootstrap3OnlineLibrary
 	classInstanceVariableNames: ''!
 Bootstrap3OnlineLibrary guid: (GUID fromString: '{c4b9d844-4e26-4a37-90ab-873fb2af360e}')!
 Bootstrap3OnlineLibrary comment: 'I''m a WALibary serving the files from the official CDN.'!
-!Bootstrap3OnlineLibrary categoriesForClass!Willow-Bootstrap-Libraries! !
+!Bootstrap3OnlineLibrary categoriesForClass!Willow-Bootstrap-3-Libraries! !
 !Bootstrap3OnlineLibrary methodsFor!
 
 initializeWithOptionalTheme: aBoolean	includeOptionalTheme := aBoolean!

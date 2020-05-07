@@ -7,7 +7,7 @@ CssColor subclass: #CssRGBColor
 	classInstanceVariableNames: ''!
 CssRGBColor guid: (GUID fromString: '{341a0031-c9c1-4c05-99c7-87ce3f2dfcf7}')!
 CssRGBColor comment: 'The RGB color model is used in numerical color specifications.'!
-!CssRGBColor categoriesForClass!RenoirSt-Colors! !
+!CssRGBColor categoriesForClass!RenoirSt-Core-Colors! !
 !CssRGBColor methodsFor!
 
 componentsDo: aBlockClosure separatedBy: aSeparationBlock		aBlockClosure value: redComponent.	aSeparationBlock value.	aBlockClosure value: greenComponent.	aSeparationBlock value.	aBlockClosure value: blueComponent.	alphaChannel componentsDo: aBlockClosure separatedBy: aSeparationBlock !

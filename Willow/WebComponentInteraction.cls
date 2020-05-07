@@ -7,7 +7,7 @@ Object subclass: #WebComponentInteraction
 	classInstanceVariableNames: ''!
 WebComponentInteraction guid: (GUID fromString: '{02f64bb1-ef2d-4310-9cd7-ffd7987347d3}')!
 WebComponentInteraction comment: ''!
-!WebComponentInteraction categoriesForClass!Willow-WebInteraction! !
+!WebComponentInteraction categoriesForClass!Willow-Core-WebInteraction! !
 !WebComponentInteraction methodsFor!
 
 applyTo: aComponent on: aCanvas	self prepareActions.	self shouldApplyActions		then: [ triggerPolicy apply: ( self commandToExecuteOn: aCanvas ) to: aComponent on: aCanvas ]!

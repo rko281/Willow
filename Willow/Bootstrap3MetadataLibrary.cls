@@ -7,7 +7,7 @@ WADeploymentAwareFileMetadataLibrary subclass: #Bootstrap3MetadataLibrary
 	classInstanceVariableNames: ''!
 Bootstrap3MetadataLibrary guid: (GUID fromString: '{8ff0de1f-c64b-4428-aac9-f15adc17a66a}')!
 Bootstrap3MetadataLibrary comment: 'I''m an asbtract WALibary serving the files in source form'!
-!Bootstrap3MetadataLibrary categoriesForClass!Willow-Bootstrap-Libraries! !
+!Bootstrap3MetadataLibrary categoriesForClass!Willow-Bootstrap-3-Libraries! !
 !Bootstrap3MetadataLibrary methodsFor!
 
 fontsglyphiconshalflingsregularEot	^ WAFileLibraryResource		filepath: 'fonts/glyphicons-halflings-regular.eot'		mimeType: (WAMimeType main: 'application' sub: 'octet-stream')		cacheDuration: self class defaultCacheDuration		contents: (GRDelayedSend receiver: self selector: #fontsglyphiconshalflingsregularEotContent)!

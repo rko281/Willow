@@ -7,7 +7,7 @@ CssObject subclass: #CssFallbackSpecified
 	classInstanceVariableNames: ''!
 CssFallbackSpecified guid: (GUID fromString: '{bf3540ee-2bf1-46d7-8402-7ca39d3de8db}')!
 CssFallbackSpecified comment: 'A CssFallbackSpecified specifies that a fallback for a CSS function is provided'!
-!CssFallbackSpecified categoriesForClass!RenoirSt-Units! !
+!CssFallbackSpecified categoriesForClass!RenoirSt-Core-Units! !
 !CssFallbackSpecified methodsFor!
 
 cssContentOn: aWriteStream		aWriteStream		nextPut: $,;		space.	value cssContentOn: aWriteStream!

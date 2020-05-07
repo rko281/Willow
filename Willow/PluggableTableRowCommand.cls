@@ -7,7 +7,7 @@ TableRowCommand subclass: #PluggableTableRowCommand
 	classInstanceVariableNames: ''!
 PluggableTableRowCommand guid: (GUID fromString: '{83958668-a1e8-44f4-ab1f-25a88fe5c18b}')!
 PluggableTableRowCommand comment: 'I''m a configurable table row command'!
-!PluggableTableRowCommand categoriesForClass!Willow-Frontend! !
+!PluggableTableRowCommand categoriesForClass!Willow-Core-Frontend! !
 !PluggableTableRowCommand methodsFor!
 
 applyTo: aTableRow for: aRelatedObject on: aCanvas	block value: aTableRow value: aRelatedObject value: aCanvas!

@@ -25,7 +25,7 @@ libraryName	^ 'bootstrap-datepicker'!
 
 using: aWALocale	^ self new initializeUsing: aWALocale!
 
-version	^ '1.8.0'! !
+version	^ '1.9.0'! !
 !BootstrapDatepickerLibrary class categoriesFor: #default!instance creation!public! !
 !BootstrapDatepickerLibrary class categoriesFor: #forDeployment!Accessing!public! !
 !BootstrapDatepickerLibrary class categoriesFor: #forDevelopment!Accessing!public! !

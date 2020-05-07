@@ -7,7 +7,7 @@ WAPainter subclass: #LabeledWebView
 	classInstanceVariableNames: ''!
 LabeledWebView guid: (GUID fromString: '{9a359cf9-107a-4bd8-be17-71927399b0d2}')!
 LabeledWebView comment: 'I represent a label bound to some field.'!
-!LabeledWebView categoriesForClass!Willow-WebViews! !
+!LabeledWebView categoriesForClass!Willow-Core-WebViews! !
 !LabeledWebView methodsFor!
 
 fieldWebView	^fieldWebView!

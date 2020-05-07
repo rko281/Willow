@@ -12,6 +12,8 @@ BootstrapModal comment: 'The modal plugin toggles your hidden content on demand,
 
 backdrop: aBooleanOrStatic	"Includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't close the modal on click."	self optionAt: #backdrop put: aBooleanOrStatic!
 
+handleUpdate	"Manually readjust the modal’s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears)."	functionName := 'handleUpdate'!
+
 hide	"Manually hides a modal. Returns to the caller before the modal has actually been hidden"	functionName := self lookupValue: #hide!
 
 keyboard: aBoolean	"Closes the modal when escape key is pressed"	self optionAt: #keyboard put: aBoolean!
@@ -32,6 +34,7 @@ show: aBoolean	"Shows the modal when initialized."	self optionAt: #show put:
 
 toggle	"Manually toggles a modal. Returns to the caller before the modal has actually been shown or hidden"	functionName := self lookupValue: #toggle! !
 !BootstrapModal categoriesFor: #backdrop:!Options!public! !
+!BootstrapModal categoriesFor: #handleUpdate!Methods!public! !
 !BootstrapModal categoriesFor: #hide!Methods!public! !
 !BootstrapModal categoriesFor: #keyboard:!Options!public! !
 !BootstrapModal categoriesFor: #method!private! !

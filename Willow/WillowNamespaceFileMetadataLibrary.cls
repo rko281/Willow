@@ -7,7 +7,7 @@ WADeploymentAwareFileMetadataLibrary subclass: #WillowNamespaceFileMetadataLibra
 	classInstanceVariableNames: ''!
 WillowNamespaceFileMetadataLibrary guid: (GUID fromString: '{7a3b231d-6b4b-48aa-ba28-bd47993ffb6c}')!
 WillowNamespaceFileMetadataLibrary comment: 'I''m a library providing some basic object used to define and access some utility functions.'!
-!WillowNamespaceFileMetadataLibrary categoriesForClass!Willow-Libraries! !
+!WillowNamespaceFileMetadataLibrary categoriesForClass!Willow-Core-Libraries! !
 !WillowNamespaceFileMetadataLibrary methodsFor!
 
 callServerFunction	| function |	function := JSFunction new arguments: (Array with: self sessionInformation asJavascript).	function << (self sessionInformation property: 'dataType') assign: 'script'.	function << (self sessionInformation property: 'error')		assign: WillowJavascriptNamespace new handleAjaxErrorCallFunction.	function << function jQuery call: 'ajax' with: self sessionInformation.	^ function!

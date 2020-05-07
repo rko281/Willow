@@ -7,7 +7,7 @@ CssObject subclass: #CssBoxShadow
 	classInstanceVariableNames: ''!
 CssBoxShadow guid: (GUID fromString: '{861171a8-16ed-46fd-a794-a70834bbf450}')!
 CssBoxShadow comment: 'I represent a box shadow propery value. See http://www.w3.org/TR/css3-background/#box-shadow.'!
-!CssBoxShadow categoriesForClass!RenoirSt-Common! !
+!CssBoxShadow categoriesForClass!RenoirSt-Core-Common! !
 !CssBoxShadow methodsFor!
 
 , aCssBoxShadow	^CssObjectList with: self with: aCssBoxShadow !

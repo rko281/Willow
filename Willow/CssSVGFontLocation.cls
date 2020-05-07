@@ -7,7 +7,7 @@ CssObject subclass: #CssSVGFontLocation
 	classInstanceVariableNames: ''!
 CssSVGFontLocation guid: (GUID fromString: '{c67dc4ce-3c68-444b-9501-6b45e644bd15}')!
 CssSVGFontLocation comment: 'I represent a location for a font inside an SVG file'!
-!CssSVGFontLocation categoriesForClass!RenoirSt-Fonts! !
+!CssSVGFontLocation categoriesForClass!RenoirSt-Core-Fonts! !
 !CssSVGFontLocation methodsFor!
 
 cssContentOn: aStream	aStream		nextPutAll: ((String streamContents: [ :stream | url cssContentOn: stream ]) copyReplaceAll: '")' with: ('#<1s>")' expandMacrosWith: id))!

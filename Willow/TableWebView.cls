@@ -7,7 +7,7 @@ WAPainter subclass: #TableWebView
 	classInstanceVariableNames: ''!
 TableWebView guid: (GUID fromString: '{332de118-824b-4c22-b26e-3c30be5499a3}')!
 TableWebView comment: 'A view to represent an html table'!
-!TableWebView categoriesForClass!Willow-WebViews! !
+!TableWebView categoriesForClass!Willow-Core-WebViews! !
 !TableWebView methodsFor!
 
 changeContentsTo: anElementCollection	items := anElementCollection.	self notifyInterested!

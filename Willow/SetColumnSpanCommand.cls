@@ -7,7 +7,7 @@ WebComponentCommand subclass: #SetColumnSpanCommand
 	classInstanceVariableNames: ''!
 SetColumnSpanCommand guid: (GUID fromString: '{233150f6-473f-4259-9f4f-3db4135f43d5}')!
 SetColumnSpanCommand comment: 'A command to set the colSpan of a table column.'!
-!SetColumnSpanCommand categoriesForClass!Willow-Frontend! !
+!SetColumnSpanCommand categoriesForClass!Willow-Core-Frontend! !
 !SetColumnSpanCommand methodsFor!
 
 applyTo: aComponent on: aCanvas	aComponent colSpan: colSpan!

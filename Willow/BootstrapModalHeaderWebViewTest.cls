@@ -16,12 +16,9 @@ testOnCloseTriggerWhenDismissable	| header html |	header := BootstrapModalHe
 
 testRenderContentOn	| header html |	header := BootstrapModalHeaderWebView titled: 'Welcome!!'.	html := self render: header.	self assert: html equals: '<div class="modal-header"><h4 class="modal-title">Welcome!!</h4></div>'!
 
-testRenderContentOnWithComplexTitle	| header html |	header := BootstrapModalHeaderWebView		titled: [ :canvas | 			canvas				render: (BootstrapIconWebView representing: Glyphicons menuUp);				render: 'Up!!' ].	html := self render: header.	self		assert: html		equals: '<div class="modal-header"><h4 class="modal-title"><span class="glyphicon glyphicon-menu-up"></span>Up!!</h4></div>'!
-
 testRenderContentOnWithDismissButton	| header html |	header := BootstrapModalHeaderWebView dismissableTitled: 'Welcome!!'.	html := self render: header.	self		assert: html		equals:			'<div class="modal-header"><button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Welcome!!</h4></div>'! !
 !BootstrapModalHeaderWebViewTest categoriesFor: #testOnCloseTriggerDoesNothingIfNotDismissable!public!tests! !
 !BootstrapModalHeaderWebViewTest categoriesFor: #testOnCloseTriggerWhenDismissable!public!tests! !
 !BootstrapModalHeaderWebViewTest categoriesFor: #testRenderContentOn!public!tests! !
-!BootstrapModalHeaderWebViewTest categoriesFor: #testRenderContentOnWithComplexTitle!public!tests! !
 !BootstrapModalHeaderWebViewTest categoriesFor: #testRenderContentOnWithDismissButton!public!tests! !
 

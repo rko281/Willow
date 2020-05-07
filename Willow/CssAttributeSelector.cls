@@ -7,7 +7,7 @@ CssSelector subclass: #CssAttributeSelector
 	classInstanceVariableNames: ''!
 CssAttributeSelector guid: (GUID fromString: '{2fffc04b-8724-4a24-98e5-1153a9acffc9}')!
 CssAttributeSelector comment: 'Selectors allow the representation of an element''s attributes. When a selector is used as an expression to match against an element, attribute selectors must be considered to match an element if that element has an attribute that matches the attribute represented by the attribute selector.'!
-!CssAttributeSelector categoriesForClass!RenoirSt-Selectors! !
+!CssAttributeSelector categoriesForClass!RenoirSt-Core-Selectors! !
 !CssAttributeSelector methodsFor!
 
 cssContentOn: aStream		selector cssContentOn: aStream.	aStream nextPut: $[.	attributeName cssContentOn: aStream.	matchingCondition cssContentOn: aStream.	aStream nextPut: $]!

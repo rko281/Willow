@@ -1,7 +1,13 @@
 # Willow
 [Willow web interaction library](https://github.com/ba-st/Willow) for [Dolphin Smalltalk 7.1](https://github.com/dolphinsmalltalk/Dolphin)
 
-Dolphin port created September 2018. 
+Dolphin port May 2020 based on:
+* Willow v13.0.0
+* Willow Bootstrap v12.0.0
+* Willow Spinkit v8.0.0
+* RenoirSt v7.0.0
+* Boardwalk v5.0.0
+* Buoy v5.0.0
 
 Many thanks to the Buenos Aires Smalltalk group for permission to port to Dolphin, and for developing Willow and its associated frameworks. 
 
@@ -11,7 +17,7 @@ Many thanks to the Buenos Aires Smalltalk group for permission to port to Dolphi
 ### Automated Installation
 * Download and install [GitHub Package Manager](https://github.com/rko281/GitHub)
 * Evaluate:
-  `GitHubPackageManager install: 'rko281/Willow/Willow-Playground-Smalltalks2017'`
+  `GitHubPackageManager beAuthenticated; install: 'rko281/Willow/Willow-Playground-Smalltalks2017'`
 * All required packages and prerequisites will be downloaded and installed
 * Once installation is complete the Smalltalks2017 example application will be started
 

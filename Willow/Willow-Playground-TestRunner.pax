@@ -11,25 +11,31 @@ https://github.com/ba-st
 Dolphin Smalltalk port by John Aspinall, May 2020.
 
 Willow v13.0.0
-Willow Bootstrap v12.0.0
+Willow Bootstrap v12.1.0
 Willow Spinkit v8.0.0
 RenoirSt v7.0.0
 Boardwalk v5.0.0
 Buoy v5.0.0'.
 
-package basicScriptAt: #postinstall put: 'WPTestRunner registerAsDevelopmentApplication.
-'.
+package basicScriptAt: #postinstall put: 'WPB3TestRunner registerAsDevelopmentApplication.
+WPB4TestRunner registerAsDevelopmentApplication.'.
 
 package classNames
-	add: #WPMessageTallyWebView;
-	add: #WPTestRunner;
+	add: #WPB3MessageTallyWebView;
+	add: #WPB3TestRunner;
+	add: #WPB3TestRunnerMessageTallyDialog;
+	add: #WPB3TestRunnerTestResultDetailsDialog;
+	add: #WPB3TestRunnerTestResultWebView;
+	add: #WPB3TestRunnerToolbar;
+	add: #WPB4MessageTallyWebView;
+	add: #WPB4TestRunner;
+	add: #WPB4TestRunnerMessageTallyDialog;
+	add: #WPB4TestRunnerTestResultDetailsDialog;
+	add: #WPB4TestRunnerTestResultWebView;
+	add: #WPB4TestRunnerToolbar;
 	add: #WPTestRunnerApplicationContext;
-	add: #WPTestRunnerMessageTallyDialog;
 	add: #WPTestRunnerSession;
 	add: #WPTestRunnerSuiteSelectionWebView;
-	add: #WPTestRunnerTestResultDetailsDialog;
-	add: #WPTestRunnerTestResultWebView;
-	add: #WPTestRunnerToolbar;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -48,6 +54,7 @@ package setPrerequisites: #(
 	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit'
 	'Willow-Bootstrap'
 	'Willow-Bootstrap-3'
+	'Willow-Bootstrap-4'
 	'Willow-Core'
 	'Willow-SpinKit').
 
@@ -60,13 +67,53 @@ GRObject subclass: #WPTestRunnerApplicationContext
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #WPMessageTallyWebView
+WAPainter subclass: #WPB3MessageTallyWebView
 	instanceVariableNames: 'rootTally'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #WPTestRunnerMessageTallyDialog
+WAPainter subclass: #WPB3TestRunnerMessageTallyDialog
 	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB3TestRunnerTestResultDetailsDialog
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB3TestRunnerTestResultWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB3TestRunnerToolbar
+	instanceVariableNames: 'runSelectedTestsButton runProfiledButton exportResultButton'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB4MessageTallyWebView
+	instanceVariableNames: 'rootTally'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB4TestRunnerMessageTallyDialog
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB4TestRunnerTestResultDetailsDialog
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB4TestRunnerTestResultWebView
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAPainter subclass: #WPB4TestRunnerToolbar
+	instanceVariableNames: 'runSelectedTestsButton runProfiledButton exportResultButton'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -75,22 +122,12 @@ WAPainter subclass: #WPTestRunnerSuiteSelectionWebView
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #WPTestRunnerTestResultDetailsDialog
-	instanceVariableNames: 'dialog'
+WillowApplication subclass: #WPB3TestRunner
+	instanceVariableNames: 'contentView'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-WAPainter subclass: #WPTestRunnerTestResultWebView
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WAPainter subclass: #WPTestRunnerToolbar
-	instanceVariableNames: 'runSelectedTestsButton runProfiledButton exportResultButton'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-WillowApplication subclass: #WPTestRunner
+WillowApplication subclass: #WPB4TestRunner
 	instanceVariableNames: 'contentView'
 	classVariableNames: ''
 	poolDictionaries: ''

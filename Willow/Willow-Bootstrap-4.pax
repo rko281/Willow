@@ -10,12 +10,7 @@ https://github.com/ba-st
 
 Dolphin Smalltalk port by John Aspinall, May 2020.
 
-Willow v13.0.0
-Willow Bootstrap v12.0.0
-Willow Spinkit v8.0.0
-RenoirSt v7.0.0
-Boardwalk v5.0.0
-Buoy v5.0.0'.
+Willow Bootstrap v12.1.0'.
 
 
 package classNames
@@ -67,6 +62,87 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #alertLight;
 	add: #ComponentClassificationCommandBuilder -> #alertPrimary;
 	add: #ComponentClassificationCommandBuilder -> #alertSecondary;
+	add: #ComponentClassificationCommandBuilder -> #alignBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignBottom;
+	add: #ComponentClassificationCommandBuilder -> #alignContentAround;
+	add: #ComponentClassificationCommandBuilder -> #alignContentCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignContentEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignContentExtraLargeAround;
+	add: #ComponentClassificationCommandBuilder -> #alignContentExtraLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignContentExtraLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignContentExtraLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignContentExtraLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignContentLargeAround;
+	add: #ComponentClassificationCommandBuilder -> #alignContentLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignContentLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignContentLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignContentLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignContentMediumAround;
+	add: #ComponentClassificationCommandBuilder -> #alignContentMediumCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignContentMediumEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignContentMediumStart;
+	add: #ComponentClassificationCommandBuilder -> #alignContentMediumStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignContentSmallAround;
+	add: #ComponentClassificationCommandBuilder -> #alignContentSmallCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignContentSmallEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignContentSmallStart;
+	add: #ComponentClassificationCommandBuilder -> #alignContentSmallStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignContentStart;
+	add: #ComponentClassificationCommandBuilder -> #alignContentStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsExtraLargeBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsExtraLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsExtraLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsExtraLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsExtraLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsLargeBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsMediumBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsMediumCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsMediumEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsMediumStart;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsMediumStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsSmallBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsSmallCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsSmallEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsSmallStart;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsSmallStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsStart;
+	add: #ComponentClassificationCommandBuilder -> #alignItemsStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignMiddle;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfExtraLargeBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfExtraLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfExtraLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfExtraLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfExtraLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfLargeBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfLargeStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfMediumBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfMediumCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfMediumEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfMediumStart;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfMediumStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfSmallBaseline;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfSmallCenter;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfSmallEnd;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfSmallStart;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfSmallStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfStart;
+	add: #ComponentClassificationCommandBuilder -> #alignSelfStretch;
+	add: #ComponentClassificationCommandBuilder -> #alignTextBottom;
+	add: #ComponentClassificationCommandBuilder -> #alignTextTop;
+	add: #ComponentClassificationCommandBuilder -> #alignTop;
 	add: #ComponentClassificationCommandBuilder -> #backgroundDark;
 	add: #ComponentClassificationCommandBuilder -> #backgroundGradientDanger;
 	add: #ComponentClassificationCommandBuilder -> #backgroundGradientDark;
@@ -80,8 +156,50 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #backgroundSecondary;
 	add: #ComponentClassificationCommandBuilder -> #backgroundTransparent;
 	add: #ComponentClassificationCommandBuilder -> #backgroundWhite;
+	add: #ComponentClassificationCommandBuilder -> #badgeDanger;
+	add: #ComponentClassificationCommandBuilder -> #badgeDark;
+	add: #ComponentClassificationCommandBuilder -> #badgeInfo;
+	add: #ComponentClassificationCommandBuilder -> #badgeLight;
+	add: #ComponentClassificationCommandBuilder -> #badgePill;
+	add: #ComponentClassificationCommandBuilder -> #badgePrimary;
+	add: #ComponentClassificationCommandBuilder -> #badgeSecondary;
+	add: #ComponentClassificationCommandBuilder -> #badgeSuccess;
+	add: #ComponentClassificationCommandBuilder -> #badgeWarning;
+	add: #ComponentClassificationCommandBuilder -> #blockquote;
+	add: #ComponentClassificationCommandBuilder -> #blockquoteFooter;
 	add: #ComponentClassificationCommandBuilder -> #bootstrap4;
+	add: #ComponentClassificationCommandBuilder -> #border;
+	add: #ComponentClassificationCommandBuilder -> #border0;
+	add: #ComponentClassificationCommandBuilder -> #borderBottom;
+	add: #ComponentClassificationCommandBuilder -> #borderBottom0;
+	add: #ComponentClassificationCommandBuilder -> #borderDanger;
+	add: #ComponentClassificationCommandBuilder -> #borderDark;
+	add: #ComponentClassificationCommandBuilder -> #borderInfo;
+	add: #ComponentClassificationCommandBuilder -> #borderLeft;
+	add: #ComponentClassificationCommandBuilder -> #borderLeft0;
+	add: #ComponentClassificationCommandBuilder -> #borderLight;
+	add: #ComponentClassificationCommandBuilder -> #borderPrimary;
+	add: #ComponentClassificationCommandBuilder -> #borderRight;
+	add: #ComponentClassificationCommandBuilder -> #borderRight0;
+	add: #ComponentClassificationCommandBuilder -> #borderSecondary;
+	add: #ComponentClassificationCommandBuilder -> #borderSuccess;
+	add: #ComponentClassificationCommandBuilder -> #borderTop;
+	add: #ComponentClassificationCommandBuilder -> #borderTop0;
+	add: #ComponentClassificationCommandBuilder -> #borderWarning;
+	add: #ComponentClassificationCommandBuilder -> #borderWhite;
 	add: #ComponentClassificationCommandBuilder -> #breadcrumbItem;
+	add: #ComponentClassificationCommandBuilder -> #buttonDark;
+	add: #ComponentClassificationCommandBuilder -> #buttonGroupToggle;
+	add: #ComponentClassificationCommandBuilder -> #buttonLight;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineDanger;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineDark;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineInfo;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineLight;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlinePrimary;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineSecondary;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineSuccess;
+	add: #ComponentClassificationCommandBuilder -> #buttonOutlineWarning;
+	add: #ComponentClassificationCommandBuilder -> #buttonSecondary;
 	add: #ComponentClassificationCommandBuilder -> #card;
 	add: #ComponentClassificationCommandBuilder -> #cardBody;
 	add: #ComponentClassificationCommandBuilder -> #cardColumns;
@@ -89,6 +207,7 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #cardFooter;
 	add: #ComponentClassificationCommandBuilder -> #cardGroup;
 	add: #ComponentClassificationCommandBuilder -> #cardHeader;
+	add: #ComponentClassificationCommandBuilder -> #cardHeaderTabs;
 	add: #ComponentClassificationCommandBuilder -> #cardImage;
 	add: #ComponentClassificationCommandBuilder -> #cardImageOverlay;
 	add: #ComponentClassificationCommandBuilder -> #cardImageTop;
@@ -98,7 +217,43 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #cardTitle;
 	add: #ComponentClassificationCommandBuilder -> #column;
 	add: #ComponentClassificationCommandBuilder -> #column:;
+	add: #ComponentClassificationCommandBuilder -> #column1;
+	add: #ComponentClassificationCommandBuilder -> #column10;
+	add: #ComponentClassificationCommandBuilder -> #column11;
+	add: #ComponentClassificationCommandBuilder -> #column12;
+	add: #ComponentClassificationCommandBuilder -> #column2;
+	add: #ComponentClassificationCommandBuilder -> #column3;
+	add: #ComponentClassificationCommandBuilder -> #column4;
+	add: #ComponentClassificationCommandBuilder -> #column5;
+	add: #ComponentClassificationCommandBuilder -> #column6;
+	add: #ComponentClassificationCommandBuilder -> #column7;
+	add: #ComponentClassificationCommandBuilder -> #column8;
+	add: #ComponentClassificationCommandBuilder -> #column9;
 	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge1;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge10;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge11;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge12;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge2;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge3;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge4;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge5;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge6;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge7;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge8;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLarge9;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset1;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset10;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset11;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset12;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset2;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset3;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset4;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset5;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset6;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset7;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset8;
+	add: #ComponentClassificationCommandBuilder -> #columnExtraLargeOffset9;
 	add: #ComponentClassificationCommandBuilder -> #columnExtraSmall;
 	add: #ComponentClassificationCommandBuilder -> #columnFormLabel;
 	add: #ComponentClassificationCommandBuilder -> #columnFormLabelLarge;
@@ -120,18 +275,135 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #customSelectLarge;
 	add: #ComponentClassificationCommandBuilder -> #customSelectSmall;
 	add: #ComponentClassificationCommandBuilder -> #customSwitch;
+	add: #ComponentClassificationCommandBuilder -> #display1;
+	add: #ComponentClassificationCommandBuilder -> #display2;
+	add: #ComponentClassificationCommandBuilder -> #display3;
+	add: #ComponentClassificationCommandBuilder -> #display4;
+	add: #ComponentClassificationCommandBuilder -> #displayBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeInline;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeNone;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeTable;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displayExtraLargeTableRow;
+	add: #ComponentClassificationCommandBuilder -> #displayFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayInline;
+	add: #ComponentClassificationCommandBuilder -> #displayInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeInline;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeNone;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeTable;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displayLargeTableRow;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumInline;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumNone;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumTable;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displayMediumTableRow;
+	add: #ComponentClassificationCommandBuilder -> #displayNone;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintInline;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintNone;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintTable;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displayPrintTableRow;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallBlock;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallFlex;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallInline;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallInlineBlock;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallInlineFlex;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallNone;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallTable;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displaySmallTableRow;
+	add: #ComponentClassificationCommandBuilder -> #displayTable;
+	add: #ComponentClassificationCommandBuilder -> #displayTableCell;
+	add: #ComponentClassificationCommandBuilder -> #displayTableRow;
 	add: #ComponentClassificationCommandBuilder -> #dropdownDivider;
 	add: #ComponentClassificationCommandBuilder -> #dropdownItem;
 	add: #ComponentClassificationCommandBuilder -> #dropdownItemText;
 	add: #ComponentClassificationCommandBuilder -> #dropdownToggleSplit;
 	add: #ComponentClassificationCommandBuilder -> #dropleft;
 	add: #ComponentClassificationCommandBuilder -> #dropright;
+	add: #ComponentClassificationCommandBuilder -> #embedReponsive16by9;
+	add: #ComponentClassificationCommandBuilder -> #embedReponsive1by1;
+	add: #ComponentClassificationCommandBuilder -> #embedReponsive21by9;
+	add: #ComponentClassificationCommandBuilder -> #embedReponsive4by3;
+	add: #ComponentClassificationCommandBuilder -> #embedResponsive;
+	add: #ComponentClassificationCommandBuilder -> #embedResponsiveItem;
+	add: #ComponentClassificationCommandBuilder -> #figure;
+	add: #ComponentClassificationCommandBuilder -> #figureCaption;
+	add: #ComponentClassificationCommandBuilder -> #figureImage;
 	add: #ComponentClassificationCommandBuilder -> #fixedBottom;
 	add: #ComponentClassificationCommandBuilder -> #fixedTop;
 	add: #ComponentClassificationCommandBuilder -> #flexColumn;
 	add: #ComponentClassificationCommandBuilder -> #flexColumnReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeColumn;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeColumnReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeNowrap;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeRow;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeRowReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeWrap;
+	add: #ComponentClassificationCommandBuilder -> #flexExtraLargeWrapReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeColumn;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeColumnReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeNowrap;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeRow;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeRowReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeWrap;
+	add: #ComponentClassificationCommandBuilder -> #flexLargeWrapReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumColumn;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumColumnReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumNowrap;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumRow;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumRowReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumWrap;
+	add: #ComponentClassificationCommandBuilder -> #flexMediumWrapReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexNowrap;
 	add: #ComponentClassificationCommandBuilder -> #flexRow;
 	add: #ComponentClassificationCommandBuilder -> #flexRowReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallColumn;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallColumnReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallNowrap;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallRow;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallRowReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallWrap;
+	add: #ComponentClassificationCommandBuilder -> #flexSmallWrapReverse;
+	add: #ComponentClassificationCommandBuilder -> #flexWrap;
+	add: #ComponentClassificationCommandBuilder -> #flexWrapReverse;
+	add: #ComponentClassificationCommandBuilder -> #floatExtraLargeLeft;
+	add: #ComponentClassificationCommandBuilder -> #floatExtraLargeNone;
+	add: #ComponentClassificationCommandBuilder -> #floatExtraLargeRight;
+	add: #ComponentClassificationCommandBuilder -> #floatLargeLeft;
+	add: #ComponentClassificationCommandBuilder -> #floatLargeNone;
+	add: #ComponentClassificationCommandBuilder -> #floatLargeRight;
+	add: #ComponentClassificationCommandBuilder -> #floatLeft;
+	add: #ComponentClassificationCommandBuilder -> #floatMediumLeft;
+	add: #ComponentClassificationCommandBuilder -> #floatMediumNone;
+	add: #ComponentClassificationCommandBuilder -> #floatMediumRight;
+	add: #ComponentClassificationCommandBuilder -> #floatNone;
+	add: #ComponentClassificationCommandBuilder -> #floatRight;
+	add: #ComponentClassificationCommandBuilder -> #floatSmallLeft;
+	add: #ComponentClassificationCommandBuilder -> #floatSmallNone;
+	add: #ComponentClassificationCommandBuilder -> #floatSmallRight;
+	add: #ComponentClassificationCommandBuilder -> #fontItalic;
+	add: #ComponentClassificationCommandBuilder -> #fontWeightBold;
+	add: #ComponentClassificationCommandBuilder -> #fontWeightLight;
+	add: #ComponentClassificationCommandBuilder -> #fontWeightNormal;
 	add: #ComponentClassificationCommandBuilder -> #formCheck;
 	add: #ComponentClassificationCommandBuilder -> #formCheckInline;
 	add: #ComponentClassificationCommandBuilder -> #formCheckInput;
@@ -147,6 +419,7 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #height25Percent;
 	add: #ComponentClassificationCommandBuilder -> #height50Percent;
 	add: #ComponentClassificationCommandBuilder -> #height75Percent;
+	add: #ComponentClassificationCommandBuilder -> #imageFluid;
 	add: #ComponentClassificationCommandBuilder -> #inputGroupAppend;
 	add: #ComponentClassificationCommandBuilder -> #inputGroupPrepend;
 	add: #ComponentClassificationCommandBuilder -> #inputGroupText;
@@ -154,10 +427,31 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #invalidTooltip;
 	add: #ComponentClassificationCommandBuilder -> #isInvalid;
 	add: #ComponentClassificationCommandBuilder -> #isValid;
+	add: #ComponentClassificationCommandBuilder -> #jumbotronFluid;
 	add: #ComponentClassificationCommandBuilder -> #justifyContentAround;
 	add: #ComponentClassificationCommandBuilder -> #justifyContentBetween;
 	add: #ComponentClassificationCommandBuilder -> #justifyContentCenter;
 	add: #ComponentClassificationCommandBuilder -> #justifyContentEnd;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentExtraLargeAround;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentExtraLargeBetween;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentExtraLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentExtraLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentExtraLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentLargeAround;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentLargeBetween;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentLargeEnd;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentLargeStart;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentMediumAround;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentMediumBetween;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentMediumCenter;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentMediumEnd;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentMediumStart;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentSmallAround;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentSmallBetween;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentSmallCenter;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentSmallEnd;
+	add: #ComponentClassificationCommandBuilder -> #justifyContentSmallStart;
 	add: #ComponentClassificationCommandBuilder -> #justifyContentStart;
 	add: #ComponentClassificationCommandBuilder -> #listGroupFlush;
 	add: #ComponentClassificationCommandBuilder -> #listGroupHorizontal;
@@ -170,6 +464,49 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #listGroupItemLight;
 	add: #ComponentClassificationCommandBuilder -> #listGroupItemPrimary;
 	add: #ComponentClassificationCommandBuilder -> #listGroupItemSecondary;
+	add: #ComponentClassificationCommandBuilder -> #listInlineItem;
+	add: #ComponentClassificationCommandBuilder -> #margin1;
+	add: #ComponentClassificationCommandBuilder -> #margin2;
+	add: #ComponentClassificationCommandBuilder -> #margin3;
+	add: #ComponentClassificationCommandBuilder -> #margin4;
+	add: #ComponentClassificationCommandBuilder -> #margin5;
+	add: #ComponentClassificationCommandBuilder -> #marginAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginBottom1;
+	add: #ComponentClassificationCommandBuilder -> #marginBottom2;
+	add: #ComponentClassificationCommandBuilder -> #marginBottom3;
+	add: #ComponentClassificationCommandBuilder -> #marginBottom4;
+	add: #ComponentClassificationCommandBuilder -> #marginBottom5;
+	add: #ComponentClassificationCommandBuilder -> #marginBottomAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontal1;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontal2;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontal3;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontal4;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontal5;
+	add: #ComponentClassificationCommandBuilder -> #marginHorizontalAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginLeft1;
+	add: #ComponentClassificationCommandBuilder -> #marginLeft2;
+	add: #ComponentClassificationCommandBuilder -> #marginLeft3;
+	add: #ComponentClassificationCommandBuilder -> #marginLeft4;
+	add: #ComponentClassificationCommandBuilder -> #marginLeft5;
+	add: #ComponentClassificationCommandBuilder -> #marginLeftAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginRight1;
+	add: #ComponentClassificationCommandBuilder -> #marginRight2;
+	add: #ComponentClassificationCommandBuilder -> #marginRight3;
+	add: #ComponentClassificationCommandBuilder -> #marginRight4;
+	add: #ComponentClassificationCommandBuilder -> #marginRight5;
+	add: #ComponentClassificationCommandBuilder -> #marginRightAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginTop1;
+	add: #ComponentClassificationCommandBuilder -> #marginTop2;
+	add: #ComponentClassificationCommandBuilder -> #marginTop3;
+	add: #ComponentClassificationCommandBuilder -> #marginTop4;
+	add: #ComponentClassificationCommandBuilder -> #marginTop5;
+	add: #ComponentClassificationCommandBuilder -> #marginTopAuto;
+	add: #ComponentClassificationCommandBuilder -> #marginVertical1;
+	add: #ComponentClassificationCommandBuilder -> #marginVertical2;
+	add: #ComponentClassificationCommandBuilder -> #marginVertical3;
+	add: #ComponentClassificationCommandBuilder -> #marginVertical4;
+	add: #ComponentClassificationCommandBuilder -> #marginVertical5;
+	add: #ComponentClassificationCommandBuilder -> #marginVerticalAuto;
 	add: #ComponentClassificationCommandBuilder -> #maxHeight100Percent;
 	add: #ComponentClassificationCommandBuilder -> #maxWidth100Percent;
 	add: #ComponentClassificationCommandBuilder -> #modalDialogCentered;
@@ -187,6 +524,115 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #navFill;
 	add: #ComponentClassificationCommandBuilder -> #navItem;
 	add: #ComponentClassificationCommandBuilder -> #navLink;
+	add: #ComponentClassificationCommandBuilder -> #order0;
+	add: #ComponentClassificationCommandBuilder -> #order1;
+	add: #ComponentClassificationCommandBuilder -> #order10;
+	add: #ComponentClassificationCommandBuilder -> #order11;
+	add: #ComponentClassificationCommandBuilder -> #order12;
+	add: #ComponentClassificationCommandBuilder -> #order2;
+	add: #ComponentClassificationCommandBuilder -> #order3;
+	add: #ComponentClassificationCommandBuilder -> #order4;
+	add: #ComponentClassificationCommandBuilder -> #order5;
+	add: #ComponentClassificationCommandBuilder -> #order6;
+	add: #ComponentClassificationCommandBuilder -> #order7;
+	add: #ComponentClassificationCommandBuilder -> #order8;
+	add: #ComponentClassificationCommandBuilder -> #order9;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge0;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge1;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge10;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge11;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge12;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge2;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge3;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge4;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge5;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge6;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge7;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge8;
+	add: #ComponentClassificationCommandBuilder -> #orderExtraLarge9;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge0;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge1;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge10;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge11;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge12;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge2;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge3;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge4;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge5;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge6;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge7;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge8;
+	add: #ComponentClassificationCommandBuilder -> #orderLarge9;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium0;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium1;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium10;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium11;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium12;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium2;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium3;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium4;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium5;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium6;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium7;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium8;
+	add: #ComponentClassificationCommandBuilder -> #orderMedium9;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall0;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall1;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall10;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall11;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall12;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall2;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall3;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall4;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall5;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall6;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall7;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall8;
+	add: #ComponentClassificationCommandBuilder -> #orderSmall9;
+	add: #ComponentClassificationCommandBuilder -> #padding1;
+	add: #ComponentClassificationCommandBuilder -> #padding2;
+	add: #ComponentClassificationCommandBuilder -> #padding3;
+	add: #ComponentClassificationCommandBuilder -> #padding4;
+	add: #ComponentClassificationCommandBuilder -> #padding5;
+	add: #ComponentClassificationCommandBuilder -> #paddingAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottom1;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottom2;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottom3;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottom4;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottom5;
+	add: #ComponentClassificationCommandBuilder -> #paddingBottomAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontal1;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontal2;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontal3;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontal4;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontal5;
+	add: #ComponentClassificationCommandBuilder -> #paddingHorizontalAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeft1;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeft2;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeft3;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeft4;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeft5;
+	add: #ComponentClassificationCommandBuilder -> #paddingLeftAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingRight1;
+	add: #ComponentClassificationCommandBuilder -> #paddingRight2;
+	add: #ComponentClassificationCommandBuilder -> #paddingRight3;
+	add: #ComponentClassificationCommandBuilder -> #paddingRight4;
+	add: #ComponentClassificationCommandBuilder -> #paddingRight5;
+	add: #ComponentClassificationCommandBuilder -> #paddingRightAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingTop1;
+	add: #ComponentClassificationCommandBuilder -> #paddingTop2;
+	add: #ComponentClassificationCommandBuilder -> #paddingTop3;
+	add: #ComponentClassificationCommandBuilder -> #paddingTop4;
+	add: #ComponentClassificationCommandBuilder -> #paddingTop5;
+	add: #ComponentClassificationCommandBuilder -> #paddingTopAuto;
+	add: #ComponentClassificationCommandBuilder -> #paddingVertical1;
+	add: #ComponentClassificationCommandBuilder -> #paddingVertical2;
+	add: #ComponentClassificationCommandBuilder -> #paddingVertical3;
+	add: #ComponentClassificationCommandBuilder -> #paddingVertical4;
+	add: #ComponentClassificationCommandBuilder -> #paddingVertical5;
+	add: #ComponentClassificationCommandBuilder -> #paddingVerticalAuto;
+	add: #ComponentClassificationCommandBuilder -> #pageItem;
+	add: #ComponentClassificationCommandBuilder -> #pageLink;
 	add: #ComponentClassificationCommandBuilder -> #popoverBody;
 	add: #ComponentClassificationCommandBuilder -> #popoverHeader;
 	add: #ComponentClassificationCommandBuilder -> #positionAbsolute;
@@ -194,16 +640,65 @@ package methodNames
 	add: #ComponentClassificationCommandBuilder -> #positionRelative;
 	add: #ComponentClassificationCommandBuilder -> #positionStatic;
 	add: #ComponentClassificationCommandBuilder -> #positionSticky;
+	add: #ComponentClassificationCommandBuilder -> #progressBarAnimated;
+	add: #ComponentClassificationCommandBuilder -> #rounded;
+	add: #ComponentClassificationCommandBuilder -> #rounded0;
+	add: #ComponentClassificationCommandBuilder -> #roundedBottom;
+	add: #ComponentClassificationCommandBuilder -> #roundedCircle;
+	add: #ComponentClassificationCommandBuilder -> #roundedLarge;
+	add: #ComponentClassificationCommandBuilder -> #roundedLeft;
+	add: #ComponentClassificationCommandBuilder -> #roundedPill;
+	add: #ComponentClassificationCommandBuilder -> #roundedRight;
+	add: #ComponentClassificationCommandBuilder -> #roundedSmall;
+	add: #ComponentClassificationCommandBuilder -> #roundedTop;
+	add: #ComponentClassificationCommandBuilder -> #spinnerBorder;
+	add: #ComponentClassificationCommandBuilder -> #spinnerBorderSmall;
+	add: #ComponentClassificationCommandBuilder -> #spinnerGrow;
+	add: #ComponentClassificationCommandBuilder -> #spinnerGrowSmall;
 	add: #ComponentClassificationCommandBuilder -> #stickyTop;
+	add: #ComponentClassificationCommandBuilder -> #tableActive;
+	add: #ComponentClassificationCommandBuilder -> #tableBorderless;
+	add: #ComponentClassificationCommandBuilder -> #tableDark;
+	add: #ComponentClassificationCommandBuilder -> #tableHeadDark;
+	add: #ComponentClassificationCommandBuilder -> #tableHeadLight;
+	add: #ComponentClassificationCommandBuilder -> #tableLight;
+	add: #ComponentClassificationCommandBuilder -> #tablePrimary;
+	add: #ComponentClassificationCommandBuilder -> #tableResponsiveExtraLarge;
+	add: #ComponentClassificationCommandBuilder -> #tableResponsiveLarge;
+	add: #ComponentClassificationCommandBuilder -> #tableResponsiveMedium;
+	add: #ComponentClassificationCommandBuilder -> #tableResponsiveSmall;
+	add: #ComponentClassificationCommandBuilder -> #tableSecondary;
+	add: #ComponentClassificationCommandBuilder -> #tableSmall;
 	add: #ComponentClassificationCommandBuilder -> #textBlack50;
 	add: #ComponentClassificationCommandBuilder -> #textBody;
 	add: #ComponentClassificationCommandBuilder -> #textDark;
+	add: #ComponentClassificationCommandBuilder -> #textExtraLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #textExtraLargeJustify;
+	add: #ComponentClassificationCommandBuilder -> #textExtraLargeLeft;
+	add: #ComponentClassificationCommandBuilder -> #textExtraLargeRight;
+	add: #ComponentClassificationCommandBuilder -> #textLargeCenter;
+	add: #ComponentClassificationCommandBuilder -> #textLargeJustify;
+	add: #ComponentClassificationCommandBuilder -> #textLargeLeft;
+	add: #ComponentClassificationCommandBuilder -> #textLargeRight;
 	add: #ComponentClassificationCommandBuilder -> #textLight;
+	add: #ComponentClassificationCommandBuilder -> #textMediumCenter;
+	add: #ComponentClassificationCommandBuilder -> #textMediumJustify;
+	add: #ComponentClassificationCommandBuilder -> #textMediumLeft;
+	add: #ComponentClassificationCommandBuilder -> #textMediumRight;
 	add: #ComponentClassificationCommandBuilder -> #textSecondary;
+	add: #ComponentClassificationCommandBuilder -> #textSmallCenter;
+	add: #ComponentClassificationCommandBuilder -> #textSmallJustify;
+	add: #ComponentClassificationCommandBuilder -> #textSmallLeft;
+	add: #ComponentClassificationCommandBuilder -> #textSmallRight;
+	add: #ComponentClassificationCommandBuilder -> #textTruncate;
 	add: #ComponentClassificationCommandBuilder -> #textWhite;
 	add: #ComponentClassificationCommandBuilder -> #textWhite50;
+	add: #ComponentClassificationCommandBuilder -> #toast;
+	add: #ComponentClassificationCommandBuilder -> #toastBody;
+	add: #ComponentClassificationCommandBuilder -> #toastHeader;
 	add: #ComponentClassificationCommandBuilder -> #validFeedback;
 	add: #ComponentClassificationCommandBuilder -> #validTooltip;
+	add: #ComponentClassificationCommandBuilder -> #visible;
 	add: #ComponentClassificationCommandBuilder -> #width100Percent;
 	add: #ComponentClassificationCommandBuilder -> #width25Percent;
 	add: #ComponentClassificationCommandBuilder -> #width50Percent;
@@ -423,302 +918,2675 @@ update	"Updates the position of an element’s tooltip."	functionName := 'up
 
 !ComponentClassificationCommandBuilder methodsFor!
 
-alertDark	^ self commandStyledWith: #alertDark!
+alertDark
 
-alertHeading	^ self commandStyledWith: #alertHeading!
+	^ self commandStyledWith: #alertDark!
 
-alertLight	^ self commandStyledWith: #alertLight!
+alertHeading
 
-alertPrimary	^ self commandStyledWith: #alertPrimary!
+	^ self commandStyledWith: #alertHeading!
 
-alertSecondary	^ self commandStyledWith: #alertSecondary!
+alertLight
 
-backgroundDark	^ self commandStyledWith: #backgroundDark!
+	^ self commandStyledWith: #alertLight!
 
-backgroundGradientDanger	^ self commandStyledWith: #backgroundGradientDanger!
+alertPrimary
 
-backgroundGradientDark	^ self commandStyledWith: #backgroundGradientDark!
+	^ self commandStyledWith: #alertPrimary!
 
-backgroundGradientInfo	^ self commandStyledWith: #backgroundGradientInfo!
+alertSecondary
 
-backgroundGradientLight	^ self commandStyledWith: #backgroundGradientLight!
+	^ self commandStyledWith: #alertSecondary!
 
-backgroundGradientPrimary	^ self commandStyledWith: #backgroundGradientPrimary!
+alignBaseline
 
-backgroundGradientSecondary	^ self commandStyledWith: #backgroundGradientSecondary!
+	^ self commandStyledWith: #alignBaseline!
 
-backgroundGradientSuccess	^ self commandStyledWith: #backgroundGradientSuccess!
+alignBottom
 
-backgroundGradientWarning	^ self commandStyledWith: #backgroundGradientWarning!
+	^ self commandStyledWith: #alignBottom!
 
-backgroundLight	^ self commandStyledWith: #backgroundLight!
+alignContentAround
 
-backgroundSecondary	^ self commandStyledWith: #backgroundSecondary!
+	^ self commandStyledWith: #alignContentAround!
 
-backgroundTransparent	^ self commandStyledWith: #backgroundTransparent!
+alignContentCenter
 
-backgroundWhite	^ self commandStyledWith: #backgroundWhite!
+	^ self commandStyledWith: #alignContentCenter!
 
-bootstrap4	classificationNamespace := classificationNamespace >> #bootstrap4!
+alignContentEnd
 
-breadcrumbItem	^ self commandStyledWith: #breadcrumbItem!
+	^ self commandStyledWith: #alignContentEnd!
 
-card	^ self commandStyledWith: #card!
+alignContentExtraLargeAround
 
-cardBody	^ self commandStyledWith: #cardBody!
+	^ self commandStyledWith: #alignContentExtraLargeAround!
 
-cardColumns	^ self commandStyledWith: #cardColumns!
+alignContentExtraLargeCenter
 
-cardDeck	^ self commandStyledWith: #cardDeck!
+	^ self commandStyledWith: #alignContentExtraLargeCenter!
 
-cardFooter	^ self commandStyledWith: #cardFooter!
+alignContentExtraLargeEnd
 
-cardGroup	^ self commandStyledWith: #cardGroup!
+	^ self commandStyledWith: #alignContentExtraLargeEnd!
 
-cardHeader	^ self commandStyledWith: #cardHeader!
+alignContentExtraLargeStart
 
-cardImage	^ self commandStyledWith: #cardImage!
+	^ self commandStyledWith: #alignContentExtraLargeStart!
 
-cardImageOverlay	^ self commandStyledWith: #cardImageOverlay!
+alignContentExtraLargeStretch
 
-cardImageTop	^ self commandStyledWith: #cardImageTop!
+	^ self commandStyledWith: #alignContentExtraLargeStretch!
 
-cardLink	^ self commandStyledWith: #cardLink!
+alignContentLargeAround
 
-cardSubtitle	^ self commandStyledWith: #cardSubtitle!
+	^ self commandStyledWith: #alignContentLargeAround!
 
-cardText	^ self commandStyledWith: #cardText!
+alignContentLargeCenter
 
-cardTitle	^ self commandStyledWith: #cardTitle!
+	^ self commandStyledWith: #alignContentLargeCenter!
 
-column	^ self commandStyledWith: #column!
+alignContentLargeEnd
 
-column: count	^ self commandStyledWith: (#'column<1p>' expandMacrosWith: count)!
+	^ self commandStyledWith: #alignContentLargeEnd!
 
-columnExtraLarge	^ self commandStyledWith: #columnExtraLarge!
+alignContentLargeStart
 
-columnExtraSmall	^ self commandStyledWith: #columnExtraSmall!
+	^ self commandStyledWith: #alignContentLargeStart!
 
-columnFormLabel	^ self commandStyledWith: #columnFormLabel!
+alignContentLargeStretch
 
-columnFormLabelLarge	^ self commandStyledWith: #columnFormLabelLarge!
+	^ self commandStyledWith: #alignContentLargeStretch!
 
-columnFormLabelSmall	^ self commandStyledWith: #columnFormLabelSmall!
+alignContentMediumAround
 
-columnLarge	^ self commandStyledWith: #columnLarge!
+	^ self commandStyledWith: #alignContentMediumAround!
 
-columnMedium	^ self commandStyledWith: #columnMedium!
+alignContentMediumCenter
 
-columnSmall	^ self commandStyledWith: #columnSmall!
+	^ self commandStyledWith: #alignContentMediumCenter!
 
-customCheckbox	^ self commandStyledWith: #customCheckbox!
+alignContentMediumEnd
 
-customControl	^ self commandStyledWith: #customControl!
+	^ self commandStyledWith: #alignContentMediumEnd!
 
-customControlInline	^ self commandStyledWith: #customControlInline!
+alignContentMediumStart
 
-customControlInput	^ self commandStyledWith: #customControlInput!
+	^ self commandStyledWith: #alignContentMediumStart!
 
-customControlLabel	^ self commandStyledWith: #customControlLabel!
+alignContentMediumStretch
 
-customFile	^ self commandStyledWith: #customFile!
+	^ self commandStyledWith: #alignContentMediumStretch!
 
-customFileInput	^ self commandStyledWith: #customFileInput!
+alignContentSmallAround
 
-customFileLabel	^ self commandStyledWith: #customFileLabel!
+	^ self commandStyledWith: #alignContentSmallAround!
 
-customRadio	^ self commandStyledWith: #customRadio!
+alignContentSmallCenter
 
-customRange	^ self commandStyledWith: #customRange!
+	^ self commandStyledWith: #alignContentSmallCenter!
 
-customSelect	^ self commandStyledWith: #customSelect!
+alignContentSmallEnd
 
-customSelectLarge	^ self commandStyledWith: #customSelectLarge!
+	^ self commandStyledWith: #alignContentSmallEnd!
 
-customSelectSmall	^ self commandStyledWith: #customSelectSmall!
+alignContentSmallStart
 
-customSwitch	^ self commandStyledWith: #customSwitch!
+	^ self commandStyledWith: #alignContentSmallStart!
 
-dropdownDivider	^ self commandStyledWith: #dropdownDivider!
+alignContentSmallStretch
 
-dropdownItem	^ self commandStyledWith: #dropdownItem!
+	^ self commandStyledWith: #alignContentSmallStretch!
 
-dropdownItemText	^ self commandStyledWith: #dropdownItemText!
+alignContentStart
 
-dropdownToggleSplit	^ self commandStyledWith: #dropdownToggleSplit!
+	^ self commandStyledWith: #alignContentStart!
 
-dropleft	^ self commandStyledWith: #dropleft!
+alignContentStretch
 
-dropright	^ self commandStyledWith: #dropright!
+	^ self commandStyledWith: #alignContentStretch!
 
-fixedBottom	^ self commandStyledWith: #fixedBottom!
+alignItemsBaseline
 
-fixedTop	^ self commandStyledWith: #fixedTop!
+	^ self commandStyledWith: #alignItemsBaseline!
 
-flexColumn	^ self commandStyledWith: #flexColumn!
+alignItemsCenter
 
-flexColumnReverse	^ self commandStyledWith: #flexColumnReverse!
+	^ self commandStyledWith: #alignItemsCenter!
 
-flexRow	^ self commandStyledWith: #flexRow!
+alignItemsEnd
 
-flexRowReverse	^ self commandStyledWith: #flexRowReverse!
+	^ self commandStyledWith: #alignItemsEnd!
 
-formCheck	^ self commandStyledWith: #formCheck!
+alignItemsExtraLargeBaseline
 
-formCheckInline	^ self commandStyledWith: #formCheckInline!
+	^ self commandStyledWith: #alignItemsExtraLargeBaseline!
 
-formCheckInput	^ self commandStyledWith: #formCheckInput!
+alignItemsExtraLargeCenter
 
-formCheckLabel	^ self commandStyledWith: #formCheckLabel!
+	^ self commandStyledWith: #alignItemsExtraLargeCenter!
 
-formControlFile	^ self commandStyledWith: #formControlFile!
+alignItemsExtraLargeEnd
 
-formControlLarge	^ self commandStyledWith: #formControlLarge!
+	^ self commandStyledWith: #alignItemsExtraLargeEnd!
 
-formControlPlainText	^ self commandStyledWith: #formControlPlainText!
+alignItemsExtraLargeStart
 
-formControlRange	^ self commandStyledWith: #formControlRange!
+	^ self commandStyledWith: #alignItemsExtraLargeStart!
 
-formControlSmall	^ self commandStyledWith: #formControlSmall!
+alignItemsExtraLargeStretch
 
-formRow	^ self commandStyledWith: #formRow!
+	^ self commandStyledWith: #alignItemsExtraLargeStretch!
 
-formText	^ self commandStyledWith: #formText!
+alignItemsLargeBaseline
 
-height100Percent	^ self commandStyledWith: #height100Percent!
+	^ self commandStyledWith: #alignItemsLargeBaseline!
 
-height25Percent	^ self commandStyledWith: #height25Percent!
+alignItemsLargeCenter
 
-height50Percent	^ self commandStyledWith: #height50Percent!
+	^ self commandStyledWith: #alignItemsLargeCenter!
 
-height75Percent	^ self commandStyledWith: #height75Percent!
+alignItemsLargeEnd
 
-inputGroupAppend	^ self commandStyledWith: #inputGroupAppend!
+	^ self commandStyledWith: #alignItemsLargeEnd!
 
-inputGroupPrepend	^ self commandStyledWith: #inputGroupPrepend!
+alignItemsLargeStart
 
-inputGroupText	^ self commandStyledWith: #inputGroupText!
+	^ self commandStyledWith: #alignItemsLargeStart!
 
-invalidFeedback	^ self commandStyledWith: #invalidFeedback!
+alignItemsLargeStretch
 
-invalidTooltip	^ self commandStyledWith: #invalidTooltip!
+	^ self commandStyledWith: #alignItemsLargeStretch!
 
-isInvalid	^ self commandStyledWith: #isInvalid!
+alignItemsMediumBaseline
 
-isValid	^ self commandStyledWith: #isValid!
+	^ self commandStyledWith: #alignItemsMediumBaseline!
 
-justifyContentAround	^ self commandStyledWith: #justifyContentAround!
+alignItemsMediumCenter
 
-justifyContentBetween	^ self commandStyledWith: #justifyContentBetween!
+	^ self commandStyledWith: #alignItemsMediumCenter!
 
-justifyContentCenter	^ self commandStyledWith: #justifyContentCenter!
+alignItemsMediumEnd
 
-justifyContentEnd	^ self commandStyledWith: #justifyContentEnd!
+	^ self commandStyledWith: #alignItemsMediumEnd!
 
-justifyContentStart	^ self commandStyledWith: #justifyContentStart!
+alignItemsMediumStart
 
-listGroupFlush	^ self commandStyledWith: #listGroupFlush!
+	^ self commandStyledWith: #alignItemsMediumStart!
 
-listGroupHorizontal	^ self commandStyledWith: #listGroupHorizontal!
+alignItemsMediumStretch
 
-listGroupHorizontalExtraSmall	^ self commandStyledWith: #listGroupHorizontalExtraSmall!
+	^ self commandStyledWith: #alignItemsMediumStretch!
 
-listGroupHorizontalLarge	^ self commandStyledWith: #listGroupHorizontalLarge!
+alignItemsSmallBaseline
 
-listGroupHorizontalMedium	^ self commandStyledWith: #listGroupHorizontalMedium!
+	^ self commandStyledWith: #alignItemsSmallBaseline!
 
-listGroupHorizontalSmall	^ self commandStyledWith: #listGroupHorizontalSmall!
+alignItemsSmallCenter
 
-listGroupItemAction	^ self commandStyledWith: #listGroupItemAction!
+	^ self commandStyledWith: #alignItemsSmallCenter!
 
-listGroupItemDark	^ self commandStyledWith: #listGroupItemDark!
+alignItemsSmallEnd
 
-listGroupItemLight	^ self commandStyledWith: #listGroupItemLight!
+	^ self commandStyledWith: #alignItemsSmallEnd!
 
-listGroupItemPrimary	^ self commandStyledWith: #listGroupItemPrimary!
+alignItemsSmallStart
 
-listGroupItemSecondary	^ self commandStyledWith: #listGroupItemSecondary!
+	^ self commandStyledWith: #alignItemsSmallStart!
 
-maxHeight100Percent	^ self commandStyledWith: #maxHeight100Percent!
+alignItemsSmallStretch
 
-maxWidth100Percent	^ self commandStyledWith: #maxWidth100Percent!
+	^ self commandStyledWith: #alignItemsSmallStretch!
 
-modalDialogCentered	^ self commandStyledWith: #modalDialogCentered!
+alignItemsStart
 
-modalDialogScrollable	^ self commandStyledWith: #modalDialogScrollable!
+	^ self commandStyledWith: #alignItemsStart!
 
-modalExtraLarge	^ self commandStyledWith: #modalExtraLarge!
+alignItemsStretch
 
-navbarDark	^ self commandStyledWith: #navbarDark!
+	^ self commandStyledWith: #alignItemsStretch!
 
-navbarExpand	^ self commandStyledWith: #navbarExpand!
+alignMiddle
 
-navbarExpandExtraLarge	^ self commandStyledWith: #navbarExpandExtraLarge!
+	^ self commandStyledWith: #alignMiddle!
 
-navbarExpandLarge	^ self commandStyledWith: #navbarExpandLarge!
+alignSelfBaseline
 
-navbarExpandMedium	^ self commandStyledWith: #navbarExpandMedium!
+	^ self commandStyledWith: #alignSelfBaseline!
 
-navbarExpandSmall	^ self commandStyledWith: #navbarExpandSmall!
+alignSelfCenter
 
-navbarLight	^ self commandStyledWith: #navbarLight!
+	^ self commandStyledWith: #alignSelfCenter!
 
-navbarToggler	^ self commandStyledWith: #navbarToggler!
+alignSelfEnd
 
-navbarTogglerIcon	^ self commandStyledWith: #navbarTogglerIcon!
+	^ self commandStyledWith: #alignSelfEnd!
 
-navFill	^ self commandStyledWith: #navFill!
+alignSelfExtraLargeBaseline
 
-navItem	^ self commandStyledWith: #navItem!
+	^ self commandStyledWith: #alignSelfExtraLargeBaseline!
 
-navLink	^ self commandStyledWith: #navLink!
+alignSelfExtraLargeCenter
 
-popoverBody	^ self commandStyledWith: #popoverBody!
+	^ self commandStyledWith: #alignSelfExtraLargeCenter!
 
-popoverHeader	^ self commandStyledWith: #popoverHeader!
+alignSelfExtraLargeEnd
 
-positionAbsolute	^ self commandStyledWith: #positionAbsolute!
+	^ self commandStyledWith: #alignSelfExtraLargeEnd!
 
-positionFixed	^ self commandStyledWith: #positionFixed!
+alignSelfExtraLargeStart
 
-positionRelative	^ self commandStyledWith: #positionRelative!
+	^ self commandStyledWith: #alignSelfExtraLargeStart!
 
-positionStatic	^ self commandStyledWith: #positionStatic!
+alignSelfExtraLargeStretch
 
-positionSticky	^ self commandStyledWith: #positionSticky!
+	^ self commandStyledWith: #alignSelfExtraLargeStretch!
 
-stickyTop	^ self commandStyledWith: #stickyTop!
+alignSelfLargeBaseline
 
-textBlack50	^ self commandStyledWith: #textBlack50!
+	^ self commandStyledWith: #alignSelfLargeBaseline!
 
-textBody	^ self commandStyledWith: #textBody!
+alignSelfLargeCenter
 
-textDark	^ self commandStyledWith: #textDark!
+	^ self commandStyledWith: #alignSelfLargeCenter!
 
-textLight	^ self commandStyledWith: #textLight!
+alignSelfLargeEnd
 
-textSecondary	^ self commandStyledWith: #textSecondary!
+	^ self commandStyledWith: #alignSelfLargeEnd!
 
-textWhite	^ self commandStyledWith: #textWhite!
+alignSelfLargeStart
 
-textWhite50	^ self commandStyledWith: #textWhite50!
+	^ self commandStyledWith: #alignSelfLargeStart!
 
-validFeedback	^ self commandStyledWith: #validFeedback!
+alignSelfLargeStretch
 
-validTooltip	^ self commandStyledWith: #validTooltip!
+	^ self commandStyledWith: #alignSelfLargeStretch!
 
-width100Percent	^ self commandStyledWith: #width100Percent!
+alignSelfMediumBaseline
 
-width25Percent	^ self commandStyledWith: #width25Percent!
+	^ self commandStyledWith: #alignSelfMediumBaseline!
 
-width50Percent	^ self commandStyledWith: #width50Percent!
+alignSelfMediumCenter
 
-width75Percent	^ self commandStyledWith: #width75Percent! !
+	^ self commandStyledWith: #alignSelfMediumCenter!
+
+alignSelfMediumEnd
+
+	^ self commandStyledWith: #alignSelfMediumEnd!
+
+alignSelfMediumStart
+
+	^ self commandStyledWith: #alignSelfMediumStart!
+
+alignSelfMediumStretch
+
+	^ self commandStyledWith: #alignSelfMediumStretch!
+
+alignSelfSmallBaseline
+
+	^ self commandStyledWith: #alignSelfSmallBaseline!
+
+alignSelfSmallCenter
+
+	^ self commandStyledWith: #alignSelfSmallCenter!
+
+alignSelfSmallEnd
+
+	^ self commandStyledWith: #alignSelfSmallEnd!
+
+alignSelfSmallStart
+
+	^ self commandStyledWith: #alignSelfSmallStart!
+
+alignSelfSmallStretch
+
+	^ self commandStyledWith: #alignSelfSmallStretch!
+
+alignSelfStart
+
+	^ self commandStyledWith: #alignSelfStart!
+
+alignSelfStretch
+
+	^ self commandStyledWith: #alignSelfStretch!
+
+alignTextBottom
+
+	^ self commandStyledWith: #alignTextBottom!
+
+alignTextTop
+
+	^ self commandStyledWith: #alignTextTop!
+
+alignTop
+
+	^ self commandStyledWith: #alignTop!
+
+backgroundDark
+
+	^ self commandStyledWith: #backgroundDark!
+
+backgroundGradientDanger
+
+	^ self commandStyledWith: #backgroundGradientDanger!
+
+backgroundGradientDark
+
+	^ self commandStyledWith: #backgroundGradientDark!
+
+backgroundGradientInfo
+
+	^ self commandStyledWith: #backgroundGradientInfo!
+
+backgroundGradientLight
+
+	^ self commandStyledWith: #backgroundGradientLight!
+
+backgroundGradientPrimary
+
+	^ self commandStyledWith: #backgroundGradientPrimary!
+
+backgroundGradientSecondary
+
+	^ self commandStyledWith: #backgroundGradientSecondary!
+
+backgroundGradientSuccess
+
+	^ self commandStyledWith: #backgroundGradientSuccess!
+
+backgroundGradientWarning
+
+	^ self commandStyledWith: #backgroundGradientWarning!
+
+backgroundLight
+
+	^ self commandStyledWith: #backgroundLight!
+
+backgroundSecondary
+
+	^ self commandStyledWith: #backgroundSecondary!
+
+backgroundTransparent
+
+	^ self commandStyledWith: #backgroundTransparent!
+
+backgroundWhite
+
+	^ self commandStyledWith: #backgroundWhite!
+
+badgeDanger
+
+	^ self commandStyledWith: #badgeDanger!
+
+badgeDark
+
+	^ self commandStyledWith: #badgeDark!
+
+badgeInfo
+
+	^ self commandStyledWith: #badgeInfo!
+
+badgeLight
+
+	^ self commandStyledWith: #badgeLight!
+
+badgePill
+
+	^ self commandStyledWith: #badgePill!
+
+badgePrimary
+
+	^ self commandStyledWith: #badgePrimary!
+
+badgeSecondary
+
+	^ self commandStyledWith: #badgeSecondary!
+
+badgeSuccess
+
+	^ self commandStyledWith: #badgeSuccess!
+
+badgeWarning
+
+	^ self commandStyledWith: #badgeWarning!
+
+blockquote
+
+	^ self commandStyledWith: #blockquote!
+
+blockquoteFooter
+
+	^ self commandStyledWith: #blockquoteFooter!
+
+bootstrap4
+
+	classificationNamespace := classificationNamespace >> #bootstrap4!
+
+border
+
+	^ self commandStyledWith: #border!
+
+border0
+
+	^ self commandStyledWith: #border0!
+
+borderBottom
+
+	^ self commandStyledWith: #borderBottom!
+
+borderBottom0
+
+	^ self commandStyledWith: #borderBottom0!
+
+borderDanger
+
+	^ self commandStyledWith: #borderDanger!
+
+borderDark
+
+	^ self commandStyledWith: #borderDark!
+
+borderInfo
+
+	^ self commandStyledWith: #borderInfo!
+
+borderLeft
+
+	^ self commandStyledWith: #borderLeft!
+
+borderLeft0
+
+	^ self commandStyledWith: #borderLeft0!
+
+borderLight
+
+	^ self commandStyledWith: #borderLight!
+
+borderPrimary
+
+	^ self commandStyledWith: #borderPrimary!
+
+borderRight
+
+	^ self commandStyledWith: #borderRight!
+
+borderRight0
+
+	^ self commandStyledWith: #borderRight0!
+
+borderSecondary
+
+	^ self commandStyledWith: #borderSecondary!
+
+borderSuccess
+
+	^ self commandStyledWith: #borderSuccess!
+
+borderTop
+
+	^ self commandStyledWith: #borderTop!
+
+borderTop0
+
+	^ self commandStyledWith: #borderTop0!
+
+borderWarning
+
+	^ self commandStyledWith: #borderWarning!
+
+borderWhite
+
+	^ self commandStyledWith: #borderWhite!
+
+breadcrumbItem
+
+	^ self commandStyledWith: #breadcrumbItem!
+
+buttonDark
+
+	^ self commandStyledWith: #buttonDark!
+
+buttonGroupToggle
+
+	^ self commandStyledWith: #buttonGroupToggle!
+
+buttonLight
+
+	^ self commandStyledWith: #buttonLight!
+
+buttonOutlineDanger
+
+	^ self commandStyledWith: #buttonOutlineDanger!
+
+buttonOutlineDark
+
+	^ self commandStyledWith: #buttonOutlineDark!
+
+buttonOutlineInfo
+
+	^ self commandStyledWith: #buttonOutlineInfo!
+
+buttonOutlineLight
+
+	^ self commandStyledWith: #buttonOutlineLight!
+
+buttonOutlinePrimary
+
+	^ self commandStyledWith: #buttonOutlinePrimary!
+
+buttonOutlineSecondary
+
+	^ self commandStyledWith: #buttonOutlineSecondary!
+
+buttonOutlineSuccess
+
+	^ self commandStyledWith: #buttonOutlineSuccess!
+
+buttonOutlineWarning
+
+	^ self commandStyledWith: #buttonOutlineWarning!
+
+buttonSecondary
+
+	^ self commandStyledWith: #buttonSecondary!
+
+card
+
+	^ self commandStyledWith: #card!
+
+cardBody
+
+	^ self commandStyledWith: #cardBody!
+
+cardColumns
+
+	^ self commandStyledWith: #cardColumns!
+
+cardDeck
+
+	^ self commandStyledWith: #cardDeck!
+
+cardFooter
+
+	^ self commandStyledWith: #cardFooter!
+
+cardGroup
+
+	^ self commandStyledWith: #cardGroup!
+
+cardHeader
+
+	^ self commandStyledWith: #cardHeader!
+
+cardHeaderTabs
+
+	^ self commandStyledWith: #cardHeaderTabs!
+
+cardImage
+
+	^ self commandStyledWith: #cardImage!
+
+cardImageOverlay
+
+	^ self commandStyledWith: #cardImageOverlay!
+
+cardImageTop
+
+	^ self commandStyledWith: #cardImageTop!
+
+cardLink
+
+	^ self commandStyledWith: #cardLink!
+
+cardSubtitle
+
+	^ self commandStyledWith: #cardSubtitle!
+
+cardText
+
+	^ self commandStyledWith: #cardText!
+
+cardTitle
+
+	^ self commandStyledWith: #cardTitle!
+
+column
+
+	^ self commandStyledWith: #column!
+
+column: count
+
+	^ self commandStyledWith: (#'column<1p>' expandMacrosWith: count)!
+
+column1
+
+	^ self commandStyledWith: #column1!
+
+column10
+
+	^ self commandStyledWith: #column10!
+
+column11
+
+	^ self commandStyledWith: #column11!
+
+column12
+
+	^ self commandStyledWith: #column12!
+
+column2
+
+	^ self commandStyledWith: #column2!
+
+column3
+
+	^ self commandStyledWith: #column3!
+
+column4
+
+	^ self commandStyledWith: #column4!
+
+column5
+
+	^ self commandStyledWith: #column5!
+
+column6
+
+	^ self commandStyledWith: #column6!
+
+column7
+
+	^ self commandStyledWith: #column7!
+
+column8
+
+	^ self commandStyledWith: #column8!
+
+column9
+
+	^ self commandStyledWith: #column9!
+
+columnExtraLarge
+
+	^ self commandStyledWith: #columnExtraLarge!
+
+columnExtraLarge1
+
+	^ self commandStyledWith: #columnExtraLarge1!
+
+columnExtraLarge10
+
+	^ self commandStyledWith: #columnExtraLarge10!
+
+columnExtraLarge11
+
+	^ self commandStyledWith: #columnExtraLarge11!
+
+columnExtraLarge12
+
+	^ self commandStyledWith: #columnExtraLarge12!
+
+columnExtraLarge2
+
+	^ self commandStyledWith: #columnExtraLarge2!
+
+columnExtraLarge3
+
+	^ self commandStyledWith: #columnExtraLarge3!
+
+columnExtraLarge4
+
+	^ self commandStyledWith: #columnExtraLarge4!
+
+columnExtraLarge5
+
+	^ self commandStyledWith: #columnExtraLarge5!
+
+columnExtraLarge6
+
+	^ self commandStyledWith: #columnExtraLarge6!
+
+columnExtraLarge7
+
+	^ self commandStyledWith: #columnExtraLarge7!
+
+columnExtraLarge8
+
+	^ self commandStyledWith: #columnExtraLarge8!
+
+columnExtraLarge9
+
+	^ self commandStyledWith: #columnExtraLarge9!
+
+columnExtraLargeOffset1
+
+	^ self commandStyledWith: #columnExtraLargeOffset1!
+
+columnExtraLargeOffset10
+
+	^ self commandStyledWith: #columnExtraLargeOffset10!
+
+columnExtraLargeOffset11
+
+	^ self commandStyledWith: #columnExtraLargeOffset11!
+
+columnExtraLargeOffset12
+
+	^ self commandStyledWith: #columnExtraLargeOffset12!
+
+columnExtraLargeOffset2
+
+	^ self commandStyledWith: #columnExtraLargeOffset2!
+
+columnExtraLargeOffset3
+
+	^ self commandStyledWith: #columnExtraLargeOffset3!
+
+columnExtraLargeOffset4
+
+	^ self commandStyledWith: #columnExtraLargeOffset4!
+
+columnExtraLargeOffset5
+
+	^ self commandStyledWith: #columnExtraLargeOffset5!
+
+columnExtraLargeOffset6
+
+	^ self commandStyledWith: #columnExtraLargeOffset6!
+
+columnExtraLargeOffset7
+
+	^ self commandStyledWith: #columnExtraLargeOffset7!
+
+columnExtraLargeOffset8
+
+	^ self commandStyledWith: #columnExtraLargeOffset8!
+
+columnExtraLargeOffset9
+
+	^ self commandStyledWith: #columnExtraLargeOffset9!
+
+columnExtraSmall
+
+	^ self commandStyledWith: #columnExtraSmall!
+
+columnFormLabel
+
+	^ self commandStyledWith: #columnFormLabel!
+
+columnFormLabelLarge
+
+	^ self commandStyledWith: #columnFormLabelLarge!
+
+columnFormLabelSmall
+
+	^ self commandStyledWith: #columnFormLabelSmall!
+
+columnLarge
+
+	^ self commandStyledWith: #columnLarge!
+
+columnMedium
+
+	^ self commandStyledWith: #columnMedium!
+
+columnSmall
+
+	^ self commandStyledWith: #columnSmall!
+
+customCheckbox
+
+	^ self commandStyledWith: #customCheckbox!
+
+customControl
+
+	^ self commandStyledWith: #customControl!
+
+customControlInline
+
+	^ self commandStyledWith: #customControlInline!
+
+customControlInput
+
+	^ self commandStyledWith: #customControlInput!
+
+customControlLabel
+
+	^ self commandStyledWith: #customControlLabel!
+
+customFile
+
+	^ self commandStyledWith: #customFile!
+
+customFileInput
+
+	^ self commandStyledWith: #customFileInput!
+
+customFileLabel
+
+	^ self commandStyledWith: #customFileLabel!
+
+customRadio
+
+	^ self commandStyledWith: #customRadio!
+
+customRange
+
+	^ self commandStyledWith: #customRange!
+
+customSelect
+
+	^ self commandStyledWith: #customSelect!
+
+customSelectLarge
+
+	^ self commandStyledWith: #customSelectLarge!
+
+customSelectSmall
+
+	^ self commandStyledWith: #customSelectSmall!
+
+customSwitch
+
+	^ self commandStyledWith: #customSwitch!
+
+display1
+
+	^ self commandStyledWith: #display1!
+
+display2
+
+	^ self commandStyledWith: #display2!
+
+display3
+
+	^ self commandStyledWith: #display3!
+
+display4
+
+	^ self commandStyledWith: #display4!
+
+displayBlock
+
+	^ self commandStyledWith: #displayBlock!
+
+displayExtraLargeBlock
+
+	^ self commandStyledWith: #displayExtraLargeBlock!
+
+displayExtraLargeFlex
+
+	^ self commandStyledWith: #displayExtraLargeFlex!
+
+displayExtraLargeInline
+
+	^ self commandStyledWith: #displayExtraLargeInline!
+
+displayExtraLargeInlineBlock
+
+	^ self commandStyledWith: #displayExtraLargeInlineBlock!
+
+displayExtraLargeInlineFlex
+
+	^ self commandStyledWith: #displayExtraLargeInlineFlex!
+
+displayExtraLargeNone
+
+	^ self commandStyledWith: #displayExtraLargeNone!
+
+displayExtraLargeTable
+
+	^ self commandStyledWith: #displayExtraLargeTable!
+
+displayExtraLargeTableCell
+
+	^ self commandStyledWith: #displayExtraLargeTableCell!
+
+displayExtraLargeTableRow
+
+	^ self commandStyledWith: #displayExtraLargeTableRow!
+
+displayFlex
+
+	^ self commandStyledWith: #displayFlex!
+
+displayInline
+
+	^ self commandStyledWith: #displayInline!
+
+displayInlineBlock
+
+	^ self commandStyledWith: #displayInlineBlock!
+
+displayInlineFlex
+
+	^ self commandStyledWith: #displayInlineFlex!
+
+displayLargeBlock
+
+	^ self commandStyledWith: #displayLargeBlock!
+
+displayLargeFlex
+
+	^ self commandStyledWith: #displayLargeFlex!
+
+displayLargeInline
+
+	^ self commandStyledWith: #displayLargeInline!
+
+displayLargeInlineBlock
+
+	^ self commandStyledWith: #displayLargeInlineBlock!
+
+displayLargeInlineFlex
+
+	^ self commandStyledWith: #displayLargeInlineFlex!
+
+displayLargeNone
+
+	^ self commandStyledWith: #displayLargeNone!
+
+displayLargeTable
+
+	^ self commandStyledWith: #displayLargeTable!
+
+displayLargeTableCell
+
+	^ self commandStyledWith: #displayLargeTableCell!
+
+displayLargeTableRow
+
+	^ self commandStyledWith: #displayLargeTableRow!
+
+displayMediumBlock
+
+	^ self commandStyledWith: #displayMediumBlock!
+
+displayMediumFlex
+
+	^ self commandStyledWith: #displayMediumFlex!
+
+displayMediumInline
+
+	^ self commandStyledWith: #displayMediumInline!
+
+displayMediumInlineBlock
+
+	^ self commandStyledWith: #displayMediumInlineBlock!
+
+displayMediumInlineFlex
+
+	^ self commandStyledWith: #displayMediumInlineFlex!
+
+displayMediumNone
+
+	^ self commandStyledWith: #displayMediumNone!
+
+displayMediumTable
+
+	^ self commandStyledWith: #displayMediumTable!
+
+displayMediumTableCell
+
+	^ self commandStyledWith: #displayMediumTableCell!
+
+displayMediumTableRow
+
+	^ self commandStyledWith: #displayMediumTableRow!
+
+displayNone
+
+	^ self commandStyledWith: #displayNone!
+
+displayPrintBlock
+
+	^ self commandStyledWith: #displayPrintBlock!
+
+displayPrintFlex
+
+	^ self commandStyledWith: #displayPrintFlex!
+
+displayPrintInline
+
+	^ self commandStyledWith: #displayPrintInline!
+
+displayPrintInlineBlock
+
+	^ self commandStyledWith: #displayPrintInlineBlock!
+
+displayPrintInlineFlex
+
+	^ self commandStyledWith: #displayPrintInlineFlex!
+
+displayPrintNone
+
+	^ self commandStyledWith: #displayPrintNone!
+
+displayPrintTable
+
+	^ self commandStyledWith: #displayPrintTable!
+
+displayPrintTableCell
+
+	^ self commandStyledWith: #displayPrintTableCell!
+
+displayPrintTableRow
+
+	^ self commandStyledWith: #displayPrintTableRow!
+
+displaySmallBlock
+
+	^ self commandStyledWith: #displaySmallBlock!
+
+displaySmallFlex
+
+	^ self commandStyledWith: #displaySmallFlex!
+
+displaySmallInline
+
+	^ self commandStyledWith: #displaySmallInline!
+
+displaySmallInlineBlock
+
+	^ self commandStyledWith: #displaySmallInlineBlock!
+
+displaySmallInlineFlex
+
+	^ self commandStyledWith: #displaySmallInlineFlex!
+
+displaySmallNone
+
+	^ self commandStyledWith: #displaySmallNone!
+
+displaySmallTable
+
+	^ self commandStyledWith: #displaySmallTable!
+
+displaySmallTableCell
+
+	^ self commandStyledWith: #displaySmallTableCell!
+
+displaySmallTableRow
+
+	^ self commandStyledWith: #displaySmallTableRow!
+
+displayTable
+
+	^ self commandStyledWith: #displayTable!
+
+displayTableCell
+
+	^ self commandStyledWith: #displayTableCell!
+
+displayTableRow
+
+	^ self commandStyledWith: #displayTableRow!
+
+dropdownDivider
+
+	^ self commandStyledWith: #dropdownDivider!
+
+dropdownItem
+
+	^ self commandStyledWith: #dropdownItem!
+
+dropdownItemText
+
+	^ self commandStyledWith: #dropdownItemText!
+
+dropdownToggleSplit
+
+	^ self commandStyledWith: #dropdownToggleSplit!
+
+dropleft
+
+	^ self commandStyledWith: #dropleft!
+
+dropright
+
+	^ self commandStyledWith: #dropright!
+
+embedReponsive16by9
+
+	^ self commandStyledWith: #embedReponsive16by9!
+
+embedReponsive1by1
+
+	^ self commandStyledWith: #embedReponsive1by1!
+
+embedReponsive21by9
+
+	^ self commandStyledWith: #embedReponsive21by9!
+
+embedReponsive4by3
+
+	^ self commandStyledWith: #embedReponsive4by3!
+
+embedResponsive
+
+	^ self commandStyledWith: #embedResponsive!
+
+embedResponsiveItem
+
+	^ self commandStyledWith: #embedResponsiveItem!
+
+figure
+
+	^ self commandStyledWith: #figure!
+
+figureCaption
+
+	^ self commandStyledWith: #figureCaption!
+
+figureImage
+
+	^ self commandStyledWith: #figureImage!
+
+fixedBottom
+
+	^ self commandStyledWith: #fixedBottom!
+
+fixedTop
+
+	^ self commandStyledWith: #fixedTop!
+
+flexColumn
+
+	^ self commandStyledWith: #flexColumn!
+
+flexColumnReverse
+
+	^ self commandStyledWith: #flexColumnReverse!
+
+flexExtraLargeColumn
+
+	^ self commandStyledWith: #flexExtraLargeColumn!
+
+flexExtraLargeColumnReverse
+
+	^ self commandStyledWith: #flexExtraLargeColumnReverse!
+
+flexExtraLargeNowrap
+
+	^ self commandStyledWith: #flexExtraLargeNowrap!
+
+flexExtraLargeRow
+
+	^ self commandStyledWith: #flexExtraLargeRow!
+
+flexExtraLargeRowReverse
+
+	^ self commandStyledWith: #flexExtraLargeRowReverse!
+
+flexExtraLargeWrap
+
+	^ self commandStyledWith: #flexExtraLargeWrap!
+
+flexExtraLargeWrapReverse
+
+	^ self commandStyledWith: #flexExtraLargeWrapReverse!
+
+flexLargeColumn
+
+	^ self commandStyledWith: #flexLargeColumn!
+
+flexLargeColumnReverse
+
+	^ self commandStyledWith: #flexLargeColumnReverse!
+
+flexLargeNowrap
+
+	^ self commandStyledWith: #flexLargeNowrap!
+
+flexLargeRow
+
+	^ self commandStyledWith: #flexLargeRow!
+
+flexLargeRowReverse
+
+	^ self commandStyledWith: #flexLargeRowReverse!
+
+flexLargeWrap
+
+	^ self commandStyledWith: #flexLargeWrap!
+
+flexLargeWrapReverse
+
+	^ self commandStyledWith: #flexLargeWrapReverse!
+
+flexMediumColumn
+
+	^ self commandStyledWith: #flexMediumColumn!
+
+flexMediumColumnReverse
+
+	^ self commandStyledWith: #flexMediumColumnReverse!
+
+flexMediumNowrap
+
+	^ self commandStyledWith: #flexMediumNowrap!
+
+flexMediumRow
+
+	^ self commandStyledWith: #flexMediumRow!
+
+flexMediumRowReverse
+
+	^ self commandStyledWith: #flexMediumRowReverse!
+
+flexMediumWrap
+
+	^ self commandStyledWith: #flexMediumWrap!
+
+flexMediumWrapReverse
+
+	^ self commandStyledWith: #flexMediumWrapReverse!
+
+flexNowrap
+
+	^ self commandStyledWith: #flexNowrap!
+
+flexRow
+
+	^ self commandStyledWith: #flexRow!
+
+flexRowReverse
+
+	^ self commandStyledWith: #flexRowReverse!
+
+flexSmallColumn
+
+	^ self commandStyledWith: #flexSmallColumn!
+
+flexSmallColumnReverse
+
+	^ self commandStyledWith: #flexSmallColumnReverse!
+
+flexSmallNowrap
+
+	^ self commandStyledWith: #flexSmallNowrap!
+
+flexSmallRow
+
+	^ self commandStyledWith: #flexSmallRow!
+
+flexSmallRowReverse
+
+	^ self commandStyledWith: #flexSmallRowReverse!
+
+flexSmallWrap
+
+	^ self commandStyledWith: #flexSmallWrap!
+
+flexSmallWrapReverse
+
+	^ self commandStyledWith: #flexSmallWrapReverse!
+
+flexWrap
+
+	^ self commandStyledWith: #flexWrap!
+
+flexWrapReverse
+
+	^ self commandStyledWith: #flexWrapReverse!
+
+floatExtraLargeLeft
+
+	^ self commandStyledWith: #floatExtraLargeLeft!
+
+floatExtraLargeNone
+
+	^ self commandStyledWith: #floatExtraLargeNone!
+
+floatExtraLargeRight
+
+	^ self commandStyledWith: #floatExtraLargeRight!
+
+floatLargeLeft
+
+	^ self commandStyledWith: #floatLargeLeft!
+
+floatLargeNone
+
+	^ self commandStyledWith: #floatLargeNone!
+
+floatLargeRight
+
+	^ self commandStyledWith: #floatLargeRight!
+
+floatLeft
+
+	^ self commandStyledWith: #floatLeft!
+
+floatMediumLeft
+
+	^ self commandStyledWith: #floatMediumLeft!
+
+floatMediumNone
+
+	^ self commandStyledWith: #floatMediumNone!
+
+floatMediumRight
+
+	^ self commandStyledWith: #floatMediumRight!
+
+floatNone
+
+	^ self commandStyledWith: #floatNone!
+
+floatRight
+
+	^ self commandStyledWith: #floatRight!
+
+floatSmallLeft
+
+	^ self commandStyledWith: #floatSmallLeft!
+
+floatSmallNone
+
+	^ self commandStyledWith: #floatSmallNone!
+
+floatSmallRight
+
+	^ self commandStyledWith: #floatSmallRight!
+
+fontItalic
+
+	^ self commandStyledWith: #fontItalic!
+
+fontWeightBold
+
+	^ self commandStyledWith: #fontWeightBold!
+
+fontWeightLight
+
+	^ self commandStyledWith: #fontWeightLight!
+
+fontWeightNormal
+
+	^ self commandStyledWith: #fontWeightNormal!
+
+formCheck
+
+	^ self commandStyledWith: #formCheck!
+
+formCheckInline
+
+	^ self commandStyledWith: #formCheckInline!
+
+formCheckInput
+
+	^ self commandStyledWith: #formCheckInput!
+
+formCheckLabel
+
+	^ self commandStyledWith: #formCheckLabel!
+
+formControlFile
+
+	^ self commandStyledWith: #formControlFile!
+
+formControlLarge
+
+	^ self commandStyledWith: #formControlLarge!
+
+formControlPlainText
+
+	^ self commandStyledWith: #formControlPlainText!
+
+formControlRange
+
+	^ self commandStyledWith: #formControlRange!
+
+formControlSmall
+
+	^ self commandStyledWith: #formControlSmall!
+
+formRow
+
+	^ self commandStyledWith: #formRow!
+
+formText
+
+	^ self commandStyledWith: #formText!
+
+height100Percent
+
+	^ self commandStyledWith: #height100Percent!
+
+height25Percent
+
+	^ self commandStyledWith: #height25Percent!
+
+height50Percent
+
+	^ self commandStyledWith: #height50Percent!
+
+height75Percent
+
+	^ self commandStyledWith: #height75Percent!
+
+imageFluid
+
+	^ self commandStyledWith: #imageFluid!
+
+inputGroupAppend
+
+	^ self commandStyledWith: #inputGroupAppend!
+
+inputGroupPrepend
+
+	^ self commandStyledWith: #inputGroupPrepend!
+
+inputGroupText
+
+	^ self commandStyledWith: #inputGroupText!
+
+invalidFeedback
+
+	^ self commandStyledWith: #invalidFeedback!
+
+invalidTooltip
+
+	^ self commandStyledWith: #invalidTooltip!
+
+isInvalid
+
+	^ self commandStyledWith: #isInvalid!
+
+isValid
+
+	^ self commandStyledWith: #isValid!
+
+jumbotronFluid
+
+	^ self commandStyledWith: #jumbotronFluid!
+
+justifyContentAround
+
+	^ self commandStyledWith: #justifyContentAround!
+
+justifyContentBetween
+
+	^ self commandStyledWith: #justifyContentBetween!
+
+justifyContentCenter
+
+	^ self commandStyledWith: #justifyContentCenter!
+
+justifyContentEnd
+
+	^ self commandStyledWith: #justifyContentEnd!
+
+justifyContentExtraLargeAround
+
+	^ self commandStyledWith: #justifyContentExtraLargeAround!
+
+justifyContentExtraLargeBetween
+
+	^ self commandStyledWith: #justifyContentExtraLargeBetween!
+
+justifyContentExtraLargeCenter
+
+	^ self commandStyledWith: #justifyContentExtraLargeCenter!
+
+justifyContentExtraLargeEnd
+
+	^ self commandStyledWith: #justifyContentExtraLargeEnd!
+
+justifyContentExtraLargeStart
+
+	^ self commandStyledWith: #justifyContentExtraLargeStart!
+
+justifyContentLargeAround
+
+	^ self commandStyledWith: #justifyContentLargeAround!
+
+justifyContentLargeBetween
+
+	^ self commandStyledWith: #justifyContentLargeBetween!
+
+justifyContentLargeCenter
+
+	^ self commandStyledWith: #justifyContentLargeCenter!
+
+justifyContentLargeEnd
+
+	^ self commandStyledWith: #justifyContentLargeEnd!
+
+justifyContentLargeStart
+
+	^ self commandStyledWith: #justifyContentLargeStart!
+
+justifyContentMediumAround
+
+	^ self commandStyledWith: #justifyContentMediumAround!
+
+justifyContentMediumBetween
+
+	^ self commandStyledWith: #justifyContentMediumBetween!
+
+justifyContentMediumCenter
+
+	^ self commandStyledWith: #justifyContentMediumCenter!
+
+justifyContentMediumEnd
+
+	^ self commandStyledWith: #justifyContentMediumEnd!
+
+justifyContentMediumStart
+
+	^ self commandStyledWith: #justifyContentMediumStart!
+
+justifyContentSmallAround
+
+	^ self commandStyledWith: #justifyContentSmallAround!
+
+justifyContentSmallBetween
+
+	^ self commandStyledWith: #justifyContentSmallBetween!
+
+justifyContentSmallCenter
+
+	^ self commandStyledWith: #justifyContentSmallCenter!
+
+justifyContentSmallEnd
+
+	^ self commandStyledWith: #justifyContentSmallEnd!
+
+justifyContentSmallStart
+
+	^ self commandStyledWith: #justifyContentSmallStart!
+
+justifyContentStart
+
+	^ self commandStyledWith: #justifyContentStart!
+
+listGroupFlush
+
+	^ self commandStyledWith: #listGroupFlush!
+
+listGroupHorizontal
+
+	^ self commandStyledWith: #listGroupHorizontal!
+
+listGroupHorizontalExtraSmall
+
+	^ self commandStyledWith: #listGroupHorizontalExtraSmall!
+
+listGroupHorizontalLarge
+
+	^ self commandStyledWith: #listGroupHorizontalLarge!
+
+listGroupHorizontalMedium
+
+	^ self commandStyledWith: #listGroupHorizontalMedium!
+
+listGroupHorizontalSmall
+
+	^ self commandStyledWith: #listGroupHorizontalSmall!
+
+listGroupItemAction
+
+	^ self commandStyledWith: #listGroupItemAction!
+
+listGroupItemDark
+
+	^ self commandStyledWith: #listGroupItemDark!
+
+listGroupItemLight
+
+	^ self commandStyledWith: #listGroupItemLight!
+
+listGroupItemPrimary
+
+	^ self commandStyledWith: #listGroupItemPrimary!
+
+listGroupItemSecondary
+
+	^ self commandStyledWith: #listGroupItemSecondary!
+
+listInlineItem
+
+	^ self commandStyledWith: #listInlineItem!
+
+margin1
+
+	^ self commandStyledWith: #margin1!
+
+margin2
+
+	^ self commandStyledWith: #margin2!
+
+margin3
+
+	^ self commandStyledWith: #margin3!
+
+margin4
+
+	^ self commandStyledWith: #margin4!
+
+margin5
+
+	^ self commandStyledWith: #margin5!
+
+marginAuto
+
+	^ self commandStyledWith: #marginAuto!
+
+marginBottom1
+
+	^ self commandStyledWith: #marginBottom1!
+
+marginBottom2
+
+	^ self commandStyledWith: #marginBottom2!
+
+marginBottom3
+
+	^ self commandStyledWith: #marginBottom3!
+
+marginBottom4
+
+	^ self commandStyledWith: #marginBottom4!
+
+marginBottom5
+
+	^ self commandStyledWith: #marginBottom5!
+
+marginBottomAuto
+
+	^ self commandStyledWith: #marginBottomAuto!
+
+marginHorizontal1
+
+	^ self commandStyledWith: #marginHorizontal1!
+
+marginHorizontal2
+
+	^ self commandStyledWith: #marginHorizontal2!
+
+marginHorizontal3
+
+	^ self commandStyledWith: #marginHorizontal3!
+
+marginHorizontal4
+
+	^ self commandStyledWith: #marginHorizontal4!
+
+marginHorizontal5
+
+	^ self commandStyledWith: #marginHorizontal5!
+
+marginHorizontalAuto
+
+	^ self commandStyledWith: #marginHorizontalAuto!
+
+marginLeft1
+
+	^ self commandStyledWith: #marginLeft1!
+
+marginLeft2
+
+	^ self commandStyledWith: #marginLeft2!
+
+marginLeft3
+
+	^ self commandStyledWith: #marginLeft3!
+
+marginLeft4
+
+	^ self commandStyledWith: #marginLeft4!
+
+marginLeft5
+
+	^ self commandStyledWith: #marginLeft5!
+
+marginLeftAuto
+
+	^ self commandStyledWith: #marginLeftAuto!
+
+marginRight1
+
+	^ self commandStyledWith: #marginRight1!
+
+marginRight2
+
+	^ self commandStyledWith: #marginRight2!
+
+marginRight3
+
+	^ self commandStyledWith: #marginRight3!
+
+marginRight4
+
+	^ self commandStyledWith: #marginRight4!
+
+marginRight5
+
+	^ self commandStyledWith: #marginRight5!
+
+marginRightAuto
+
+	^ self commandStyledWith: #marginRightAuto!
+
+marginTop1
+
+	^ self commandStyledWith: #marginTop1!
+
+marginTop2
+
+	^ self commandStyledWith: #marginTop2!
+
+marginTop3
+
+	^ self commandStyledWith: #marginTop3!
+
+marginTop4
+
+	^ self commandStyledWith: #marginTop4!
+
+marginTop5
+
+	^ self commandStyledWith: #marginTop5!
+
+marginTopAuto
+
+	^ self commandStyledWith: #marginTopAuto!
+
+marginVertical1
+
+	^ self commandStyledWith: #marginVertical1!
+
+marginVertical2
+
+	^ self commandStyledWith: #marginVertical2!
+
+marginVertical3
+
+	^ self commandStyledWith: #marginVertical3!
+
+marginVertical4
+
+	^ self commandStyledWith: #marginVertical4!
+
+marginVertical5
+
+	^ self commandStyledWith: #marginVertical5!
+
+marginVerticalAuto
+
+	^ self commandStyledWith: #marginVerticalAuto!
+
+maxHeight100Percent
+
+	^ self commandStyledWith: #maxHeight100Percent!
+
+maxWidth100Percent
+
+	^ self commandStyledWith: #maxWidth100Percent!
+
+modalDialogCentered
+
+	^ self commandStyledWith: #modalDialogCentered!
+
+modalDialogScrollable
+
+	^ self commandStyledWith: #modalDialogScrollable!
+
+modalExtraLarge
+
+	^ self commandStyledWith: #modalExtraLarge!
+
+navbarDark
+
+	^ self commandStyledWith: #navbarDark!
+
+navbarExpand
+
+	^ self commandStyledWith: #navbarExpand!
+
+navbarExpandExtraLarge
+
+	^ self commandStyledWith: #navbarExpandExtraLarge!
+
+navbarExpandLarge
+
+	^ self commandStyledWith: #navbarExpandLarge!
+
+navbarExpandMedium
+
+	^ self commandStyledWith: #navbarExpandMedium!
+
+navbarExpandSmall
+
+	^ self commandStyledWith: #navbarExpandSmall!
+
+navbarLight
+
+	^ self commandStyledWith: #navbarLight!
+
+navbarToggler
+
+	^ self commandStyledWith: #navbarToggler!
+
+navbarTogglerIcon
+
+	^ self commandStyledWith: #navbarTogglerIcon!
+
+navFill
+
+	^ self commandStyledWith: #navFill!
+
+navItem
+
+	^ self commandStyledWith: #navItem!
+
+navLink
+
+	^ self commandStyledWith: #navLink!
+
+order0
+
+	^ self commandStyledWith: #order0!
+
+order1
+
+	^ self commandStyledWith: #order1!
+
+order10
+
+	^ self commandStyledWith: #order10!
+
+order11
+
+	^ self commandStyledWith: #order11!
+
+order12
+
+	^ self commandStyledWith: #order12!
+
+order2
+
+	^ self commandStyledWith: #order2!
+
+order3
+
+	^ self commandStyledWith: #order3!
+
+order4
+
+	^ self commandStyledWith: #order4!
+
+order5
+
+	^ self commandStyledWith: #order5!
+
+order6
+
+	^ self commandStyledWith: #order6!
+
+order7
+
+	^ self commandStyledWith: #order7!
+
+order8
+
+	^ self commandStyledWith: #order8!
+
+order9
+
+	^ self commandStyledWith: #order9!
+
+orderExtraLarge0
+
+	^ self commandStyledWith: #orderExtraLarge0!
+
+orderExtraLarge1
+
+	^ self commandStyledWith: #orderExtraLarge1!
+
+orderExtraLarge10
+
+	^ self commandStyledWith: #orderExtraLarge10!
+
+orderExtraLarge11
+
+	^ self commandStyledWith: #orderExtraLarge11!
+
+orderExtraLarge12
+
+	^ self commandStyledWith: #orderExtraLarge12!
+
+orderExtraLarge2
+
+	^ self commandStyledWith: #orderExtraLarge2!
+
+orderExtraLarge3
+
+	^ self commandStyledWith: #orderExtraLarge3!
+
+orderExtraLarge4
+
+	^ self commandStyledWith: #orderExtraLarge4!
+
+orderExtraLarge5
+
+	^ self commandStyledWith: #orderExtraLarge5!
+
+orderExtraLarge6
+
+	^ self commandStyledWith: #orderExtraLarge6!
+
+orderExtraLarge7
+
+	^ self commandStyledWith: #orderExtraLarge7!
+
+orderExtraLarge8
+
+	^ self commandStyledWith: #orderExtraLarge8!
+
+orderExtraLarge9
+
+	^ self commandStyledWith: #orderExtraLarge9!
+
+orderLarge0
+
+	^ self commandStyledWith: #orderLarge0!
+
+orderLarge1
+
+	^ self commandStyledWith: #orderLarge1!
+
+orderLarge10
+
+	^ self commandStyledWith: #orderLarge10!
+
+orderLarge11
+
+	^ self commandStyledWith: #orderLarge11!
+
+orderLarge12
+
+	^ self commandStyledWith: #orderLarge12!
+
+orderLarge2
+
+	^ self commandStyledWith: #orderLarge2!
+
+orderLarge3
+
+	^ self commandStyledWith: #orderLarge3!
+
+orderLarge4
+
+	^ self commandStyledWith: #orderLarge4!
+
+orderLarge5
+
+	^ self commandStyledWith: #orderLarge5!
+
+orderLarge6
+
+	^ self commandStyledWith: #orderLarge6!
+
+orderLarge7
+
+	^ self commandStyledWith: #orderLarge7!
+
+orderLarge8
+
+	^ self commandStyledWith: #orderLarge8!
+
+orderLarge9
+
+	^ self commandStyledWith: #orderLarge9!
+
+orderMedium0
+
+	^ self commandStyledWith: #orderMedium0!
+
+orderMedium1
+
+	^ self commandStyledWith: #orderMedium1!
+
+orderMedium10
+
+	^ self commandStyledWith: #orderMedium10!
+
+orderMedium11
+
+	^ self commandStyledWith: #orderMedium11!
+
+orderMedium12
+
+	^ self commandStyledWith: #orderMedium12!
+
+orderMedium2
+
+	^ self commandStyledWith: #orderMedium2!
+
+orderMedium3
+
+	^ self commandStyledWith: #orderMedium3!
+
+orderMedium4
+
+	^ self commandStyledWith: #orderMedium4!
+
+orderMedium5
+
+	^ self commandStyledWith: #orderMedium5!
+
+orderMedium6
+
+	^ self commandStyledWith: #orderMedium6!
+
+orderMedium7
+
+	^ self commandStyledWith: #orderMedium7!
+
+orderMedium8
+
+	^ self commandStyledWith: #orderMedium8!
+
+orderMedium9
+
+	^ self commandStyledWith: #orderMedium9!
+
+orderSmall0
+
+	^ self commandStyledWith: #orderSmall0!
+
+orderSmall1
+
+	^ self commandStyledWith: #orderSmall1!
+
+orderSmall10
+
+	^ self commandStyledWith: #orderSmall10!
+
+orderSmall11
+
+	^ self commandStyledWith: #orderSmall11!
+
+orderSmall12
+
+	^ self commandStyledWith: #orderSmall12!
+
+orderSmall2
+
+	^ self commandStyledWith: #orderSmall2!
+
+orderSmall3
+
+	^ self commandStyledWith: #orderSmall3!
+
+orderSmall4
+
+	^ self commandStyledWith: #orderSmall4!
+
+orderSmall5
+
+	^ self commandStyledWith: #orderSmall5!
+
+orderSmall6
+
+	^ self commandStyledWith: #orderSmall6!
+
+orderSmall7
+
+	^ self commandStyledWith: #orderSmall7!
+
+orderSmall8
+
+	^ self commandStyledWith: #orderSmall8!
+
+orderSmall9
+
+	^ self commandStyledWith: #orderSmall9!
+
+padding1
+
+	^ self commandStyledWith: #padding1!
+
+padding2
+
+	^ self commandStyledWith: #padding2!
+
+padding3
+
+	^ self commandStyledWith: #padding3!
+
+padding4
+
+	^ self commandStyledWith: #padding4!
+
+padding5
+
+	^ self commandStyledWith: #padding5!
+
+paddingAuto
+
+	^ self commandStyledWith: #paddingAuto!
+
+paddingBottom1
+
+	^ self commandStyledWith: #paddingBottom1!
+
+paddingBottom2
+
+	^ self commandStyledWith: #paddingBottom2!
+
+paddingBottom3
+
+	^ self commandStyledWith: #paddingBottom3!
+
+paddingBottom4
+
+	^ self commandStyledWith: #paddingBottom4!
+
+paddingBottom5
+
+	^ self commandStyledWith: #paddingBottom5!
+
+paddingBottomAuto
+
+	^ self commandStyledWith: #paddingBottomAuto!
+
+paddingHorizontal1
+
+	^ self commandStyledWith: #paddingHorizontal1!
+
+paddingHorizontal2
+
+	^ self commandStyledWith: #paddingHorizontal2!
+
+paddingHorizontal3
+
+	^ self commandStyledWith: #paddingHorizontal3!
+
+paddingHorizontal4
+
+	^ self commandStyledWith: #paddingHorizontal4!
+
+paddingHorizontal5
+
+	^ self commandStyledWith: #paddingHorizontal5!
+
+paddingHorizontalAuto
+
+	^ self commandStyledWith: #paddingHorizontalAuto!
+
+paddingLeft1
+
+	^ self commandStyledWith: #paddingLeft1!
+
+paddingLeft2
+
+	^ self commandStyledWith: #paddingLeft2!
+
+paddingLeft3
+
+	^ self commandStyledWith: #paddingLeft3!
+
+paddingLeft4
+
+	^ self commandStyledWith: #paddingLeft4!
+
+paddingLeft5
+
+	^ self commandStyledWith: #paddingLeft5!
+
+paddingLeftAuto
+
+	^ self commandStyledWith: #paddingLeftAuto!
+
+paddingRight1
+
+	^ self commandStyledWith: #paddingRight1!
+
+paddingRight2
+
+	^ self commandStyledWith: #paddingRight2!
+
+paddingRight3
+
+	^ self commandStyledWith: #paddingRight3!
+
+paddingRight4
+
+	^ self commandStyledWith: #paddingRight4!
+
+paddingRight5
+
+	^ self commandStyledWith: #paddingRight5!
+
+paddingRightAuto
+
+	^ self commandStyledWith: #paddingRightAuto!
+
+paddingTop1
+
+	^ self commandStyledWith: #paddingTop1!
+
+paddingTop2
+
+	^ self commandStyledWith: #paddingTop2!
+
+paddingTop3
+
+	^ self commandStyledWith: #paddingTop3!
+
+paddingTop4
+
+	^ self commandStyledWith: #paddingTop4!
+
+paddingTop5
+
+	^ self commandStyledWith: #paddingTop5!
+
+paddingTopAuto
+
+	^ self commandStyledWith: #paddingTopAuto!
+
+paddingVertical1
+
+	^ self commandStyledWith: #paddingVertical1!
+
+paddingVertical2
+
+	^ self commandStyledWith: #paddingVertical2!
+
+paddingVertical3
+
+	^ self commandStyledWith: #paddingVertical3!
+
+paddingVertical4
+
+	^ self commandStyledWith: #paddingVertical4!
+
+paddingVertical5
+
+	^ self commandStyledWith: #paddingVertical5!
+
+paddingVerticalAuto
+
+	^ self commandStyledWith: #paddingVerticalAuto!
+
+pageItem
+
+	^ self commandStyledWith: #pageItem!
+
+pageLink
+
+	^ self commandStyledWith: #pageLink!
+
+popoverBody
+
+	^ self commandStyledWith: #popoverBody!
+
+popoverHeader
+
+	^ self commandStyledWith: #popoverHeader!
+
+positionAbsolute
+
+	^ self commandStyledWith: #positionAbsolute!
+
+positionFixed
+
+	^ self commandStyledWith: #positionFixed!
+
+positionRelative
+
+	^ self commandStyledWith: #positionRelative!
+
+positionStatic
+
+	^ self commandStyledWith: #positionStatic!
+
+positionSticky
+
+	^ self commandStyledWith: #positionSticky!
+
+progressBarAnimated
+
+	^ self commandStyledWith: #progressBarAnimated!
+
+rounded
+
+	^ self commandStyledWith: #rounded!
+
+rounded0
+
+	^ self commandStyledWith: #rounded0!
+
+roundedBottom
+
+	^ self commandStyledWith: #roundedBottom!
+
+roundedCircle
+
+	^ self commandStyledWith: #roundedCircle!
+
+roundedLarge
+
+	^ self commandStyledWith: #roundedLarge!
+
+roundedLeft
+
+	^ self commandStyledWith: #roundedLeft!
+
+roundedPill
+
+	^ self commandStyledWith: #roundedPill!
+
+roundedRight
+
+	^ self commandStyledWith: #roundedRight!
+
+roundedSmall
+
+	^ self commandStyledWith: #roundedSmall!
+
+roundedTop
+
+	^ self commandStyledWith: #roundedTop!
+
+spinnerBorder
+
+	^ self commandStyledWith: #spinnerBorder!
+
+spinnerBorderSmall
+
+	^ self commandStyledWith: #spinnerBorderSmall!
+
+spinnerGrow
+
+	^ self commandStyledWith: #spinnerGrow!
+
+spinnerGrowSmall
+
+	^ self commandStyledWith: #spinnerGrowSmall!
+
+stickyTop
+
+	^ self commandStyledWith: #stickyTop!
+
+tableActive
+
+	^ self commandStyledWith: #tableActive!
+
+tableBorderless
+
+	^ self commandStyledWith: #tableBorderless!
+
+tableDark
+
+	^ self commandStyledWith: #tableDark!
+
+tableHeadDark
+
+	^ self commandStyledWith: #tableHeadDark!
+
+tableHeadLight
+
+	^ self commandStyledWith: #tableHeadLight!
+
+tableLight
+
+	^ self commandStyledWith: #tableLight!
+
+tablePrimary
+
+	^ self commandStyledWith: #tablePrimary!
+
+tableResponsiveExtraLarge
+
+	^ self commandStyledWith: #tableResponsiveExtraLarge!
+
+tableResponsiveLarge
+
+	^ self commandStyledWith: #tableResponsiveLarge!
+
+tableResponsiveMedium
+
+	^ self commandStyledWith: #tableResponsiveMedium!
+
+tableResponsiveSmall
+
+	^ self commandStyledWith: #tableResponsiveSmall!
+
+tableSecondary
+
+	^ self commandStyledWith: #tableSecondary!
+
+tableSmall
+
+	^ self commandStyledWith: #tableSmall!
+
+textBlack50
+
+	^ self commandStyledWith: #textBlack50!
+
+textBody
+
+	^ self commandStyledWith: #textBody!
+
+textDark
+
+	^ self commandStyledWith: #textDark!
+
+textExtraLargeCenter
+
+	^ self commandStyledWith: #textExtraLargeCenter!
+
+textExtraLargeJustify
+
+	^ self commandStyledWith: #textExtraLargeJustify!
+
+textExtraLargeLeft
+
+	^ self commandStyledWith: #textExtraLargeLeft!
+
+textExtraLargeRight
+
+	^ self commandStyledWith: #textExtraLargeRight!
+
+textLargeCenter
+
+	^ self commandStyledWith: #textLargeCenter!
+
+textLargeJustify
+
+	^ self commandStyledWith: #textLargeJustify!
+
+textLargeLeft
+
+	^ self commandStyledWith: #textLargeLeft!
+
+textLargeRight
+
+	^ self commandStyledWith: #textLargeRight!
+
+textLight
+
+	^ self commandStyledWith: #textLight!
+
+textMediumCenter
+
+	^ self commandStyledWith: #textMediumCenter!
+
+textMediumJustify
+
+	^ self commandStyledWith: #textMediumJustify!
+
+textMediumLeft
+
+	^ self commandStyledWith: #textMediumLeft!
+
+textMediumRight
+
+	^ self commandStyledWith: #textMediumRight!
+
+textSecondary
+
+	^ self commandStyledWith: #textSecondary!
+
+textSmallCenter
+
+	^ self commandStyledWith: #textSmallCenter!
+
+textSmallJustify
+
+	^ self commandStyledWith: #textSmallJustify!
+
+textSmallLeft
+
+	^ self commandStyledWith: #textSmallLeft!
+
+textSmallRight
+
+	^ self commandStyledWith: #textSmallRight!
+
+textTruncate
+
+	^ self commandStyledWith: #textTruncate!
+
+textWhite
+
+	^ self commandStyledWith: #textWhite!
+
+textWhite50
+
+	^ self commandStyledWith: #textWhite50!
+
+toast
+
+	^ self commandStyledWith: #toast!
+
+toastBody
+
+	^ self commandStyledWith: #toastBody!
+
+toastHeader
+
+	^ self commandStyledWith: #toastHeader!
+
+validFeedback
+
+	^ self commandStyledWith: #validFeedback!
+
+validTooltip
+
+	^ self commandStyledWith: #validTooltip!
+
+visible
+
+	^ self commandStyledWith: #visible!
+
+width100Percent
+
+	^ self commandStyledWith: #width100Percent!
+
+width25Percent
+
+	^ self commandStyledWith: #width25Percent!
+
+width50Percent
+
+	^ self commandStyledWith: #width50Percent!
+
+width75Percent
+
+	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #alertDark!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #alertHeading!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #alertLight!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #alertPrimary!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #alertSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignBottom!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentExtraLargeAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentExtraLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentExtraLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentExtraLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentExtraLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentLargeAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentMediumAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentMediumCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentMediumEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentMediumStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentMediumStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentSmallAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentSmallCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentSmallEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentSmallStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentSmallStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignContentStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsExtraLargeBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsExtraLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsExtraLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsExtraLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsExtraLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsLargeBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsMediumBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsMediumCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsMediumEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsMediumStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsMediumStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsSmallBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsSmallCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsSmallEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsSmallStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsSmallStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignItemsStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignMiddle!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfExtraLargeBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfExtraLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfExtraLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfExtraLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfExtraLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfLargeBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfLargeStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfMediumBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfMediumCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfMediumEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfMediumStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfMediumStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfSmallBaseline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfSmallCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfSmallEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfSmallStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfSmallStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignSelfStretch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignTextBottom!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignTextTop!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #alignTop!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundDark!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundGradientDanger!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundGradientDark!*Willow/Bootstrap/4!public! !
@@ -732,8 +3600,50 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundSecondary!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundTransparent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #backgroundWhite!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeDanger!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeInfo!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgePill!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgePrimary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeSuccess!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #badgeWarning!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #blockquote!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #blockquoteFooter!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #bootstrap4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #border!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #border0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderBottom!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderBottom0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderDanger!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderInfo!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderLeft0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderPrimary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderRight0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderSuccess!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderTop!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderTop0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderWarning!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #borderWhite!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #breadcrumbItem!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonGroupToggle!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineDanger!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineInfo!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlinePrimary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineSuccess!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonOutlineWarning!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #buttonSecondary!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #card!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardBody!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardColumns!*Willow/Bootstrap/4!public! !
@@ -741,6 +3651,7 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardFooter!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardGroup!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardHeader!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #cardHeaderTabs!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardImage!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardImageOverlay!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardImageTop!*Willow/Bootstrap/4!public! !
@@ -749,8 +3660,44 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardText!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #cardTitle!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #column!*Willow/Bootstrap/4!public! !
-!ComponentClassificationCommandBuilder categoriesFor: #column:!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column:!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #column9!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLarge9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #columnExtraLargeOffset9!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #columnExtraSmall!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #columnFormLabel!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #columnFormLabelLarge!*Willow/Bootstrap/4!public! !
@@ -772,18 +3719,135 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #customSelectLarge!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #customSelectSmall!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #customSwitch!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #display1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #display2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #display3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #display4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayExtraLargeTableRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayLargeTableRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayMediumTableRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayPrintTableRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallInline!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallInlineBlock!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallInlineFlex!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displaySmallTableRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayTable!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayTableCell!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #displayTableRow!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropdownDivider!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropdownItem!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropdownItemText!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropdownToggleSplit!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropleft!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #dropright!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedReponsive16by9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedReponsive1by1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedReponsive21by9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedReponsive4by3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedResponsive!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #embedResponsiveItem!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #figure!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #figureCaption!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #figureImage!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #fixedBottom!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #fixedTop!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #flexColumn!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #flexColumnReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeColumn!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeColumnReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeNowrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeRowReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeWrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexExtraLargeWrapReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeColumn!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeColumnReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeNowrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeRowReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeWrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexLargeWrapReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumColumn!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumColumnReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumNowrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumRowReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumWrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexMediumWrapReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexNowrap!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #flexRow!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #flexRowReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallColumn!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallColumnReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallNowrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallRow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallRowReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallWrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexSmallWrapReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexWrap!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #flexWrapReverse!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatExtraLargeLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatExtraLargeNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatExtraLargeRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatLargeLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatLargeNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatLargeRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatMediumLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatMediumNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatMediumRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatSmallLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatSmallNone!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #floatSmallRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #fontItalic!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #fontWeightBold!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #fontWeightLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #fontWeightNormal!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #formCheck!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #formCheckInline!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #formCheckInput!*Willow/Bootstrap/4!public! !
@@ -799,6 +3863,7 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #height25Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #height50Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #height75Percent!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #imageFluid!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #inputGroupAppend!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #inputGroupPrepend!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #inputGroupText!*Willow/Bootstrap/4!public! !
@@ -806,10 +3871,31 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #invalidTooltip!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #isInvalid!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #isValid!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #jumbotronFluid!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #justifyContentAround!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #justifyContentBetween!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #justifyContentCenter!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #justifyContentEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentExtraLargeAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentExtraLargeBetween!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentExtraLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentExtraLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentExtraLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentLargeAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentLargeBetween!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentLargeEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentLargeStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentMediumAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentMediumBetween!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentMediumCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentMediumEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentMediumStart!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentSmallAround!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentSmallBetween!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentSmallCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentSmallEnd!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #justifyContentSmallStart!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #justifyContentStart!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #listGroupFlush!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #listGroupHorizontal!*Willow/Bootstrap/4!public! !
@@ -822,6 +3908,49 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #listGroupItemLight!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #listGroupItemPrimary!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #listGroupItemSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #listInlineItem!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #margin1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #margin2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #margin3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #margin4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #margin5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottom1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottom2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottom3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottom4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottom5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginBottomAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontal1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontal2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontal3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontal4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontal5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginHorizontalAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeft1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeft2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeft3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeft4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeft5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginLeftAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRight1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRight2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRight3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRight4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRight5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginRightAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTop1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTop2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTop3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTop4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTop5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginTopAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVertical1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVertical2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVertical3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVertical4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVertical5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #marginVerticalAuto!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #maxHeight100Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #maxWidth100Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #modalDialogCentered!*Willow/Bootstrap/4!public! !
@@ -839,6 +3968,115 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #navFill!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #navItem!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #navLink!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #order9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderExtraLarge9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderLarge9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderMedium9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall10!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall11!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall12!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall6!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall7!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall8!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #orderSmall9!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #padding1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #padding2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #padding3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #padding4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #padding5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottom1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottom2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottom3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottom4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottom5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingBottomAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontal1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontal2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontal3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontal4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontal5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingHorizontalAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeft1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeft2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeft3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeft4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeft5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingLeftAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRight1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRight2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRight3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRight4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRight5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingRightAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTop1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTop2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTop3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTop4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTop5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingTopAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVertical1!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVertical2!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVertical3!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVertical4!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVertical5!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #paddingVerticalAuto!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pageItem!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #pageLink!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #popoverBody!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #popoverHeader!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #positionAbsolute!*Willow/Bootstrap/4!public! !
@@ -846,16 +4084,65 @@ width75Percent	^ self commandStyledWith: #width75Percent! !
 !ComponentClassificationCommandBuilder categoriesFor: #positionRelative!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #positionStatic!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #positionSticky!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #progressBarAnimated!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #rounded!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #rounded0!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedBottom!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedCircle!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedLarge!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedPill!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedSmall!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #roundedTop!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #spinnerBorder!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #spinnerBorderSmall!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #spinnerGrow!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #spinnerGrowSmall!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #stickyTop!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableActive!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableBorderless!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableHeadDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableHeadLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tablePrimary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableResponsiveExtraLarge!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableResponsiveLarge!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableResponsiveMedium!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableResponsiveSmall!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #tableSmall!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textBlack50!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textBody!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textDark!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textExtraLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textExtraLargeJustify!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textExtraLargeLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textExtraLargeRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textLargeCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textLargeJustify!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textLargeLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textLargeRight!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textLight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textMediumCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textMediumJustify!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textMediumLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textMediumRight!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textSecondary!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textSmallCenter!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textSmallJustify!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textSmallLeft!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textSmallRight!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #textTruncate!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textWhite!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #textWhite50!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #toast!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #toastBody!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #toastHeader!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #validFeedback!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #validTooltip!*Willow/Bootstrap/4!public! !
+!ComponentClassificationCommandBuilder categoriesFor: #visible!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #width100Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #width25Percent!*Willow/Bootstrap/4!public! !
 !ComponentClassificationCommandBuilder categoriesFor: #width50Percent!*Willow/Bootstrap/4!public! !

@@ -7,7 +7,7 @@ WAPainter subclass: #WPTestRunnerSuiteSelectionWebView
 	classInstanceVariableNames: ''!
 WPTestRunnerSuiteSelectionWebView guid: (GUID fromString: '{7ee98b34-77c0-4235-b72d-bcc49e4d0c0d}')!
 WPTestRunnerSuiteSelectionWebView comment: 'I represent the test suite selection'!
-!WPTestRunnerSuiteSelectionWebView categoriesForClass!Willow-Playground-TestRunner-WebViews! !
+!WPTestRunnerSuiteSelectionWebView categoriesForClass!Willow-Playground-TestRunner-Application! !
 !WPTestRunnerSuiteSelectionWebView methodsFor!
 
 initialize	super initialize.	self		initializeTestCaseClassesSelection;		initializeIdentifiedTestCaseClassesSelection;		initializePackageSelection!

@@ -12,16 +12,20 @@ PlaygroundApplicationsStepWebView comment: 'I''m a step showing a list of exampl
 
 description	^ 'Let''s see what you can do with Willow'!
 
-liveDocumentationAnchor	^ self componentSupplier asynchronicLinkLabeled: 'Open the Live Documentation!!' applying: (OpenLocationCommand forNewBrowsingContextNavigatingTo: WPLiveDocumentation handlerName)!
+liveDocumentationAnchor	^ self componentSupplier asynchronicLinkLabeled: 'Open the Live Documentation!!' applying: (OpenLocationCommand forNewBrowsingContextNavigatingTo: ('../', WPLiveDocumentation handlerName))!
 
-renderContentOn: aCanvas	self		renderPanelWrapping: [ :canvas | 			canvas				paragraph: self testRunnerAnchor;				paragraph: self liveDocumentationAnchor ]		on: aCanvas!
+renderContentOn: aCanvas	self		renderPanelWrapping: [ :canvas | 			canvas				paragraph: self testRunnerAnchor3;
+				paragraph: self testRunnerAnchor4;				paragraph: self liveDocumentationAnchor ]		on: aCanvas!
 
 shortName	^ 'Some Examples'!
 
-testRunnerAnchor	^ self componentSupplier		asynchronicLinkLabeled: 'Open the Test Runner!!'		applying: (OpenLocationCommand forNewBrowsingContextNavigatingTo:WPTestRunner handlerName)! !
+testRunnerAnchor3	^ self componentSupplier		asynchronicLinkLabeled: 'Open the Test Runner (Bootstrap 3)!!'		applying: (OpenLocationCommand forNewBrowsingContextNavigatingTo: ('../', WPB3TestRunner handlerName))!
+
+testRunnerAnchor4	^ self componentSupplier		asynchronicLinkLabeled: 'Open the Test Runner (Bootstrap 4)!!'		applying: (OpenLocationCommand forNewBrowsingContextNavigatingTo: ('../', WPB4TestRunner handlerName))! !
 !PlaygroundApplicationsStepWebView categoriesFor: #description!accessing!public! !
 !PlaygroundApplicationsStepWebView categoriesFor: #liveDocumentationAnchor!private/accessing!public! !
 !PlaygroundApplicationsStepWebView categoriesFor: #renderContentOn:!public!rendering! !
 !PlaygroundApplicationsStepWebView categoriesFor: #shortName!accessing!public! !
-!PlaygroundApplicationsStepWebView categoriesFor: #testRunnerAnchor!private/accessing!public! !
+!PlaygroundApplicationsStepWebView categoriesFor: #testRunnerAnchor3!private/accessing!public! !
+!PlaygroundApplicationsStepWebView categoriesFor: #testRunnerAnchor4!private/accessing!public! !
 

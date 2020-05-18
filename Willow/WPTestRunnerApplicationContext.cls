@@ -18,14 +18,11 @@ currentTestResult	^ currentTestResult!
 
 initialize	super initialize.	self resetTestResult.	selectedTestCaseClasses := #().	selectedPackageCategories := #().	messageTallyOptional := Optional unused!
 
-resetTestResult
-	currentTestResult := TestAsserter classForTestResult new duration: 0 asSeconds; yourself!
+resetTestResult	currentTestResult := TestAsserter classForTestResult new!
 
 runTests	self		resetTestResult;		runTestSuites: (selectedTestCaseClasses select: [ :class | class isAbstract not ] thenCollect: [ :class | class suite ])!
 
-runTestsProfiled"	| messageTally |	messageTally := MessageTally		spyOn: [ self runTests ]		reportOtherProcesses: false		cutoff: 1		openResultWindow: false		closeAfter: false.	messageTallyOptional := (messageTally tally strictlyPositive and: [ messageTally time strictlyPositive ])		ifTrue: [ Optional containing: messageTally ]		ifFalse: [ Optional unused ]"
-
-	messageTallyOptional := Optional unused!
+runTestsProfiled	| messageTally |	messageTally := MessageTally		spyOn: [ self runTests ]		reportOtherProcesses: false		cutoff: 1		openResultWindow: false		closeAfter: false.	messageTallyOptional := (messageTally tally strictlyPositive and: [ messageTally time strictlyPositive ])		ifTrue: [ Optional containing: messageTally ]		ifFalse: [ Optional unused ]!
 
 runTestSuites: testSuites	CurrentExecutionEnvironment runTestsBy: [ testSuites do: [ :suite | suite run: currentTestResult ] ]!
 

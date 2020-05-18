@@ -3,7 +3,7 @@
 
 Dolphin port May 2020 based on:
 * Willow v13.0.0
-* Willow Bootstrap v12.0.0
+* Willow Bootstrap v12.1.0
 * Willow Spinkit v8.0.0
 * RenoirSt v7.0.0
 * Boardwalk v5.0.0

@@ -17,7 +17,7 @@ Many thanks to the Buenos Aires Smalltalk group for permission to port to Dolphi
 ### Automated Installation
 * Download and install [GitHub Package Manager](https://github.com/rko281/GitHub)
 * Evaluate:
-  `GitHubPackageManager beAuthenticated; install: 'rko281/Willow/Willow-Playground-Smalltalks2017'`
+  `GitHubPackageManager install: 'rko281/Willow/Willow-Playground-Smalltalks2017'`
 * All required packages and prerequisites will be downloaded and installed
 * Once installation is complete the Smalltalks2017 example application will be started
 
